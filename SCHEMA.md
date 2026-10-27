@@ -91,3 +91,7 @@ table_name, row_id, old_row, new_row, changed_by, changed_at. Read only.
 Every change to the shape of the brain is a numbered file in `migrations/`, applied in order.
 - `001_brain_schema.sql`: tables, lists, lock, history, privacy, window
 - `002_pin_function_search_path.sql`: security fix from the Supabase advisor
+- `003_certainty_optional_and_staging.sql`: certainty may be blank (ideas, framework text, outside voices); a private `staging` schema for the one-time move-in
+
+## Move-in record (2026-10-27)
+802 entries, 47 sources and 11 people moved in from the worksheet (403), the Testimony collection (114), the New Material bank F-01 to F-150 and W-01 to W-19 (217) and the Obsidian Book Map vault (68). `added_by` on these rows is `move-in 2026-10-27 (mining chat)`. Every field was checked against the original files by hash and matched exactly. Old IDs live in `legacy_ref`.
