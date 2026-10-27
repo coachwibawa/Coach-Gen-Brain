@@ -1,0 +1,7 @@
+-- 006 (applied 2026-10-27): raw layer.
+-- tags added: heading, duplicate, table dump, label (cleanup marks only, nothing deleted)
+-- entries.chunk_id bigint (gold line -> source chunk)
+-- brain.documents: add-only (delete/truncate blocked), owner in (own, client, peer, outside), turns jsonb [{s,sp,t}]
+-- brain.chunks: derived, rebuildable, NOT locked. embedding vector(1536), HNSW + GIN indexes
+-- brain.chunk_document(doc, target_words=320, overlap_turns=1): speaker-turn chunker, deletes and rebuilds that doc's chunks
+-- brain.embed_pending_chunks(limit)

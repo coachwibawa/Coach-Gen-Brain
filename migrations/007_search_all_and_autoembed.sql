@@ -1,0 +1,3 @@
+-- 007 (applied 2026-10-27): brain.search_all(query, limit, law, type, min_similarity=0.30, layers='both'|'gold'|'chunks')
+-- Returns kind (gold|chunk), ref, text, link, similarity, score, via. Skips tags heading/duplicate/table dump/label and status 'never use'.
+-- Chunk layer ignored when law or type filter is set. pg_cron job 'brain-embed' runs every minute: embed_pending(25) + embed_pending_chunks(25).

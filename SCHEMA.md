@@ -103,3 +103,10 @@ Second pass, same day, from the Obsidian Book Map vault:
 - 39 connections: 24 "pairs with" (Testimony "Pair with" and notes that name a pair), 15 "same idea" (pieces under one Book Map concept).
 - 58 entries BL-01 to BL-58: every quoted line of the vault's Brainstorm Log, with the decision that followed in `note`. Lines about a cast member are `client story`, `recounted`, with the cast name in `extra.persona`. The whole log is kept verbatim in the source's `notes`.
 - The vault's piece "T-110" was a stray note about the Testimony file, not material, so it was skipped. 222 vault worksheet IDs used an older numbering and were matched to the brain by exact text.
+
+## Vector layer (2026-10-27)
+- `entry_vectors` (one 1536-number vector per gold entry, model text-embedding-3-small, key in Supabase Vault as `openai_api_key`).
+- `documents` (full cleaned text of calls, videos, PDFs, posts. Add-only. `owner` = own, client, peer, outside) and `chunks` (derived and rebuildable, with vectors).
+- `brain.search_all()` searches both layers. A cron job embeds anything new every minute.
+- First raw document: Gen and Genio sprint 27 Oct 2026 (documents id 1, source row added). Personal and money talk left out (see `left_out`).
+- Cleanup tags on old rows: heading 5, table dump 1, duplicate 17, label 12.
