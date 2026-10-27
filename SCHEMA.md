@@ -95,3 +95,11 @@ Every change to the shape of the brain is a numbered file in `migrations/`, appl
 
 ## Move-in record (2026-10-27)
 802 entries, 47 sources and 11 people moved in from the worksheet (403), the Testimony collection (114), the New Material bank F-01 to F-150 and W-01 to W-19 (217) and the Obsidian Book Map vault (68). `added_by` on these rows is `move-in 2026-10-27 (mining chat)`. Every field was checked against the original files by hash and matched exactly. Old IDs live in `legacy_ref`.
+
+Second pass, same day, from the Obsidian Book Map vault:
+- 2 works: the book "5 Laws of Lasting Change" (its `notes` hold the Persona Map, verbatim) and "5 Laws client workbook".
+- 22 personas: the 18 Cast cards for the book (each `profile` is the full card, verbatim, including "Your corrections") and 4 for the workbook.
+- 307 `used_in` rows: 296 book rows from the vault's Concepts and "Closest match" scan (snapshot of 22 Oct; locations keep the vault's flags such as REPEAT and CONTRADICTION), 11 workbook rows for lines marked PLACED.
+- 39 connections: 24 "pairs with" (Testimony "Pair with" and notes that name a pair), 15 "same idea" (pieces under one Book Map concept).
+- 58 entries BL-01 to BL-58: every quoted line of the vault's Brainstorm Log, with the decision that followed in `note`. Lines about a cast member are `client story`, `recounted`, with the cast name in `extra.persona`. The whole log is kept verbatim in the source's `notes`.
+- The vault's piece "T-110" was a stray note about the Testimony file, not material, so it was skipped. 222 vault worksheet IDs used an older numbering and were matched to the brain by exact text.
