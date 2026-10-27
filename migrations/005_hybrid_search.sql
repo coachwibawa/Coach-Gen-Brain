@@ -1,0 +1,3 @@
+-- 005: brain.search(query, limit, law, type): hybrid of meaning (vector, top 50) and exact words (full text, top 50),
+-- merged by reciprocal rank fusion (k=60). Skips status 'never use'. Returns id, legacy_ref, law, type, speaker, text, link, score, via.
+-- Applied 2026-10-27 (005 + 005b casts). Execute revoked from public/anon/authenticated.

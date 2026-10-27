@@ -1,0 +1,8 @@
+-- 004: pgvector + http extensions, brain.entry_vectors (HNSW), brain.embed_text() reading openai_api_key from Vault
+-- Applied 2026-10-27. entry_id is bigint (matches brain.entries.id).
+-- See Supabase migration history for the exact applied text. Summary:
+--  create extension vector, http (schema extensions)
+--  create table brain.entry_vectors (entry_id bigint pk -> entries, model, context_text, embedding vector(1536), embedded_at)
+--  RLS forced, service policy, hnsw cosine index
+--  function brain.embed_text(text, model) -> vector, security definer, execute revoked from public/anon/authenticated
+--  function brain.embed_pending(limit) embeds entries (not 'never use') not yet in entry_vectors, with context: Law, Type, Speaker, About, Note, Text
