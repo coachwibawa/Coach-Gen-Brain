@@ -1,0 +1,93 @@
+# Coach Gen Brain: schema
+
+Read this before reading from or writing to the brain. It is the plain-words description of every table and column. If this file and the database ever disagree, the database is right and this file must be updated.
+
+- Supabase project: **Coach Gen Brain** (id `zjedqjiuxkoncwsmylls`, coachwibawa's Org, Singapore)
+- Everything lives in the schema `brain`. The public API cannot reach it.
+- Brain work touches this project only. Never the Project Rebirth projects.
+
+## The rules (enforced by the database)
+
+1. **Nothing is ever deleted.** Delete and truncate are refused on every table.
+2. **On entries, these never change:** text, original text, original language, speaker, source, link, date said, legacy ref, corrects, added by, added at. To fix a mistake, add a new entry with `corrects_id` pointing to the old one.
+3. **Everything else can change** (status, importance, law, tags, note, about, extra, and so on). Every change is copied into `brain.change_log`, which itself can never be edited.
+4. **Tags, types and projects come from fixed lists** (`brain.tags`, `brain.entry_types`, `brain.projects`). An unknown value is refused. To add one, insert it into the list on purpose first.
+5. **A minor entry is used once per work.** Core and major entries may repeat. Using a minor entry in a different work is fine.
+6. **A persona in `used_in` must belong to the same work.**
+7. **Columns are never dropped.** A column that is no longer needed is renamed and retired.
+8. **Never run** `drop`, `truncate`, `alter table ... drop column`, or `disable trigger` on the brain. The lock stops accidents. It cannot stop a deliberate admin command, so this rule matters.
+
+## How to read
+
+Read through the window **`brain.entries_full`**. It shows every entry with speaker, about and source as names, plus `times_used`. Chats should read this view, not the raw table, so the table can change underneath without breaking anyone.
+
+Examples:
+- Law 3 material, newest first: `select * from brain.entries_full where project = '5 Laws of Lasting Change' and law = 3 order by said_on desc nulls last;`
+- Word search: `select * from brain.entries_full e join brain.entries x using (id) where x.search @@ plainto_tsquery('simple', 'lazy');`
+- Unused gold: `... where times_used = 0 and importance in ('core','major') and status <> 'never use'`
+- Never print anything with status `never use`.
+
+## How to add
+
+1. **Check the source first.** Look in `brain.sources` by title or url. If it exists, read its `passes` so you do not mine it twice. If not, add it.
+2. **Check the people.** Look up `brain.people` by real name. Add anyone new, with role and consent.
+3. **Check for duplicates.** Before adding an entry, check `brain.entries` for the same `source_id` and `link`.
+4. **Add the entry.** Exact words in `text`. For Indonesian sessions, the original words go in `original_text` with `original_language = 'id'`, and the English translation in `text` with `origin = 'translated'`.
+5. **Add connections** where an entry pairs with, mirrors, answers or backs up another.
+6. **Update the source's `passes`** with what this pass covered.
+7. Always fill `added_by` with the chat or session that added the row.
+
+## Tables
+
+### brain.entries: one row per mined piece
+| Column | Meaning |
+|---|---|
+| id | Running number. This is the entry's number from now on (#1, #2...) |
+| legacy_ref | Old ID from before the brain (T-306, F-132, W-07). Blank for new entries |
+| project | From `brain.projects` |
+| law | 1 to 5. 0 for Intro or whole book. Blank if not 5 Laws |
+| type | From `brain.entry_types` |
+| tags | Any number, each from `brain.tags` |
+| text | The exact words (English) |
+| original_text | The original words, if not English |
+| original_language | Language code of the original, for example `id` |
+| speaker_id | Who said the words (`brain.people`) |
+| about_id | Who the story is about (`brain.people`). May differ from the speaker |
+| certainty | `recorded` (from a recording, person certain), `recounted` (Gen's memory, struggle real, person may not match), `built` (invented for a persona) |
+| origin | `verbatim`, `translated`, `joined`, `shortened`, `built` |
+| said_on | Date the words were said |
+| source_id | Where it came from (`brain.sources`) |
+| link | Timestamp link |
+| importance | `core`, `major`, `minor` (default `minor`) |
+| status | `raw` (default), `printable`, `placed`, `never use`, `retired` |
+| note | Why it matters, where it fits |
+| extra | Box for one-off details (JSON). If a key gets used a lot, it becomes a real column |
+| corrects_id | The entry this one corrects |
+| added_by, added_at | Who added it and when |
+| search | Built automatically for word search |
+
+### brain.sources: one row per call, video, podcast, book, article or dump
+title, kind (`fathom call`, `video`, `podcast`, `article`, `book`, `voice dump`, `own published`, `note`, `chat`, `other`), url, happened_on, participants, passes (which mining passes it got), left_out (what was left out on purpose), notes.
+
+### brain.people: one row per person
+real_name, role (`self`, `client`, `peer`, `coach`, `family`, `friend`, `outside author`, `other`), consent (`given`, `pending`, `not asked`, `refused`, `not needed`), notes.
+
+### brain.connections: links between entries
+from_id, to_id, relation (`pairs with`, `before after`, `backs up`, `mirrors`, `answers`, `same idea`, `contradicts`, `part of`), note.
+
+### brain.works: each book, talk, article, series
+title, kind (`book`, `workbook`, `talk`, `article`, `article series`, `letter`, `reel`, `reel series`, `course`, `other`), status, notes.
+
+### brain.personas: a persona's profile inside one work
+work_id, name, profile, based_on. The persona belongs to the work, not to the material.
+
+### brain.used_in: an entry used in a work
+entry_id, work_id, location (chapter, page, slide), persona_id (optional, same work), used_on, note.
+
+### brain.change_log: history of every change
+table_name, row_id, old_row, new_row, changed_by, changed_at. Read only.
+
+## Migrations
+Every change to the shape of the brain is a numbered file in `migrations/`, applied in order.
+- `001_brain_schema.sql`: tables, lists, lock, history, privacy, window
+- `002_pin_function_search_path.sql`: security fix from the Supabase advisor

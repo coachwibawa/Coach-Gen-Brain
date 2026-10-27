@@ -4,6 +4,8 @@ One source of truth for Coach Gen's original knowledge: calls, videos, podcasts,
 
 - Database: Supabase project "Coach Gen Brain" (coachwibawa's Org, Singapore)
 - This repo holds the table design, the add-only lock and the weekly export script.
+- Read `SCHEMA.md` before reading from or writing to the brain.
+- Shape changes are numbered files in `migrations/`.
 
 Rules:
 - Add-only. Rows are never deleted and their text is never edited. A correction is a new row that points to the old one.
