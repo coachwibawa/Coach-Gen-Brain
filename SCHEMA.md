@@ -117,3 +117,13 @@ Second pass, same day, from the Obsidian Book Map vault:
 - Removal test (rolled back): chunks can be deleted, documents and sources are refused.
 - Intake rule: calls come in through the mining chat. Claude cuts junk sections before a document is stored. No direct Fathom fetch for now. See `Brain_Rule.md` section 7 in the project.
 - Not yet in this file from earlier: BL-59 to BL-65 (the Brainstorm Log entries added after BL-58), so counts above may be short by those.
+
+## Search tuning and health check (2026-10-27, evening)
+Tested against a fixed 20-question set (`claude/Brain_Test_Set.md` in the project, with every run recorded). Baseline 14 of 20, now 18 of 20.
+- `009_search_or_word_match.sql`: new `brain.or_tsquery()`. Word match now uses any meaningful word of the question (filler words dropped) instead of every word. Run 2: 16 of 20.
+- `010_search_word_match_passes_cutoff.sql`: a match on words always passes the meaning cutoff. Fixed "yearly misogi", which matched by words but scored 0.253 on meaning.
+- `011_chunks_keep_cutoff.sql`: takes 010 back for chunks only. Long spoken chunks match many words and flooded results. Gold entries keep the skip. Run 4: 17 of 20.
+- `012_search_cutoff_032.sql`: default `p_min_sim` raised from 0.30 to 0.32. Run 5: 18 of 20.
+- `013_health_check.sql`: `brain.health()` returns 6 checks (embed job on, ran in last 15 minutes, no failed runs in 24 hours, every entry searchable, every chunk searchable, OpenAI key works). Not callable by anon or authenticated. A daily scheduled task "Brain health check" (07:41 Jakarta) reads it and notifies Coach Gen by push and email when a check fails.
+- Still failing: Q15 (T-032, its search text carries a call link and timestamps) and Q18 (WS-L5-F7-03). Both are ranking problems, left until more material is in.
+- Migrations 010 to 012 edit the live function text with `replace()`, so they must run in order after 009.
