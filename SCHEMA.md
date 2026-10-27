@@ -110,3 +110,10 @@ Second pass, same day, from the Obsidian Book Map vault:
 - `brain.search_all()` searches both layers. A cron job embeds anything new every minute.
 - First raw document: Gen and Genio sprint 27 Oct 2026 (documents id 1, source row added). Personal and money talk left out (see `left_out`).
 - Cleanup tags on old rows: heading 5, table dump 1, duplicate 17, label 12.
+
+## Retire a document (2026-10-27, later)
+- `documents.status` is `active` or `retired`, plus `retired_note`. Documents and sources cannot be deleted (delete trigger). Retire instead. `search_all()` skips chunks of retired documents.
+- Document 1 (the 27 Oct sprint) is retired. Coach Gen judged it tech talk with no 5 Laws insight. The words are kept.
+- Removal test (rolled back): chunks can be deleted, documents and sources are refused.
+- Intake rule: calls come in through the mining chat. Claude cuts junk sections before a document is stored. No direct Fathom fetch for now. See `Brain_Rule.md` section 7 in the project.
+- Not yet in this file from earlier: BL-59 to BL-65 (the Brainstorm Log entries added after BL-58), so counts above may be short by those.

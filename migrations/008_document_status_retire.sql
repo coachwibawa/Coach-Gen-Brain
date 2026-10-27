@@ -1,0 +1,8 @@
+-- 008_document_status_retire.sql (applied through Supabase apply_migration, 2026-10-27)
+-- Summary file. The live migration is in Supabase.
+-- 1. brain.documents gets status ('active' or 'retired', default 'active') and retired_note.
+--    Documents and sources cannot be deleted (block_delete trigger). Retire instead.
+-- 2. brain.search_all() now skips chunks whose document is not 'active'.
+--    Gold entries are unaffected.
+-- Data change: document 1 (Gen and Genio sprint, 27 Oct 2026) set to 'retired'.
+-- Tested (rolled back): deleting chunks works, deleting documents or sources is refused.
