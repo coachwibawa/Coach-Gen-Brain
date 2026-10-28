@@ -127,3 +127,8 @@ Tested against a fixed 20-question set (`claude/Brain_Test_Set.md` in the projec
 - `013_health_check.sql`: `brain.health()` returns 6 checks (embed job on, ran in last 15 minutes, no failed runs in 24 hours, every entry searchable, every chunk searchable, OpenAI key works). Not callable by anon or authenticated. A daily scheduled task "Brain health check" (07:41 Jakarta) reads it and notifies Coach Gen by push and email when a check fails.
 - Still failing: Q15 (T-032, its search text carries a call link and timestamps) and Q18 (WS-L5-F7-03). Both are ranking problems, left until more material is in.
 - Migrations 010 to 012 edit the live function text with `replace()`, so they must run in order after 009.
+
+### Voices search (28 Oct 2026)
+
+- `014_search_voices.sql`: `brain.search_voices(query, scope, limit_own, limit_outside, min_sim, outside_min_sim)`. Scope `own` returns Coach Gen's gold entries (including adopted entries typed "outside voice") and chunks from his own documents, cutoff 0.32. Scope `outside` returns chunks from documents owned by `outside`, cutoff 0.25 on meaning, top 3. Scope `all` (default) returns both lists. Each row has `voice`, `author`, `source`, `place` ("page 93" for books). The main `brain.search_all` stays unchanged.
+- The War of Art (Steven Pressfield, 2002) is loaded as `brain.sources` 53 and `brain.documents` 3 (owner `outside`, 591 turns from PDF pages 6 to 158, 103 chunks). Data only, no migration.
