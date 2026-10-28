@@ -132,3 +132,9 @@ Tested against a fixed 20-question set (`claude/Brain_Test_Set.md` in the projec
 
 - `014_search_voices.sql`: `brain.search_voices(query, scope, limit_own, limit_outside, min_sim, outside_min_sim)`. Scope `own` returns Coach Gen's gold entries (including adopted entries typed "outside voice") and chunks from his own documents, cutoff 0.32. Scope `outside` returns chunks from documents owned by `outside`, cutoff 0.25 on meaning, top 3. Scope `all` (default) returns both lists. Each row has `voice`, `author`, `source`, `place` ("page 93" for books). The main `brain.search_all` stays unchanged.
 - The War of Art (Steven Pressfield, 2002) is loaded as `brain.sources` 53 and `brain.documents` 3 (owner `outside`, 591 turns from PDF pages 6 to 158, 103 chunks). Data only, no migration.
+
+### Loading long outside texts from GitHub (28 Oct 2026)
+
+- `015_load_from_github.sql`: `brain.github_fetch(path)` and `brain.load_from_github(path)`. The token is a read-only fine-grained GitHub token for this repo, stored in the Supabase Vault as `coach_gen_brain`.
+- Flow for a book: clean the PDF in code into `turns.json`, run `python3 tools/build_load.py turns.json loads/<name>.json meta.json`, push, then run `select * from brain.load_from_github('loads/<name>.json');` and compare the md5 values with the ones the script printed. Load files hold copyrighted book text, so remove them from `loads/` after the load. The repo is private.
+- Mindset (Carol S. Dweck) is source 54, 28 documents (ids 4 to 31), 1,735 paragraphs, 411 chunks. It was loaded the slow way, through the chat, before this route existed.
