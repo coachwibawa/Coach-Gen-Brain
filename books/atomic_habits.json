@@ -1,0 +1,128 @@
+{
+ "title": "Atomic Habits",
+ "keep_pages": "8-201,204-210",
+ "front_label": "Introduction: My Story",
+ "chapters": [
+  [
+   8,
+   "Introduction: My Story"
+  ],
+  [
+   17,
+   "Chapter 1: The Surprising Power of Atomic Habits"
+  ],
+  [
+   31,
+   "Chapter 2: How Your Habits Shape Your Identity (and Vice Versa)"
+  ],
+  [
+   42,
+   "Chapter 3: How to Build Better Habits in 4 Simple Steps"
+  ],
+  [
+   54,
+   "Chapter 4: The Man Who Didn\u2019t Look Right"
+  ],
+  [
+   62,
+   "Chapter 5: The Best Way to Start a New Habit"
+  ],
+  [
+   72,
+   "Chapter 6: Motivation Is Overrated; Environment Often Matters More"
+  ],
+  [
+   81,
+   "Chapter 7: The Secret to Self-Control"
+  ],
+  [
+   87,
+   "Chapter 8: How to Make a Habit Irresistible"
+  ],
+  [
+   97,
+   "Chapter 9: The Role of Family and Friends in Shaping Your Habits"
+  ],
+  [
+   106,
+   "Chapter 10: How to Find and Fix the Causes of Your Bad Habits"
+  ],
+  [
+   116,
+   "Chapter 11: Walk Slowly, but Never Backward"
+  ],
+  [
+   122,
+   "Chapter 12: The Law of Least Effort"
+  ],
+  [
+   131,
+   "Chapter 13: How to Stop Procrastinating by Using the Two-Minute Rule"
+  ],
+  [
+   139,
+   "Chapter 14: How to Make Good Habits Inevitable and Bad Habits Impossible"
+  ],
+  [
+   147,
+   "Chapter 15: The Cardinal Rule of Behavior Change"
+  ],
+  [
+   156,
+   "Chapter 16: How to Stick with Good Habits Every Day"
+  ],
+  [
+   165,
+   "Chapter 17: How an Accountability Partner Can Change Everything"
+  ],
+  [
+   173,
+   "Chapter 18: The Truth About Talent (When Genes Matter and When They Don\u2019t)"
+  ],
+  [
+   182,
+   "Chapter 19: The Goldilocks Rule: How to Stay Motivated in Life and Work"
+  ],
+  [
+   189,
+   "Chapter 20: The Downside of Creating Good Habits"
+  ],
+  [
+   199,
+   "Conclusion: The Secret to Results That Last"
+  ],
+  [
+   204,
+   "Appendix: Little Lessons from the Four Laws"
+  ],
+  [
+   209,
+   "Appendix: How to Apply These Ideas to Business"
+  ],
+  [
+   210,
+   "Appendix: How to Apply These Ideas to Parenting"
+  ]
+ ],
+ "parts": [
+  16,
+  53,
+  86,
+  115,
+  146,
+  172
+ ],
+ "styles": {
+  "Georgia 14.4": "body",
+  "Georgia-Bold 14.4": "body",
+  "Georgia 10.8": "body",
+  "Georgia-Bold 10.8": "body",
+  "Arial-BoldMT 14.4": "heading",
+  "ArialMT 16.6": "heading",
+  "ArialMT 23.8": "chapter",
+  "Arial-BoldMT 28.8": "chapter",
+  "ArialMT 10.8": "figure",
+  "Arial-BoldMT 10.8": "figure",
+  "ArialMT 9.4": "figure"
+ }
+}

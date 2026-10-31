@@ -1,0 +1,36 @@
+{
+ "title": "The War of Art",
+ "keep_pages": "6-157",
+ "front_label": "Foreword",
+ "drop_lines": [
+  "^_+$",
+  "^[0-9]{1,3}$"
+ ],
+ "chapters": [
+  [
+   16,
+   "Book One: Resistance, Defined"
+  ],
+  [
+   64,
+   "Book Two: Combating Resistance"
+  ],
+  [
+   103,
+   "Book Three: Beyond Resistance"
+  ]
+ ],
+ "styles": {
+  "Times-Roman 11.5": "body",
+  "Times-Italic 11.5": "body",
+  "Times-Roman 14.0": "heading",
+  "Times-Roman 13.5": "heading",
+  "Helvetica 18.0": "heading",
+  "Helvetica 24.0": "chapter",
+  "Times-Roman 11.0": "body",
+  "Times-Roman 12.0": "body",
+  "Times-Italic 12.0": "body",
+  "Courier 10.0": "body",
+  "Courier 11.0": "body"
+ }
+}

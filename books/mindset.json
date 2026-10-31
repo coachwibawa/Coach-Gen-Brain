@@ -1,0 +1,55 @@
+{
+ "title": "Mindset",
+ "keep_pages": "7-247",
+ "front_label": "Introduction",
+ "chapters": [
+  [
+   7,
+   "Introduction"
+  ],
+  [
+   9,
+   "Chapter 1: The Mindsets"
+  ],
+  [
+   20,
+   "Chapter 2: Inside the Mindsets"
+  ],
+  [
+   56,
+   "Chapter 3: The Truth About Ability and Accomplishment"
+  ],
+  [
+   82,
+   "Chapter 4: Sports: The Mindset of a Champion"
+  ],
+  [
+   106,
+   "Chapter 5: Business: Mindset and Leadership"
+  ],
+  [
+   141,
+   "Chapter 6: Relationships: Mindsets in Love (or Not)"
+  ],
+  [
+   167,
+   "Chapter 7: Parents, Teachers, and Coaches: Where Do Mindsets Come From?"
+  ],
+  [
+   210,
+   "Chapter 8: Changing Mindsets"
+  ]
+ ],
+ "chapter_line_re": "^Chapter \\d$",
+ "styles": {
+  "LiberationSerif 14.4": "body",
+  "LiberationSerif-Italic 14.4": "body",
+  "LiberationSerif-BoldItalic 14.4": "heading",
+  "LiberationSans 14.4": "heading",
+  "LiberationSans-Bold 14.4": "heading",
+  "LiberationSans-Bold 16.6": "chapter",
+  "LiberationSerif-Bold 10.8": "heading",
+  "LiberationSerif 10.8": "body",
+  "LiberationSerif 8.6": "skip"
+ }
+}

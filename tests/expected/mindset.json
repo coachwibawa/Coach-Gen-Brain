@@ -1,0 +1,14 @@
+{
+ "book": "mindset",
+ "turns": 1675,
+ "words": 91143,
+ "chars_no_space": 433286,
+ "kinds": {
+  "chapter": 9,
+  "body": 1491,
+  "heading": 175
+ },
+ "chapters": 9,
+ "all_md5": "45b0b8b7edf32c3fec1f61ac8d7d6ff9",
+ "note": "Regression key made 31 Oct 2026 by tools/parse_book.py. No text lost against the PDF. Compared with the older hand parser output: same characters except credit lines, section-break dashes and periods the hand parser added; fewer turns because the hand parser cut paragraphs at page breaks."
+}

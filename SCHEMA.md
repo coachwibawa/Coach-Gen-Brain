@@ -138,3 +138,16 @@ Tested against a fixed 20-question set (`claude/Brain_Test_Set.md` in the projec
 - `015_load_from_github.sql`: `brain.github_fetch(path)` and `brain.load_from_github(path)`. The token is a read-only fine-grained GitHub token for this repo, stored in the Supabase Vault as `coach_gen_brain`.
 - Flow for a book: clean the PDF in code into `turns.json`, run `python3 tools/build_load.py turns.json loads/<name>.json meta.json`, push, then run `select * from brain.load_from_github('loads/<name>.json');` and compare the md5 values with the ones the script printed. Load files hold copyrighted book text, so remove them from `loads/` after the load. The repo is private.
 - Mindset (Carol S. Dweck) is source 54, 28 documents (ids 4 to 31), 1,735 paragraphs, 411 chunks. It was loaded the slow way, through the chat, before this route existed.
+
+## Book parser (added 31 Oct 2026)
+
+`tools/parse_book.py` turns a text PDF into `turns.json` for `tools/build_load.py`. It reads the font and size of every line (pdfplumber), not the spaces, so one tool covers every book.
+
+- Profile: `python3 tools/parse_book.py book.pdf --profile` prints a page map, a style table with sample lines, left edges, the chapter-start candidates and the contents page. About 3,000 tokens to read.
+- Settings: `books/<name>.json`, no book text. Keys are in `books/README.md`.
+- Parse: `python3 tools/parse_book.py book.pdf books/<name>.json turns.json`. It prints the checks: no text lost (source and turns compared with all spaces removed), unmapped styles, dropped lines, heading and paragraph flags, and PAGES TO LOOK AT. Read only those pages.
+- Tests: `books/atomic_habits.json`, `books/mindset.json`, `books/war_of_art.json` and the regression keys in `tests/expected/` (counts and one md5, no text). `tests/check_expected.py book.pdf settings expected` re-runs a book. `tests/compare_parse.py new.json old.json` compares two parses by paragraph boundary.
+- Results on 31 Oct 2026: all three books lose no text. Against the older hand parsers the text is the same except credit lines, section-break dashes and periods the hand parser added. The new parser joins paragraphs across page breaks (the hand parsers cut at every page).
+- Not covered: scanned PDFs (the profile stops with a warning), EPUB, notes and index pages (cut by `keep_pages`).
+
+Migration 016: book chunks in `brain.search_all` show `p39` instead of a time.

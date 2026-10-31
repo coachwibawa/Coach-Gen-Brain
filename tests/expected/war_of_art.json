@@ -1,0 +1,14 @@
+{
+ "book": "war_of_art",
+ "turns": 640,
+ "words": 23888,
+ "chars_no_space": 111122,
+ "kinds": {
+  "heading": 90,
+  "body": 547,
+  "chapter": 3
+ },
+ "chapters": 4,
+ "all_md5": "b130e18d76cea46ce04563465dbce610",
+ "note": "Regression key made 31 Oct 2026 by tools/parse_book.py. No text lost against the PDF. Compared with the older hand parser output: same characters except credit lines, section-break dashes and periods the hand parser added; fewer turns because the hand parser cut paragraphs at page breaks."
+}

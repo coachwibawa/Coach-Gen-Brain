@@ -1,0 +1,16 @@
+{
+ "book": "atomic_habits",
+ "turns": 1278,
+ "words": 61666,
+ "chars_no_space": 292239,
+ "kinds": {
+  "chapter": 25,
+  "heading": 78,
+  "body": 1112,
+  "part": 6,
+  "figure": 57
+ },
+ "chapters": 25,
+ "all_md5": "adef15617b1a4fd6384b92bd33c39c0e",
+ "note": "Regression key made 31 Oct 2026 by tools/parse_book.py. No text lost against the PDF. Compared with the older hand parser output: same characters except credit lines, section-break dashes and periods the hand parser added; fewer turns because the hand parser cut paragraphs at page breaks."
+}
