@@ -273,8 +273,7 @@ def parse(path, cfg, out):
                 cur['t'] += t if not cur['t'].endswith(' ') else t; l['_page'] = pno; prev_line = l; continue
             if len(t) == 1 and t.isalpha() and l['size'] > 1.25 * (body_lines[0]['size'] if body_lines else 12):
                 add_text(t, pno, 'body', True); l['_dropcap'] = True; l['_page'] = pno; prev_line = l; continue
-            for pre in speakers:
-                if t.startswith(pre): break
+            if any(t.startswith(pre) for pre in speakers): new = True
             add_text(t, pno, 'body', new); l['_page'] = pno; prev_line = l
         flush_head()
         src_page_end.append((pno, sum(map(len, src_chars))))
@@ -317,7 +316,7 @@ def report(turns, src_chars, src_page_end, cfg, unmapped, dropped, speakers):
     paras = [t for t in turns if t['k'] == 'body']
     for t in paras:
         w = len(t['t'].split())
-        if w > 400 or t['t'][:1].islower() or w < 4: flags.append(('para', t))
+        if w > 400 or t['t'][:1].islower() or (w < 4 and not speakers): flags.append(('para', t))
     print(f"FLAGS {len(flags)}")
     for kind, t in flags[:25]:
         print(f"  [{kind}] p{t['s']} {len(t['t'].split())}w: {t['t'][:70]!r}")

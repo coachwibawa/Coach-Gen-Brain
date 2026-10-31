@@ -1,0 +1,51 @@
+{
+ "title": "The Courage to Be Disliked",
+ "keep_pages": "9-246",
+ "front_label": "Prologue",
+ "chapters": [
+  [
+   10,
+   "Introduction"
+  ],
+  [
+   16,
+   "The First Night: Deny Trauma"
+  ],
+  [
+   52,
+   "The Second Night: All Problems Are Interpersonal Relationship Problems"
+  ],
+  [
+   106,
+   "The Third Night: Discard Other People’s Tasks"
+  ],
+  [
+   144,
+   "The Fourth Night: Where the Center of the World Is"
+  ],
+  [
+   187,
+   "The Fifth Night: To Live in Earnest in the Here and Now"
+  ],
+  [
+   242,
+   "Afterword by Fumitake Koga"
+  ],
+  [
+   244,
+   "Afterword by Ichiro Kishimi"
+  ]
+ ],
+ "speakers": {
+  "YOUTH:": "Youth",
+  "PHILOSOPHER:": "Philosopher"
+ },
+ "styles": {
+  "EBGaramond-Regular 14.4": "body",
+  "EBGaramond-Italic 14.4": "body",
+  "EBGaramond-Bold 10.8": "body",
+  "EBGaramond-Regular 26.6": "heading",
+  "EBGaramond-Regular 20.2": "chapter",
+  "EBGaramond-Italic 28.8": "chapter"
+ }
+}
