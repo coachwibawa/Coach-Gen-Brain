@@ -1,0 +1,19 @@
+{
+ "book": "courage_to_be_disliked",
+ "turns": 1573,
+ "words": 58669,
+ "chars_no_space": 268321,
+ "kinds": {
+  "body": 1510,
+  "heading": 58,
+  "chapter": 5
+ },
+ "speakers": {
+  "none": 119,
+  "Youth": 727,
+  "Philosopher": 727
+ },
+ "chapters": 9,
+ "all_md5": "f329f08f89736dbeef63c4dc0d54c02f",
+ "note": "Regression key made 1 Nov 2026. Same parse that was loaded on 31 Oct 2026 (documents 93 to 107). No text lost against the PDF."
+}

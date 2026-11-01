@@ -6,7 +6,11 @@ Steps for a new book:
 1. `python3 tools/parse_book.py book.pdf --profile` and read the report.
 2. Write `books/<name>.json` from it.
 3. `python3 tools/parse_book.py book.pdf books/<name>.json turns.json`. Read the checks and only the pages listed under PAGES TO LOOK AT.
-4. `python3 tools/build_load.py turns.json loads/<name>.json meta.json`, then the GitHub load route.
+4. Write `meta.json` (see SCHEMA.md, Book parser). For an existing source put `"pass"` and `"left_out_add"` in it, so the load records itself and no UPDATE is needed.
+5. `python3 tools/build_load.py turns.json loads/<name>.json meta.json`
+6. `tools/push_load.sh loads/<name>.json`, run the printed SQL, compare the md5 values, then `tools/drop_load.sh <name>`.
+7. Check embeddings: about 25 chunks a minute.
+8. After a new book, run `tests/check_expected.py` on any test book whose PDF is attached, and add a key for the new one in `tests/expected/`.
 
 Keys (all optional except `keep_pages` and `styles`):
 

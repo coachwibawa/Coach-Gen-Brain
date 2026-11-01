@@ -1,9 +1,11 @@
 #!/bin/bash
-# Delete the throwaway load branch on GitHub and locally, and the local load file.
+# Remove a load file from main after the load and push.
 # Usage: tools/drop_load.sh <name>
 set -e
-name="$1"; br="load-$name"
-git push -q origin --delete "$br" 2>&1 | grep -v -e 'remote:' || true
-git branch -q -D "$br" 2>/dev/null || true
-rm -f "loads/$name.json"
-git ls-remote --heads origin "$br" | grep -q . && echo "BRANCH STILL ON GITHUB" || echo "branch $br gone"
+name="$1"; f="loads/$name.json"
+git checkout -q main
+git rm -q --cached "$f" 2>/dev/null || git rm -q "$f"
+rm -f "$f"
+git commit -q -m "Remove load file $name after load (copyrighted text)"
+git push -q origin main 2>&1 | grep -v -e 'remote:' || true
+git ls-tree -r HEAD --name-only | grep -c '^loads/' | sed 's/^/load files left on main: /'

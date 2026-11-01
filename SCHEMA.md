@@ -151,3 +151,23 @@ Tested against a fixed 20-question set (`claude/Brain_Test_Set.md` in the projec
 - Not covered: scanned PDFs (the profile stops with a warning), EPUB, notes and index pages (cut by `keep_pages`).
 
 Migration 016: book chunks in `brain.search_all` show `p39` instead of a time.
+
+## Book load route, final shape (1 Nov 2026)
+
+One pass for a book PDF, start to finish:
+1. `python3 tools/parse_book.py book.pdf --profile`, write `books/<name>.json`, then `python3 tools/parse_book.py book.pdf books/<name>.json turns.json`. NO TEXT LOST must be OK. Read only the PAGES TO LOOK AT.
+2. `meta.json`: `source_id` for a source that already exists (with `"pass"` and `"left_out_add"`), or a `"source"` object for a new one (with `passes` and `left_out`). `context_prefix`, `speaker`, `title_prefix`, `notes`, `added_by`.
+3. `python3 tools/build_load.py turns.json loads/<name>.json meta.json`. Heading, chapter and part turns get speaker "Section title", so chunks do not show a heading as said by the author.
+4. `tools/push_load.sh loads/<name>.json`, run the printed `select * from brain.load_from_github(...)`, compare md5 values, `tools/drop_load.sh <name>`.
+5. Check embeddings until none are waiting for the source.
+
+Migration 018: `load_from_github` appends `pass` to `sources.passes` and `left_out_add` to `sources.left_out` for an existing source. Inserts plus this append happen inside the function, so the load needs no separate UPDATE.
+
+Migration 017 and 017b: `search_voices` outside list takes the best passage of each book first, then fills by similarity. Candidate pool 250 chunks (was 80). Test record: Run 8 in the project doc `claude/Brain_Test_Set.md`.
+
+Known limits:
+- Branch deletion and force-push are blocked from the Claude workspace, so load files go to main and are removed right after. The history of main holds the Atomic Habits and Courage load files and the Mindset test file. The repo is private.
+- A leftover branch `load-routetest` holds one dummy test line. It can be deleted on GitHub (Branches page).
+- Loaded on 31 Oct 2026 or earlier: chunks show headings with the author as speaker. Later loads mark them "Section title".
+
+Books in the raw layer: The War of Art (doc 3), Mindset (source 54, docs 4 to 31), Atomic Habits (source 47, docs 66 to 90), The Courage to Be Disliked (source 45, docs 93 to 107). Regression keys for all four in `tests/expected/`.
