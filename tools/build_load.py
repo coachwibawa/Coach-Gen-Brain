@@ -47,6 +47,8 @@ for d in docs:
         o = {'s': t['s'], 't': t['t']}
         if t.get('sp') and t['sp'] != meta['speaker']:
             o['sp'] = t['sp']
+        elif t.get('k') in ('heading', 'chapter', 'part'):
+            o['sp'] = 'Section title'
         turns_out.append(o)
     out_docs.append({
         'title': f"{meta['title_prefix']}, {d['ch']}{part}",
@@ -58,6 +60,7 @@ for d in docs:
     report.append((out_docs[-1]['title'], len(T), len(chunks), hashlib.md5('\n'.join(t['t'] for t in T).encode()).hexdigest()))
 
 f = {k: v for k, v in meta.items() if k not in ('title_prefix', 'target_words', 'max_doc_bytes')}
+# meta may carry "pass" and "left_out_add": brain.load_from_github appends them to the existing source (migration 018)
 f['docs'] = out_docs
 json.dump(f, open(out_path, 'w'), ensure_ascii=False, separators=(',', ':'))
 for r in report: print(r)
