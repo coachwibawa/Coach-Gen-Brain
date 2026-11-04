@@ -1,0 +1,25 @@
+:root {
+  /* Coach Gen brand tokens v1.0, 30 Oct 2026. Source: 01_CORE.md */
+  --cg-abyss: #01131C;
+  --cg-deep-water: #0D4A59;
+  --cg-aqua: #72CCD0;
+  --cg-mist: #EAF5F6;
+  --cg-charcoal: #2B2B2B;
+  --cg-gold: #C8B796;
+  --cg-deep-gold: #9A8360;
+  --cg-ivory: #F6F2EA;
+  --cg-black: #000000;
+  --cg-white: #FFFFFF;
+  --cg-font-display: 'Montserrat', Arial, sans-serif;
+  --cg-font-reading: 'Libre Baskerville', Georgia, serif;
+  --cg-radius: 0;
+  --cg-radius-control: 4px;
+  --cg-rule: 2px;
+  --cg-space-unit: 8px;
+  --cg-max-width: 1200px;
+}
+.cg-blue-dark { background: #01131C; color: #EAF5F6; --cg-heading: #EAF5F6; --cg-accent: #72CCD0; --cg-button-bg: #72CCD0; --cg-button-text: #01131C; }
+.cg-blue-light { background: #EAF5F6; color: #01131C; --cg-heading: #0D4A59; --cg-accent: #0D4A59; --cg-button-bg: #0D4A59; --cg-button-text: #FFFFFF; }
+.cg-gold-dark { background: #2B2B2B; color: #F6F2EA; --cg-heading: #C8B796; --cg-accent: #C8B796; --cg-button-bg: #C8B796; --cg-button-text: #2B2B2B; }
+.cg-gold-light { background: #F6F2EA; color: #2B2B2B; --cg-heading: #9A8360; --cg-accent: #9A8360; --cg-button-bg: #2B2B2B; --cg-button-text: #F6F2EA; }
+/* Google Fonts: https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap */

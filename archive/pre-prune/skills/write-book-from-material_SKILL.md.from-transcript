@@ -1,0 +1,137 @@
+---
+name: "write-book-from-material"
+description: "Draft, mark up and redraft chapters of Coach Gen's book 5 Laws of Lasting Change from his real material. Use for /write-book-from-material, any chapter, next chapter, or a marked-up draft."
+---
+
+# Write the book from his material
+
+The goal is to finish the whole book from the material that already exists: the Coach Gen Brain, his articles and his own notes. A chapter goes from raw material to a Google Doc he can mark up in two stops. Stop 1: the chapter's key moments, each written three ways, for him to pick. Stop 2: the whole chapter, built around his picks. Do every step between the stops in one go. Do not stop to ask him to approve a fact sheet or an outline.
+
+**Argument.** A chapter name ("Chapter 1", "Law 3", "Introduction"), or `next` (the first chapter in the book map with no draft yet), or `all` (stop 1 for every undrafted chapter in book-map order, one key-moments doc each), or `picked <chapter>` (he has picked key moments: log the picks, then build the chapter), or `marked <chapter>` (he has marked up a chapter draft: log it, then redraft). With no argument, use `next`. With no argument and picks or a marked draft waiting, do that first.
+
+**This skill is a procedure, not a rulebook.** The writing rules live in the Book Rules file. Never restate them here or in chat. A second copy drifts.
+
+**Keep it lean.** His words (6 Oct 2026): "This new workflow is too token and time inefficient, and doesn't seem to accomplish the objective of generating creativity and new lines or constructions." Write in the conversation, not through fresh agents. A fresh agent re-reads about 80 KB of rules before it writes a word, and a beat-by-beat outline leaves it nothing to invent but the wording.
+
+---
+
+## 0. Where everything lives
+
+His Mac folder `/Users/coachwibawa/Documents/5 Laws of Lasting Change/` (device bridge, `$HOME/mnt/5 Laws of Lasting Change/` in device_bash):
+
+- `Book/Coach_Gen_Book_Rules.md`: **the master Book Rules.** The project copy `claude/Coach_Gen_Book_Rules.md` is a mirror. After any change, write the project mirror from the same file with `project_write` and `local_path`. Never re-type it.
+- `Book/Book_Status.md`: the build state. Book map, epoch and Google Doc id per chapter, his score per epoch, and the **ownership ledger** (which chapter owns which idea, story and quote). Create it on the first run from `claude/Full_Read_Progress.md` and the calibration log if it does not exist.
+- `Book/build/<chapter>/`: working files per chapter (`fact_sheet.md`, `outline.md`, `key_moments_eN.md`, `epochN.json` with the exact text delivered). Working files go here, never into the project.
+- **The Coach Gen Brain** (Supabase project `zjedqjiuxkoncwsmylls`, schema `brain`): the one home of all his material. It replaced the worksheet, the Obsidian vaults and the Testimony collection on 27 Oct 2026. Read `claude/Brain_Rule.md` first, then query `brain.entries_full` with `execute_sql` (examples in section 3 of that file). Everything in it is real unless `certainty` is `built` (invented for a persona). Never ask him to verify it. Never print status `never use`. Use each text exactly as written. Old IDs are in `legacy_ref`. The old files are frozen history.
+
+In the project: `Coach_Gen_Language_Rules.md` (protected, read only), `Guardrails.md`, `claude/Coach_Gen_Protected_Docs.md`, `claude/Coach_Gen_Book_Calibration_Log.md` (his verbatim reactions, add-only), and the full-read findings and notes that the Book Rules cite (`claude/Findings_Books.md` section F covers research, quotes, headings and how many terms).
+
+In Notion: his articles, Inside The Introvert (`collection://d73333e2-807b-4aee-a4ce-0bb96ef282e7`), including the Laws of Lasting Change Acts 1 to 3 and his true-corpus pieces (My Dragon series, The Social Battery Myth, On Blind Spots, How Do You Reset?).
+
+In Google Drive: session transcripts (for example "Sri 3 Transcript"). **For checking a fact only. Never a source of new detail.**
+
+**Writing to his Mac.** `device_commit_files` can write a stale cached copy when a staged path was used before. On 6 Oct it put an older Book Rules over the master for a minute. Always stage under a new file name, commit to a new path, check the md5 on the Mac, then `mv` it over the target. Small text edits go in place with a short python script in device_bash.
+
+If the Mac is not reachable, say so in one line, use the project copies, and tell him they may be stale.
+
+## 1. Load first
+
+Read in full before writing a sentence: the Book Rules, `Coach_Gen_Language_Rules.md`, `Guardrails.md`, the protected-docs list, `Book_Status.md`, and every calibration-log entry for this chapter and for the Introduction. Read them once per session, not once per draft. Do not draft from memory of the rules.
+
+## 2. If he picked key moments or marked a draft, log it first
+
+Read the latest Google Doc with `read_file_content` and `includeComments: true`. Diff it against what you delivered (`key_moments_eN.md` or `epochN.json`) to find what he typed.
+
+- Copy his score, his picks, his comments and his inline notes into the calibration log **word for word**, with the words each one sits on. Add only. Never condense.
+- What he **typed into the text** becomes a keeper line, word for word. It is not a rule.
+- A comment that names a problem may become a rule. Check it for overfitting first, and never derive a rule from an edit he did not comment on. The Book Rules are protected: show him the exact proposed lines in chat, and write them only when he names the change in his own words, to the Mac master first, then the project mirror from the same bytes. If a rule clashes with the Language Rules, it goes in the warnings section with his decision.
+- If a note implies a change to `Coach_Gen_Language_Rules.md`, show him the exact lines in chat. Never write to it.
+
+## 3. Gather the material for this chapter
+
+The book map row below names where material used to live (worksheet, Obsidian, Testimony). Find the same material in the brain by Law, type and `legacy_ref`. Read every source in the row in full. A skim of one part is not a read. Use the ownership ledger to see what other chapters already own.
+
+| Order | Chapter | Main material |
+|---|---|---|
+| 1 | Chapter 1, the pattern (his own story) | Laws of Lasting Change Acts 1 to 3 (Notion), the worksheet Stories row notes for the three acts, My Dragon series |
+| 2 | Law 1, Reset My Course | Worksheet Law 1 page and column, Obsidian Law 1, Testimony 3B and T-110 to T-119 (David), T-022 |
+| 3 | Law 2, Reframe Past Regret | Worksheet Law 2, Obsidian Law 2, Testimony 3C and T-018, the accepted chimpanzee piece (Language Rules section 14) |
+| 4 | Law 3, Resolve Present Friction | Worksheet Law 3 (his pruning story is its Stories cell), Obsidian Law 3, Laws 3-5 Map, Testimony 3D, T-014, T-017 |
+| 5 | Law 4, Reap Future Habits | Worksheet Law 4, Obsidian Law 4, Laws 3-5 Map, Testimony 3E, T-019 to T-021 |
+| 6 | Law 5, Relax To Results | Worksheet Law 5, Obsidian Law 5, Testimony 3F, T-025 |
+| 7 | Introduction (epoch 3 and later) | Testimony INTRO and INTRO-LETTER entries, his published pieces. **Write it last**, once the chapters exist, so it promises only what they deliver |
+
+A conclusion is not decided. Do not write one unless he asks. An article's Insight 2 and 3 are optional (Book Rules R29).
+
+## 4. Build the fact sheet (`build/<chapter>/fact_sheet.md`)
+
+- Every event, detail, number and quote the chapter could use, in time order, each tagged with its source (brain `legacy_ref` and entry id, article title).
+- **Keeper lines**: his own words to print word for word. His worksheet sentences, his typed edits, and lines he praised in the calibration log ("this is good", "cool sentence").
+- **No article sentences.** Facts and keepers only. An article sentence that is not a keeper is rewritten as a plain fact. This is what stops the old draft from leaking in.
+- Strip anything on the NEVER USE list: weights, health readings, money figures, health framing, third parties' private stories. Composite names only.
+
+## 5. Write a short outline (`build/<chapter>/outline.md`)
+
+Three things, not a beat-by-beat plan:
+
+- The blank: "this chapter is about ____", and the one thought the reader leaves with.
+- The thread word, and the 2 or 3 things the reader must keep (R32).
+- The key moments: the 5 or 6 places that carry the chapter (its opening, its turns, its payoff, its hand-off), and where the headings go (R31).
+
+Respect the ownership ledger. An idea another chapter owns gets, at most, one callback line here.
+
+**Law chapters, default shape**, as a menu, not a sequence to fill. Skip any slot that has no material:
+  1. Opening story: one case or his own scene, no heading.
+  2. The stuck point in the reader's own life (Stuck Symptoms, self-talk inline).
+  3. Myth and reality (Misconceptions, Common Misexecutions).
+  4. The idea, shown first and then named (Concept, Coined Term, Hidden Reward).
+  5. The method: his Core Exercise and Resources. **Never invented.**
+  6. What changes (DoD lines, Testimony WHAT-CHANGED and END-CARD lines).
+  7. Why this Law comes here and what it opens next (Why This Position, What Happens If Skipped, Sequence Trigger).
+  8. A From Within You exercise box, built from his self-directed questions and Core Exercise.
+  9. A Chapter Summary box, with lines lifted from the chapter.
+
+If something needs material that does not exist, do not invent it. Mark it `[MATERIAL NEEDED: what, and where it would go]`.
+
+## 6. Stop 1: the key moments, three ways each
+
+In the conversation, write each key moment three ways. **Built differently, not reworded:** for example time order, his line first, the reader first, the payoff first, a callback to an earlier line, a mirror with matching beats. Label each version with how it is built. Every fact comes from the fact sheet, and every version follows the Book Rules.
+
+Check by script (em dashes, semicolons, numbers, British spelling, "my clients"), and check every fact against the fact sheet yourself. No checker agent.
+
+Deliver a Google Doc, "5 Laws Manuscript, <Chapter> Key Moments", with one grey line at the top asking him to pick one version per moment, or mix them, and to comment on any line. Save the text to `build/<chapter>/key_moments_eN.md`, update `Book_Status.md`, and add one line to the calibration log. Reply with 1 or 2 lines and the link.
+
+## 7. Stop 2: the chapter, built around his picks
+
+Write the whole chapter in the conversation, from the fact sheet forward, with his picks in place and the joins between them written fresh. Never draft by editing an earlier chapter draft. Review once against Book Rules section I, then run the script. Fix, and do not call the draft clean until the script says so.
+
+## 8. Deliver the chapter
+
+- Build the Google Doc from HTML with Drive `create_file` (`contentMimeType: text/html`, which converts it to a Google Doc). Title it "5 Laws Manuscript, <Chapter> Epoch N".
+- Lay the doc out in this order:
+  1. The grey HOW TO MARK UP line, asking for one score: "x% as a book".
+  2. The chapter. Quotes sit inside the prose (R30). Exercise and summary boxes are set off.
+  3. A grey note at the end: the `[MATERIAL NEEDED]` list, and at most 3 questions, only about facts, realness or missing material.
+- Save the exact delivered text to `build/<chapter>/epochN.json`.
+- Update `Book_Status.md`: the epoch, the doc id, and the ideas, stories and quotes this chapter now owns.
+- Add one line to the calibration log: drafted, awaiting his markup. Write the project mirror.
+- Reply in chat with 1 or 2 lines and the link. Do not recap the chapter. Do not defend choices he has not questioned.
+
+---
+
+## What has gone wrong before (his words, from the calibration log)
+
+- **A heavy pipeline.** "This new workflow is too token and time inefficient, and doesn't seem to accomplish the objective of generating creativity and new lines or constructions." Hence the lean method and the key moments.
+- **Research dropped into his story.** "the way you put things is very jarring." Hence R28.
+- **A transcript used as a quarry.** "where the fuck did healthy come from?" Facts come from approved material only.
+- **Patching an earlier draft.** "yes now it's parallel and long, but it's just making it robotic and repeated." And on epoch 2: "the content is still held back by previous draft it feels." Hence the fact sheet, and writing from it forward.
+- **Too many ideas, or ideas from other chapters.** "x is not even a function of y, and is just random." Hence the ownership ledger.
+- **A wall of context.** "my words are verbatim and records of coaching is nice. but they are in a wall of context." Give the reader the facts before a client's line.
+- **A forced parallel or mirror.** "the parallel is still not that connected or is forced in a context that can't use that structure."
+- **A made-up image.** "what is this vague metaphor no one ever uses?"
+- **An invented prescription.** "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe." The method comes from the brain (Core Exercise, Hidden Reward, self-directed questions).
+- **Working files in the project.** Fact sheets, outlines and drafts live in `Book/build/` on his Mac.
+
+## Brain use log
+
+When a piece goes into a chapter, add a row to `brain.used_in` (entry, work, location, persona if any). Check `brain.used_in` first so nothing is repeated. A minor entry can be used once per work. See `claude/Brain_Rule.md` section 5.
