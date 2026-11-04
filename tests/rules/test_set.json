@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "built": "2026-11-04",
  "cases": [
   {
@@ -255,6 +255,26 @@
    "text": ""
   },
   {
+   "id": "F8",
+   "verdict": "fail",
+   "output": "case study (book)",
+   "title": "Case Study Test round 1, passage 2: Aiman",
+   "source": "Google Doc \"5 Laws, Case Study Test (8 passages)\" (1xAwmGFpjozX_NZhuKM30pIPySXkb7X_lB0eY5wuRTMo)",
+   "date": "2026-11-04",
+   "score": "2/10",
+   "his_words": [
+    "Wtf is this, nothing after the first sentence make any sense"
+   ],
+   "flags": [
+    {
+     "anchor": "In late October, he came to me with a deadline",
+     "his_note": "nothing after the first sentence make any sense"
+    }
+   ],
+   "cause": "Claude's reading of the marks: under-built. Each gap between two recorded moments needed one or two reasonable bridges.",
+   "text": "Aiman owns a cafe, and for years he sent his assistant to present for him, even in his own boardroom. In late October, he came to me with a deadline: the December meeting, in his own voice. He tried out his opening line on his morning customers. Before December, he was confident."
+  },
+  {
    "id": "P1",
    "verdict": "pass",
    "output": "article",
@@ -276,15 +296,21 @@
    "id": "P2",
    "verdict": "pass",
    "output": "letter",
-   "title": "The force paragraph, Lasting Change Letters #1",
-   "source": "Coach_Gen_Language_Rules.md, \"A paragraph he could not have written himself, in his words\".",
+   "title": "Lasting Change Letters #1: Never Split The Difference (full, as you pasted it)",
+   "source": "Pasted by Gen in chat, 4 Nov 2026. Accepted 25 Sep at \"90%, which is a passing mark.\"",
    "date": "2026-09-25",
-   "score": "endorsed line by line",
+   "score": "90%. The force paragraph endorsed line by line.",
    "his_words": [
+    "90%, which is a passing mark. if I want 100% I'll write it without AI.",
     "this is one paragraph here that I would not be able to conjure myself even though that is 100% what I am thinking. and this paragraph is in the right place, with the right development of ideas, was the right bridge between the previous and next paragraph."
    ],
-   "note": "Only the paragraph survives. The full v6 letter (\"bravo. 90% there.\") is not in the project, Drive or Notion, so its place between the paragraphs cannot be tested.",
-   "text": "Most of us try to win this negotiation by force. More discipline, a better plan, a harder push. But you cannot overpower the other side when the other side is you. Every time you push, it pushes back just as hard, because it is exactly as strong as you are."
+   "keep": [
+    {
+     "anchor": "Most of us try to win this negotiation by force.",
+     "his_note": "the force paragraph"
+    }
+   ],
+   "text": "Lasting Change Letters #1:Never Split The Difference\n\nLast month I read Never Split The Difference, by Chris Voss, the FBI's former chief international kidnapping negotiator. I picked it up for the stories. Kidnappers, ransom calls, a life on the other end of the phone. About as far from my work as a book can get.\n\nOne of his tools surprised me. When a kidnapper is angry or afraid, he does not argue with it. He names it out loud, calmly, like he is describing the weather. The book calls it labeling, and the idea is that a fear said out loud loses its grip.\n\nThat is where I put the book down, because I do the same thing almost every week, just not with kidnappers.\n\nVoss sits across from someone who is negotiating with him. I sit across from someone who is negotiating with themselves.\n\nIt is the same negotiation, and the same tools work. The only difference is that in my sessions, both sides of the table are the same person.\n\nOne side says, \"If I don't try and fail, I'm lazy.\"\n\nBut the other side says, \"If I try and fail, I'm not good enough.\"\n\nSo they settle on lazy. Lazy can be fixed next Monday. Not good enough feels like forever. The side saying no is not lazy at all. It is protecting them from finding out.\n\nMost of us try to win this negotiation by force. More discipline, a better plan, a harder push. But you cannot overpower the other side when the other side is you. Every time you push, it pushes back just as hard, because it is exactly as strong as you are.\n\nSo do what a negotiator does. Stop arguing, and say out loud what the other side actually wants. It is often the first time that side has been heard instead of fought, and a side that feels heard is finally ready to make a deal.\n\nWe all have a negotiation like this running. The video we recorded 12 times and never posted. The application we filled in and never sent. The person we never asked.\n\nIn yours, what does the side that says no actually want?\n\nUsually something you can give it, once you stop fighting long enough to ask.\n\nCoach Gen"
   },
   {
    "id": "P3",
@@ -337,6 +363,61 @@
    "score": "90%",
    "his_words": [],
    "text": "Insights from me, to you.\n\nIn our first session, David told me his problem in one sentence: he was lazy.\n\nI didn't believe him. David runs his own business, and he takes on consulting work on the side. When we met, he was also weighing a career switch, learning a new skill, and reworking an old project. That is not what a lazy person's week looks like.\n\nSo why did he feel lazy? Because almost nothing he started ever got finished. In his own words: \"I start with a goal, then the first shiny thing pulls me off course.\"\n\nDavid did what a high performer does when something isn't working. He built a system. Every day, he gave himself 0, half, or 1 point. Every 30 days, the count reset, and if his score was too low, he owed a friend. For a while, it worked.\n\nThen the zeros started. One zero turned into a week of them, and one day David noticed that he no longer cared. He told me about it quietly, almost like a confession, and then he asked a question out loud:\n\n\"I stopped caring that I scored zero. Is it because I have no clarity where I'm going?\"\n\nI knew that question, because there was a time when I could have asked it myself. I had my own version of David's points: one new challenge after another, and never once did I ask where any of them were taking me, or who any of this busywork was really for.\n\nHis points and my challenges had the same problem. The effort was real. The direction was missing.\n\nAnd effort without a direction has a cost. You make progress, but it doesn't feel like yours. Keeping it up gets heavier every week, until one day you quit, because none of it was ever really you.\n\nThis isn't only about David's business. You can join a gym because your friends go, learn a language because it looks good on your CV, or chase a promotion because it's simply the next step. You can run hard every day in a direction you never chose.\n\nIf the fix is just to choose a direction, why didn't David choose one? Why didn't I?\n\nCoach Gen\n\nInsights from other experts.\n\nIn 1999, two psychologists named Kennon Sheldon and Andrew Elliot followed people as they worked on their own goals over time, across 3 separate studies. They looked at how well each goal fit the person's own interests and core values.\n\nPeople whose goals fit their own interests and values kept putting in effort for longer, so they were more likely to reach those goals. And when they did reach them, they got more out of it. They felt better than the people who reached goals that were never really theirs.\n\nRead that way, David's zeros were never laziness.\n\nInsight from within you.\n\nWhat is one thing you always have time for in your life?"
+  },
+  {
+   "id": "P7",
+   "verdict": "pass",
+   "output": "book chapter",
+   "title": "Chapter 3 epoch 4: the parent paragraph",
+   "source": "Book/build/law-1/epoch4_chapter.md. Comment in markup_log.md.",
+   "date": "2026-10-30",
+   "score": "praised",
+   "his_words": [
+    "good passage.",
+    "good mix of credibility and argument"
+   ],
+   "text": "If you are a parent who has paid for your child's tutors, classes, or coaching, I don't think you did anything wrong. Worrying about someone you love is normal, and paying for their help is a gift. What you are really hoping for is not that your child drives down the road you picked. It is the day they find a reason of their own to drive at all."
+  },
+  {
+   "id": "P8",
+   "verdict": "pass",
+   "output": "book chapter",
+   "title": "Chapter 3 epoch 4: the reader's-week paragraph",
+   "source": "Book/build/law-1/epoch4_chapter.md. Comment in markup_log.md.",
+   "date": "2026-11-03",
+   "score": "praised",
+   "his_words": [
+    "good way to conclude, I like it."
+   ],
+   "text": "If you have ever called yourself lazy, look at your own week before you believe the word. Count the messages you answered, the favours you said yes to, the small fires you put out at work, and the new things you started over the weekend. That is not the week of a lazy person. It is the week of someone with a full tank and no destination. Many of us drive hard toward a place someone else picked, then call ourselves lazy when the trip wears us out. You can make progress that way. It just won't feel like your progress. Keeping it up gets heavier every week, until you quit, because none of it was ever really you. Then you call it laziness, and the word sticks a little harder."
+  },
+  {
+   "id": "P9",
+   "verdict": "pass",
+   "output": "book chapter",
+   "title": "Chapter 3 epoch 5: David's points system, your rewrite",
+   "source": "Book/build/law-1/markup_log.md, 3 Nov.",
+   "date": "2026-11-03",
+   "score": "his own rewrite",
+   "his_words": [
+    "my rewrites here makes it feel better."
+   ],
+   "text": "So I asked him why the word fit, and he told me about his points system. Every day, he gave himself a score: nothing, half a point, or a full point. Every 30 days the count went back to zero, and if his total was too low, he owed a friend $200. He made a system that makes failing more painful than being lazy, clever.\nFor a while, it worked. Then one day he was sick and scored a zero, one zero became a week of them, and so begins the pattern he's so familiar with. Before long, David was paying his friend $200 every month, money he couldn't afford. It wasn't the zeros or the money that scared him. It was how little he felt about them. He was frustrated: how could he stop caring about something so important? He asked me, \"Is it because I have no clarity of where I'm going?\""
+  },
+  {
+   "id": "P10",
+   "verdict": "pass",
+   "output": "case study (book)",
+   "title": "Case Study Test round 1, passage 6: your door-to-door story",
+   "source": "Google Doc \"5 Laws, Case Study Test (8 passages)\"",
+   "date": "2026-11-04",
+   "score": "8/10",
+   "his_words": [
+    "Good and concise, short and sweet.",
+    "Note that not all stories has to be short, and not all stories have to be long."
+   ],
+   "text": "In my last year of high school, I tried selling property door to door. Until then, I failed maybe once every two months, and I quietly believed that made me special. That one day, I was turned down about a hundred times. One man shut the door before I finished my first sentence. By the twentieth door, I had stopped smiling. By the end of the day, I knew what I was: biasa-biasa aja. Ordinary. For years, I told nobody, not even my brother."
   }
- ]
+ ],
+ "status": "under review by Gen, 4 Nov 2026"
 }
