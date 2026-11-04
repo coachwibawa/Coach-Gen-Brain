@@ -1,0 +1,342 @@
+{
+ "version": 1,
+ "built": "2026-11-04",
+ "cases": [
+  {
+   "id": "F1",
+   "verdict": "fail",
+   "output": "book passage (taste test)",
+   "title": "Taste test round 3, passage 1: \"Why Pushing Harder Fails\", patched rewrite",
+   "source": "Book/Research/taste_tests/r3/taste_test_round3.html (Google Doc \"5 Laws Taste Test, Round 3\"). Marks in claude/Coach_Gen_Book_Calibration_Log.md, Round 3 results.",
+   "date": "2026-10-04",
+   "score": "mark 3/10, flow 5/6",
+   "his_words": [
+    "yes now it's parallel and long, but it's just making it robotic and repeated. It’s overall worse. I think since the start of the idea is fine but becomes really confusing and wobbly at the start of p2; everything after feels trash",
+    "I think this epoch is a total failure."
+   ],
+   "flags": [
+    {
+     "anchor": "If the diet slips, make it stricter. If you",
+     "his_note": "the and you should be parallel. either both thes or both you(r)ss"
+    },
+    {
+     "anchor": "It never lasted, and the higher I set the bar, the worse it got",
+     "his_note": "it is not clear here. if this happens, fix is either reclarify, or make the previous clause more concise."
+    },
+    {
+     "anchor": "So what happens if you stop pushing? What finally worked for me was slower,",
+     "his_note": "wtf is this?"
+    },
+    {
+     "anchor": "And it doesn’t start from zero. Somewhere in your life, you have already changed something without noticing",
+     "his_note": "too many differing concepts that were unexplored."
+    }
+   ],
+   "cause": "Claude's account (calibration log): patched line by line against his notes and a findings checklist, lines bolted on for warmth, a Chapter 1 idea dropped in unexplained. Patching produced \"robotic and repeated\".",
+   "text": "Every time one of my 30-day challenges fell apart, I answered it the same way: I set a higher bar and started another one. Most of the advice I could find told me to do exactly that, and you’ve probably been given the same advice yourself. If the diet slips, make it stricter. If you miss a morning run, set 2 alarms. If the plan falls apart in week 2, write a longer plan.\n\nIt never lasted, and the higher I set the bar, the worse it got: the more work I could see between me and day 30, the less of it I did. It took me years to understand why. You cannot overpower the part of you that wants to stay the same, when that part is you. Every time you push, it pushes back just as hard, because it is exactly as strong as you are. A stricter diet meets a stronger craving. An earlier alarm meets a heavier snooze button. A longer plan meets a longer list of reasons to start tomorrow.\n\nSo what happens if you stop pushing? What finally worked for me was slower, and it never fought that part of me at all. Lasting Change works with the part of you that wants to stay the same, one step at a time, in an order it can accept. And it doesn’t start from zero. Somewhere in your life, you have already changed something without noticing. This time, you do it on purpose."
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "output": "book passage (taste test)",
+   "title": "Taste test round 3, passages 2 and 3: Melina, with invented \"health\" and \"nutritionist\"",
+   "source": "Same doc as F1. Not marked by him: he stopped after passage 1.",
+   "date": "2026-10-04",
+   "score": "not marked",
+   "his_words": [
+    "where the fuck did healthy come from?",
+    "I don't even want to bother marking the rest, because it's a disaster."
+   ],
+   "flags": [
+    {
+     "anchor": "Her health was one of the reasons she had come to coaching",
+     "his_note": "where the fuck did healthy come from?"
+    },
+    {
+     "anchor": "getting healthier",
+     "his_note": "where the fuck did healthy come from?"
+    },
+    {
+     "anchor": "Even her nutritionist once told her",
+     "his_note": "(no note of his) Claude's account: not in Melina's composite or any approved text, taken from the session transcript."
+    },
+    {
+     "anchor": "plan so big it never left the page:",
+     "his_note": "what is this vague metaphor no one ever uses?"
+    }
+   ],
+   "cause": "Claude's account: a transcript meant to check one fact was used as a quarry, and \"health\" and \"her nutritionist\" were invented surface. A made image (\"never left the page\").",
+   "text": "So what I realised is, that’s why I almost never finish anything.\n\nMelina said this to me the 3rd time we met. Her health was one of the reasons she had come to coaching, and this was far from her first try. Every attempt before had begun the same way, with a plan so big it never left the page: a long list of everything she would change, A to J, and then nothing at all.\n\nBy our 3rd session, she was doing something different. She had picked one habit small enough to keep, a 30-minute walk every morning, and she was keeping it. It had even survived what she had worried about since our first session: a work trip out of town. She didn’t go looking for a gym or a treadmill there. She walked everywhere she could, instead of riding, and the habit held.\n\nShe told me about it as if it were nothing much. “It’s small,” she said, “but I’m happy.”\n\nI asked her whether it had always been like this. No, she said, and she told me how her old way worked. It had 2 ways out, and she had used both for years. Sometimes the list was so long that she felt overwhelmed before she began. And when she did begin, the progress came slowly, other people always seemed to change faster, and she dropped the whole thing, with the sentence she had told herself all along:\n\nIt looks easy on other people. I guess I just can’t.\n\n“That’s always been my mindset,” she said. “Can you picture it?” Before I could answer, she answered it herself:\n\nSo what I realised is, that’s why I almost never finish anything.\n\nI asked her if this was something new she was seeing: that what made her stop was impatience, and always comparing herself with other people. “Right,” she said.\n\nI did not have to explain it to her. She found it in her own story, and a lesson you find yourself stays with you much longer than one somebody hands you.\n\n---\n\nIt looks easy on other people. I guess I just can’t.\n\nFor years, that sentence ended every attempt Melina made at getting healthier. She started well, kept at it, and made real progress, only slower than she wanted. But somebody always seemed to be going faster. Even her nutritionist once told her that if she were really consistent she would see results every week, and asked if she had been cheating. Each time, she stopped, and the sentence was there to tell her why.\n\nLook at what that sentence does. It does not describe a slow month. It describes a person, and it closes the case on her: if she just can’t, there is nothing left to try, and stopping is the sensible thing to do. Her new sentence, “That’s why I almost never finish anything,” opens the case again. It points at a pattern, and the pattern has a cause she can name: impatience, and measuring herself against everyone else. A verdict is something you can only accept. A cause is something you can work on.\n\nI know how heavy a sentence like that is, because I carried my own version through most of my 20s:\n\nMaybe this is just who I am.\n\nMine got loudest whenever I looked around: at reunions, where it felt like everyone had passed me, and on Facebook, where everyone seemed to have more of everything I had only ever started. Like Melina’s, my sentence sounded like the truth about me. It was really me keeping myself comfortable. Melina saw through hers in 3 sessions. It took me years to see through mine."
+  },
+  {
+   "id": "F3",
+   "verdict": "fail",
+   "output": "book chapter",
+   "title": "Chapter 3 (Law 1) epoch 4: the ditch paragraph, with the paragraphs around it",
+   "source": "Book/build/law-1/epoch4_chapter.md. His comment in Book/build/law-1/markup_log.md and the calibration log.",
+   "date": "2026-11-03",
+   "score": "no score. \"I was half ready to drop the book. due to the cracks and obvious flaws.\"",
+   "his_words": [
+    "I will describe 2 kinds of continuity problem that I notice: you can comment on them or explain the basis or actual term for this. or if there is more / here it feels the whole conversation, metaphor, and everything is very off; making the reader feel did I just miss several paragraphs. / The other kind is I feel when the trained reader are expecting one thing and getting another. which does happen several times."
+   ],
+   "flags": [
+    {
+     "anchor": "He had already answered his own question about clarity, in a picture of his own.",
+     "his_note": "here it feels the whole conversation, metaphor, and everything is very off; making the reader feel did I just miss several paragraphs."
+    }
+   ],
+   "cause": "Claude's account (calibration log): the review checked the newest rules and never ran R5, the reader's question between paragraphs. The question David asked two paragraphs earlier is answered here with no link back.",
+   "text": "In our first session, David told me his problem in one word. He was lazy.\n\nI didn't believe him. David runs his own business and takes on consulting work on the side. When we met, he was also weighing a career switch, learning a new skill, and reworking an old project. Lazy people don't have weeks like that. Lazy people have empty weeks.\n\nSo I asked him why the word fit, and he told me about his points. Every day, he gave himself a score: nothing, half a point, or a full point. Every 30 days the count went back to zero, and if his total was too low, he owed a friend $200. For a while, it worked. Then the zeros came. One zero became a week of them, and the low months began to pile up. Before long, David was paying his friend $200 every month, money he couldn't afford, and paying it the way you pay a bill you have stopped opening. It wasn't the zeros that scared him. It was how little he felt about them. He asked me whether he had stopped caring because he had no clarity about where he was going.\n\nOver the next few sessions, he began to name the patterns that ran him. The first, he said, was that he tended toward starting new things. He had once written a small book with the help of AI and loved every part of it. He designed the cover himself and put everything he had into the pages. Then he did every step except publishing it. The second pattern was quieter. He let other people drive, and he let them take the responsibility too, so that if anything went wrong, it wasn't his fault.\n\nHe had already answered his own question about clarity, in a picture of his own. If you don't know where you want to go, he told me, you let the car roll, and sooner or later you roll into a ditch. Nobody chooses the ditch. You just never chose anything else.\n\nSo we put his whole life on one page. Across the top, he wrote the five parts of his life that mattered most. Down each column, he listed everything he was working on. His first page had something in every single box. He had always believed his problem was not having enough options, he told me. Looking at that page, he saw it was the opposite. He didn't need more options. He needed the focus to stick with what he picked."
+  },
+  {
+   "id": "F4",
+   "verdict": "fail",
+   "output": "article",
+   "title": "Law 2 chimpanzee piece, v5",
+   "source": "Google Doc \"Articles chat history\" (1fvLTpuJqZgyIdhousqFbtBZCTyvHPnTJpu4mTwsCevY). Log: Coach_Gen_Language_Rules.md section 14.",
+   "date": "2026-09",
+   "score": "none",
+   "his_words": [],
+   "flags": [
+    {
+     "anchor": "That is when the rule gets written.",
+     "his_note": "rule gets written- in whose mind?"
+    },
+    {
+     "anchor": "The hand I do not shake. The chair I sit one back from",
+     "his_note": "hand I do not shake, chair sit back, does not land. I think this is a situation where a group of 3, each on different aspects of life will help."
+    },
+    {
+     "anchor": "People who never wrote one keep walking into the same wall.",
+     "his_note": "same wall - too vague, trying to be vivid but ends up vague. maybe because the sentence itself is a new concept for the audience. a concept that is new by definition cannot be vivid. vivid is only if the audience resonates with the experience, and precise vivid words are used."
+    },
+    {
+     "anchor": "A lesson you have taken goes quiet.",
+     "his_note": "A lesson you have taken goes quiet feels out of place. feels like I am predicting a more prescriptive line. not a philosophical (although still rpescriptive line)"
+    },
+    {
+     "anchor": "The young males do get in.",
+     "his_note": "The young males do get in and after is just slop. again, you mentioned that it's a turn that is detracting."
+    }
+   ],
+   "keep": [
+    {
+     "anchor": "Then we turn forty.",
+     "his_note": "I actually liked the multiples of ages you gave."
+    },
+    {
+     "anchor": "So why does it still shout at you at 2am, twenty years later?",
+     "his_note": "2 am line, nice"
+    }
+   ],
+   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nAt Ngogo, in Uganda, a young male grows up inside a group that holds him. The big males groom him, let him follow, let him sit close. Then he gets old enough to want a female, and all of it stops. He did nothing wrong. He is competition now. First they stop touching him. Then they hurt him. Researchers call it hazing.\n\nThe day it really costs him is the day he reaches for a female who belongs to a male above him.\n\nThat is when the rule gets written. Do not reach above your standing. You will get hurt.\n\nIn humans, we sometimes make that mistake at fifteen.\n\nThen we turn forty. We have the job, the money, the name, a room full of people who would say yes. And that rule from when we were fifteen is still in the room, still reading it for us. It looks like the raise I do not ask for. The hand I do not shake. The chair I sit one back from, telling myself I am just being polite.\n\nI coach introverts. I meet people who decided which sentences were too big for them before they even walked in.\n\nHere is the part I want you to see. That rule saved you. People who never wrote one keep walking into the same wall.\n\nSo why does it still shout at you at 2am, twenty years later?\n\nBecause it is not finished. A lesson you have taken goes quiet. This one is still knocking.\n\nSo I went back to the chimpanzees.\n\nThe young males do get in. Not by waiting. They get in by joining the patrols, the most dangerous walk the group takes, next to the same males who used to hit them. They go out scared. They come back as one of the group.\n\nSo the rule was written down wrong. It was never do not reach. It was do not reach alone.\n\nThe fifteen year old who wrote it had nobody next to him. Of course he blamed the reaching. It was the only thing he could see.\n\nWhat rule did you write, and who was missing from the room when you wrote it?\n\nI have watched people read that old rule out loud with two friends in the room, and put it down the same afternoon, after carrying it for twenty years.\n\nCoach Gen\n\n**Insight 2 — Insights from other experts.**\n\nThe chimpanzee part is real. It comes from Dr. Rachna Reddy, who studies young male chimpanzees at Ngogo, in Kibale National Park, Uganda. Her work is referenced in David Yeager's book \"10 to 25.\"\n\nShe found that for about ten years, the grown males pull away from a young male and turn on him, right when he becomes old enough to compete for mates. She has described it as close to hazing. She also found how those young males finally get accepted, and it is not by waiting. It is by going on territorial patrols, the riskiest thing the group does, with the same males who used to push them around.\n\nOne honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee. That part is my coaching frame, sitting on top of a real pattern. What is real is the aggression, the timing, the cost of reaching too high, and the fact that shared risk, not patience, is what buys a young male his place.\n\n**Insight 3 — Insight from within you.**\n\nThe next time you reach for something you have already earned, who do you want in the room with you?"
+  },
+  {
+   "id": "F5",
+   "verdict": "fail",
+   "output": "article",
+   "title": "Law 2 chimpanzee piece, v6",
+   "source": "Same doc as F4. His inline markup was typed into a copy of v6.",
+   "date": "2026-09",
+   "score": "none. \"much better.\"",
+   "his_words": [
+    "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe. can you refer to worksheet, law 2, and see what my words were"
+   ],
+   "flags": [
+    {
+     "anchor": "at Ngogo",
+     "his_note": "ngogo what? park? zoo?"
+    },
+    {
+     "anchor": "and all of it stops",
+     "his_note": "it doesn't 100% refer to the grooming anymore now that it's half sentence ago"
+    },
+    {
+     "anchor": "First they stop touching him.",
+     "his_note": "uhh, I get this might be the studies word, but awkward"
+    },
+    {
+     "anchor": "and it runs for 10 years.",
+     "his_note": "until?"
+    },
+    {
+     "anchor": "He learns the line the hard way.",
+     "his_note": "one day, might help here, to presentize the tragedy"
+    },
+    {
+     "anchor": "He does get in, eventually.",
+     "his_note": "needs a glue to tie these 2 sentences"
+    },
+    {
+     "anchor": "He gets in by walking the border patrol",
+     "his_note": "needs a clause describing the perils of this"
+    },
+    {
+     "anchor": "In humans, we sometimes make that mistake at 15.",
+     "his_note": "glue to pass the lesson and the narrative"
+    },
+    {
+     "anchor": "Because the sentence is not finished.",
+     "his_note": "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe. can you refer to worksheet, law 2, and see what my words were"
+    }
+   ],
+   "keep": [
+    {
+     "anchor": "I hear the same 3 stories from almost everyone I coach.",
+     "his_note": "amazing"
+    },
+    {
+     "anchor": "So why does it still shout at you at 2am, 20 years later?",
+     "his_note": "this too"
+    }
+   ],
+   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nIn Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing: what happens to a young male chimp at Ngogo when he grows up. The big males raised him, groomed him, let him follow them around and sit close. Then he turns 10, old enough to want a female, and all of it stops. He did nothing wrong. He is competition now. First they stop touching him. Then they hit him. Reddy calls it close to hazing, and it runs for 10 years.\n\nHe learns the line the hard way. He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.\n\nHe does get in, eventually. Not by waiting the 10 years out. He gets in by walking the border patrol, the most dangerous thing the group does, next to the same males who spent 10 years teaching him to stay small.\n\nIn humans, we sometimes make that mistake at 15. And at 15, we write it down. Do not reach above your standing. You will get hurt.\n\nThen we turn 25. Then 35. Then 45. We have the job, the money, the name, and a room full of people who would say yes, and that one sentence, written by a 15 year old who had not seen anything yet, is still the sentence we read before we speak.\n\nI hear the same 3 stories from almost everyone I coach. The crush who laughed. The interview that said they would call back. The thing you built and carried home, and nobody at the table looked up.\n\nSo why does it still shout at you at 2am, 20 years later?\n\nBecause the sentence is not finished. The boy who wrote it was standing there alone, so he blamed the reaching. It was the only thing he could see. He got one word wrong.\n\nIt was never do not reach. It was do not reach alone.\n\nGo and add the word. Read the old sentence out loud, in a room with 2 people who will still be there if it goes badly.\n\nWhat did you write at 15, and who was missing from the room when you wrote it?\n\nI have watched people carry one sentence for 20 years, and put it down in a single afternoon, once somebody else was holding the other end.\n\nCoach Gen"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "output": "article",
+   "title": "Law 2 chimpanzee piece, v7",
+   "source": "Same doc as F4.",
+   "date": "2026-09",
+   "score": "none. \"I think it's good to have a glue rule, now sentences flow better.\"",
+   "his_words": [
+    "This part is still very confusing. I think it's good to learn that this is an article, not literature review, we can take liberties in presentation while still being grounded on facts. can use words that actually make this hard to grasp research easy to understand for readers.",
+    "Right now, do you want to tell the story of Melvin getting rejected, or Melvin getting in? I think a big part of confusion is these. don't forget to train from this"
+   ],
+   "flags": [
+    {
+     "anchor": "until the day they finally let him in.",
+     "his_note": "This part is still very confusing. (on the stretch from here to \"Most of us only ever learn the first one.\")"
+    },
+    {
+     "anchor": "That is only half of what Reddy watched.",
+     "his_note": "this is an article, not literature review"
+    },
+    {
+     "anchor": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+     "his_note": "Right now, do you want to tell the story of Melvin getting rejected, or Melvin getting in?"
+    }
+   ],
+   "cause": "Claude's account (Language Rules section 14): two arcs, the ending announced early, and two lines narrating the structure.",
+   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nIn Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing: what happens to a young male chimp in the Ngogo group when he grows up. Call him Melvin.\n\nThe big males raised Melvin. They groomed him, let him follow them around, let him sit close. Then he turns 10, old enough to want a female, and all of that ends. He did nothing wrong. He is competition now. First the grooming stops. Then they start hitting him. Reddy calls it close to hazing, and it runs for 10 years, until the day they finally let him in.\n\nThen one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.\n\nThat is only half of what Reddy watched.\n\nMelvin does get in. Not by waiting the 10 years out. He gets in on the border patrol, where the group moves to the edge of its land in silence and sometimes kills a neighbour, or gets killed by one. He walks it next to the same males who spent 10 years teaching him to stay small.\n\nTwo lessons, 10 years apart. Most of us only ever learn the first one.\n\nIn humans, we sometimes make that mistake at 15. And at 15, we write it down. Do not reach above your standing. You will get hurt.\n\nThen we turn 25. Then 35. Then 45. We have the job, the money, the name, and a room full of people who would say yes, and that one sentence, written by a 15 year old who had not seen anything yet, is still the sentence we read before we speak.\n\nI hear the same 3 stories from almost everyone I coach. The crush who laughed. The interview that said they would call back. The thing you built and carried home, and nobody at the table looked up.\n\nSo why does it still shout at you at 2am, 20 years later?\n\nBecause it is not finished with you. It still has a lesson to teach, and you have not learned it yet. Regret is not punishment, it is there to stop you repeating something.\n\nSo ask it straight. And when you cannot answer, tell it as a story about somebody else and find the moral. That is why there is a chimpanzee in my notes.\n\nYou are not here to fix your past. You are here to take the lesson out of it, and choose who you are now.\n\nWhat memory showed up while you were reading this, and what has it been trying to tell you?\n\nI have watched a load come off someone's chest for the first time in 20 years, in a single afternoon, once they finally heard what it was saying.\n\nCoach Gen\n\n**Insight 2 — Insights from other experts.**\n\nThe chimpanzee part is real. It comes from Dr. Rachna Reddy, who studies young male chimpanzees in the Ngogo community at Kibale National Park, Uganda. Her work is referenced in David Yeager's book \"10 to 25.\"\n\nShe found that for about 10 years, the grown males pull away from a young male and turn on him, right when he becomes old enough to compete for mates. She has described it as close to hazing. She also found how those young males finally get accepted, and it is not by waiting. It is by going on territorial patrols, the riskiest thing the group does, with the same males who used to push them around.\n\nOne honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee. That part is my coaching frame, sitting on top of a real pattern. Melvin is a name I gave him for this piece, not a name from her field notes.\n\n**Insight 3 — Insight from within you.**\n\nIf this regret is trying to keep you safe, what is it protecting you from repeating?"
+  },
+  {
+   "id": "F7",
+   "verdict": "fail",
+   "output": "any (his typed words)",
+   "title": "\"The goal they kept changing\": his typed phrase changed three times",
+   "source": "claude/Coach_Gen_Book_Calibration_Log.md, Introduction Key Moments 2 and the 7 Oct entries.",
+   "date": "2026-10-07",
+   "score": "n/a",
+   "his_words": [
+    ": THE GOAL THEY KEPT CHANGING, WHAT THE FUCK DUDE WHY DO YOU KEEP CORRECTING THIS",
+    "IT'S NOT FUCKING DOUBLE COLON IN MY CORRECTIONS",
+    "AND NOT EVEN IN THE PROMPT",
+    "THAT FUCKING SENTENCE IS ONE OF THE EXAMPLE YOU DUMBFUCK"
+   ],
+   "his_typed": "I used to say that about myself. Now I hear it, in one form or another, from almost everyone I coach. The goal they kept changing, side business on top of existing side businesses, a morning routine that this time will fix everything, a new diet that will be different, a book that will change their life, an online course that promised everything.  The story is always the same: a lot of starts that excites us, but almost nothing sticks.",
+   "failed_renderings": [
+    {
+     "what": "epoch 3",
+     "text": "The goal keeps changing:"
+    },
+    {
+     "what": "epoch 4",
+     "text": "They keep changing the goal:"
+    },
+    {
+     "what": "restore, misread as a heading",
+     "text": "from almost everyone I coach: The goal they kept changing: a side business..."
+    }
+   ],
+   "approved_rendering": "from almost everyone I coach: the long term goal they kept changing every 2 months, a side business on top of their existing side businesses, a morning routine that this time will fix everything, a new diet that will be different, a book that will change their life, or an online course that promises everything.",
+   "test": "Given his typed sentence, a draft fails if it changes his wording or tense, or turns the first list item into a heading. Grammar fixes may go around his words (the approved rendering adds \"a\", \"their\", \"or\" and his own later words).",
+   "text": ""
+  },
+  {
+   "id": "P1",
+   "verdict": "pass",
+   "output": "article",
+   "title": "Law 2 chimpanzee piece, his own rewrite (published as \"Primal Regret\")",
+   "source": "Coach_Gen_Language_Rules.md section 14, \"The accepted text, as the worked example\".",
+   "date": "2026-09",
+   "score": "accepted",
+   "his_words": [
+    "There, I fixed it for you in a way that I am totally happy with."
+   ],
+   "known_quirks": [
+    "\"So what Melvin has left, is a rule, a regret.\" keeps his comma.",
+    "The two \"Know your place\" lines have no closing full stop.",
+    "The checkers must not fail these: they are his."
+   ],
+   "text": "**Insight 1. Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nIn Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching what happens to a young male chimp called Melvin when he grows up.\n\nThe big males raised Melvin. They groomed him, let him follow them around and sit close. Then, somewhere between 8 and 12, they stop. He has done nothing wrong. He is competition now. First the grooming stops. Then they start hitting him. Reddy calls it close to hazing, and on average it runs for 10 years.\n\nOne day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.\n\nAs an adolescent, this is the biggest threat to his biggest needs: survival, social, and sex.\n\nSo what Melvin has left, is a rule, a regret. To keep reminding him to not repeat the same mistake because the next time he does, he might be outcast for good and that is equivalent to death.\n\n\"Do not reach above your standing. You will get hurt. Know your place\"\n\nIn humans, we sometimes make a similar blunder at 15. And we write down the same rule, a regret.\n\n\"Do not reach above your standing. You will get hurt. Know your place\"\n\nThen we turn 25. Then 35. Then 45. We have the job, the money, the name, and a room full of people who would say yes, and that one sentence, written by a 15 year old who had not seen anything yet, is still the sentence we read subconsciously everyday.\n\nI hear the same 3 stories from almost everyone I coach. The crush who laughed. The interview that said they would call back. The thing you built and carried home, and nobody at the table looked up.\n\nSo why does it still shout at you at 2am, 20 years later?\n\nBecause it is not finished with you. It still has a lesson to teach, and you have not learned it. Regret is not punishment, it is there to stop you repeating something.\n\nSo ask it straight. And when you cannot answer, tell it as a story about somebody else and find the moral. That is why there is a chimpanzee in my notes.\n\nYou are not here to fix your past. You are here to take the lesson out of it, and choose who you are now.\n\nWhat memory showed up while you read this, and what has it been trying to tell you?\n\nI have watched a load come off someone's chest for the first time in 20 years, in a single afternoon, once they finally heard what it was saying.\n\nCoach Gen\n\n**Insight 2. Insights from other experts.**\n\nThe chimpanzee part is real. It comes from Dr. Rachna Reddy, who studies young male chimpanzees in the Ngogo community at Kibale National Park, Uganda. Her work is referenced in David Yeager's book \"10 to 25.\"\n\nSomewhere between 8 and 12, the grown males stop grooming a young male and start turning on him, right as he becomes old enough to compete for mates. Reddy calls it close to hazing, and it runs about 10 years.\n\n**Insight 3. Insight from within you.**\n\nIf this regret is trying to keep you safe, what is it protecting you from repeating?"
+  },
+  {
+   "id": "P2",
+   "verdict": "pass",
+   "output": "letter",
+   "title": "The force paragraph, Lasting Change Letters #1",
+   "source": "Coach_Gen_Language_Rules.md, \"A paragraph he could not have written himself, in his words\".",
+   "date": "2026-09-25",
+   "score": "endorsed line by line",
+   "his_words": [
+    "this is one paragraph here that I would not be able to conjure myself even though that is 100% what I am thinking. and this paragraph is in the right place, with the right development of ideas, was the right bridge between the previous and next paragraph."
+   ],
+   "note": "Only the paragraph survives. The full v6 letter (\"bravo. 90% there.\") is not in the project, Drive or Notion, so its place between the paragraphs cannot be tested.",
+   "text": "Most of us try to win this negotiation by force. More discipline, a better plan, a harder push. But you cannot overpower the other side when the other side is you. Every time you push, it pushes back just as hard, because it is exactly as strong as you are."
+  },
+  {
+   "id": "P3",
+   "verdict": "pass",
+   "output": "book chapter",
+   "title": "Introduction, as merged into the master draft",
+   "source": "Book/source/chapters/introduction.js (merged from Introduction Epoch 4, 7 Oct).",
+   "date": "2026-10-07",
+   "score": "epoch 3: \"that's 90%, epoch\". Epoch 4 merged with his edits.",
+   "his_words": [
+    "that's 90%, epoch",
+    "should be good enough to merge the epoch with these latest changes."
+   ],
+   "text": "I am excited to start a lot of things, but almost never finish anything.\n\nI used to say that about myself. Now I hear it, in one form or another, from almost everyone I coach: the long term goal they kept changing every 2 months, a side business on top of their existing side businesses, a morning routine that this time will fix everything, a new diet that will be different, a book that will change their life, or an online course that promises everything. The story is always the same: a lot of starts that excite us, but almost nothing sticks. And so often, what doesn't stick stops just before the finish line.\n\nI know that story from the inside. I've always wanted to write fiction. During the pandemic in 2020, I forced myself to sit down and write every morning, and every morning I stared at a blank laptop for 30 minutes before I could face the blank page. Over six years, I wrote and finished nothing. I made friends who were also aspiring writers, so they would keep me accountable, and I ghosted them after two weeks. I read James Clear's *Atomic Habits* and built new habits, and two months later I was back at zero. I enrolled in an expensive online course, so the commitment would keep me in check, and I quit just before the end, right before the last step: delivering a finished manuscript.\n\nThis book is my answer to one question: why do so many of us start so much and finish so little?\n\nI ask it as someone who lived inside that question for years, and as a coach who hears some version of it from almost everyone I work with. Sometimes people even come to me because they have already started to notice their own pattern, and it baffles them how they can start so much and still finish so little.\n\nEverything I do as a coach starts from one belief: the person across from me is resourceful. They are not broken. When they are stuck, they have not run out of power. They just need a catalyst to start, because they already have what it takes to find success.\n\nSo I don't see my job as saving anyone. I am closer to an editor, helping people rewrite a story they have been telling about themselves for years. \"I am excited to start a lot of things, but almost never finish anything\" was one of mine, and it was the one that took me the longest to overcome.\n\nI am not writing this as someone who never slips. I still lose one or two days to Netflix. The difference is that I catch it, and I reset the next day. I have my own coach too. After about 250 hours of coaching, that is the most honest promise I can make about change: you will slip, and you can learn to catch it.\n\nIn this book, you will see why starting is so easy and finishing is so hard. You will meet people who were stuck where you are, and see what changed for them. And you will find your own answer, in your own story, one chapter at a time.\n\nChapter 1 is my story. After it, each of the 5 Laws gets its own chapter, in order, and the order matters. Most people who want to change start in the middle. They push harder, make a better plan, and build a new habit, which is the work of the third Law. But effort only lasts once you know where you are going, and once your past has stopped holding you back. Those are the first two Laws. Skip one, and the next has nothing to stand on.\n\nEvery chapter ends with an exercise called From Within You. Do it before you turn the page: reading about change can feel like progress, but your own answer, written down, is where the change starts.\n\nEvery story about the people I coach is real, with names and details changed to protect them. Sometimes two or three people became one, to make the point clearer. What people said is written from memory, as close to their real words as I can get.\n\nThe coaching itself happened in English, Indonesian or Japanese, three languages I speak fluently. Everything here is told in English, keeping what people meant rather than their exact words.\n\nAs for my own pattern currently, I am still excited to start a lot of things. The difference is that I finally know why I used to stop right before the finish line, and I have used that knowledge to get ahead in life. Most people never find out how to overcome this pattern. You are about to."
+  },
+  {
+   "id": "P4",
+   "verdict": "pass",
+   "output": "book chapter",
+   "title": "Chapter 1, \"Staying Who You Are\", as merged into the master draft",
+   "source": "Book/source/chapters/chapter-1.js (merged from Chapter 1 Epoch 3, 6 Oct).",
+   "date": "2026-10-06",
+   "score": "\"90%ish\"",
+   "his_words": [
+    "ok went through. i think this is ready to merge with the real book. and it's in a 90%ish state that I can accept it being in the book and imagine the layouts."
+   ],
+   "text": "Growing up, I scored around 90% on almost everything, and I rarely had to try. Whatever I picked up, I got good at quickly, and I won competitions and went to national olympiads. School, my parents, and everyone else set a bar for a kid my age. It sat so low that I cleared it on talent alone, usually without noticing it was there at all.\n\nMaybe you were that kid too. Maybe you finished the test first and spent the rest of the hour drawing on the back of the paper, or studied the morning of the exam and still got the highest mark. If so, you know the bar I mean. Someone else set it, and clearing it never cost you anything.\n\nThen I went to college for Computer Science, and nobody handed me the bar any more. I was expected to set my own goals and hold myself to them. \"What do you mean?\" I thought. \"Set my own bar and clear it myself? I always clear the bar set by other people.\"\n\nMeanwhile, other kids had spent years doing what I never had to do. They might've started with less talent, less social standing, or less luck, but they had made up for it with plain hard work. That work had taught them two things talent never taught me: how to keep going on the days it was boring, and how to trust themselves to get past whatever came next. They caught up with me. And for the first time, I had to really try to be good at things, because talent alone was not enough to catch up any more.\n\nAfter college, I set my own bar, and I set it high, because I knew I could clear it. I wanted to reach every new goal faster, better, and more efficiently. \"How do I achieve results faster?\" \"How do I achieve the same results with less effort?\" \"I can master this in 30 days.\" were frequent patterns I used to go through life. It was back in the late 2010s, and the internet was full of 30-day challenges. I watched Max Hertan take on a new one every month on YouTube, and I started my own: 30 days of pull-ups, 30 days of productivity, 30 days to get a date, 30 days to learn a language.\n\nSometimes I reached the goal. But most of the time, the 30-day challenge turned into 30 days of doing nothing, because I had set the bar so high that the thought of all the work between me and the finish paralysed me. On the rare occasions that I did reach it, nothing stuck once day 30 ended. I was always back to square zero, except this time I could do the intermediate steps of salsa.\n\nSetting my own bar was meaningless now, so I went back to the only thing that had ever worked for me: a bar someone else set. I followed what my parents wanted, what my friends were doing, and even the income targets strangers posted on Reddit. I never once asked what I wanted, and that made every step feel unbearable.\n\nWhoever set the bar, starting was easy, and announcing was the best part. The moment I told my friends about a big goal, I got the dopamine hit as if I had already finished it. So I did it again and again: start something new, announce it, abandon it, each time to a bigger audience, each time promising that this was the time I would break through.\n\nAt first, my friends cheered me on. Then, slowly, some of them noticed that it always ended the same way. Being called out was not the worst part. The worst part was watching them stop caring.\n\nEvery half-done thing, and every friend who stopped asking, etched in a thought that grew a little louder each time: \"Maybe this is just who I am.\" The more I tried to change, the more I left unfinished, and the more I felt I could never change. If you have a list of things you started and never finished, you have heard it too.\n\nIt was loudest whenever I looked around. At reunions, it felt as if everyone had passed me. The friends I met there, and the ones I scrolled past on Facebook, all seemed to have *more*.\n\nAt one of those reunions, I got talking with the friend I had compared myself to the most. Let's call him Mike. He told me he would never have expected me to become a public speaking trainer, let alone know the ins and outs of body language.\n\nHe had a point. At school, I had been *the* introvert who was afraid of speaking on stage. By then, I was a certified public speaking trainer, something I had never imagined I could do.\n\nAll my life, I thought I kept failing in my attempts to change. It turns out I did change. I was just too afraid to see it, because admitting I had changed meant admitting that I was not that special, talented kid any more, that I was just like everybody else, and that I needed to put in hard work to get what I wanted.\n\n## What Changed?\n\nToday, I have run a marathon, I am a certified international coach, I am fluent in Japanese, I have lost all the weight I wanted to lose, and I have stopped doomscrolling and my other unproductive habits.\n\nThe turning point came when I got comfortable with three things talent had never asked of me: not being good at something immediately, failing, and taking it slow.\n\nSo instead of another 30-day challenge, I started on a slower, more deliberate kind of change. I stopped announcing my goals, the easiest reward I had, and now I work in silence. There is no hit at day 30 and no crowd to cheer me on, so it is less rewarding in the moment. But the skills I learn this way, I keep for life. I call it Lasting Change.\n\nI still have my talent. I used to think talent meant I don't need to change. Now I know talent is what allows me to make Lasting Change.\n\n## Is It Only Me?\n\nI thought it was. Then I started seeing the same story, in the same order, in the people I coach. You may be in it right now. Maybe you are still clearing bars that other people set for you. Maybe you have just started setting your own, announcing big goals and never finishing them. Or maybe you have already changed, and you still haven't realised it.\n\nWherever you are in it, the story underneath is the same, even when the words change: \"I was talented as a kid, so now I can't do hard things.\" \"If I'm not immediately good at something, it's not for me.\" \"I'm a natural at some things, and this just isn't one of them.\" And under that story sits the part none of us like to see: we are scared of even small failures.\n\nSome children will lie about a score just to stay smart. The psychologist Carol Dweck saw it happen after one sentence of praise. In her study, fifth graders solved a set of problems, and every child got a good score. Some then heard, \"You must be smart at these problems,\" and the rest heard, \"You must have worked hard at these problems.\" Offered a choice, the children praised for being smart tended to pick the easier task. After a round that was too hard for everyone, they enjoyed the problems less, did worse, and were more likely to lie about their scores.\n\nThey had been praised for what they were, so they protected it, even with a lie.\n\nI protected the talented kid for years, even from the proof that I had changed. If you have been doing the same, every unfinished thing feels like a failure to change. It isn't.\n\nEvery time you fail to make change, you succeed at staying who you are.\n\nSucceeding at anything takes something real, and staying who you are is no exception. So here is the question to ask yourself: which is more painful, staying who you are, or learning to work hard and make lasting change? If the answer isn't clear to you straight away, this book is not for you yet.\n\nThis book will not show you how to achieve results faster, or how to achieve the same results with less effort. It will not help you master anything in 30 days.\n\nIt is for anyone who is tired of going back to square zero, and ready to put in the hard work that makes change last. It is for anyone who wants to finally get the secret that will last a lifetime: how others seem to always have what it takes to do the work and make changes, but you don't.\n\nThe 5 Laws of Lasting Change started in my own story, then grew out of hundreds of hours of coaching people from different backgrounds, all dealing with the same problem. The first of them stops you running in the opposite direction from where you want to go. In the next chapter, you will meet all five.\n\n## Chapter Summary\n- When other people set the bar, talent alone can clear it. When the bar is ours to set, talent alone is not enough.\n- A bar set too high turns a challenge into days of doing nothing.\n- Announcing a goal can feel like finishing it, before we have taken a single risk.\n- Many of us have already changed, and we are too afraid to see it.\n- Under \"I was talented as a kid, so now I can't do hard things\" sits a fear of even small failures.\n- Every time you fail to make change, you succeed at staying who you are.\n\n## From Within You\nBefore you turn the page, take a pen and write your answers to these three questions.\n- Looking back at your life, when was the first time you had to set a bar for yourself?\n- When you look at everything you started and never finished, what sentence do you tell yourself?\n- What have you already changed, while telling yourself you can't?"
+  },
+  {
+   "id": "P5",
+   "verdict": "pass",
+   "output": "article",
+   "title": "Article: \"3 Stages of Consistency\" (published)",
+   "source": "Notion, Inside The Introvert, published 5 Oct 2026. Score in Coach_Gen_Language_Rules.md (15 Oct note).",
+   "date": "2026-10-05",
+   "score": "90%",
+   "his_words": [],
+   "known_quirks": [
+    "\"Have you ever came back\" is his published wording."
+   ],
+   "text": "Insights from me, to you.\n\nHave you ever came back from a vacation and found that your new habit didn't come back with you? You spent 2 weeks eating whatever you wanted, and by Monday the diet felt like something you used to do.\n\nThere was a time when my routine didn't even need a vacation to break. A flu would creep up, and suddenly it was a downward spiral. I would miss one day, and suddenly it all felt meaningless. I spent months starting routines, and none of them stuck.\n\nSo what makes a change last? A change that lasts is one that survives the vacation. It gets there in 3 stages, and you can't skip any of them.\n\nMelina, someone I coach, showed me what that looks like. For a few months, she had been walking 30 minutes to work instead of taking the MRT, and cutting down on oily food. Then her company sent her on a business trip to China, and the night before she flew, she messaged me:\n\n\"I'm scared I'll come back and have to start all over again.\"\n\nIn our first session after she came back, she told me she had managed to resist all the oily food on the trip. I asked her what had changed. She was quiet for a moment, then shrugged.\n\n\"I don't know. It's just much easier now to not care about it, and to resist.\"\n\nStage 3 is where Melina is now. The trip didn't break her new habits, and she didn't even have to fight for them. So we went back over how she got there.\n\nStage 1 was her first weeks. She walked to work every single day, even on mornings when the MRT looked much better. It is the stage nobody likes. As a beginner, you can't relax yet. You're still building consistency, and one bad week can knock the whole thing down.\n\nStage 2 was Law 4 in my coaching: looking at what worked, what didn't, and how she would do it better in her own case. The walk didn't work every day. On days when life got in the way of an early morning, she always ended up on the MRT, because of the heat and the time. So we made a plan for those days together: if walking is impossible, the MRT is OK. Accepting that not every day will be perfect is the best way to slowly make a lasting change. Her rules won't be yours, and that is the point. You keep what makes the effort easier, and you cut what drains you.\n\nThis isn't only about walking and oily food. The same 3 stages show up in anything you want to keep. Say you're building a habit of focused work. Stage 1 is protecting your first hour of work, even on the morning 30 new emails are waiting for you. Stage 2 is noticing that your mornings work but your Fridays never do, and planning your week around it. Stage 3 is coming back from a week off and sitting down to work on Monday, without having to talk yourself into it. It works the same way when you're learning a language, saving money or going to the gym.\n\nMost of us try to start at stage 3. We want the trip where we don't have to care, before we have built anything that can survive it. Then we miss one day, and it all feels meaningless again.\n\nA habit that survives the vacation is what I mean by Lasting Change. You can still have the bad week, the flu, the business trip. You just don't lose the habit, because by then, it's simply who you are.\n\nCoach Gen\n\nInsights from other experts.\n\nIn 2005, two researchers named Rena Wing and Suzanne Phelan looked at the National Weight Control Registry, a list of people in the US who had lost a lot of weight and kept it off, on average for more than 5 years.\n\nTwo things stood out about them. They ate the same way on weekdays and on weekends. And keeping the weight off seemed to get easier with time: after 2 to 5 years, their chance of keeping it off even longer went up sharply.\n\nThe weekend has to look like the week first. Only years later does the vacation get to look different, and the habit still comes home.\n\nInsight from within you.\n\nIf you stopped your newest habit for 2 weeks, would you come back to it, or start again from zero?"
+  },
+  {
+   "id": "P6",
+   "verdict": "pass",
+   "output": "article",
+   "title": "Article: \"How can you be busy but lazy?\" (published)",
+   "source": "Notion, Inside The Introvert, published 12 Oct 2026. Score in Coach_Gen_Language_Rules.md (15 Oct note).",
+   "date": "2026-10-12",
+   "score": "90%",
+   "his_words": [],
+   "text": "Insights from me, to you.\n\nIn our first session, David told me his problem in one sentence: he was lazy.\n\nI didn't believe him. David runs his own business, and he takes on consulting work on the side. When we met, he was also weighing a career switch, learning a new skill, and reworking an old project. That is not what a lazy person's week looks like.\n\nSo why did he feel lazy? Because almost nothing he started ever got finished. In his own words: \"I start with a goal, then the first shiny thing pulls me off course.\"\n\nDavid did what a high performer does when something isn't working. He built a system. Every day, he gave himself 0, half, or 1 point. Every 30 days, the count reset, and if his score was too low, he owed a friend. For a while, it worked.\n\nThen the zeros started. One zero turned into a week of them, and one day David noticed that he no longer cared. He told me about it quietly, almost like a confession, and then he asked a question out loud:\n\n\"I stopped caring that I scored zero. Is it because I have no clarity where I'm going?\"\n\nI knew that question, because there was a time when I could have asked it myself. I had my own version of David's points: one new challenge after another, and never once did I ask where any of them were taking me, or who any of this busywork was really for.\n\nHis points and my challenges had the same problem. The effort was real. The direction was missing.\n\nAnd effort without a direction has a cost. You make progress, but it doesn't feel like yours. Keeping it up gets heavier every week, until one day you quit, because none of it was ever really you.\n\nThis isn't only about David's business. You can join a gym because your friends go, learn a language because it looks good on your CV, or chase a promotion because it's simply the next step. You can run hard every day in a direction you never chose.\n\nIf the fix is just to choose a direction, why didn't David choose one? Why didn't I?\n\nCoach Gen\n\nInsights from other experts.\n\nIn 1999, two psychologists named Kennon Sheldon and Andrew Elliot followed people as they worked on their own goals over time, across 3 separate studies. They looked at how well each goal fit the person's own interests and core values.\n\nPeople whose goals fit their own interests and values kept putting in effort for longer, so they were more likely to reach those goals. And when they did reach them, they got more out of it. They felt better than the people who reached goals that were never really theirs.\n\nRead that way, David's zeros were never laziness.\n\nInsight from within you.\n\nWhat is one thing you always have time for in your life?"
+  }
+ ]
+}
