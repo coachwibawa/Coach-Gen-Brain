@@ -1,0 +1,56 @@
+id|tier|title|outputs|check|what it will hold (proposed for step 8, not final wording)
+T0.1|0|Banned marks and words|ALCKS|mech|No em dashes, no semicolons, no emojis, never "my clients". Lint blocks delivery.
+T0.2|0|His words stay his|ALCKS|mech|Text he typed keeps its wording and tense. "" lines change at most a tenth. Keeper lines, brain quotes and locked names (Laws, tagline, coined terms) printed exactly. Doubt means ask, never change.
+T0.3|0|True material only|ALCKS|checker|Every fact traces to the brain or his published pieces. Transcripts only check facts. No invented biography, title, subtitle, citation, book claim or fact under his name. Missing material is marked, never filled.
+T0.4|0|His method and his thesis|ALCKS|checker|The method and the closing third come from the Law's own material. Argue his thesis, never the genre's or a book author's.
+T0.5|0|Built-detail hard lines|ALCKS|checker|R3b Never list plus R3 health and money: no better result or raised stakes, no past, no moved insight, no family scene, no unseen sensory detail, nothing no real person would do, no made-up research data, no condition, diagnosis, medicine, reading or weight, money only with a human side.
+T0.6|0|Print names and hidden people|ALCKS|mech|Print names from brain.personas only. Never a real client name or an identifying detail. Never-use material stays out.
+T0.7|0|His stance|ALCKS|checker|Everyone is resourceful. He is the editor, not the hero. Never diagnostic, pitying, know-it-all, or a label for the reader.
+T1.1|1|One thread|ALCKS|checker|Fill "this piece is about ____". Every beat makes the reader relate to their own ____ and moves the one thought, second half too. An idea owned elsewhere gets one callback at most.
+T1.2|1|Joins answer the reader's question|ALCKS|checker|The reader's question sits between paragraphs and the next first sentence answers it. Glue between beats. A switch of person or mode gets a bridge. The story-to-takeaway join ends the story first.
+T1.3|1|Links are real|ALCKS|checker|Each sentence takes something from the one before. So, then, because and but claim true relations. Repeat the words, never a far "it". Every sentence has an owner. A louder restatement is cut.
+T1.4|1|Few names, one each|ALCKS|checker|2 or 3 things the reader must carry, each with one name every time.
+T1.5|1|Nothing arrives bare|ALCKS|checker|Show, then name, then say plainly. A surprising idea comes with its support. New ideas are explained plainly. One leap of logic per step, every step written. Lean only on what the reader brought or met earlier.
+T1.6|1|Images from the reader's life|ALCKS|checker|Imagery only on experiences the reader has lived. One image at a time. No made-up metaphor.
+T1.7|1|One story, told once|ALCKS|checker|One arc, told forward. A person's story told whole in one place, then only callbacks. No return trips, no retcons, no second arc in place of a cut one. Close loops by continuing the timeline.
+T1.8|1|Stakes, not more story|ALCKS|checker|A weak beat gets higher stakes, raised to what they really are, never more narrative. Show a claimed peril in a clause.
+T1.9|1|Warm the water|ALCKS|checker|A client line gets the facts the reader lacks first. A one-line quote gets more setup or runs longer. Every leap a session took for granted is served on the page. A case reaches beyond its one area of life.
+T1.10|1|Research backs, never interrupts|ALCKS|checker|Idea first in his words, then the study in 2 to 5 sentences, one finding, its meaning in a line. No year, no university, at most one name with a role. Never inside his story. The reader's words, not the paper's. No disclaimer paragraph.
+T1.11|1|Built details serve the reader|CKSAL|checker|Build only to answer a reader's question or hide the person. Each detail does work. One or two per gap. Border items only with their "unless". Every built detail listed in the end note.
+T1.12|1|No meta-narration|ALCKS|checker|Never explain the piece's shape. The book may signpost what the reader needs.
+T1.13|1|Rhythm without choppiness|ALCKS|checker|Short sentences have a job. One event, one sentence. Break a run of same-shape sentences with a long one. No clipped fragment runs. Fragments default to none.
+T1.14|1|Parallels that truly match|ALCKS|checker|Parallel frames only for matching items, with the frame and subject kept exact. A mirror needs matching beats and enough material.
+T1.15|1|Plain words he would say|ALCKS|checker|Concrete nouns the reader can see, touch or count. Plain at the mechanism. Spoken material rewritten as prose. Simple words for articles, letters and case studies, richer allowed in chapters.
+T1.16|1|Protect the author|ALCKS|checker|His worst moments clearly in the past. No line that reads against him out of context. Recognition, never credit for being first. /privileged lines made acceptable.
+T1.17|1|Turns and endings|ALCKS|checker|A section rises to one turn, then hands off. Prescriptive, not philosophical, at the hinge. Articles never end on the hard question alone. No teacher's summary in the prose.
+T1.18|1|AI tells|ALCKS|checker|No "Stop X. Start Y.", no "not just X. Y.", no cliché templates or hype words, no over-simplified prose, no cleverness the audience will not recognise.
+T2.1|2|Mechanics fixed silently|ALCKS|mech|British spelling, "everyday", Oxford comma, numbers per card, grammar in his voice. Lint fixes, never fails.
+T2.2|2|Length and readability are guardrails|ALCKS|mech|Length follows the material. Never pad, never compress steps. Numbers reported, never proof.
+T2.3|2|Specific detail|ALCKS|judge|Name books, places, brands, people, exact numbers. Name characters. A place name gets its category.
+T2.4|2|Quoted self-talk|ALCKS|judge|The reader's inner voice in quotes, first person. Placement per card (see clash C3).
+T2.5|2|Raw emotion and real pressure|ALCKS|judge|Small specific humiliations. Raw beats tasteful. External pressure and his themes.
+T2.6|2|Lists and triplets|ALCKS|judge|Three items from different areas of life. End on the callback. Vary the counts.
+T2.7|2|Author presence|ALCKS|judge|Warmth from his own short story. Calibrated confidence. Check in with the reader.
+T2.8|2|Callbacks and staying close|ALCKS|judge|After the turn, stay with the reader's life. Call back in exact words with a tag. Plant and pay off.
+T2.9|2|People on the page|CKSAL|judge|Case shape, exchanges told in prose, scenes set up with body, setting, inner voice and one chain of cause.
+T2.10|2|Moves that work|ALCKS|judge|Pattern bank: reveal in its own paragraph, presentize, short suspense, let the reader draw the line, directive with a concrete act, compression after setup, "similarly:", extended metaphor order, same-frame openers, contractions, "However" at a turn, building toward a genre-cliché word without naming it, his soft verb and coined terms for research.
+T2.11|2|Reading his raw material|ALCKS|judge|Cut hedges, keep vulnerability markers. Tell talking-out-loud from crafted lines. Read what a detail is evidence of.
+T2.12|2|Built details you may use|CKSAL|judge|R3b Allowed list (lines 21 to 32, 39): permissions, never musts.
+card-A|card|Article card|A|-|Inside The Introvert: 3 Insight fields, Insight 1 from him in first person, 600-word ballpark, readability band, digits, simple words, vocabulary diff, possibility coda, sign-off, Insight 3 question, no title until publish, Notion schema.
+card-L|card|Letter card|L|-|Article card plus: his realisation is the blank, told in the order it happened, the book only as setup, author named at first mention, the book checked before quoting, Insight 2 is the book layer, name and subtitle pattern.
+card-C|card|Chapter card|C|-|Book standard: Dweck and Clear point of view, book numbers and vocabulary, headings, opening story, one turn per section, summary box, From Within You, special line, figures, callbacks, default shape, end note, indent layout.
+card-K|card|Key moments card|K|-|5 or 6 moments, each built 3 different ways and labelled, facts from the fact sheet, chapter rules per moment, visible paragraph gap.
+card-S|card|Case study card|S|-|The objective (reads like Dweck, sounds like him, inside the built-detail lines), case shape, warm water, built details, exchanges, length follows the story.
+skill:writer|dest|coach-gen-writer rewrite (step 14)|-|-|Process: load the card, draft, lint, check, deliver.
+skill:propose|dest|propose-language-rule (step 16)|-|-|Rule-change process, admission test, wording format, test-set gate.
+guardrails|dest|Guardrails and new project instructions (step 17)|-|-|Working rules that are not about the writing.
+memory|dest|Project or account memory (step 19)|-|-|Working style that stays in memory.
+brain-table|dest|Rules table in the brain (step 9)|-|-|Protection, never-delete trigger and change log replace protection by instruction.
+ref|dest|Reference the cards point to|-|-|Corpus list, worked examples, reference shelf, provenance.
+log|dest|Calibration log or archive only|-|-|History. Kept in archive/pre-prune and git, not loaded with the rules.
+skill:other|dest|Stays in its own skill|-|-|Tool rules that live with the tool (rhyme-this, other skills).
+out:social|dest|Stays in Social Posting Rules|-|-|Out of scope until a social card is built (deferred).
+out:reel|dest|Stays in Reel Style Guide|-|-|Out of scope (deferred).
+out:brand|dest|Stays in brand docs|-|-|Out of scope (deferred).
+out:content|dest|Stays in Content Rules|-|-|Out of scope (deferred).
+open|dest|Open, his call|-|-|Not placed until he decides.

@@ -1,0 +1,448 @@
+id|src|loc|kind|rule|tier|out|check|action|target|note
+LR-00a|LR|L1|history|Stray first line "CLAUDE EDITED THIS AGAIN": a protected doc was edited anyway|-|-|-|cut|log|Evidence for plan cause 7 (protection by instruction fails)
+LR-00b|LR|L5|meta|Scope: the one guardrail doc for turning his raw material into short-form and articles|-|-|-|cut|-|Replaced by the merged rulebook header
+LR-00c|LR|L7|meta|Holds only language rules and evidence. Project state lives in claude/voice-translation-guide.md|-|-|-|cut|-|Stale pointer: that doc is no longer in the project
+LR-00d|LR|L9|meta|Tags [short-form] and [article] scope a rule to one track|-|-|-|cut|-|Replaced by per-output cards
+LR-00e|LR|L11|meta|Add and annotate, never condense, keep corrected lines|-|-|-|cut|brain-table|Decision 4. History now lives in git and the change log (step 9). Clash C7
+LR-1.01|LR|§1 L19|ref|True voice: Insight 1 of the six Inside The Introvert pieces, 23 Mar to 4 May 2026|-|AL|-|move|ref|Corpus for the vocabulary diff and the deferred style bank
+LR-1.02|LR|§1 L21|ref|Also his: his own rewrite of the Law 2 chimpanzee piece|-|AL|-|move|ref|Text sits at LR L578
+LR-1.03|LR|§1 L23-28|ref|Not his voice: A Garden Full of Nothing, Worst Advice Ever, the Jan and Feb 2026 pieces|-|AL|-|move|ref|One line beside the corpus list
+LR-1.04|LR|§1 L32-36|rule|Article ranges: 280 to 450 words, 11 to 13 words per sentence, grade 3 to 6, ease 75 to 93, named things over 5 per 100|-|A|-|cut|-|Superseded 15 Oct by LR-1.05 and LR-1.06
+LR-1.05|LR|§1 L36-38|rule|Word count is a ballpark: Insight 1 about 600, longer when the story needs it, never padded|2|AL|mech|merge|T2.2|Dup MP-47, WS-05, BR-H8
+LR-1.06|LR|§1 L40|rule|Insight 1 readability band: grade 3 to 7, ease 72 to 93, 11 to 15 words per sentence|2|AL|mech|merge|card-A|Reported, never a target (T2.2). Dup MP-47
+LR-1.07|LR|§1 L42|rule|Never assume the piece must be short: write every step the argument needs|1|ALCKS|checker|merge|T1.5|Pairs with BR-R37
+LR-1.08|LR|§1 L44-48|rule|The numbers are guardrails, never proof|2|ALCKS|mech|merge|T2.2|Dup WS-19, WS-H
+LR-1.09|LR|§1 L50-52|rule|Too heavy comes from length, turns and abstract nouns, not long words|2|AL|judge|merge|T2.2|Diagnostic note
+LR-1.10|LR|§1 L54|rule|Too light: clipped, over-simplified prose with no proper nouns is an AI tell|1|ALCKS|checker|merge|T1.18|Dup LR-10.06
+LR-1.11|LR|§1 L56-58|rule|Glue budget: draft the beats at about 320 words|-|A|-|cut|-|Retired 15 Oct. Stale copy in WS-B (letters). Clash C11
+LR-1.12|LR|§1 L60|history|Glue budget retired, 15 Oct|-|-|-|cut|log|-
+LR-2.01|LR|§2 L64-70|rule|Fill "this piece is about ____" first, then test every beat: does it make the reader relate to their own ____?|1|ALCKS|checker|keep|T1.1|The overriding test. Dup BR-R1, BR-I, LR-12.00, WS-06
+LR-2.02|LR|§2 L72|history|Three off-topic beats cut from the chimp piece|-|-|-|cut|log|Evidence for T1.1
+LR-2.03|LR|§2 L74|process|A line that survived into an accepted draft is not proven|-|ALCKS|-|move|skill:writer|-
+LR-2.04|LR|§2 L76|rule|Re-run the blank on the second half: a supporting idea must not take it over|1|ALCKS|checker|merge|T1.1|-
+LR-2.05|LR|§2 L78-84|rule|The goal is emotional relation: show raw emotions and downs, small specific humiliations|2|ALCKS|judge|keep|T2.5|-
+LR-2.06|LR|§2 L86|rule|Raw beats tasteful: the line the thing says to you is the one that hurts|2|ALCKS|judge|merge|T2.5|-
+LR-3.01|LR|§3 L92|rule|Specificity beats abstraction ("courage to do the hard things", not "courage")|1|ALCKS|checker|merge|T1.15|-
+LR-3.02|LR|§3 L94-102|rule|Every noun is something the reader can see, touch or count: swap abstract for concrete, one for one|1|ALCKS|checker|keep|T1.15|Dup LR-12.00, PI-03
+LR-3.03|LR|§3 L104|rule|Flagged words that are always replaceable (circuit, variable, consequences and 16 more)|1|ALS|mech|merge|T1.15|Lint warning list. Chapters relaxed by BR-H3
+LR-3.04|LR|§3 L106|history|The vivid-without-specifics exception was deleted (it came from AI prose)|-|-|-|cut|log|-
+LR-3.05|LR|§3 L108|rule|What he actually names: books, places, brands, people, exact numbers|2|ALCKS|judge|keep|T2.3|The example list goes to ref
+LR-3.06|LR|§3 L110|rule|Numbers as digits, never spelled out|2|AL|mech|merge|T2.1|Articles and letters only. Book follows BR-H1. Clash C4. Dup BV-07, LR-12.00
+LR-3.07|LR|§3 L112|rule|He names his experts inside the narrative ("In 1955, two psychologists named...")|-|AL|-|cut|-|Superseded by decision 2 (R28). Clash C2
+LR-3.08|LR|§3 L114|rule|Name the characters, and give a name openly where the source has none|2|ALCKS|judge|merge|T2.3|Print names come from T0.6
+LR-3.09|LR|§3 L116|rule|Diff the vocabulary against the true corpus: keep unseen abstract nouns of 7 or more letters low|2|AL|mech|merge|card-A|Lint report. Dup WS-18, LR-12.00
+LR-3.10|LR|§3 L118|rule|British spelling, "everyday" as one word|2|ALCKS|mech|merge|T2.1|Dup BV-07, BR-I, WS-18, PL-05, OS-02
+LR-3.11|LR|§3 L120-122|rule|Plain over crafted at the mechanism: the honest looser word over a false exact one|1|ALCKS|checker|merge|T1.15|-
+LR-3.12|LR|§3 L124|rule|Name the subject early|-|AL|-|cut|-|Corrected by LR-3.13
+LR-3.13|LR|§3 L126|rule|Name the topic early, not the realization|2|AL|judge|merge|card-L|With LR-5.02
+LR-3.14|LR|§3 L128|rule|Filler: cut uncertainty hedges, keep vulnerability markers ("honestly", "genuinely")|2|ALCKS|judge|keep|T2.11|-
+LR-3.15|LR|§3 L130|rule|Tell talking-out-loud apart from crafted content before building on a phrase|2|ALCKS|judge|merge|T2.11|-
+LR-3.16|LR|§3 L132|rule|Read what a recurring detail is evidence of|2|ALCKS|judge|merge|T2.11|-
+LR-3.17|LR|§3 L134|rule|A few strong, concrete unfamiliar words are welcome, never a general lift in register|1|ALCKS|judge|merge|T1.15|Qualifier inside T1.15. Dup MA-07
+LR-3.18|LR|§3 L138|rule|No em dashes|0|ALCKS|mech|keep|T0.1|Stated in 43 files (see INVENTORY.md, duplicates)
+LR-3.19|LR|§3 L139|rule|No semicolons|0|ALCKS|mech|keep|T0.1|Decision 1. Clash C1 with MA-03 and MW-10
+LR-3.20|LR|§3 L140|rule|No clichés, no corporate jargon, no emojis|0|ALCKS|mech|merge|T0.1|Emojis to T0.1 lint. Clichés and jargon to T1.18. Dup PI-03, MW-09
+LR-3.21|LR|§3 L141|rule|Active voice. Address the reader as "you", except in self-talk|2|ALCKS|judge|merge|T2.10|Agentless passives are T1.3. Dup PI-03
+LR-3.22|LR|§3 L142|rule|Omit needless words, concrete over abstract, mix sentence lengths|-|ALCKS|-|cut|-|Dup T1.15, T1.13, PI-03
+LR-3.23|LR|§3 L143|rule|Sign-off "Coach Gen."|2|AL|mech|merge|card-A|Dup SP-S1, WS-A, BV-07
+LR-3.24|LR|§3 L144|rule|His readers read English as a second language. Many sophisticated words are ones he would not use|1|ALS|checker|merge|T1.15|Chapters relaxed by BR-H3. Dup MA-07, OS-02
+LR-4.01|LR|§4 L150|rule|First person for the reader's self-talk, second person for coach address|2|ALCKS|judge|merge|T2.4|-
+LR-4.02|LR|§4 L152-159|rule|Quoted self-talk is a core device|2|ALCKS|judge|keep|T2.4|Placement differs by output. Clash C3
+LR-4.03|LR|§4 L161-165|rule|Repeat a quoted line word for word to bridge two registers (his chimp rewrite)|2|AL|judge|merge|T2.10|Clash C3
+LR-4.04|LR|§4 L167-169|rule|The piece is "from me": Insight 1 opens in first person with him inside it|1|AL|checker|keep|card-A|Field premise "Insights from me, to you"
+LR-4.05|LR|§4 L171-175|rule|Never invent biography. The four legitimate first-person entries|0|ALCKS|checker|merge|T0.3|Dup BR-R3b.39, LR-12.00
+LR-4.06|LR|§4 L177|rule|Recognition, not credit: never frame his practice as having done it first|1|ALCKS|checker|merge|T1.16|-
+LR-4.07|LR|§4 L179|rule|Never "my clients"|0|ALCKS|mech|merge|T0.1|Dup BR-H9, BV-06, WS-14, WS-18
+LR-4.08|LR|§4 L181|rule|"We" is his bridge to the shared human beat|2|ALCKS|judge|merge|T2.10|Clash C9 with BV-06
+LR-4.09|LR|§4 L183|rule|Standing gap: ask him for a real detail from his life, never manufacture one|0|ALCKS|checker|merge|T0.3|-
+LR-4.10|LR|§4 L185-189|rule|A switch of POV or mode needs a reasoned bridge sentence|1|ALCKS|checker|merge|T1.2|Dup LR-11.11
+LR-4.11|LR|§4 L191|rule|A quote may change person across a switch, unless its power is in the exact words|2|ALCKS|judge|merge|T2.4|-
+LR-5.01|LR|§5 L197-201|rule|One arc, told forward: "the story of X getting rejected, or getting in?" answered in one sentence|1|ALCKS|checker|keep|T1.7|Dup LR-12.00. F6 fails it
+LR-5.02|LR|§5 L203|rule|A realization is told in the order it happened, held back until the reader can have it with him|1|AL|checker|keep|card-L|Also article realizations
+LR-5.03|LR|§5 L205|rule|A reveal gets its own paragraph and is said once more plainly. Each side of a conflict gets its own line|2|ALCKS|judge|merge|T2.10|-
+LR-5.04|LR|§5 L207|rule|One story, one turn, no return trips|1|ALCKS|checker|merge|T1.7|Dup LR-10.07, BR-R38
+LR-5.05|LR|§5 L209|rule|Never replace a cut arc with another arc|1|ALCKS|checker|merge|T1.7|Dup LR-10.13
+LR-5.06|LR|§5 L211|rule|Glue between beats: never make the reader infer a transition|1|ALCKS|checker|merge|T1.2|Dup BR-R5, LR-12.00
+LR-5.07|LR|§5 L213|rule|The story-to-takeaway glue concludes the story first|1|ALCKS|checker|merge|T1.2|-
+LR-5.08|LR|§5 L215|rule|After a story, let the reader draw the line: their terms, not the story's image again|2|ALCKS|judge|merge|T2.10|-
+LR-5.09|LR|§5 L217|rule|A suspense opener is short|2|ALCKS|judge|merge|T2.10|-
+LR-5.10|LR|§5 L219-221|rule|The force paragraph: name the reader's default fix and why it fails, extending the piece's own image|2|ALCKS|judge|merge|T2.10|One instance, a pattern to reach for
+LR-5.11|LR|§5 L223|rule|Reference decay: re-name the thing instead of pointing at it|1|ALCKS|checker|merge|T1.3|Dup BR-R7
+LR-5.12|LR|§5 L225|rule|Close every loop, never by spoiling the arc: continue the timeline|1|ALCKS|checker|merge|T1.7|Dup LR-12.00
+LR-5.13|LR|§5 L227|rule|Never narrate your own structure|1|ALCKS|checker|keep|T1.12|Book signpost exception BR-H5. Clash C15. Dup LR-10.10
+LR-5.14|LR|§5 L229|rule|Presentize the tragedy: "one day" turns a habit into one scene|2|ALCKS|judge|merge|T2.10|-
+LR-5.15|LR|§5 L231|rule|Show the peril you claim, in a clause|1|ALCKS|checker|merge|T1.8|-
+LR-5.16|LR|§5 L233|rule|A place name needs its category|2|ALCKS|judge|merge|T2.3|-
+LR-5.17|LR|§5 L235|rule|Every sentence needs an owner: no agentless passives|1|ALCKS|checker|merge|T1.3|Dup LR-10.08, LR-12.00
+LR-5.18|LR|§5 L237|process|After every local fix, re-read the whole beat|-|ALCKS|-|move|skill:writer|Dup WS-21
+LR-5.19|LR|§5 L239|rule|Vary sentence length, with some long winding sentences|1|ALCKS|checker|merge|T1.13|Dup LR-12.00, PI-03
+LR-6.01|LR|§6 L245-250|rule|When a beat is weak, raise the stakes, do not add story|1|ALCKS|checker|keep|T1.8|Dup LR-10.12, LR-12.00
+LR-6.02|LR|§6 L252|rule|The AI reflex adds narrative. His raises what is at risk|-|ALCKS|-|cut|-|Dup LR-6.01
+LR-6.03|LR|§6 L254|rule|Raise stakes to what they actually are: a concrete, plural cost|1|ALCKS|checker|merge|T1.8|Dup LR-9.05
+LR-6.04|LR|§6 L256-260|rule|Vividness needs an experience the reader has: explain new ideas plainly, spend imagery only on lived experience|1|ALCKS|checker|keep|T1.6|Plain-new-idea half also in T1.5. Dup BR-R24, LR-12.00
+LR-6.05|LR|§6 L262|rule|A group of three signals a swappable category, so vary the examples|2|ALCKS|judge|merge|T2.6|-
+LR-6.06|LR|§6 L264-268|rule|A triplet spans different aspects of life. Vary counts elsewhere|2|ALCKS|judge|keep|T2.6|Dup LR-10.05, LR-12.00
+LR-6.07|LR|§6 L270|rule|End a list of three on the callback: reader lines first, the story last|2|ALCKS|judge|merge|T2.6|Dup MP-57
+LR-6.08|LR|§6 L272|rule|A series of ages works as a beat|2|ALCKS|judge|merge|T2.6|One instance
+LR-6.09|LR|§6 L274|rule|Compression is a payoff after setup, never standalone|2|ALCKS|judge|merge|T2.10|-
+LR-6.10|LR|§6 L276|rule|A directive tone only with a concrete, literal action|2|ALCKS|judge|merge|T2.10|-
+LR-6.11|LR|§6 L278|rule|External pressure is a deliberate theme worth drawing out|2|ALCKS|judge|merge|T2.5|Dup LR-9.04
+LR-7.01|LR|§7 L284|rule|Never end on the hard question alone: follow it with demonstrated possibility|1|AL|checker|keep|T1.17|Dup LR-12.00, LR-11.10
+LR-7.02|LR|§7 L286|rule|The coda is concrete and promises liberation, not survival|1|AL|checker|merge|T1.17|-
+LR-7.03|LR|§7 L288|rule|Insight 3 is the reader's open question, with no coda|2|AL|judge|keep|card-A|-
+LR-7.04|LR|§7 L290|rule|Insight 3 opens a new angle, never restates Insight 1's question|2|AL|judge|merge|card-A|With MP-13 and WS-A. Clash C20
+LR-7.05|LR|§7 L292|rule|Prescriptive, not philosophical, at the hinge|1|ALCKS|checker|merge|T1.17|-
+LR-8.01|LR|§8 L298|rule|Argue his thesis, not the genre's|0|ALCKS|checker|keep|T0.4|Dup WS-H (letters: the author's thesis)
+LR-8.02|LR|§8 L300-304|rule|The prescription comes from his material, never from invention|0|ALCKS|checker|keep|T0.4|Names build_worksheet.js: now the brain (clash C5). Dup LR-10.09, LR-12.00, WS-10, WS-C3, WS-H
+LR-8.03|LR|§8 L306|rule|Find material by fit: name the inspiration's core, take the item that shows it happening, prefer a live session|1|AL|checker|keep|card-L|Dup WS-13
+LR-8.04|LR|§8 L308|rule|Watch for the structural gift: his material may hold its own ending|2|ALCKS|judge|merge|T2.10|-
+LR-8.05|LR|§8 L310|rule|An article, not a literature review: the facts stay true, the presentation is free|1|ALCKS|checker|merge|T1.10|-
+LR-8.06|LR|§8 L312|rule|No mid-narrative attribution: credit once up front and in the citation layer|1|ALCKS|checker|merge|T1.10|Up-front credit superseded by R28 (decision 2)
+LR-8.07|LR|§8 L313|rule|The reader's words, not the paper's|1|ALCKS|checker|merge|T1.10|-
+LR-8.08|LR|§8 L314|rule|Research serves the piece: a finding that does not earn its place is cut everywhere|1|ALCKS|checker|merge|T1.1|-
+LR-8.09|LR|§8 L316|rule|Never smooth his worksheet wording when quoting it directly|0|ALCKS|mech|merge|T0.2|-
+LR-8.10|LR|§8 L318|rule|Never invent titles, subtitles or citations. Flag an unverified fact and ask|0|ALCKS|checker|merge|T0.3|Dup LR-10.01, GR-13, WS-A, WS-B
+LR-8.11|LR|§8 L320|rule|How he handles research: names the researcher, one soft verb where thin, coins terms, research as something that happened to him|2|AL|judge|merge|T2.10|Naming half superseded by decision 2. The soft-verb and coined-term moves are patterns
+LR-8.12|LR|§8 L322|rule|Mark his own layer by what it did to him, never by what the study does not prove|1|ALCKS|checker|merge|T1.10|-
+LR-8.13|LR|§8 L324|rule|Anything added for protection passes the reader test: no permanent disclaimer seat|1|ALCKS|checker|merge|T1.10|Dup WS-H (the disclaimer paragraph)
+LR-8.14|LR|§8 L326|rule|"Do these" combos need full storyboards with production tags|-|content|-|out|out:content|Dup CR-03
+LR-8.15|LR|§8 L330|rule|Science belongs in Insight 1 when done properly, to book quality|2|A|judge|merge|card-A|-
+LR-8.16|LR|§8 L332|rule|One step of the reasoning per paragraph, laid out before drafting|1|ALCKS|checker|merge|T1.5|Dup BR-R37, MP-58
+LR-8.17|LR|§8 L334|rule|Give a study only the sentences its step needs|1|ALCKS|checker|merge|T1.10|-
+LR-9.01|LR|§9 L340|rule|Extended metaphor: strict internal chronology|2|ALCKS|judge|merge|T2.10|-
+LR-9.02|LR|§9 L341|rule|Foreshadow the hoped-for outcome before the letdown|2|ALCKS|judge|merge|T2.10|-
+LR-9.03|LR|§9 L342|rule|Keep the question cadence once it is set|2|ALCKS|judge|merge|T2.10|-
+LR-9.04|LR|§9 L343|rule|External and social pressure deepens paralysis|-|ALCKS|-|cut|-|Dup LR-6.11
+LR-9.05|LR|§9 L344|rule|Raise stakes to what they actually are|-|ALCKS|-|cut|-|Dup LR-6.03
+LR-9.06|LR|§9 L345|rule|Split a sharp contrasting fact into its own short sentence|2|ALCKS|judge|merge|T2.10|-
+LR-9.07|LR|§9 L346|rule|One governing image per beat: never stack unrelated vehicles|1|ALCKS|checker|merge|T1.6|Dup LR-10.03, BR-R24
+LR-9.08|LR|§9 L347|rule|The paired analogy with "similarly:" is his move|2|ALCKS|judge|merge|T2.10|Dup LR-11.08
+LR-10.01|LR|§10 L353|rule|No unrequested titles or framing elements|0|ALCKS|checker|merge|T0.3|-
+LR-10.02|LR|§10 L354|rule|No cliché templates ("The [Noun] Nobody [Verb]", "The Truth About X")|1|ALCKS|mech|merge|T1.18|Regex in lint plus the checker
+LR-10.03|LR|§10 L355|rule|Metaphor stacking|-|-|-|cut|-|Dup LR-9.07
+LR-10.04|LR|§10 L356|rule|Rhythmic monotony from clipped fragments, even when every rule is followed|1|ALCKS|checker|merge|T1.13|-
+LR-10.05|LR|§10 L357|rule|The three-item list as a default shape|-|-|-|cut|-|Dup LR-6.06
+LR-10.06|LR|§10 L358|rule|Over-simplification is a tell|1|ALCKS|checker|merge|T1.18|-
+LR-10.07|LR|§10 L359|rule|The return trip|-|-|-|cut|-|Dup LR-5.04
+LR-10.08|LR|§10 L360|rule|Agentless passives|-|-|-|cut|-|Dup LR-5.17
+LR-10.09|LR|§10 L361|rule|A well-fitting invention in place of his method|-|-|-|cut|-|Dup LR-8.02
+LR-10.10|LR|§10 L362|rule|Meta-narration|-|-|-|cut|-|Dup LR-5.13
+LR-10.11|LR|§10 L363|rule|Literature-review habits|-|-|-|cut|-|Dup LR-8.05 to LR-8.07
+LR-10.12|LR|§10 L364|rule|Adding story where stakes belong|-|-|-|cut|-|Dup LR-6.01
+LR-10.13|LR|§10 L365|rule|Replacing a cut arc with another|-|-|-|cut|-|Dup LR-5.05
+LR-10.14|LR|§10 L366|rule|No "Stop X. Start Y." bald imperative pairs|1|ALCKS|mech|merge|T1.18|Regex plus the checker
+LR-10.15|LR|§10 L367|rule|No "not just X. Y." when the second half only restates the first, louder|1|ALCKS|checker|merge|T1.18|Also T1.3
+LR-10.16|LR|§10 L368|rule|Build toward a genre-cliché word ("why"), never name it|2|ALCKS|judge|merge|T2.10|Pattern, not a fail
+LR-10.17|LR|§10 L369|rule|Cleverness over audience fit: only bust a myth almost every reader already knows|1|ALCKS|checker|merge|T1.18|-
+LR-11.00|LR|§11 L375|process|List his devices before drafting, not just the statistics|-|ALCKS|-|move|skill:writer|-
+LR-11.01|LR|§11 L377|rule|Opens in first person with a concrete dated scene|2|AL|judge|merge|card-A|-
+LR-11.02|LR|§11 L378|rule|Names books, brands, places, people and exact numbers|-|-|-|cut|-|Dup LR-3.05
+LR-11.03|LR|§11 L379|rule|Introduces research by naming the researcher and the year inside the story|-|AL|-|cut|-|Superseded by decision 2. Clash C2
+LR-11.04|LR|§11 L380|rule|Quoted self-talk dropped in as its own beat|2|AL|judge|merge|T2.4|Clash C3
+LR-11.05|LR|§11 L381|rule|A long winding sentence, then a very short one|2|ALCKS|judge|merge|T2.10|-
+LR-11.06|LR|§11 L382|rule|Direct address slipped inside a first-person passage|2|AL|judge|merge|T2.10|-
+LR-11.07|LR|§11 L383|rule|Two-part contrast ending on a rhetorical question, different content in each half|2|ALCKS|judge|merge|T2.10|-
+LR-11.08|LR|§11 L384|rule|Paired analogy with "similarly:"|-|-|-|cut|-|Dup LR-9.08
+LR-11.09|LR|§11 L385-387|rule|His themes: escape and refuge for excuses, failed suppression, identity mismatch drives quitting|2|ALCKS|judge|merge|T2.5|-
+LR-11.10|LR|§11 L388|rule|First-person anecdote, a closing question, then a possibility coda|-|AL|-|cut|-|Dup LR-7.01, LR-11.01
+LR-11.11|LR|§11 L389|rule|Third person to second person always through a bridge sentence|-|-|-|cut|-|Dup LR-4.10
+LR-12.00|LR|§12 L393-415|rule|Quick checklist: 18 items, each restating a rule above|-|AL|-|cut|-|Replaced by one checker per Tier 1 rule (step 12) and cg_lint.py (step 11)
+LR-13|LR|§13 L419-517|history|Calibration log: Law 1 sentence rounds 0 to 8, every variant and ranking|-|-|-|move|log|Training data, not rules
+LR-14|LR|§14 L519-576|history|Calibration log: Law 2 chimp piece, v1 to v10 and his rewrite|-|-|-|move|log|Source of test case F6
+LR-14a|LR|§14 L578-628|ref|The accepted chimp text, his own rewrite|-|AL|-|move|ref|Part of his true corpus
+LR-15|LR|§15 L630-649|history|Calibration log: Lasting Change Letters #1, v1 to v6|-|-|-|move|log|Source of test case P2
+BR-00a|BR|L1-5|meta|File holds v2 and, below it, the abandoned v1 as raw data|-|-|-|cut|-|-
+BR-00b|BR|L9|ref|How v2 was built: the full read of 5 books, the findings, the calibration log|-|-|-|move|ref|Provenance line for the rulebook header
+BR-00c|BR|L11|meta|What earns a place: what the books do and something he said. Overfitting flagged|-|-|-|move|skill:propose|Admission test. Dup PL-04, MW-14
+BR-00d|BR|L13|meta|LR governs voice, BR sits on top, book craft may override LR|-|-|-|cut|-|The merged rulebook ends the two-doc split. Cards settle each clash
+BR-00e|BR|L15|process|Not a checklist while drafting: draft whole, then use section I as the review pass|-|ALCKS|-|move|skill:writer|Dup WS-15, WS-16
+BR-00f|BR|L17|meta|Protected since 5 Oct, same level as LR|-|-|-|move|brain-table|Step 9
+BR-00g|BR|L19|meta|Add and annotate, never condense|-|-|-|cut|brain-table|Decision 4. Clash C7
+BR-0.1|BR|§0 L27|process|[Square brackets] mean a suggestion: about half may be rewritten|-|ALCKS|-|move|skill:writer|Markup round. Dup MP-54, OS-02
+BR-0.2|BR|§0 L28|rule|"Double quotes" mean a sentence he strongly believes: change at most a tenth, keep his voice|0|ALCKS|mech|merge|T0.2|Dup MP-54. Clash C8 with MW-05
+BR-0.3|BR|§0 L29|process|A newer note wins over a "" line|-|ALCKS|-|move|skill:writer|-
+BR-0.4|BR|§0 L30-31|rule|Paragraphs: a visible gap in drafts, but chapter drafts indent with no gap (3 Nov)|2|ALCKS|mech|merge|card-C|Gap for A, L, K, S. Clash C14. Dup MP-55, WS-C5
+BR-0.5|BR|§0 L32|rule|/privileged: keep the fact, make it acceptable, say where it was a privilege|1|ALCKS|checker|merge|T1.16|Code handling to skill:writer. Dup MP-84
+BR-R1|BR|R1 L38-40|rule|Fill the blank and pick one thread: every paragraph is a step on it|1|ALCKS|checker|keep|T1.1|Dup LR-2.01
+BR-R1a|BR|R1 L42-46|rule|The one thought carries the whole chapter. Sections plant arguments that a later section joins (pattern)|1|C|checker|merge|T1.1|The pattern half goes to card-C
+BR-R2|BR|R2 L48-50|rule|Every idea lives in the chapter that owns it: no previews, no repeats|1|CK|checker|keep|T1.1|Ledger in Book_Status. Dup WS-12, BS-02, BR-I
+BR-R3|BR|R3 L52-54|rule|Only approved material. A transcript only checks a fact. Composite names in print|0|ALCKS|checker|keep|T0.3|Source list is stale (clash C5). Names go to T0.6
+BR-R3a|BR|R3 L56|rule|For people he coaches, R3b governs the surface and R3 the core|0|CKS|checker|merge|T0.5|-
+BR-R3m|BR|R3 L58-61|rule|Money only with a struggle or a human side, never as a flex. An everyday illness as a cause is not health framing. Conditions, diagnoses, medicines, readings and weights stay out|0|ALCKS|checker|merge|T0.5|Replaces R3's blanket money ban. Clash C12 with WS-11
+BR-R3b|BR|R3b L63-67|rule|True core, built surface: a built detail makes the core clearer and the person harder to recognise, never changes what happened|0|CKSAL|checker|keep|T0.5|Listing duty goes to T1.11. Dup WS-14, MP-45
+BR-R3c|BR|R3b L66|rule|Never quote a client's thinking-out-loud as a line: write the line she would say once she had found the words|1|CKSAL|checker|merge|T1.15|Root of the half-vague, choppy client story (5 Oct). With BR-R30a
+BR-R3b.1-8|BR|R3b L69-80|rule|Read this first: limits, not musts. The record is the default. Build only for a reader's question or to hide the person. A detail must do work. Reread the whole. Imagine this person. Off the list means leave out and ask|1|CKSAL|checker|keep|T1.11|-
+BR-R3b.9-15|BR|R3b L82-90|rule|Never: a better or invented result or raised stakes. The person's past. A moved insight. Family acting or speaking. Sensory detail he was not there for. What no real person would do. Made-up research data|0|CKSAL|checker|keep|T0.5|Line 9 exception: an invented persona may get a result
+BR-R3b.16-20|BR|R3b L92-98|rule|Border, no unless: an action built from talk. An unnamed feeling, only as an earned hunch. Another person's tone-changing act. False precision. A reworded coaching line when his words exist|1|CKSAL|checker|keep|T1.11|-
+BR-R3b.21-32|BR|R3b L100-113|rule|Allowed: causes between events. What an unnamed thing was. Small facts. Small things he saw. Plain problem scenes. Odd fixes. A light matching result. His narration extending their image. Their meaning in clearer words. Hiding swaps. Money with a human side. Research names and year from the citation|2|CKSAL|judge|keep|T2.12|Line 32 sits beside R28's no-year rule: the citation layer only. Clash C2
+BR-R3b.33-38|BR|R3b L115-122|rule|Use very carefully: a built line for him. His built first move. After-session acts. "almost everyone I coach" with 3 examples. One observation then a question. Singlish|1|CKSAL|checker|keep|T1.11|-
+BR-R3b.39|BR|R3b L124-126|rule|His own stories: the same lines hold. A true event may move days. No built action of his own, no family|0|ALCKS|checker|merge|T0.5|Dup LR-4.05
+BR-R4|BR|R4 L128-129|process|Write whole from the material forward, never patch. After 3 rewrites, use different material|-|ALCKS|-|move|skill:writer|Its symptoms are caught by T1.3 and T1.13. Dup MP-37, WS-15, WS-C4
+BR-R29|BR|R29 L131-135|rule|An article's Insight 2 and 3 are optional in a chapter. A kept study follows R28. Kept questions go in From Within You|2|C|judge|keep|card-C|Dup BR-I
+BR-R5|BR|R5 L139-142|rule|The reader's question sits between paragraphs, and the next first sentence answers it|1|ALCKS|checker|keep|T1.2|Dup BR-I, WS-16. F3 fails it
+BR-R6|BR|R6 L144-148|rule|Each sentence hands something to the next. Connectors name the real relation|1|ALCKS|checker|keep|T1.3|Dup BR-I, WS-16
+BR-R7|BR|R7 L150-152|rule|Repeat the words, not the idea: no far "it", and a louder restatement is cut|1|ALCKS|checker|merge|T1.3|Dup LR-5.11, LR-10.15
+BR-R8|BR|R8 L154-156|rule|Show it, then name it, then say it plainly|1|ALCKS|checker|keep|T1.5|Dup BR-I
+BR-R9|BR|R9 L158-160|rule|A surprising idea never arrives bare|1|ALCKS|checker|merge|T1.5|Marked strong, not yet proven
+BR-R32|BR|R32 L162-167|rule|Few things to remember, one name each: keep 2 or 3, same words every time. Source labels are not reader words|1|ALCKS|checker|keep|T1.4|Dup BR-I, WS-16
+BR-R10|BR|R10 L171-173|rule|Sentences under 8 words have a job. About 1 in 7 to 1 in 5|1|ALCKS|checker|keep|T1.13|Lint counts, checker judges. Dup BR-I
+BR-R11|BR|R11 L175-176|rule|One event, one sentence. A long sentence may hold a sequence in time order|1|ALCKS|checker|merge|T1.13|-
+BR-R12|BR|R12 L178|rule|Parallel only for items that truly match, with the frame and subject kept exact|1|ALCKS|checker|keep|T1.14|Dup MP-34, MP-38, BR-I. F1 flag
+BR-R12a|BR|R12 L180|rule|Paragraphs that build on the same idea open in the same frame|2|ALCKS|judge|merge|T2.10|Dup BR-I
+BR-R13|BR|R13 L182-183|rule|Break a run of 3 or 4 same-shape sentences with a long one that moves on|1|ALCKS|checker|merge|T1.13|-
+BR-R14|BR|R14 L185-187|rule|The colon does the joining: no semicolons, no em dashes|0|ALCKS|mech|merge|T0.1|Dup LR-3.18, LR-3.19, BR-H6
+BR-R15|BR|R15 L189-191|rule|Grammar correct in his voice: tense, agreement, fragments|2|ALCKS|judge|keep|T2.1|Fragments per BR-H4. Dup MP-39
+BR-R15a|BR|R15 L192|rule|Articles too: fix spelling and grammar silently, keep his voice|2|ALCKS|judge|merge|T2.1|Dup MP-46, BR-I, WS-17
+BR-R33|BR|R33 L194-197|rule|Oxford comma|2|ALCKS|mech|merge|T2.1|Dup MP-17, BR-I, BV-07, SP-S4, PL-05
+BR-R16|BR|R16 L201-202|rule|A case has a set shape: the person in one sentence, stakes before speech, action or feeling before a short quote, one sentence of meaning|2|CKSAL|judge|keep|T2.9|Core of card-S
+BR-R16a|BR|R16 L204|rule|Carry a case from one area of life into at least one other the reader lives in|1|ALCKS|checker|merge|T1.9|T1 because he named the gap as a failure ("it's missing and it feels"). Dup BR-I
+BR-R17|BR|R17 L206-208|rule|Warm the water before a client's line: facts first, never the meaning. A one-sentence quote gets longer setup or runs longer|1|CKSAL|checker|keep|T1.9|Dup MP-32, MP-33, BR-I, WS-H
+BR-R18|BR|R18 L210-212|rule|Two or 3 exchanges told in prose: quote feeling, report facts, plain intent verbs, a human beat. Sessions warm, him a great coach|2|CKSAL|judge|keep|T2.9|Dup MP-21
+BR-R19|BR|R19 L214-216|rule|Set up a scene like Courage's narrator: body, setting only where it carries feeling, inner voice, one chain of cause and effect|2|CKS|judge|merge|T2.9|No-pity line goes to T0.7
+BR-R20|BR|R20 L218-219|rule|A mirror needs matching beats: case, hinge, explicit link, second story with the same beats|1|ALCKS|checker|merge|T1.14|-
+BR-R28|BR|R28 L221-224|rule|Research backs an idea, never interrupts a story: idea first, 2 to 5 sentences, one finding, meaning in a line, no year, no university, at most one name with a role|1|ALCKS|checker|keep|T1.10|Decision 2 extends it to articles. Dup BR-I
+BR-R30|BR|R30 L226-228|rule|Quotes sit inside the prose, except quick dialogue, a list of sample sentences, or the payoff line|2|CKS|judge|keep|T2.4|Clash C3 for articles. Dup BR-I
+BR-R30a|BR|R30 L230-235|rule|A call or session is rewritten as book prose, never copied in call order. Each quoted line as well written as the prose|1|CKS|checker|merge|T1.15|Line 5 is context, not a rule. Dup MP-76, WS-SC
+BR-R35|BR|R35 L237-238|rule|Only the line a chapter is built to deliver is set apart|2|C|mech|keep|card-C|Dup BR-I
+BR-R38|BR|R38 L240-248|rule|Tell a person's story once, then call back. A new piece reads as a retcon. Default: tell it whole|1|CKS|checker|keep|T1.7|Dup BR-I
+BR-R38a|BR|R38 L250-254|rule|"Once" means one story. Pattern to try: the story follows the chapter's own shape|2|C|judge|merge|card-C|Claude's reading plus his suggestion, unconfirmed
+BR-R21|BR|R21 L260|rule|Warmth is the author's own story: short, mirrored, admitting something. Take the blame off the reader|2|ALCKS|judge|keep|T2.7|Dup BR-I
+BR-R21a|BR|R21 L262|rule|Anything showing the author negative or unfinished is clearly in the past, unless a deliberate payoff|1|ALCKS|checker|keep|T1.16|Dup BR-I, WS-H
+BR-R22|BR|R22 L264-265|rule|Confidence calibrated: flat where solid, a hedge only at a real limit, first-person verdicts|2|ALCKS|judge|merge|T2.7|-
+BR-R23|BR|R23 L267-268|rule|Check in with the reader: answer their question at once, voice their doubt first|2|ALCKS|judge|merge|T2.7|-
+BR-R36|BR|R36 L270-272|rule|Once the piece turns to the reader, the next paragraphs open on the reader's life|2|ALCKS|judge|keep|T2.8|Dup MP-56
+BR-R37|BR|R37 L274-277|rule|One leap of logic per step: list the steps first, never merge them to stay short|1|ALCKS|checker|merge|T1.5|Dup LR-8.16, MP-58
+BR-R24|BR|R24 L281-284|rule|An image must already be in the reader's life: hold one, pay it off plainly|1|ALCKS|checker|keep|T1.6|Dup LR-6.04, BR-I, WS-H. F2 flag
+BR-R25|BR|R25 L288|rule|Plant and pay off threads: call back in exact words with a reminder tag, each time adding a layer|2|ALCKS|judge|keep|T2.8|-
+BR-R25a|BR|R25 L290|rule|Article: after the story ends, the second half calls back to it at least once|2|AL|judge|merge|T2.8|-
+BR-R25b|BR|R25 L292-297|rule|Name a chapter only for a tool. Each chapter opens where the last left the reader|2|C|judge|merge|card-C|Dup BR-I
+BR-R26|BR|R26 L299|rule|Endings: the relationship, the echo, or one sayable line, never a teacher's summary in the prose|1|CKS|checker|merge|T1.17|-
+BR-R27|BR|R27 L301-304|rule|Open the book like Dweck. Chapter 1 in time order. Never repeat the subtitle in the opening pages|2|C|judge|keep|card-C|Introduction and Chapter 1 only
+BR-R31|BR|R31 L306-309|rule|Headings mark a new idea, never an act of the story. No heading on the opening story. About one per 400 to 600 words|2|C|judge|keep|card-C|Clash C13 (settled). Dup BR-I
+BR-R31a|BR|R31 L311-316|rule|Headings name the idea by default, a question only where the reader asks it, fresh and human|2|C|judge|merge|card-C|-
+BR-R34|BR|R34 L318-319|rule|Chapter Summary box: never "I", holds the key phrases, every line from the chapter|2|C|mech|keep|card-C|Dup MP-18, BR-I
+BR-R39|BR|R39 L321-326|rule|A section rises to one turn, then hands off: nothing after the turn but the hand-off|1|CK|checker|keep|T1.17|Dup BR-I
+BR-R40|BR|R40 L328-336|rule|Figures: numbered x.y, a one-sentence caption, pointed to once, never instead of the prose|2|C|mech|keep|card-C|Dup BR-I. Build gap (L336) is a process note
+BR-H1|BR|H1 L342|rule|Book numbers follow the books: small counts in words, digits for measures and labels|2|CKS|mech|keep|T2.1|Articles and letters keep digits (WS-05). Clash C4
+BR-H2|BR|H2 L344|rule|Contractions are fine where the line is spoken or warm|2|ALCKS|judge|merge|T2.10|Dup MP-41, WS-05
+BR-H3|BR|H3 L346-347|rule|Book vocabulary may be richer: vivid and precise, never long or fancy|1|CK|judge|merge|T1.15|Per-output qualifier inside T1.15. Clash C6. Dup MP-35
+BR-H4|BR|H4 L349|rule|Fragments: none by default. A deliberate one is flagged for his call|1|ALCKS|judge|merge|T1.13|Qualifier inside T1.13. Clash C16
+BR-H5|BR|H5 L351|rule|The book may signpost what the reader needs, never explain its shape|1|C|checker|merge|T1.12|Clash C15
+BR-H6|BR|H6 L353|rule|Semicolons and em dashes banned despite the guides|-|-|-|cut|-|Dup BR-R14
+BR-H7|BR|H7 L355|rule|"However" may open a sentence when it turns the story|2|ALCKS|judge|merge|T2.10|-
+BR-H8|BR|H8 L357|rule|Article length ranges do not apply to the book|2|C|judge|merge|T2.2|-
+BR-H9|BR|H9 L359|rule|"My clients" banned in the book|-|-|-|cut|-|Dup LR-4.07
+BR-H10|BR|H10 L361|rule|R28 and R30 for the book. LR §11 still governs articles|-|-|-|cut|-|Research half superseded by decision 2. Self-talk half is clash C3
+BR-I|BR|§I L365-396|rule|Review pass: 30 items, each pointing at a rule above|-|ALCKS|-|cut|-|Becomes the checker set (step 12) and lint (step 11). Item 12, "mechanics checked by script", goes to skill:writer
+BR-v1|BR|L397-538|history|Abandoned Book Rules v1 (4 Oct), its epoch 0 log and reference shelf notes|-|-|-|cut|log|16% of the file. Archived in git. Its "draft long, he trims" proposal was never confirmed
+BR-R41|Book_Writing_Handoff|§10 L274-280|open|"Look in the brain first" before writing any detail of a person, story or quote|-|ALCKS|-|open|open|Removed 4 Nov at his order. Whether it returns is his call only
+CS-01|Book_Writing_Handoff|§10 L213-219|rule|Case study objective: reads like Dweck (trusted, fast, lands on the person's own line), sounds like him (curious, editor not hero, client capable, simple vivid words), stays inside the built-detail lines|1|S|checker|keep|card-S|Claude's words that he holds it to (4 Nov). In no rule doc yet
+CS-02|Book_Writing_Handoff|§10 L228-241|rule|Round 1 readings: under-built gaps need one or two bridges. Length follows the story. The best cases carry an argument. No advice, diagnosis or know-it-all voice. Keep his short session line|1|S|checker|merge|card-S|Claude's reading of his marks. Round 2 not run yet. Bridges in T1.9, no-advice in T0.7
+GR-01|GR|"Check the protected list"|process|Check the protected list before any write. On the list, he must name the change|-|-|-|move|brain-table|Dup PD-02
+GR-02|GR|"Not on the list"|process|Off the list: normal edits, condensing allowed, read the current version first|-|-|-|move|guardrails|Clash C7 with MA-09
+GR-03|GR|"Either way"|process|project_write replaces the whole file: a dropped line is gone|-|-|-|move|guardrails|-
+GR-04|GR|"Never copy a file by re-typing it"|process|Copy files by moving bytes, never by retyping|-|-|-|keep|guardrails|Dup PD-04, PL-06, SP-00, WS-03
+GR-05|GR|"A project doc that also lives on his Mac"|process|A doc mirrored on the Mac: diff before calling it current|-|-|-|keep|guardrails|-
+GR-06|GR|"One artifact, one home"|process|One home per artifact: split rather than mirror|-|-|-|keep|guardrails|-
+GR-07|GR|"Local by default, project by request"|process|Scratch stays local. The project gets finished deliverables. Ask before writing durable docs|-|-|-|keep|guardrails|Dup WS-H
+GR-08|GR|"Verify, do not assert"|process|Never call a doc clean until a script says so. Test a protection before claiming it|-|ALCKS|-|keep|guardrails|The basis for cg_lint.py. Dup WS-18
+GR-09|GR|"Read the whole source"|process|Read the whole source before choosing from it|-|ALCKS|-|move|skill:writer|Dup WS-C1
+GR-10|GR|"Never delete a doc, flag it"|process|Never delete or empty a doc on your own judgment|-|-|-|keep|guardrails|-
+GR-11|GR|"Read the guardrails first"|process|Read LR and Guardrails first. Extend rules, never re-derive them|-|-|-|cut|-|The card loader replaces it (steps 9, 14)
+GR-12|GR|"Response shape"|process|Answer first, no reflective commentary, do A when told A|-|-|-|keep|memory|Dup MA-01, MA-05
+GR-13|GR|"Never without asking"|process|Never without asking: publish, create or delete a doc, write a protected doc, invent a title or citation, add an unconfirmed fact under his name|0|ALCKS|checker|merge|T0.3|Titles, citations and facts to T0.3. The rest stays in guardrails
+PD-01|PD|"The list"|meta|Read-only: LR (3 Sep) and BR (5 Oct). Append-only: Social Posting Rules (15 Oct)|-|-|-|move|brain-table|The rules table with a never-delete trigger and change log (step 9)
+PD-02|PD|"The rule"|meta|Never write, condense or clean a listed doc. Propose the exact lines in chat|-|-|-|move|brain-table|Decision 4 allows this refactor
+PD-03|PD|"The one exception"|meta|He overrides by naming the change that turn. Read fresh, change only those lines, report|-|-|-|keep|skill:propose|Survives as the go-on-exact-lines rule
+PD-04|PD|"The one exception", BR paragraph|process|Book Rules: edit the Mac master first, then upload the same bytes|-|-|-|move|skill:propose|The master moves to the brain table. The compiler writes the Mac copy (step 10)
+PD-05|PD|"Append-only docs"|meta|Append-only: add lines and CORRECTION lines, never delete or rewrite|-|social|-|out|out:social|-
+PD-06|PD|"Why this exists"|history|No patch operation. Every LR write retypes about 9,000 words|-|-|-|cut|log|-
+PD-07|PD|"What is not protected", "Adding a doc"|meta|.docx and .pdf uploads cannot be written. He adds docs to the list|-|-|-|cut|-|-
+CR-00|CR|L1-9|meta|A separate rulebook for short-form content. Do not copy rules in from LR or BR. Add and annotate|-|content|-|out|out:content|Deferred with the brand and social cards
+CR-01|CR|§1|rule|Strip brainstorm output to bare suggestions|-|content|-|out|out:content|Dup MA-02
+CR-02|CR|§1|rule|The 4th five: combos chosen by done-before, impact, framework importance|-|content|-|out|out:content|Dup MA-02
+CR-03|CR|§1|rule|Combos get full beat-by-beat storyboards|-|content|-|out|out:content|Dup LR-8.14
+CR-04|CR|§1|rule|Content-kitchen leads come only from him|-|content|-|out|out:content|-
+CR-05|CR|§1|rule|Default shape is the four fives unless he asks otherwise|-|content|-|out|out:content|-
+CR-06|CR|§2|history|Calibration log, empty|-|content|-|out|out:content|-
+SP-00|SP|header, "No-delete rule"|meta|Packaging per platform. Never delete, add only, his go for additions, never retype|-|social|-|out|out:social|-
+SP-S1|SP|Shared|rule|Sign-off "Coach Gen" on every site|-|social|-|out|out:social|Dup LR-3.23
+SP-S2|SP|Shared|rule|Flex and story claims true and on record|0|social|-|out|out:social|Dup T0.3
+SP-S3|SP|Shared|rule|Workshops: only the one he has not run (6C) is unclaimable|-|social|-|out|out:social|-
+SP-S4|SP|Shared|rule|No em dashes, simple words, Oxford comma|-|social|-|out|out:social|Dup T0.1, T1.15, T2.1
+SP-LI|SP|LinkedIn, Confirmed rules|rule|8 rules: link per goal, sign-off, series line under the title, 3 fresh hashtags, 75 to 85% story, wording may change, mix flexes, flex calls back to the story|-|social|-|out|out:social|-
+SP-LIr|SP|LinkedIn, Flex menu, Mechanics, Approved posts, Calibration log|ref|15 flex types, platform facts, one approved post, log|-|social|-|out|out:social|-
+SP-FB|SP|Facebook, Confirmed rules|rule|13 rules: post as the Page, switch identity, two audiences, warm and bite-sized, Indonesian mixed in, both languages up front, English title with Indonesian tag, no series line, 1 article as 3 posts, part labels, minimalist images, no word target, which language carries what|-|social|-|out|out:social|-
+SP-FBr|SP|Facebook, Accounts, Mechanics, Localization log, Calibration log, Open decisions|ref|Account facts, platform facts, Indonesian training log|-|social|-|out|out:social|-
+SP-IG|SP|Instagram|rule|Full English. The visuals carry the post. Coachinator tools and parser facts|-|social|-|out|out:social|-
+RS-00|RS|header|meta|Working reference: add and annotate, never shorten|-|reel|-|out|out:reel|-
+RS-01|RS|"Quick pick", "Shared rules", Styles 1 to 3|rule|Which style per post type. Frame, loudness, captions, length. Each style's structure, look and settings|-|reel|-|out|out:reel|-
+RS-02|RS|"Decisions, 2026-10-21"|rule|References guide presentation only, the content is always his. Caption language follows the speech. Fonts. Transcription. Shadow off|-|reel|-|out|out:reel|"Content always his" dup T0.3
+RS-03|RS|"Open items", "Reference file map"|ref|Open items and file map|-|reel|-|out|out:reel|-
+BV-00|BV|header|meta|Load for public copy. LR wins on sentence-level questions|-|brand|-|out|out:brand|Its pointer to LR must move to the new rulebook (steps 17, 18)
+BV-01|BV|§1|ref|Brand platform: audience, belief, promise, mechanism, system, positioning|-|brand|-|out|out:brand|"Everyone is resourceful" dup T0.7
+BV-02|BV|§2-3|ref|Tracks and messaging house|-|brand|-|out|out:brand|-
+BV-03|BV|§4|rule|Voice traits: plain and concrete, calm and certain, on your side, from me and true|1|ALCKS|checker|merge|T1.15|"Never sounds like: We, our team" is clash C9
+BV-04|BV|§5|rule|Tone per channel|-|brand|-|out|out:brand|-
+BV-05|BV|§6, Always|rule|Exact names: Lasting Change, the 5 Laws and their names, 3 Stages, Energy Audit, "keep trying, but never finish", "someone I coach"|0|ALCKS|mech|merge|T0.2|Locked names. Dup MF-02
+BV-06|BV|§6, Never|rule|Never: "my clients", "we", "our team", "Coach Wibawa", "broken", "fix you", "lazy" as a label, hype clichés, health labels at the reader, scare stats, ™|1|ALCKS|mech|merge|T1.18|"my clients" to T0.1, labels to T0.7, hype list to T1.18 lint. "we" is clash C9
+BV-07|BV|§6, Mechanics|rule|British spelling, digits, "everyday", Oxford comma, no em dashes, semicolons or emojis, sign-off|-|-|-|cut|-|Dup T0.1, T2.1 (it says so itself)
+BV-08|BV|§7-8|ref|Naming and bios|-|brand|-|out|out:brand|-
+BV-09|BV|§9|rule|Checklist for public copy|-|brand|-|out|out:brand|Item 5 points at the LR checklist: update the pointer
+BT-00|BT|header|meta|Load only for a judgment call nothing else covers. Add only|-|brand|-|out|out:brand|-
+BT-01|BT|"Likes", "Dislikes", "Added 30 Oct"|ref|Visual, brand and workflow taste|-|brand|-|out|out:brand|"Agents driving the browser before confirming" is working style
+BS-01|BS|L5|meta|Update a chapter's row every epoch. Add to the ledger, never silently remove|-|C|-|keep|skill:writer|The ledger is state, not a rule
+BS-02|BS|§Ownership ledger|rule|An idea, story or quote a chapter owns gets at most one callback elsewhere|1|CK|checker|merge|T1.1|Rule half dup BR-R2, WS-12. The ledger itself stays as state
+BS-03|BS|L108|process|Where an article series and a chapter epoch disagree, the newer context wins|-|ACK|-|move|skill:writer|Dup MP-62
+WS-00|WS|L8-22|process|One writer, three endings. Everything to book standard (19 Oct, letters 20 Oct). No argument means ask and wait|-|ALC|-|keep|skill:writer|Book standard frames every card
+WS-01|WS|L24|meta|The skill is a procedure. Rules live in their own docs and are never restated|-|-|-|keep|skill:writer|The same principle drives the cards
+WS-02|WS|§0 L28-34|process|One chat per piece. Keep it through markup. /handoff. Write in the conversation, not through fresh agents|-|ALCKS|-|keep|skill:writer|The fresh-agent line is clash C10
+WS-03|WS|§1 L36-54|ref|Where everything lives: Mac paths, the brain, project docs, Notion, Drive. Writing to the Mac safely|-|ALCKS|-|keep|skill:writer|Testimony and worksheet now frozen (clash C5)
+WS-04|WS|§2 L56-66|process|Load rules, research and state before writing, once per chat. Never draft from memory of the rules|-|ALCKS|-|keep|skill:writer|Will load the card instead (step 14)
+WS-05|WS|§2 L64|rule|Articles and letters keep LR numbers (digits) and simple words. Contractions fine. Word counts reported, never cut to|2|AL|mech|merge|card-A|Settles H1 to H3 per output. Dup MP-41, MP-47
+WS-06|WS|§3 L68-70|process|Settle the blank and give it back in one line before drafting. In a letter it is his realisation|1|ALCKS|checker|merge|T1.1|The give-it-back step goes to skill:writer
+WS-07|WS|§4 L72-74|process|Find or coin the leading word the piece hangs on, from his material|-|ALCKS|-|move|skill:writer|From the A/B test. Ties to T1.4
+WS-08|WS|§5 L76-80|rule|Ground the reader: each paragraph leans only on ideas the reader brought or met earlier|1|ALCKS|checker|merge|T1.5|A/B test: about 8.1 and 7.3 with it, 4.3 without
+WS-09|WS|§6 L82-84|rule|Take material from the brain. Read all of the Law's material. Real unless certainty says built. Gold only|0|ALCKS|checker|merge|T0.3|Procedure to skill:writer. Dup MW-08 (worksheet form)
+WS-10|WS|§6 L85|rule|The method and an article's closing third come from the Law's own material|-|ALCK|-|cut|-|Dup LR-8.02
+WS-11|WS|§6 L86|rule|Testimony and cast exactly as written. Never print never-use material (weights, health, money, third parties)|0|ALCKS|checker|merge|T0.6|The money part is stale. Clash C12
+WS-12|WS|§6 L87|rule|An idea another chapter owns gets at most one callback|-|CK|-|cut|-|Dup BR-R2, BS-02
+WS-13|WS|§6 L88|rule|A letter's material is chosen by fit|-|L|-|cut|-|Dup LR-8.03
+WS-14|WS|§7 L90-94|rule|R3b for people he coaches. List built details. Use the surface he gives. Composite names. Never "my clients"|-|CKSAL|-|cut|-|Dup BR-R3b, LR-4.07
+WS-15|WS|§8 L96-98|process|Draft whole from the material. A redraft starts from the material and the blank|-|ALCKS|-|keep|skill:writer|Dup BR-R4
+WS-16|WS|§9 L100-110|process|The written review file: every join, every carried name, every so, then and because. Old core rules first. Fix by rewriting from the material, never a bolted connector|-|ALCKS|-|keep|skill:writer|The one fix that worked (plan cause 8). Feeds the checkers (step 12)
+WS-17|WS|§9 L112-114|process|Then section I, LR §12 and grounding again. Fix grammar silently|-|ALCKS|-|cut|-|Replaced by checkers and lint
+WS-18|WS|§9 L116-118|process|Mechanical checks: textstat 0.7.3 pinned, vocabulary diff, script for em dashes, semicolons, numbers, spelling, "my clients"|-|ALCKS|mech|move|skill:writer|Becomes cg_lint.py (step 11)
+WS-19|WS|§9 L120|process|Check every fact yourself, no checker agent. Numbers in one line, never as proof|-|ALCKS|-|merge|skill:writer|"No checker agent" is clash C10
+WS-20|WS|§9b L122-124|process|Score chapter drafts on the six traits before delivery, outside the doc|-|C|-|keep|skill:writer|-
+WS-21|WS|§10 L126-134|process|Markup round: no preamble. Keep his rewrites. Read comments. Apply the codes. Log word for word. Re-read the beat. "regurgitate" means the full piece|-|ALCKS|-|keep|skill:writer|Keep-his-rewrite half dup T0.2
+WS-22|WS|§11 L136-141|process|Feed back: typed text is a keeper, not a rule. Rules only from what he said. Protected docs on his go. Run fold-article-lessons after publish|-|ALCKS|-|merge|skill:propose|fold-article-lessons is gone (step 16)
+WS-A|WS|Ending A L145-159|ref|Article: 3 Insight fields. Insight 3 a question for a reader in his shoes. No title until publish. Ask once for name, subtitle, category. Notion schema, header lines, categories. Sha256 check|2|A|mech|keep|card-A|The only copy of the schema
+WS-B|WS|Ending B L161-187|ref|Letter: not a review. Author named at first mention. The book only as setup. Check the book before quoting. Insight 2 is the book layer. Name and subtitle pattern. Categories|2|L|checker|keep|card-L|L173 "aim at about 320 words" is the retired glue budget: cut (clash C11). Fidelity lines to T0.3
+WS-C1|WS|Ending C L189-205|ref|Chapter: two stops. Book map with old material names. No conclusion unless asked. Insight 2 and 3 optional|-|CK|-|keep|card-C|Map rows name frozen sources: remap to the brain
+WS-C2|WS|Ending C L207-217|process|Fact sheet (facts and keeper lines, no article sentences) and outline (blank, thread word, 2 or 3 things to keep, key moments, heading places)|-|CK|-|keep|skill:writer|-
+WS-C3|WS|Ending C L219-231|ref|Law chapter default shape, a 9-slot menu. [MATERIAL NEEDED] instead of invention|2|C|judge|keep|card-C|[MATERIAL NEEDED] dup T0.3
+WS-K|WS|Ending C L233|rule|Key moments: 5 or 6, each written 3 ways built differently and labelled. Facts from the fact sheet. Grey top line|2|K|judge|keep|card-K|The only source of key-moment rules
+WS-C4|WS|Ending C L235|process|Stop 2: write the whole chapter fresh around his picks, never edit an earlier draft|-|C|-|keep|skill:writer|Dup BR-R4
+WS-C5|WS|Ending C L237-252|ref|Deliver: make_review_doc.py, 6x9 layout, merge contract, scorecard page, end note (MATERIAL NEEDED, at most 3 questions, full sources), epochN.json, Book_Status|-|C|-|keep|skill:writer|Step 15 makes it one command. End-note content to card-C
+WS-SC|WS|Scorecard L256-277|ref|Six traits with levels, the overall cap, anchors, calibration, alpha-reader questions|-|C|-|keep|skill:writer|Scoring, not rules
+WS-H|WS|"What has actually gone wrong" L279-301|history|17 recurring failures, each pointing at a rule|-|-|-|cut|log|Letters-only lines (summary creep, the author's thesis) go to card-L
+WS-BL|WS|"Brain use log" L303-305|process|Log every use in brain.used_in. Check it before choosing. A minor entry once per work|-|ALCKS|-|keep|skill:writer|-
+PL-00|PL|L8-12|process|Run whenever feedback holds a lesson, on any rule doc|-|-|-|keep|skill:propose|-
+PL-01|PL|§0|ref|Table of rule docs, protection and masters|-|-|-|keep|skill:propose|Rewritten for the rules table (step 16)
+PL-02|PL|§1|process|Gather every message, comment and silent edit, with what each sits on. Log first|-|-|-|keep|skill:propose|Dup FL-00
+PL-03|PL|§2|process|Measure before claiming what the books do, with line numbers|-|-|-|keep|skill:propose|-
+PL-04|PL|§3|process|Sort notes into candidate, explicit rule, praise with reason, observation, covered, rejected. Overfitting test|-|-|-|keep|skill:propose|Dup FL-00, BR-00c, MW-14, MP-59
+PL-05|PL|§4|process|Word each rule: bold title, short numbered lines, his words in context, cold-read test, options he offered, support, labelled diagnosis, review line, mechanics|-|-|-|keep|skill:propose|The format for step 8. Dup MP-59, MP-81
+PL-06|PL|§5-7|process|Place, annotate corrections, group, anchor, show once, write on his go by script|-|-|-|keep|skill:propose|Writing steps change with the rules table
+PL-07|PL|"What went wrong before"|history|Nine lessons from 16 and 30 Oct|-|-|-|merge|skill:propose|Keep as a short list
+PL-08|PL|(handoff, 5 Nov)|process|A new rule must leave all 6 fail cases failing and all 9 pass cases passing|-|-|-|move|skill:propose|Not yet in the skill (step 16)
+FL-00|FL|whole|process|The same job as PL, run at the end of an article cycle|-|-|-|cut|-|Merged into PL (step 16). Already uninstalled. Every section dup PL
+FL-07|FL|§7|process|Process lessons go to coach-gen-writer through propose_skills. Preferences to memory|-|-|-|merge|skill:propose|-
+WB-00|WB|whole|process|The old one-prompt chapter skill|-|C|-|cut|-|Decision 3. Replaced by coach-gen-writer Ending C
+PI-01|PI|"Core philosophy"|rule|Everyone is resourceful. Clients are not broken. He is the editor, not the hero. Empowering, never diagnostic, never pitying|0|ALCKS|checker|keep|T0.7|"do not violate". Dup BV-01, BR-R19
+PI-02|PI|"Content formats"|ref|Myth vs Reality, Diagnostic Questions, Micro Tools, Client Stories, Identity Shifts|2|CK|judge|merge|card-C|Overlaps the chapter default shape
+PI-03|PI|"Style rules"|rule|Strunk and White: active voice, "you", omit needless words, plain words, concrete detail, mixed lengths, no clichés, jargon, redundancy, emojis or semicolons|-|ALCKS|-|cut|-|Each is in T0.1, T1.13, T1.15, T1.18 or T2.10. Step 17 replaces the instructions
+PI-04|PI|"Style rules"|rule|Positive, definite statements|2|ALCKS|judge|merge|T2.7|With calibrated confidence
+MA-01|MA|L7-9|process|Do A when told A. Answer first. Direct style|-|-|-|keep|memory|-
+MA-02|MA|L10-11|rule|The 5x5x5 brainstorm shape and its 4th five|-|content|-|out|out:content|Dup CR-01, CR-02
+MA-03|MA|L12|rule|No em dashes. Use a period, comma, colon, semicolon or parentheses|-|ALCKS|-|cut|-|Em dash half dup T0.1. Semicolon half is clash C1 (fixed in step 19)
+MA-04|MA|L13|rule|Tax documents in Indonesian, in the officials' own words|-|other|-|keep|memory|Not a writing-card rule
+MA-05|MA|L14-15|process|No unsolicited reflective commentary. No minor next steps while he works|-|-|-|keep|memory|-
+MA-06|MA|L16|process|Send a fresh clickable version after a big edit|-|-|-|keep|memory|-
+MA-07|MA|L17|rule|Writing in his voice stays simple, comprehension load low. Open to a few powerful words|-|ALS|-|cut|-|Dup T1.15
+MA-08|MA|L18|rule|Vividness in his style without adding words|-|ALCKS|-|cut|-|Dup T1.6, T2.3
+MA-09|MA|L19|meta|Working and reference docs are only added to, never condensed|-|-|-|cut|-|Clash C7: decision 4 for rule docs
+MP-07|MP|L7|process|Responses extremely concise|-|-|-|keep|memory|-
+MP-08|MP|L8|process|Fix a flagged issue, never re-flag it|-|-|-|keep|memory|-
+MP-09|MP|L9|process|The multi-agent workflow is expected: re-sync and continue|-|-|-|keep|memory|-
+MP-10|MP|L10|process|Shared client material is already consented|-|-|-|keep|memory|-
+MP-11|MP|L11|rule|Real client names fine in internal docs. Composite names in anything client-facing|0|ALCKS|checker|merge|T0.6|Internal half stays in memory
+MP-12|MP|L12|rule|Likes a 3-act structure for articles, across 3 pieces or inside one|2|A|judge|merge|card-A|-
+MP-13|MP|L13|rule|Insight 3's question relates to Insight 1, for a reader who was in his shoes|2|AL|judge|merge|card-A|Clash C20 (settled by wording)
+MP-14|MP|L14|process|"Seems ok" means everything in it is approved|-|-|-|keep|memory|-
+MP-15|MP|L15|process|Work like a ghostwriter corresponding with him. He annotates a docx|-|C|-|cut|-|Stale: Google Docs since (MP-20, MP-53). Ghostwriter framing to card-C intro
+MP-16|MP|L16|rule|Story sections get bestseller-style names (updated 6 Oct to R31)|-|C|-|cut|-|Clash C13, settled by R31
+MP-17|MP|L17|rule|Oxford comma|-|ALCKS|-|cut|-|Dup BR-R33
+MP-18|MP|L18|rule|Chapter summaries never in "I". They house the key phrases|-|C|-|cut|-|Dup BR-R34
+MP-19|MP|L19|process|Lean method: key moments 3 ways, then the chapter around his picks|-|CK|-|move|skill:writer|Dup WS-C1, WS-K
+MP-20|MP|L20|process|He edits in Word and Google Docs, not Pages|-|-|-|keep|memory|-
+MP-21|MP|L21|rule|Drafts too concise. Client scenes warm with him a great coach. The setup paints the session. A vague "it" becomes a paraphrase|1|CKS|checker|merge|T1.9|Warmth to T2.9, "it" to T1.3
+MP-22|MP|L22|process|Resolve Google Doc comments when 100% sure they are fixed|-|ALCKS|-|move|skill:writer|-
+MP-23|MP|L23|history|Book benchmark: epochs on the Introduction, 80% article, 40% book|-|-|-|cut|log|-
+MP-24|MP|L24|history|Book Rules v1 abandoned. V2 built bottom-up|-|-|-|cut|log|-
+MP-25|MP|L25|ref|Reference shelf and what he likes in each book|-|C|-|move|ref|-
+MP-26|MP|L26|process|When the guides and the rules disagree, warn him rather than pick a winner|-|ALCKS|-|move|skill:propose|The cards settle known clashes. New ones still get a warning
+MP-27|MP|L27|history|Epoch 1 scored about 40%: x=floor(y)|-|-|-|cut|log|Evidence for T1.1
+MP-28|MP|L28|ref|Raw calibration data lives in claude/Coach_Gen_Book_Calibration_Log.md|-|-|-|keep|ref|-
+MP-29|MP|L29|rule|Book point of view: Dweck and Clear blend (author "I" tells others' stories and his own, speaks to "you")|2|CKS|judge|merge|card-C|-
+MP-30|MP|L30|history|Taste test round 1: Mindset and Atomic Habits highest|-|-|-|cut|log|-
+MP-31|MP|L31|rule|Book craft may override the Language Rules|-|C|-|cut|-|The cards settle each case
+MP-32|MP|L32|rule|Verbatim records sit in a wall of context: a client line may need context|-|CKS|-|cut|-|Dup BR-R17
+MP-33|MP|L33|rule|A single quoted line must carry its own relatability|-|CKS|-|cut|-|Dup BR-R17
+MP-34|MP|L34|rule|Parallels and mirrors only when the two sides truly connect|-|ALCKS|-|cut|-|Dup BR-R12, BR-R20
+MP-35|MP|L35|rule|Book vocabulary may be more complex than articles|-|C|-|cut|-|Dup BR-H3
+MP-36|MP|L36|history|Full read order|-|-|-|cut|log|-
+MP-37|MP|L37|rule|Round 3 "healthy" failure. If overfitting, write from a different piece of material|0|ALCKS|checker|merge|T0.3|"Different material" half to skill:writer (BR-R4)
+MP-38|MP|L38|rule|Keep the subject parallel in lists and pairs|-|ALCKS|-|cut|-|Dup BR-R12
+MP-39|MP|L39|rule|Grammar fixes always, in his voice, fragments included|-|ALCKS|-|cut|-|Dup BR-R15
+MP-40|MP|L40|rule|Never keep "correcting" a phrase he typed. His wording and tense stay. Read what each phrase does before touching punctuation|0|ALCKS|mech|keep|T0.2|Source of test case F7
+MP-41|MP|L41|rule|Book: numbers and contractions are fine|-|C|-|cut|-|Dup BR-H1, BR-H2
+MP-42|MP|L42|process|Chapters run end to end to a markable draft, no intermediate approvals|-|C|-|move|skill:writer|Dup WS-C1
+MP-43|MP|L43|process|Book Rules kept as local files on his Mac for other threads|-|-|-|move|brain-table|The compiler writes Mac copies (step 10). Clash C21 (settled)
+MP-44|MP|L44|meta|Book Rules protected like the Language Rules|-|-|-|move|brain-table|-
+MP-45|MP|L45|rule|True core, built surface|-|CKS|-|cut|-|Dup BR-R3b
+MP-46|MP|L46|rule|Articles too: spelling and grammar fixed silently|-|ALCKS|-|cut|-|Dup BR-R15a
+MP-47|MP|L47|rule|Articles: word counts disregarded. 600 ballpark. Readability band|-|A|-|cut|-|Dup LR-1.05, LR-1.06
+MP-48|MP|L48|process|Never resurface small items he has brushed off|-|-|-|keep|memory|-
+MP-49|MP|L49|ref|A Law 1 introductory series in 3 parts|-|A|-|keep|memory|State, not a rule
+MP-50|MP|L50|rule|Every leap of logic in his verbatim stories is surgically served over paragraphs, even pages|1|CKS|checker|merge|T1.9|His main gripe with the Law 1 stories
+MP-51|MP|L51|rule|David's case may be split into several people under different names. Ask him for the names|2|C|judge|merge|card-C|-
+MP-52|MP|L52|history|Worried a chapter from 6 stories would be too short|-|-|-|cut|log|-
+MP-53|MP|L53|process|Article drafts in a Google Doc he marks up|-|AL|-|move|skill:writer|-
+MP-54|MP|L54|rule|Markup code: [] suggestion about 50%, "" about 10%, newer wins|-|ALCKS|-|cut|-|Dup BR-0.1 to BR-0.3
+MP-55|MP|L55|rule|Paragraphs look separate in Google Doc drafts|-|ALCKS|-|cut|-|Dup BR-0.4
+MP-56|MP|L56|rule|Stay close to the reader after the turn. Call back to the story in the second half|-|ALCKS|-|cut|-|Dup BR-R36, BR-R25a
+MP-57|MP|L57|rule|In a list of 3, reader lines first, the callback last ("not yet in the Book Rules")|-|ALCKS|-|cut|-|Dup LR-6.07
+MP-58|MP|L58|rule|Lay out the science step by step and discuss it in parts before drafting. Uncommented lines are not approved|1|ALCKS|checker|merge|T1.5|Discuss-first and uncommented-lines halves to skill:writer
+MP-59|MP|L59|process|Rule proposals: no quotes out of context, no overfitting, plain wording, grouped|-|-|-|cut|-|Dup PL-04, PL-05
+MP-60|MP|L60|process|Never suggest tracking or map docs|-|-|-|keep|memory|-
+MP-61|MP|L61|process|Articles and chapters need both contexts in one thread. Read Book_Status and the build files first|-|ACK|-|move|skill:writer|-
+MP-62|MP|L62|process|Merge conflicts between threads: the newer context wins|-|ACK|-|move|skill:writer|Dup BS-03
+MP-63|MP|L63|process|The research (full read, findings, taste tests) is the most important context for book standard|-|ALCKS|-|move|skill:writer|Dup WS-04
+MP-64|MP|L64-66|process|Do tasks for him. Stop only at logins and OTPs. Summarise before a major step|-|-|-|keep|memory|Clash C19 with MW-01
+MP-67|MP|L67|process|In grillings, options with no steering|-|-|-|keep|memory|Clash C18 with OS-02
+MP-68|MP|L68|rule|Parents (worry about their kids, parenting) are "EXTREMELY IMPORTANT" examples to include|2|CKSA|judge|merge|card-C|Content guidance
+MP-69|MP|L69|process|"ok" to a numbered list is a CEO-style ok|-|-|-|keep|memory|-
+MP-70|MP|L70|rule|Book: don't over-quote the reference books. Quote the original work they cite|1|CKS|checker|merge|T1.10|-
+MP-71|MP|L71|process|Options as a numbered list|-|-|-|keep|memory|-
+MP-72|MP|L72|process|Anything weird in a draft is Claude's: own the fix, never ask him to explain Claude's text|-|ALCKS|-|move|skill:writer|-
+MP-73|MP|L73|process|Files in a folder per project. Token-efficient repeat workflows|-|-|-|keep|memory|-
+MP-74|MP|L74|process|Test runs printed with expected and actual, human-readable|-|-|-|keep|memory|Applies to step 13
+MP-75|MP|L75|process|Batch approval prompts, then one go|-|-|-|keep|memory|-
+MP-76|MP|L76|rule|His words from calls are rewritten as book prose, not kept verbatim|-|CKS|-|cut|-|Dup BR-R30a
+MP-77|MP|L77|rule|Avoid lines that could be taken out of context to make him look bad|1|ALCKS|checker|merge|T1.16|-
+MP-78|MP|L78|process|Never critique the confidence of a fact he recalls from memory|-|-|-|keep|memory|-
+MP-79|MP|L79|process|Do social and profile tasks for him|-|-|-|keep|memory|Clash C19 with MW-01
+MP-80|MP|L80|process|"Language rule" means any rule doc improved through drafting turns|-|-|-|move|skill:propose|-
+MP-81|MP|L81|process|Things he must review are glanceable: short numbered lines|-|-|-|keep|memory|Dup PL-05
+MP-82|MP|L82|process|Consistency and ease over token savings. Genio calls|-|-|-|keep|memory|-
+MP-83|MP|L83|process|Instagram and WhatsApp changes proposed first|-|-|-|keep|memory|-
+MP-84|MP|L84|rule|/privileged flags privileged context|-|ALCKS|-|cut|-|Dup BR-0.5
+MW-01|MW|L10-11|process|Claude is a planning agent only. Never prompt him to execute, film or post|-|-|-|cut|-|Clash C19: stale against MP-64 and MP-79 (step 19)
+MW-02|MW|L15|rule|Question-type content: exactly 3 candidates|-|content|-|out|out:content|-
+MW-03|MW|L16-17|process|Worksheet transcription verbatim with zero cleanup. Amplification is a separate pass|-|-|-|keep|memory|Now applies to mining into the brain
+MW-05|MW|L18|rule|His explanation in quotation marks is a brief: rebuild the idea from scratch|-|ALCKS|-|open|open|Clash C8 with BR-0.2
+MW-06|MW|L22-23|rule|Keep his verbatim words apart from Claude's synthesis. Never present Claude's content as his philosophy|0|ALCKS|checker|merge|T0.3|-
+MW-08|MW|L24|rule|Everything in build_worksheet.js is real unless marked|-|ALCKS|-|cut|-|Clash C5: now the brain (WS-09)
+MW-09|MW|L28|rule|Brand voice: Strunk and White, active voice, no jargon, no emojis|-|ALCKS|-|cut|-|Dup T0.1, T1.18, T2.10
+MW-10|MW|L29|rule|Never use em dashes. Use a period, comma, colon, semicolon or parentheses|-|ALCKS|-|cut|-|Em dash half dup T0.1. Semicolon half is clash C1
+MW-11|MW|L33-40, L44-45|process|Thread partitioning, agent names, the numbered reference system|-|-|-|keep|memory|-
+MW-14|MW|L49-51|process|Each article is an epoch. Rule proposals reasoned for overfitting. No rules from uncomplained edits|-|-|-|cut|-|Dup PL-04
+MF-01|MF|"Structural principles"|ref|The Laws differ by timeframe. Emotional overlap is fine. Never invent context for a differentiation concern|-|ALCKS|-|keep|memory|Framework facts
+MF-02|MF|"Word-choice rationale"|ref|The load-bearing "but" in the tagline, "Reap", "My", "To"|0|ALCKS|mech|merge|T0.2|Locked words. Dup BV-05
+MF-03|MF|"Coined terms"|ref|Energy Audit. The thought map and the page are flagship exercises, alluded to and hyped like Clear|2|CK|judge|merge|card-C|-
+MF-04|MF|"Law 1 vs Law 2 boundary"|ref|The foot on the brake. Law 1 vs Law 2 hidden rewards. The full thesis line|0|ALCKS|mech|merge|T0.2|"If I don't try and fail, I'm lazy. If I try and fail, I'm incompetent." is a locked line
+OS-01|OS|16 skills|rule|The em dash ban (and in 10 of them the semicolon ban) restated in 16 other skills|-|-|-|keep|skill:other|Harmless copies. No action until a skill is next edited
+OS-02|OS|rhyme-this §3|rule|Rhyme options: his clients' words, no made-up image or cliché, first-read clarity, not too cute. Say which you would pick|-|ALCKS|-|keep|skill:other|Tool rules stay in the skill. "Say which you would pick" is clash C18
+OS-03|OS|cite-outside-voices|rule|Cite outside voices by author, book, page and exact words. Always their idea. One or two sentences, then his idea|1|ALCKS|checker|merge|T1.10|Clash C17 with R28's one-name rule in the prose
