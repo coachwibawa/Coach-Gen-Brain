@@ -114,7 +114,7 @@ def main():
             if "—" in f or ";" in f:
                 errors.append(f"target {t['id']}: em dash or semicolon")
     for f in flags:
-        for ref in re.findall(r"\b([A-Z]{2,3}-[\w.]+)", f["rows"]):
+        for ref in re.findall(r"\b([A-Z]{2,3}-[\w.]+(?:-\d+)?)", f["rows"]):
             if ref not in seen and ref not in tids:
                 errors.append(f"flag {f['n']}: unknown row {ref}")
         if any(";" in v or "\u2014" in v for v in f.values()):

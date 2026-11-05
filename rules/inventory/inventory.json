@@ -6570,5 +6570,239 @@
    "status": "open",
    "how it settles, or his options": "(a) Leave it out. (b) Bring back that one sentence as a rule"
   }
+ ],
+ "flags": [
+  {
+   "n": "1",
+   "kind": "counterproductive",
+   "rows": "LR-3.02",
+   "problem": "\"Every noun is something the reader can see, touch or count\", taken literally in an argument chapter, forces made-up images (the \"vague metaphor no one uses\" failure)",
+   "proposed fix": "Prefer concrete nouns, explain ideas plainly",
+   "status": "flagged"
+  },
+  {
+   "n": "2",
+   "kind": "counterproductive",
+   "rows": "BR-R22",
+   "problem": "\"One honest limit per chapter\" is a quota that invites a disclaimer, the paragraph that was cut four times",
+   "proposed fix": "Drop the quota. Keep \"hedge only at a real limit\"",
+   "status": "flagged"
+  },
+  {
+   "n": "3",
+   "kind": "counterproductive",
+   "rows": "BR-R10, BR-R31, LR-5.19",
+   "problem": "Number quotas: short sentences \"1 in 7 to 1 in 5\", a heading \"every 400 to 600 words\", \"at least one long winding sentence\". The model hits the number and misses the job",
+   "proposed fix": "Keep the job, drop the numbers (lint may report them)",
+   "status": "flagged"
+  },
+  {
+   "n": "4",
+   "kind": "counterproductive",
+   "rows": "BR-R12, BR-R12a",
+   "problem": "Exact parallel frames and same-frame paragraph openers. This push made round 3 \"robotic and repeated\", and it fights R13 (break a run)",
+   "proposed fix": "Parallel only when items truly match. Drop R12a",
+   "status": "flagged"
+  },
+  {
+   "n": "5",
+   "kind": "counterproductive",
+   "rows": "BR-R16a",
+   "problem": "\"Carry every case into another area of life\" as a Tier 1 must adds a boilerplate \"this works for X, Y, Z\" paragraph after every case and fights R39. From one article",
+   "proposed fix": "Tier 2, use it when a case is narrow",
+   "status": "flagged"
+  },
+  {
+   "n": "6",
+   "kind": "counterproductive",
+   "rows": "LR-5.10, LR-9.08, LR-11.05, LR-11.06, LR-11.07, LR-6.08, LR-4.03",
+   "problem": "Praised passages written as patterns (the force paragraph, \"similarly:\", the structural moves list, the ages series). Loud examples get copied into every draft (plan cause 6)",
+   "proposed fix": "Move them to the style bank as examples",
+   "status": "flagged"
+  },
+  {
+   "n": "7",
+   "kind": "counterproductive",
+   "rows": "BR-R3, WS-16, and others",
+   "problem": "Angry quotes inside rule text make the model over-apply that one rule",
+   "proposed fix": "Quotes go to the evidence column. The rule line stays calm",
+   "status": "flagged"
+  },
+  {
+   "n": "8",
+   "kind": "counterproductive",
+   "rows": "LR-3.03",
+   "problem": "A banned-word list from one draft (circuit, variable, reasonable, eventually and more). The model swaps synonyms and keeps the abstract sentence",
+   "proposed fix": "Drop the list. The concrete-noun rule does the job",
+   "status": "flagged"
+  },
+  {
+   "n": "9",
+   "kind": "counterproductive",
+   "rows": "WS-20, WS-SC",
+   "problem": "Claude scores its own draft before delivery. It gave 7.5 to the epoch he nearly dropped",
+   "proposed fix": "Blind checkers replace it. His scorecard stays",
+   "status": "flagged"
+  },
+  {
+   "n": "10",
+   "kind": "counterproductive",
+   "rows": "BR-R21",
+   "problem": "\"Warmth is the author's own story, right after a case.\" With no story for that spot in the brain, the model invents biography or forces an \"I, too\"",
+   "proposed fix": "Only from the brain, never a quota",
+   "status": "flagged"
+  },
+  {
+   "n": "11",
+   "kind": "business change",
+   "rows": "LR-3.09, LR-1.01, WS-18",
+   "problem": "Vocabulary diff against six March to May articles. The target is now book standard, and the corpus has to be rebuilt from Notion each time",
+   "proposed fix": "His call: (a) drop it (b) keep it for articles",
+   "status": "flagged"
+  },
+  {
+   "n": "12",
+   "kind": "business change",
+   "rows": "LR-3.06, LR-1.05, LR-1.06, LR-11.04, WS-05",
+   "problem": "Article-only splits (digits, self-talk on its own line, 600 ballpark, readability band). Articles now feed chapters, so each split is rework later",
+   "proposed fix": "His call: (a) one convention for everything (b) keep the splits",
+   "status": "flagged"
+  },
+  {
+   "n": "13",
+   "kind": "business change",
+   "rows": "LR-00d, LR-8.14, CR-00 to CR-05, MA-02, MW-02",
+   "problem": "The short-form track: [short-form] tags, storyboards, the 5x5x5 brainstorm. Its skill (content-from-article) is gone and its log is empty",
+   "proposed fix": "His call: (a) retire it (b) keep it for a future content card",
+   "status": "flagged"
+  },
+  {
+   "n": "14",
+   "kind": "business change",
+   "rows": "MW-03, MW-08",
+   "problem": "Worksheet rules (verbatim transcription, \"everything in build_worksheet.js is real\"). The brain replaced the worksheet",
+   "proposed fix": "Verbatim rule to the mine skill. Drop the worksheet line",
+   "status": "flagged"
+  },
+  {
+   "n": "15",
+   "kind": "business change",
+   "rows": "LR-3.14, LR-3.15, LR-3.16",
+   "problem": "Reading raw material (cut hedges, spot talking-out-loud, read what a detail is evidence of). Writers now take mined gold from the brain",
+   "proposed fix": "Move to the mine skill",
+   "status": "flagged"
+  },
+  {
+   "n": "16",
+   "kind": "business change",
+   "rows": "MP-12",
+   "problem": "\"3-act structure for articles\" against R31 (never an act) and one arc per piece",
+   "proposed fix": "His call: (a) drop it (b) keep it, meaning a series in 3 parts",
+   "status": "flagged"
+  },
+  {
+   "n": "17",
+   "kind": "business change",
+   "rows": "MP-51",
+   "problem": "\"David's case may be split into several people\" (7 Oct). Chapter 3 now tells David's arc once (R38)",
+   "proposed fix": "His call: (a) retire it (b) keep it",
+   "status": "flagged"
+  },
+  {
+   "n": "18",
+   "kind": "business change",
+   "rows": "LR-3.08",
+   "problem": "\"Call him X, and disclose it in the citation layer\" predates brain.personas and the anonymity line",
+   "proposed fix": "Print names from brain.personas. The anonymity line covers it",
+   "status": "flagged"
+  },
+  {
+   "n": "19",
+   "kind": "badly made",
+   "rows": "LR-3.10, BV-07",
+   "problem": "\"Everyday\" as one word. As an adverb (\"every day\") that is a grammar mistake, and R15 says fix grammar",
+   "proposed fix": "\"Everyday\" only as an adjective. His own typed words stay",
+   "status": "flagged"
+  },
+  {
+   "n": "20",
+   "kind": "badly made",
+   "rows": "BR-R16, BR-R19, BR-R27 and others",
+   "problem": "Rules that point at a book passage by line (\"like Courage's narrator, CG 254 to 262\"). The writer cannot see those lines",
+   "proposed fix": "Spell out the moves. Line references to the evidence column",
+   "status": "flagged"
+  },
+  {
+   "n": "21",
+   "kind": "badly made",
+   "rows": "BR-R38a, BR-R39, BR-R31a, CS-02",
+   "problem": "Unconfirmed Claude readings sitting inside rules (\"Claude's reading, to confirm on epoch 4\")",
+   "proposed fix": "Cut until he confirms",
+   "status": "flagged"
+  },
+  {
+   "n": "22",
+   "kind": "clouds context",
+   "rows": "BR-R3b.1-8",
+   "problem": "The built-detail list opens with 8 lines that say \"limits, not musts\" three ways",
+   "proposed fix": "3 lines",
+   "status": "flagged"
+  },
+  {
+   "n": "23",
+   "kind": "clouds context",
+   "rows": "BR (most of sections A to G)",
+   "problem": "Evidence inside rule text: \"His words\", \"Support\", measurements, [5 of 5] tags, dated \"(Added ... at his request)\" lines. Most of the Book Rules' bulk",
+   "proposed fix": "Evidence column. The card loads the rule lines only",
+   "status": "flagged"
+  },
+  {
+   "n": "24",
+   "kind": "clouds context",
+   "rows": "WS-B, LR-7.03, LR-2.03, SP-S3",
+   "problem": "Notes about non-rules (\"Edition 1 had a beat ... not a rule\", \"confirm with him if...\", \"this is not a rule\")",
+   "proposed fix": "Cut",
+   "status": "flagged"
+  },
+  {
+   "n": "25",
+   "kind": "clouds context",
+   "rows": "LR-9.01, LR-9.02, LR-9.03, LR-6.11, LR-11.09",
+   "problem": "Extended metaphor rules (rarely used) and his themes (content, not craft)",
+   "proposed fix": "Themes to the brain. Metaphor lines cut, \"one image per beat\" stays",
+   "status": "flagged"
+  },
+  {
+   "n": "26",
+   "kind": "clouds context",
+   "rows": "LR-1.09, LR-1.10, LR-4.09",
+   "problem": "Too-heavy and too-light diagnosis paragraphs, the named-things-per-100-words metric",
+   "proposed fix": "One line: numbers catch gross failure only. Drop the metric",
+   "status": "flagged"
+  },
+  {
+   "n": "27",
+   "kind": "clouds context",
+   "rows": "BR-R40",
+   "problem": "Status notes inside rules (\"the build doesn't handle figures yet\")",
+   "proposed fix": "To the handoff",
+   "status": "flagged"
+  },
+  {
+   "n": "28",
+   "kind": "clouds context",
+   "rows": "RS-03, BT-01, BV-06",
+   "problem": "Answered items still marked open or proposed (Reel open items, Taste \"not stated yet\", Voice \"approve or strike\")",
+   "proposed fix": "Cut the stale labels when those cards are built",
+   "status": "flagged"
+  },
+  {
+   "n": "29",
+   "kind": "clouds context",
+   "rows": "T2.10",
+   "problem": "The Tier 2 pattern bank (about 25 small moves) never fails a draft but would load every time",
+   "proposed fix": "Tier 0 and 1 always. A few Tier 2 lines per card. The rest in the style bank",
+   "status": "flagged"
+  }
  ]
 }
