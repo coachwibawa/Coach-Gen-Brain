@@ -1,5 +1,9 @@
 # Rule test set (step 5 of the Rules Refactor Plan)
 
+Locked 5 Nov 2026. Gen re-judged every case by book standard. 17 cases: 8 fail, 9 pass. P1 (Melvin) dropped ("a very weird passage"), kept under `dropped`.
+
+**What pass and fail mean (his framing, 5 Nov):** a pass case has no Tier 0 or Tier 1 break, though he would still make Tier 2 edits ("some t2 edits, but pass t1 t0"). The checker must not fail a passage for Tier 2 polish. A fail case breaks Tier 0 or Tier 1, and the failures he named on re-reading are about the whole passage: low quality, connectivity, awkward constructions.
+
 `test_set.json` holds passages with Gen's verdicts. Every text was copied by script from its source (`build_test_set.py`), never retyped.
 
 - **The checker judges the whole passage.** It reads every line, not only the flagged ones, and gives a verdict on the passage as a whole.
