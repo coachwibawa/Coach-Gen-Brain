@@ -6399,7 +6399,7 @@
    "topic": "Semicolons",
    "one side": "LR-3.19, BR-R14, PI-03 ban them",
    "other side": "MA-03 and MW-10 offer the semicolon as an em dash substitute",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "Decision 1 (4 Nov): banned everywhere. Both memory lines fixed in step 19"
   },
   {
@@ -6407,7 +6407,7 @@
    "topic": "Research in articles",
    "one side": "LR-3.07, LR-8.11, LR-11.03 put the researcher and year inside the story, and BR-H10 kept that for articles",
    "other side": "BR-R28: story first, no year, at most one name",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "Decision 2 (4 Nov): R28 everywhere. Reading to confirm: Insight 2 (the expert layer) and the end note may still carry names, year and source (BR-R3b line 32, WS-B)"
   },
   {
@@ -6415,7 +6415,7 @@
    "topic": "Where quoted self-talk sits",
    "one side": "LR-4.02, LR-4.03, LR-11.04: self-talk as its own beat, and his line printed twice as a bridge",
    "other side": "BR-R30: quotes inline. Own line only for quick dialogue, a sample list or the payoff line. BR-H10 split them by output",
-   "status": "open",
+   "status": "decided, card 8: book",
    "how it settles, or his options": "(a) Keep the split: articles and letters may set self-talk on its own line, the book inlines it. (b) R30 everywhere. (c) R30 everywhere, with his repeated-line bridge as a named exception"
   },
   {
@@ -6423,7 +6423,7 @@
    "topic": "Numbers",
    "one side": "LR-3.06: digits always",
    "other side": "BR-H1: the books' convention",
-   "status": "settled",
+   "status": "settled by card 8 (book way everywhere)",
    "how it settles, or his options": "H1 (5 Oct) for the book, WS-05 digits for articles and letters. Cards: A and L digits, C, K and S the books' way"
   },
   {
@@ -6431,7 +6431,7 @@
    "topic": "Where material comes from",
    "one side": "LR-8.02, BR-R3, MW-08 name build_worksheet.js and the Testimony collection",
    "other side": "WS-03, WS-09: the brain replaced them on 27 Oct",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "His 27 Oct move to the brain. The rulebook names the brain only"
   },
   {
@@ -6439,7 +6439,7 @@
    "topic": "Vocabulary and length",
    "one side": "LR-3.03, LR-3.24, MA-07: simple words, vocabulary diff, 600 ballpark",
    "other side": "BR-H3, BR-H8: richer book vocabulary, no length target",
-   "status": "settled",
+   "status": "settled by card 8 (book way everywhere)",
    "how it settles, or his options": "H3 (4 Oct), H8, WS-05. Cards: A, L and S simple words. C and K richer but still plain"
   },
   {
@@ -6447,7 +6447,7 @@
    "topic": "Never condense",
    "one side": "LR-00e, BR-00g, PD-02, MA-09 and the out-of-scope docs: add and annotate only",
    "other side": "GR-02: condensing allowed off the protected list",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "Decision 4 (4 Nov) for rule docs. History lives in git and the change log. Social, Reel, Taste and Content docs keep their own rule until their cards are built"
   },
   {
@@ -6455,7 +6455,7 @@
    "topic": "Text he puts in double quotes",
    "one side": "BR-0.2, MP-54 (15 Oct): a \"\" sentence changes at most a tenth",
    "other side": "MW-05 (older): his explanation in quotation marks is a brief, rebuilt from scratch",
-   "status": "open",
+   "status": "decided, card 39: see note",
    "how it settles, or his options": "(a) Both stand, scoped: \"\" in a draft or comment keeps 90%, a quoted explanation in chat is a brief. (b) \"\" always keeps 90%. The older line goes"
   },
   {
@@ -6463,7 +6463,7 @@
    "topic": "\"We\"",
    "one side": "LR-4.08: \"we\" is his bridge to the shared human beat. BR-R34 summary in \"we\"",
    "other side": "BV-03, BV-06: never \"we\", \"our team\"",
-   "status": "open",
+   "status": "decided, card 40: business",
    "how it settles, or his options": "(a) Only the business \"we\" (the company speaking) is banned. The shared human \"we\" stays everywhere. (b) \"we\" is banned in brand copy only (bios, ads, pages). Articles and the book keep it"
   },
   {
@@ -6471,7 +6471,7 @@
    "topic": "Checker agents",
    "one side": "WS-02, WS-19: no checker agent. Fresh agents only for blind A/B tests",
    "other side": "Plan steps 12 and 13: one-rule checkers run in parallel",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "The plan he approved on 4 Nov. The skill is fixed in step 14"
   },
   {
@@ -6479,7 +6479,7 @@
    "topic": "Letter length",
    "one side": "WS-B: aim at about 320 words, the article range",
    "other side": "LR 15 Oct: no glue budget, 600 a loose ballpark",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "The newer LR lines. The stale line is cut"
   },
   {
@@ -6487,7 +6487,7 @@
    "topic": "Money",
    "one side": "BR-R3, WS-11: never a money figure",
    "other side": "BR-R3m (4 Nov): money with a struggle or a human side, never as a flex",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "The 4 Nov annotation, in his words"
   },
   {
@@ -6495,7 +6495,7 @@
    "topic": "Story-section headings",
    "one side": "MP-16, BR v1: story sections get bestseller names",
    "other side": "BR-R31: headings name an idea, never an act",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "R31 (6 Oct)"
   },
   {
@@ -6503,7 +6503,7 @@
    "topic": "Paragraph spacing",
    "one side": "BR-0.4, MP-55: a visible gap after each paragraph",
    "other side": "BR-0.4 annotation (3 Nov): chapter drafts indent with no gap",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "His 3 Nov pick: chapters indent. Key moments, articles, letters and case studies keep the gap"
   },
   {
@@ -6511,7 +6511,7 @@
    "topic": "Narrating structure",
    "one side": "LR-5.13: never",
    "other side": "BR-H5: the book may signpost",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "H5 (4 Oct) for the book. Articles keep the ban"
   },
   {
@@ -6519,7 +6519,7 @@
    "topic": "Fragments",
    "one side": "BR-R15: fix fragments",
    "other side": "The books and his own corpus use some on purpose",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "H4: none by default. A deliberate one is flagged for his call"
   },
   {
@@ -6527,7 +6527,7 @@
    "topic": "Outside quotes in the prose",
    "one side": "OS-03: cite by author, book, page and exact words",
    "other side": "BR-R28: one name with a role at most. MP-70: don't over-quote the reference books",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "Existing lines: the prose follows R28. The page and full source go in the end note for the Notes page (WS-C5). To confirm"
   },
   {
@@ -6535,7 +6535,7 @@
    "topic": "Naming a pick",
    "one side": "OS-02 (rhyme-this): say which option you would pick",
    "other side": "MP-67 and this plan's rule: options without steering",
-   "status": "open",
+   "status": "decided, card 41: never",
    "how it settles, or his options": "(a) No pick wherever he chooses. (b) No pick in grillings and decisions. A pick allowed for rhyme options"
   },
   {
@@ -6543,7 +6543,7 @@
    "topic": "Planning agent only",
    "one side": "MW-01 (backfill): never prompt him to execute, film or post",
    "other side": "MP-64, MP-79 (20 and 30 Oct): do the tasks for him",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "The newer lines. The old one goes in step 19"
   },
   {
@@ -6551,7 +6551,7 @@
    "topic": "Insight 3",
    "one side": "MP-13: relates to Insight 1",
    "other side": "LR-7.04: a new angle, never a restatement",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "One line: a question for a reader who was in his shoes in Insight 1, from an angle Insight 1 did not take"
   },
   {
@@ -6559,7 +6559,7 @@
    "topic": "Where the rules live",
    "one side": "MP-43: Book Rules as files on his Mac",
    "other side": "Plan step 9: one rules table in the brain",
-   "status": "settled",
+   "status": "settled, go (card 42-56)",
    "how it settles, or his options": "Plan step 10: the compiler writes the cards to the project and the Mac"
   },
   {
@@ -6567,7 +6567,7 @@
    "topic": "\"Look in the brain first\"",
    "one side": "BR-R41: removed on 4 Nov at his order",
    "other side": "Left open as his call only",
-   "status": "open",
+   "status": "decided, card 13: out",
    "how it settles, or his options": "(a) Leave it out. (b) Bring back that one sentence as a rule"
   }
  ],
@@ -6578,7 +6578,7 @@
    "rows": "LR-3.02",
    "problem": "\"Every noun is something the reader can see, touch or count\", taken literally in an argument chapter, forces made-up images (the \"vague metaphor no one uses\" failure)",
    "proposed fix": "Prefer concrete nouns, explain ideas plainly",
-   "status": "flagged"
+   "status": "card 14: go"
   },
   {
    "n": "2",
@@ -6586,7 +6586,7 @@
    "rows": "BR-R22",
    "problem": "\"One honest limit per chapter\" is a quota that invites a disclaimer, the paragraph that was cut four times",
    "proposed fix": "Drop the quota. Keep \"hedge only at a real limit\"",
-   "status": "flagged"
+   "status": "card 15: go"
   },
   {
    "n": "3",
@@ -6594,7 +6594,7 @@
    "rows": "BR-R10, BR-R31, LR-5.19",
    "problem": "Number quotas: short sentences \"1 in 7 to 1 in 5\", a heading \"every 400 to 600 words\", \"at least one long winding sentence\". The model hits the number and misses the job",
    "proposed fix": "Keep the job, drop the numbers (lint may report them)",
-   "status": "flagged"
+   "status": "card 16: go"
   },
   {
    "n": "4",
@@ -6602,7 +6602,7 @@
    "rows": "BR-R12, BR-R12a",
    "problem": "Exact parallel frames and same-frame paragraph openers. This push made round 3 \"robotic and repeated\", and it fights R13 (break a run)",
    "proposed fix": "Parallel only when items truly match. Drop R12a",
-   "status": "flagged"
+   "status": "card 17: go"
   },
   {
    "n": "5",
@@ -6610,7 +6610,7 @@
    "rows": "BR-R16a",
    "problem": "\"Carry every case into another area of life\" as a Tier 1 must adds a boilerplate \"this works for X, Y, Z\" paragraph after every case and fights R39. From one article",
    "proposed fix": "Tier 2, use it when a case is narrow",
-   "status": "flagged"
+   "status": "card 18: edit"
   },
   {
    "n": "6",
@@ -6618,7 +6618,7 @@
    "rows": "LR-5.10, LR-9.08, LR-11.05, LR-11.06, LR-11.07, LR-6.08, LR-4.03",
    "problem": "Praised passages written as patterns (the force paragraph, \"similarly:\", the structural moves list, the ages series). Loud examples get copied into every draft (plan cause 6)",
    "proposed fix": "Move them to the style bank as examples",
-   "status": "flagged"
+   "status": "card 19: go"
   },
   {
    "n": "7",
@@ -6626,7 +6626,7 @@
    "rows": "BR-R3, WS-16, and others",
    "problem": "Angry quotes inside rule text make the model over-apply that one rule",
    "proposed fix": "Quotes go to the evidence column. The rule line stays calm",
-   "status": "flagged"
+   "status": "card 20: go"
   },
   {
    "n": "8",
@@ -6634,7 +6634,7 @@
    "rows": "LR-3.03",
    "problem": "A banned-word list from one draft (circuit, variable, reasonable, eventually and more). The model swaps synonyms and keeps the abstract sentence",
    "proposed fix": "Drop the list. The concrete-noun rule does the job",
-   "status": "flagged"
+   "status": "card 21: go"
   },
   {
    "n": "9",
@@ -6642,7 +6642,7 @@
    "rows": "WS-20, WS-SC",
    "problem": "Claude scores its own draft before delivery. It gave 7.5 to the epoch he nearly dropped",
    "proposed fix": "Blind checkers replace it. His scorecard stays",
-   "status": "flagged"
+   "status": "card 22: go"
   },
   {
    "n": "10",
@@ -6650,7 +6650,7 @@
    "rows": "BR-R21",
    "problem": "\"Warmth is the author's own story, right after a case.\" With no story for that spot in the brain, the model invents biography or forces an \"I, too\"",
    "proposed fix": "Only from the brain, never a quota",
-   "status": "flagged"
+   "status": "card 23: go"
   },
   {
    "n": "11",
@@ -6658,7 +6658,7 @@
    "rows": "LR-3.09, LR-1.01, WS-18",
    "problem": "Vocabulary diff against six March to May articles. The target is now book standard, and the corpus has to be rebuilt from Notion each time",
    "proposed fix": "His call: (a) drop it (b) keep it for articles",
-   "status": "flagged"
+   "status": "card 9: drop"
   },
   {
    "n": "12",
@@ -6666,7 +6666,7 @@
    "rows": "LR-3.06, LR-1.05, LR-1.06, LR-11.04, WS-05",
    "problem": "Article-only splits (digits, self-talk on its own line, 600 ballpark, readability band). Articles now feed chapters, so each split is rework later",
    "proposed fix": "His call: (a) one convention for everything (b) keep the splits",
-   "status": "flagged"
+   "status": "card 8: book"
   },
   {
    "n": "13",
@@ -6674,7 +6674,7 @@
    "rows": "LR-00d, LR-8.14, CR-00 to CR-05, MA-02, MW-02",
    "problem": "The short-form track: [short-form] tags, storyboards, the 5x5x5 brainstorm. Its skill (content-from-article) is gone and its log is empty",
    "proposed fix": "His call: (a) retire it (b) keep it for a future content card",
-   "status": "flagged"
+   "status": "card 10: retire"
   },
   {
    "n": "14",
@@ -6682,7 +6682,7 @@
    "rows": "MW-03, MW-08",
    "problem": "Worksheet rules (verbatim transcription, \"everything in build_worksheet.js is real\"). The brain replaced the worksheet",
    "proposed fix": "Verbatim rule to the mine skill. Drop the worksheet line",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "15",
@@ -6690,7 +6690,7 @@
    "rows": "LR-3.14, LR-3.15, LR-3.16",
    "problem": "Reading raw material (cut hedges, spot talking-out-loud, read what a detail is evidence of). Writers now take mined gold from the brain",
    "proposed fix": "Move to the mine skill",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "16",
@@ -6698,7 +6698,7 @@
    "rows": "MP-12",
    "problem": "\"3-act structure for articles\" against R31 (never an act) and one arc per piece",
    "proposed fix": "His call: (a) drop it (b) keep it, meaning a series in 3 parts",
-   "status": "flagged"
+   "status": "card 11: drop"
   },
   {
    "n": "17",
@@ -6706,7 +6706,7 @@
    "rows": "MP-51",
    "problem": "\"David's case may be split into several people\" (7 Oct). Chapter 3 now tells David's arc once (R38)",
    "proposed fix": "His call: (a) retire it (b) keep it",
-   "status": "flagged"
+   "status": "card 12: retire"
   },
   {
    "n": "18",
@@ -6714,7 +6714,7 @@
    "rows": "LR-3.08",
    "problem": "\"Call him X, and disclose it in the citation layer\" predates brain.personas and the anonymity line",
    "proposed fix": "Print names from brain.personas. The anonymity line covers it",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "19",
@@ -6722,7 +6722,7 @@
    "rows": "LR-3.10, BV-07",
    "problem": "\"Everyday\" as one word. As an adverb (\"every day\") that is a grammar mistake, and R15 says fix grammar",
    "proposed fix": "\"Everyday\" only as an adjective. His own typed words stay",
-   "status": "flagged"
+   "status": "card 25: go"
   },
   {
    "n": "20",
@@ -6730,7 +6730,7 @@
    "rows": "BR-R16, BR-R19, BR-R27 and others",
    "problem": "Rules that point at a book passage by line (\"like Courage's narrator, CG 254 to 262\"). The writer cannot see those lines",
    "proposed fix": "Spell out the moves. Line references to the evidence column",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "21",
@@ -6738,7 +6738,7 @@
    "rows": "BR-R38a, BR-R39, BR-R31a, CS-02",
    "problem": "Unconfirmed Claude readings sitting inside rules (\"Claude's reading, to confirm on epoch 4\")",
    "proposed fix": "Cut until he confirms",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "22",
@@ -6746,7 +6746,7 @@
    "rows": "BR-R3b.1-8",
    "problem": "The built-detail list opens with 8 lines that say \"limits, not musts\" three ways",
    "proposed fix": "3 lines",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "23",
@@ -6754,7 +6754,7 @@
    "rows": "BR (most of sections A to G)",
    "problem": "Evidence inside rule text: \"His words\", \"Support\", measurements, [5 of 5] tags, dated \"(Added ... at his request)\" lines. Most of the Book Rules' bulk",
    "proposed fix": "Evidence column. The card loads the rule lines only",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "24",
@@ -6762,7 +6762,7 @@
    "rows": "WS-B, LR-7.03, LR-2.03, SP-S3",
    "problem": "Notes about non-rules (\"Edition 1 had a beat ... not a rule\", \"confirm with him if...\", \"this is not a rule\")",
    "proposed fix": "Cut",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "25",
@@ -6770,7 +6770,7 @@
    "rows": "LR-9.01, LR-9.02, LR-9.03, LR-6.11, LR-11.09",
    "problem": "Extended metaphor rules (rarely used) and his themes (content, not craft)",
    "proposed fix": "Themes to the brain. Metaphor lines cut, \"one image per beat\" stays",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "26",
@@ -6778,7 +6778,7 @@
    "rows": "LR-1.09, LR-1.10, LR-4.09",
    "problem": "Too-heavy and too-light diagnosis paragraphs, the named-things-per-100-words metric",
    "proposed fix": "One line: numbers catch gross failure only. Drop the metric",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "27",
@@ -6786,7 +6786,7 @@
    "rows": "BR-R40",
    "problem": "Status notes inside rules (\"the build doesn't handle figures yet\")",
    "proposed fix": "To the handoff",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "28",
@@ -6794,7 +6794,7 @@
    "rows": "RS-03, BT-01, BV-06",
    "problem": "Answered items still marked open or proposed (Reel open items, Taste \"not stated yet\", Voice \"approve or strike\")",
    "proposed fix": "Cut the stale labels when those cards are built",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "29",
@@ -6802,7 +6802,7 @@
    "rows": "T2.10",
    "problem": "The Tier 2 pattern bank (about 25 small moves) never fails a draft but would load every time",
    "proposed fix": "Tier 0 and 1 always. A few Tier 2 lines per card. The rest in the style bank",
-   "status": "flagged"
+   "status": "card 26-38: go"
   },
   {
    "n": "30",
@@ -6810,7 +6810,7 @@
    "rows": "BR-R21a, MP-77, T1.16",
    "problem": "\"Protect the author\" read vulnerability as looking bad. His note (5 Nov): the two are a thin line AI often gets wrong, and vulnerability is fine, even good",
    "proposed fix": "Reword T1.16 (decision page, card 24)",
-   "status": "flagged"
+   "status": "card 24: go"
   }
  ]
 }
