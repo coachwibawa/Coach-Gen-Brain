@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "built": "2026-11-04",
  "cases": [
   {
@@ -91,118 +91,6 @@
    "rejudged_2026_11_05": {
     "call": "keep",
     "his_why": "red is bad, but also connectivity of everything is bad"
-   }
-  },
-  {
-   "id": "F4",
-   "verdict": "fail",
-   "output": "article",
-   "title": "Law 2 chimpanzee piece, v5",
-   "source": "Google Doc \"Articles chat history\" (1fvLTpuJqZgyIdhousqFbtBZCTyvHPnTJpu4mTwsCevY). Log: Coach_Gen_Language_Rules.md section 14.",
-   "date": "2026-09",
-   "score": "none",
-   "his_words": [],
-   "flags": [
-    {
-     "anchor": "That is when the rule gets written.",
-     "his_note": "rule gets written- in whose mind?"
-    },
-    {
-     "anchor": "The hand I do not shake. The chair I sit one back from",
-     "his_note": "hand I do not shake, chair sit back, does not land. I think this is a situation where a group of 3, each on different aspects of life will help."
-    },
-    {
-     "anchor": "People who never wrote one keep walking into the same wall.",
-     "his_note": "same wall - too vague, trying to be vivid but ends up vague. maybe because the sentence itself is a new concept for the audience. a concept that is new by definition cannot be vivid. vivid is only if the audience resonates with the experience, and precise vivid words are used."
-    },
-    {
-     "anchor": "A lesson you have taken goes quiet.",
-     "his_note": "A lesson you have taken goes quiet feels out of place. feels like I am predicting a more prescriptive line. not a philosophical (although still rpescriptive line)"
-    },
-    {
-     "anchor": "The young males do get in.",
-     "his_note": "The young males do get in and after is just slop. again, you mentioned that it's a turn that is detracting."
-    }
-   ],
-   "keep": [
-    {
-     "anchor": "Then we turn forty.",
-     "his_note": "I actually liked the multiples of ages you gave."
-    },
-    {
-     "anchor": "So why does it still shout at you at 2am, twenty years later?",
-     "his_note": "2 am line, nice"
-    }
-   ],
-   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nAt Ngogo, in Uganda, a young male grows up inside a group that holds him. The big males groom him, let him follow, let him sit close. Then he gets old enough to want a female, and all of it stops. He did nothing wrong. He is competition now. First they stop touching him. Then they hurt him. Researchers call it hazing.\n\nThe day it really costs him is the day he reaches for a female who belongs to a male above him.\n\nThat is when the rule gets written. Do not reach above your standing. You will get hurt.\n\nIn humans, we sometimes make that mistake at fifteen.\n\nThen we turn forty. We have the job, the money, the name, a room full of people who would say yes. And that rule from when we were fifteen is still in the room, still reading it for us. It looks like the raise I do not ask for. The hand I do not shake. The chair I sit one back from, telling myself I am just being polite.\n\nI coach introverts. I meet people who decided which sentences were too big for them before they even walked in.\n\nHere is the part I want you to see. That rule saved you. People who never wrote one keep walking into the same wall.\n\nSo why does it still shout at you at 2am, twenty years later?\n\nBecause it is not finished. A lesson you have taken goes quiet. This one is still knocking.\n\nSo I went back to the chimpanzees.\n\nThe young males do get in. Not by waiting. They get in by joining the patrols, the most dangerous walk the group takes, next to the same males who used to hit them. They go out scared. They come back as one of the group.\n\nSo the rule was written down wrong. It was never do not reach. It was do not reach alone.\n\nThe fifteen year old who wrote it had nobody next to him. Of course he blamed the reaching. It was the only thing he could see.\n\nWhat rule did you write, and who was missing from the room when you wrote it?\n\nI have watched people read that old rule out loud with two friends in the room, and put it down the same afternoon, after carrying it for twenty years.\n\nCoach Gen\n\n**Insight 2 — Insights from other experts.**\n\nThe chimpanzee part is real. It comes from Dr. Rachna Reddy, who studies young male chimpanzees at Ngogo, in Kibale National Park, Uganda. Her work is referenced in David Yeager's book \"10 to 25.\"\n\nShe found that for about ten years, the grown males pull away from a young male and turn on him, right when he becomes old enough to compete for mates. She has described it as close to hazing. She also found how those young males finally get accepted, and it is not by waiting. It is by going on territorial patrols, the riskiest thing the group does, with the same males who used to push them around.\n\nOne honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee. That part is my coaching frame, sitting on top of a real pattern. What is real is the aggression, the timing, the cost of reaching too high, and the fact that shared risk, not patience, is what buys a young male his place.\n\n**Insight 3 — Insight from within you.**\n\nThe next time you reach for something you have already earned, who do you want in the room with you?",
-   "rejudged_2026_11_05": {
-    "call": "keep",
-    "his_why": "continuation and connectivity. many awkward constructions"
-   }
-  },
-  {
-   "id": "F5",
-   "verdict": "fail",
-   "output": "article",
-   "title": "Law 2 chimpanzee piece, v6",
-   "source": "Same doc as F4. His inline markup was typed into a copy of v6.",
-   "date": "2026-09",
-   "score": "none. \"much better.\"",
-   "his_words": [
-    "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe. can you refer to worksheet, law 2, and see what my words were"
-   ],
-   "flags": [
-    {
-     "anchor": "at Ngogo",
-     "his_note": "ngogo what? park? zoo?"
-    },
-    {
-     "anchor": "and all of it stops",
-     "his_note": "it doesn't 100% refer to the grooming anymore now that it's half sentence ago"
-    },
-    {
-     "anchor": "First they stop touching him.",
-     "his_note": "uhh, I get this might be the studies word, but awkward"
-    },
-    {
-     "anchor": "and it runs for 10 years.",
-     "his_note": "until?"
-    },
-    {
-     "anchor": "He learns the line the hard way.",
-     "his_note": "one day, might help here, to presentize the tragedy"
-    },
-    {
-     "anchor": "He does get in, eventually.",
-     "his_note": "needs a glue to tie these 2 sentences"
-    },
-    {
-     "anchor": "He gets in by walking the border patrol",
-     "his_note": "needs a clause describing the perils of this"
-    },
-    {
-     "anchor": "In humans, we sometimes make that mistake at 15.",
-     "his_note": "glue to pass the lesson and the narrative"
-    },
-    {
-     "anchor": "Because the sentence is not finished.",
-     "his_note": "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe. can you refer to worksheet, law 2, and see what my words were"
-    }
-   ],
-   "keep": [
-    {
-     "anchor": "I hear the same 3 stories from almost everyone I coach.",
-     "his_note": "amazing"
-    },
-    {
-     "anchor": "So why does it still shout at you at 2am, 20 years later?",
-     "his_note": "this too"
-    }
-   ],
-   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nIn Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing: what happens to a young male chimp at Ngogo when he grows up. The big males raised him, groomed him, let him follow them around and sit close. Then he turns 10, old enough to want a female, and all of it stops. He did nothing wrong. He is competition now. First they stop touching him. Then they hit him. Reddy calls it close to hazing, and it runs for 10 years.\n\nHe learns the line the hard way. He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.\n\nHe does get in, eventually. Not by waiting the 10 years out. He gets in by walking the border patrol, the most dangerous thing the group does, next to the same males who spent 10 years teaching him to stay small.\n\nIn humans, we sometimes make that mistake at 15. And at 15, we write it down. Do not reach above your standing. You will get hurt.\n\nThen we turn 25. Then 35. Then 45. We have the job, the money, the name, and a room full of people who would say yes, and that one sentence, written by a 15 year old who had not seen anything yet, is still the sentence we read before we speak.\n\nI hear the same 3 stories from almost everyone I coach. The crush who laughed. The interview that said they would call back. The thing you built and carried home, and nobody at the table looked up.\n\nSo why does it still shout at you at 2am, 20 years later?\n\nBecause the sentence is not finished. The boy who wrote it was standing there alone, so he blamed the reaching. It was the only thing he could see. He got one word wrong.\n\nIt was never do not reach. It was do not reach alone.\n\nGo and add the word. Read the old sentence out loud, in a room with 2 people who will still be there if it goes badly.\n\nWhat did you write at 15, and who was missing from the room when you wrote it?\n\nI have watched people carry one sentence for 20 years, and put it down in a single afternoon, once somebody else was holding the other end.\n\nCoach Gen",
-   "rejudged_2026_11_05": {
-    "call": "keep",
-    "his_why": ""
    }
   },
   {
@@ -489,6 +377,120 @@
     "call": "drop",
     "his_why": "I am not sure how to judge this, looking back at it, it is a very weird passage"
    }
+  },
+  {
+   "id": "F4",
+   "verdict": "fail",
+   "output": "article",
+   "title": "Law 2 chimpanzee piece, v5",
+   "source": "Google Doc \"Articles chat history\" (1fvLTpuJqZgyIdhousqFbtBZCTyvHPnTJpu4mTwsCevY). Log: Coach_Gen_Language_Rules.md section 14.",
+   "date": "2026-09",
+   "score": "none",
+   "his_words": [],
+   "flags": [
+    {
+     "anchor": "That is when the rule gets written.",
+     "his_note": "rule gets written- in whose mind?"
+    },
+    {
+     "anchor": "The hand I do not shake. The chair I sit one back from",
+     "his_note": "hand I do not shake, chair sit back, does not land. I think this is a situation where a group of 3, each on different aspects of life will help."
+    },
+    {
+     "anchor": "People who never wrote one keep walking into the same wall.",
+     "his_note": "same wall - too vague, trying to be vivid but ends up vague. maybe because the sentence itself is a new concept for the audience. a concept that is new by definition cannot be vivid. vivid is only if the audience resonates with the experience, and precise vivid words are used."
+    },
+    {
+     "anchor": "A lesson you have taken goes quiet.",
+     "his_note": "A lesson you have taken goes quiet feels out of place. feels like I am predicting a more prescriptive line. not a philosophical (although still rpescriptive line)"
+    },
+    {
+     "anchor": "The young males do get in.",
+     "his_note": "The young males do get in and after is just slop. again, you mentioned that it's a turn that is detracting."
+    }
+   ],
+   "keep": [
+    {
+     "anchor": "Then we turn forty.",
+     "his_note": "I actually liked the multiples of ages you gave."
+    },
+    {
+     "anchor": "So why does it still shout at you at 2am, twenty years later?",
+     "his_note": "2 am line, nice"
+    }
+   ],
+   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nAt Ngogo, in Uganda, a young male grows up inside a group that holds him. The big males groom him, let him follow, let him sit close. Then he gets old enough to want a female, and all of it stops. He did nothing wrong. He is competition now. First they stop touching him. Then they hurt him. Researchers call it hazing.\n\nThe day it really costs him is the day he reaches for a female who belongs to a male above him.\n\nThat is when the rule gets written. Do not reach above your standing. You will get hurt.\n\nIn humans, we sometimes make that mistake at fifteen.\n\nThen we turn forty. We have the job, the money, the name, a room full of people who would say yes. And that rule from when we were fifteen is still in the room, still reading it for us. It looks like the raise I do not ask for. The hand I do not shake. The chair I sit one back from, telling myself I am just being polite.\n\nI coach introverts. I meet people who decided which sentences were too big for them before they even walked in.\n\nHere is the part I want you to see. That rule saved you. People who never wrote one keep walking into the same wall.\n\nSo why does it still shout at you at 2am, twenty years later?\n\nBecause it is not finished. A lesson you have taken goes quiet. This one is still knocking.\n\nSo I went back to the chimpanzees.\n\nThe young males do get in. Not by waiting. They get in by joining the patrols, the most dangerous walk the group takes, next to the same males who used to hit them. They go out scared. They come back as one of the group.\n\nSo the rule was written down wrong. It was never do not reach. It was do not reach alone.\n\nThe fifteen year old who wrote it had nobody next to him. Of course he blamed the reaching. It was the only thing he could see.\n\nWhat rule did you write, and who was missing from the room when you wrote it?\n\nI have watched people read that old rule out loud with two friends in the room, and put it down the same afternoon, after carrying it for twenty years.\n\nCoach Gen\n\n**Insight 2 — Insights from other experts.**\n\nThe chimpanzee part is real. It comes from Dr. Rachna Reddy, who studies young male chimpanzees at Ngogo, in Kibale National Park, Uganda. Her work is referenced in David Yeager's book \"10 to 25.\"\n\nShe found that for about ten years, the grown males pull away from a young male and turn on him, right when he becomes old enough to compete for mates. She has described it as close to hazing. She also found how those young males finally get accepted, and it is not by waiting. It is by going on territorial patrols, the riskiest thing the group does, with the same males who used to push them around.\n\nOne honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee. That part is my coaching frame, sitting on top of a real pattern. What is real is the aggression, the timing, the cost of reaching too high, and the fact that shared risk, not patience, is what buys a young male his place.\n\n**Insight 3 — Insight from within you.**\n\nThe next time you reach for something you have already earned, who do you want in the room with you?",
+   "rejudged_2026_11_05": {
+    "call": "keep",
+    "his_why": "continuation and connectivity. many awkward constructions"
+   },
+   "dropped_reason": "Melvin era, on the edge of brilliance and dumb: Gen kept only v7 (F6) of the three chimp drafts (5 Nov)."
+  },
+  {
+   "id": "F5",
+   "verdict": "fail",
+   "output": "article",
+   "title": "Law 2 chimpanzee piece, v6",
+   "source": "Same doc as F4. His inline markup was typed into a copy of v6.",
+   "date": "2026-09",
+   "score": "none. \"much better.\"",
+   "his_words": [
+    "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe. can you refer to worksheet, law 2, and see what my words were"
+   ],
+   "flags": [
+    {
+     "anchor": "at Ngogo",
+     "his_note": "ngogo what? park? zoo?"
+    },
+    {
+     "anchor": "and all of it stops",
+     "his_note": "it doesn't 100% refer to the grooming anymore now that it's half sentence ago"
+    },
+    {
+     "anchor": "First they stop touching him.",
+     "his_note": "uhh, I get this might be the studies word, but awkward"
+    },
+    {
+     "anchor": "and it runs for 10 years.",
+     "his_note": "until?"
+    },
+    {
+     "anchor": "He learns the line the hard way.",
+     "his_note": "one day, might help here, to presentize the tragedy"
+    },
+    {
+     "anchor": "He does get in, eventually.",
+     "his_note": "needs a glue to tie these 2 sentences"
+    },
+    {
+     "anchor": "He gets in by walking the border patrol",
+     "his_note": "needs a clause describing the perils of this"
+    },
+    {
+     "anchor": "In humans, we sometimes make that mistake at 15.",
+     "his_note": "glue to pass the lesson and the narrative"
+    },
+    {
+     "anchor": "Because the sentence is not finished.",
+     "his_note": "everything after this, mainly the diagnosis and prescription, is not what I actually would prescribe. can you refer to worksheet, law 2, and see what my words were"
+    }
+   ],
+   "keep": [
+    {
+     "anchor": "I hear the same 3 stories from almost everyone I coach.",
+     "his_note": "amazing"
+    },
+    {
+     "anchor": "So why does it still shout at you at 2am, 20 years later?",
+     "his_note": "this too"
+    }
+   ],
+   "text": "**Insight 1 — Insights from me, to you.**\n\nI keep a chimpanzee study in my coaching notes. Not for the chimpanzees.\n\nIn Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing: what happens to a young male chimp at Ngogo when he grows up. The big males raised him, groomed him, let him follow them around and sit close. Then he turns 10, old enough to want a female, and all of it stops. He did nothing wrong. He is competition now. First they stop touching him. Then they hit him. Reddy calls it close to hazing, and it runs for 10 years.\n\nHe learns the line the hard way. He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.\n\nHe does get in, eventually. Not by waiting the 10 years out. He gets in by walking the border patrol, the most dangerous thing the group does, next to the same males who spent 10 years teaching him to stay small.\n\nIn humans, we sometimes make that mistake at 15. And at 15, we write it down. Do not reach above your standing. You will get hurt.\n\nThen we turn 25. Then 35. Then 45. We have the job, the money, the name, and a room full of people who would say yes, and that one sentence, written by a 15 year old who had not seen anything yet, is still the sentence we read before we speak.\n\nI hear the same 3 stories from almost everyone I coach. The crush who laughed. The interview that said they would call back. The thing you built and carried home, and nobody at the table looked up.\n\nSo why does it still shout at you at 2am, 20 years later?\n\nBecause the sentence is not finished. The boy who wrote it was standing there alone, so he blamed the reaching. It was the only thing he could see. He got one word wrong.\n\nIt was never do not reach. It was do not reach alone.\n\nGo and add the word. Read the old sentence out loud, in a room with 2 people who will still be there if it goes badly.\n\nWhat did you write at 15, and who was missing from the room when you wrote it?\n\nI have watched people carry one sentence for 20 years, and put it down in a single afternoon, once somebody else was holding the other end.\n\nCoach Gen",
+   "rejudged_2026_11_05": {
+    "call": "keep",
+    "his_why": ""
+   },
+   "dropped_reason": "Melvin era, on the edge of brilliance and dumb: Gen kept only v7 (F6) of the three chimp drafts (5 Nov)."
   }
  ]
 }
