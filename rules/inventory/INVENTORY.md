@@ -84,7 +84,7 @@ A skeleton for step 8, not the final wording. Each line lists the rows that feed
 | **T1.13 Rhythm without choppiness** | ALCKS | checker | Short sentences have a job. One event, one sentence. Break a run of same-shape sentences with a long one. No clipped fragment runs. Fragments default to none. | LR-5.19, LR-10.04, BR-R10, BR-R11, BR-R13, BR-H4 |
 | **T1.14 Parallels that truly match** | ALCKS | checker | Parallel frames only for matching items, with the frame and subject kept exact. A mirror needs matching beats and enough material. | BR-R12, BR-R20 |
 | **T1.15 Plain words he would say** | ALCKS | checker | Concrete nouns the reader can see, touch or count. Plain at the mechanism. Spoken material rewritten as prose. Simple words for articles, letters and case studies, richer allowed in chapters. | LR-3.01, LR-3.02, LR-3.03, LR-3.11, LR-3.17, LR-3.24, BR-R3c, BR-R30a, BR-H3, BV-03 |
-| **T1.16 Protect the author** | ALCKS | checker | His worst moments clearly in the past. No line that reads against him out of context. Recognition, never credit for being first. /privileged lines made acceptable. | LR-4.06, BR-0.5, BR-R21a, MP-77 |
+| **T1.16 Protect the author** | ALCKS | checker | Being open and vulnerable is welcome, often good (his note, 5 Nov). Out: a line that reads against him out of context, such as a bad practice or a wealth flex. A moment that shows him unfinished sits in the past, unless it pays off a vulnerable build. /privileged lines made acceptable. Recognition, never credit for being first. | LR-4.06, BR-0.5, BR-R21a, MP-77 |
 | **T1.17 Turns and endings** | ALCKS | checker | A section rises to one turn, then hands off. Prescriptive, not philosophical, at the hinge. Articles never end on the hard question alone. No teacher's summary in the prose. | LR-7.01, LR-7.02, LR-7.05, BR-R26, BR-R39 |
 | **T1.18 AI tells** | ALCKS | checker | No "Stop X. Start Y.", no "not just X. Y.", no cliché templates or hype words, no over-simplified prose, no cleverness the audience will not recognise. | LR-1.10, LR-10.02, LR-10.06, LR-10.14, LR-10.15, LR-10.17, BV-06 |
 
@@ -229,6 +229,7 @@ Tested against the business requirements: counterproductive or beyond what the m
 | 27 | clouds context | BR-R40 | Status notes inside rules ("the build doesn't handle figures yet") | To the handoff | flagged |
 | 28 | clouds context | RS-03, BT-01, BV-06 | Answered items still marked open or proposed (Reel open items, Taste "not stated yet", Voice "approve or strike") | Cut the stale labels when those cards are built | flagged |
 | 29 | clouds context | T2.10 | The Tier 2 pattern bank (about 25 small moves) never fails a draft but would load every time | Tier 0 and 1 always. A few Tier 2 lines per card. The rest in the style bank | flagged |
+| 30 | badly made | BR-R21a, MP-77, T1.16 | "Protect the author" read vulnerability as looking bad. His note (5 Nov): the two are a thin line AI often gets wrong, and vulnerability is fine, even good | Reword T1.16 (decision page, card 24) | flagged |
 
 ## Every row, by source
 

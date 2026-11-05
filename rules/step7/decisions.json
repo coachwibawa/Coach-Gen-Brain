@@ -1,0 +1,314 @@
+{
+ "title": "Rulebook Decisions",
+ "description": "Every call that shapes the new writing rulebook, in the order they depend on each other: requirements, your calls, proposed cuts, open clashes, settled items.",
+ "collection": "picks",
+ "intro": [
+  "These decide what goes into the new rulebook. They run in the order they depend on each other: the requirements first, then your calls from the business changes, then the rules I would cut or change, then the clashes still open, then everything already settled.",
+  "Pick one option per card. Notes are optional. Numbers run through the whole page, so any line can be named by its number. Picks save as you go, and I read them from here."
+ ],
+ "sections": [
+  {
+   "title": "The requirements",
+   "sub": "Every rule below was tested against these. Number 5 carries your note from today.",
+   "cards": [
+    {
+     "id": "1-7",
+     "title": "What the writing rules are for",
+     "items": [
+      "The book is the main job: finish 5 Laws of Lasting Change from what already exists (the brain, the articles, your notes), at Clear and Dweck standard.",
+      "Articles and letters are written to book standard and feed the chapters.",
+      "Case studies read like Dweck, sound like you, and stay inside the built-detail lines.",
+      "The reader keeps trying but never finishes. Many read English as a second language. Parents matter. Introverts are one track, not the main idea.",
+      "Everything is true and from your material, and clients stay hidden. Being open and vulnerable is welcome, often good. What is out is a line that reads against you out of context. Everyone is resourceful.",
+      "Your workflow: the brain is the one home of material, you mark up in Google Docs, key moments come before the chapter, one chat per piece.",
+      "The writer follows the crucial rules every time, on far fewer rule tokens."
+     ],
+     "options": [["ok", "Correct as written"], ["change", "Needs a change (say which number in the note)"]],
+     "placeholder": "Which number, and what changes"
+    }
+   ]
+  },
+  {
+   "title": "Your calls from the business changes",
+   "sub": "These shape the rest, so they come first.",
+   "cards": [
+    {
+     "id": "8",
+     "kind": "call",
+     "title": "Articles feed chapters. One set of conventions, or two?",
+     "context": "Today articles and letters follow their own conventions and the book follows the books'. Each difference is rework when an article becomes a chapter section.",
+     "rows": [
+      ["Numbers", "Article: digits always. Book: small counts in words, digits for measures and labels."],
+      ["Self-talk", "Article: a quoted line may stand on its own. Book: inline, except quick dialogue, a list of sample lines or the payoff line."],
+      ["Length", "Article: a 600-word ballpark and a readability band. Book: no target."],
+      ["Words", "Article: simple words. Book: richer, still plain."]
+     ],
+     "options": [["book", "a. The book's way everywhere"], ["split", "b. Keep the article way for articles and letters"], ["mix", "c. Mix (say which in the note)"]],
+     "placeholder": "Optional. Also say if your chimp-piece move (one line printed twice as a bridge) stays allowed"
+    },
+    {
+     "id": "9",
+     "kind": "call",
+     "title": "Comparing a draft's words to your six March to May articles",
+     "context": "The writer lists every word your six true-voice pieces never use and watches the long abstract ones. The corpus is rebuilt from Notion each time.",
+     "options": [["drop", "a. Drop it"], ["keep", "b. Keep it for articles and letters"]]
+    },
+    {
+     "id": "10",
+     "kind": "call",
+     "title": "The short-form track",
+     "context": "The 5x5x5 brainstorm, full storyboards for combos, the Content Rules doc. The skill it served (content-from-article) is gone, and the doc's log is empty.",
+     "options": [["retire", "a. Retire it"], ["keep", "b. Keep it for a future content card"]]
+    },
+    {
+     "id": "11",
+     "kind": "call",
+     "title": "\"Likes a 3-act structure for articles\"",
+     "context": "A memory line. The rules now say headings never mark an act and each piece runs one arc.",
+     "options": [["drop", "a. Drop it"], ["keep", "b. Keep it, meaning a series told in 3 parts"]]
+    },
+    {
+     "id": "12",
+     "kind": "call",
+     "title": "\"David's case can be split into several people\"",
+     "context": "A memory line from 7 Oct. Chapter 3 now tells David's arc once, then calls back.",
+     "options": [["retire", "a. Retire it"], ["keep", "b. Keep it"]]
+    },
+    {
+     "id": "13",
+     "kind": "call",
+     "title": "\"Look in the brain first\"",
+     "context": "Removed from the Book Rules on 4 Nov at your order and left as your call: whether that one sentence comes back as a rule.",
+     "options": [["out", "a. Leave it out"], ["back", "b. Bring back that one sentence"]]
+    }
+   ]
+  },
+  {
+   "title": "Rules I would cut or change",
+   "sub": "Each one either works against its own purpose, is beyond what the model can do well, or was made badly.",
+   "cards": [
+    {
+     "id": "14",
+     "kind": "change",
+     "title": "Concrete nouns",
+     "rows": [
+      ["Now", "\"Every noun is something the reader can see, touch or count.\""],
+      ["Change", "Prefer concrete nouns. Explain ideas plainly."],
+      ["Why", "Read literally in an argument chapter, it forces made-up images, the \"vague metaphor no one uses\" failure."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "15",
+     "kind": "change",
+     "title": "\"One honest limit per chapter\"",
+     "rows": [
+      ["Now", "Calibrated confidence, with one honest limit per chapter (R22)."],
+      ["Change", "Drop the quota. Keep \"a hedge only at a real limit\"."],
+      ["Why", "A quota invites the disclaimer paragraph that was cut four times."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "16",
+     "kind": "change",
+     "title": "Number targets",
+     "rows": [
+      ["Now", "Short sentences \"1 in 7 to 1 in 5\". A heading every 400 to 600 words. \"At least one long winding sentence.\""],
+      ["Change", "Keep each rule's job, drop the numbers. The script may still report them."],
+      ["Why", "The model hits the number and misses the job."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "17",
+     "kind": "change",
+     "title": "Exact parallel frames",
+     "rows": [
+      ["Now", "\"Keep the frame exact\" (R12), and paragraphs on one idea open the same way (R12a)."],
+      ["Change", "Parallel only when the items truly match, with the subject kept parallel. Drop R12a."],
+      ["Why", "This push made taste test round 3 \"robotic and repeated\", and it fights \"break a run\" (R13)."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "18",
+     "kind": "change",
+     "title": "Carrying a case into other areas of life",
+     "rows": [
+      ["Now", "After every case, carry the idea into another area of life, then name a few more. A must (R16)."],
+      ["Change", "Polish, used when a case is narrow."],
+      ["Why", "As a must it adds a stock \"this works for X, Y and Z\" paragraph after every case. It came from one article."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "19",
+     "kind": "change",
+     "title": "Praised passages written as patterns",
+     "rows": [
+      ["Now", "The force paragraph, the \"similarly:\" analogy, the list of your structural moves and the ages series sit in the rules as moves to reach for."],
+      ["Change", "Move them to the style bank as examples."],
+      ["Why", "Loud examples get copied into every draft."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "20",
+     "kind": "change",
+     "title": "Angry quotes inside rule text",
+     "rows": [
+      ["Now", "Your sharpest lines sit inside the rules they produced."],
+      ["Change", "They move to the evidence beside the rule. The rule line stays calm."],
+      ["Why", "The loudest quote makes the model over-apply that one rule."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "21",
+     "kind": "change",
+     "title": "The banned-word list",
+     "rows": [
+      ["Now", "Circuit, variable, reasonable, eventually and 15 more, \"always replaceable\"."],
+      ["Change", "Drop the list. The concrete-noun rule does the job."],
+      ["Why", "It came from one draft, and the model just swaps in synonyms."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "22",
+     "kind": "change",
+     "title": "Claude scoring its own draft",
+     "rows": [
+      ["Now", "Before you see a chapter, Claude scores it on the six traits."],
+      ["Change", "Drop it. The blind checkers replace it. Your scorecard stays."],
+      ["Why", "It scored 7.5 the draft you nearly dropped."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "23",
+     "kind": "change",
+     "title": "Your own story as warmth",
+     "rows": [
+      ["Now", "Warmth is your own short story, placed right after a case (R21)."],
+      ["Change", "Your stories come only from the brain, where one fits, never to fill a slot."],
+      ["Why", "With no story for that spot, the model invents one or forces an \"I, too\"."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "24",
+     "kind": "change",
+     "title": "Protecting the author, reworded after your note",
+     "rows": [
+      ["Now", "Your worst moments clearly in the past. No line that reads against you out of context."],
+      ["Change", "Being open and vulnerable is welcome, often good. Out: a line that reads against you out of context, such as a bad practice or a wealth flex. Your 5 Oct rule stays: a moment that shows you unfinished sits in the past, unless it pays off a vulnerable build."]
+     ],
+     "said": ["looking bad and being emotionally available/vulnerable is a thin line often misrepresented by AI. the latter is OK even good to have in some cases."],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "25",
+     "kind": "change",
+     "title": "\"Everyday\" as one word",
+     "rows": [
+      ["Now", "\"Everyday\" is always one word."],
+      ["Change", "One word only as an adjective (\"an everyday habit\"). As an adverb it is \"every day\". Your own typed words stay as typed."],
+      ["Why", "The adverb form is a grammar mistake, and the rules say fix grammar."]
+     ],
+     "options": [["go", "Go"], ["keep", "Keep as is"], ["edit", "Change it (say how)"]]
+    },
+    {
+     "id": "26-38",
+     "kind": "change",
+     "title": "Clean-up",
+     "context": "Smaller changes that move or cut noise. None changes what a draft must do.",
+     "items": [
+      "Worksheet rules: the verbatim-transcription rule moves to the mine skill, and \"everything in build_worksheet.js is real\" goes.",
+      "Rules for reading raw material (cut hedges, spot talking-out-loud) move to the mine skill.",
+      "\"Call him X, and say so in the citation layer\" goes. The cast in the brain and the anonymity note cover it.",
+      "Rules that point at a book line (\"like Courage's narrator, CG 254\") get their moves spelled out. Line references move to the evidence.",
+      "My unconfirmed readings inside rules come out until you confirm them.",
+      "The 8-line opening of the built-detail list becomes 3 lines.",
+      "Your quotes, the measurements, \"[5 of 5]\" tags and \"(Added ... at his request)\" lines move to the evidence beside each rule. The writer loads only the rule lines.",
+      "Notes about things that are not rules come out (\"not a rule\", \"confirm with him if...\").",
+      "Your recurring themes move to the brain. The extended-metaphor rules go, and \"one image per beat\" stays.",
+      "The too-heavy and too-light paragraphs and the named-things metric become one line: the numbers catch only gross failure.",
+      "Status notes inside rules (\"the build doesn't handle figures yet\") move to the handoff.",
+      "Old \"open\" and \"proposed\" labels in the Reel, Taste and Voice docs get cleaned when those cards are built.",
+      "The polish list loads only a few lines per card. The rest goes to the style bank."
+     ],
+     "options": [["go", "Go on all"], ["except", "Go, except the numbers in my note"]],
+     "placeholder": "Numbers to leave out, if any"
+    }
+   ]
+  },
+  {
+   "title": "Clashes still open",
+   "sub": "Two rules say opposite things and nothing you decided settles them. No pick from me.",
+   "cards": [
+    {
+     "id": "39",
+     "kind": "call",
+     "title": "Text you put in double quotes",
+     "rows": [
+      ["One side", "In a draft or comment, \"\" marks a sentence you strongly believe. Change at most a tenth (15 Oct)."],
+      ["Other side", "An older memory line: a quoted explanation is a brief, rebuilt from scratch."]
+     ],
+     "options": [["both", "a. Both stand: \"\" in a draft or comment keeps 90%, a quoted explanation in chat is a brief"], ["one", "b. \"\" always keeps 90%. The older line goes"]]
+    },
+    {
+     "id": "40",
+     "kind": "call",
+     "title": "\"We\"",
+     "rows": [
+      ["One side", "Your rules call \"we\" your bridge to the shared human beat, and chapter summaries use it."],
+      ["Other side", "The brand docs: \"Voice: I. Never we or our team.\""]
+     ],
+     "options": [["business", "a. Only the business \"we\" (the company speaking) is banned. The shared human \"we\" stays everywhere"], ["brand", "b. \"We\" is banned in brand copy only (bios, ads, pages). Articles and the book keep it"]]
+    },
+    {
+     "id": "41",
+     "kind": "call",
+     "title": "Naming a pick when you choose",
+     "rows": [
+      ["One side", "rhyme-this ends with the option Claude would pick."],
+      ["Other side", "Your rule for grillings, and for this work: options with no pick."]
+     ],
+     "options": [["never", "a. No pick anywhere you choose"], ["rhyme", "b. No pick in grillings and decisions. A pick allowed for rhyme options"]]
+    }
+   ]
+  },
+  {
+   "title": "Already settled",
+   "sub": "Settled by your decisions or by newer rules. Go writes them this way.",
+   "cards": [
+    {
+     "id": "42-56",
+     "kind": "settled",
+     "title": "Settled items",
+     "items": [
+      "Semicolons are banned everywhere (your 4 Nov call). Two memory lines that allow them get fixed.",
+      "Research follows R28 everywhere, articles included (your 4 Nov call). My reading: Insight 2 and the end note may still carry names, year and source.",
+      "Material comes from the brain only. References to the worksheet and the Testimony collection come out (27 Oct).",
+      "\"Never condense\" lines are retired for rule docs (your 4 Nov call). The Social, Reel, Taste and Content docs keep theirs until their cards are built.",
+      "The skill's \"no checker agent\" line goes, as in the plan you approved.",
+      "Letters lose the old \"aim at about 320 words\" line.",
+      "Money is fine with a struggle or a human side, never as a flex (4 Nov). The skill's old blanket ban goes.",
+      "Headings name an idea, never an act of the story (R31).",
+      "Chapters indent paragraphs. Key moments, articles, letters and case studies keep the gap (3 Nov).",
+      "The book may signpost. Articles never narrate their own structure (H5).",
+      "Fragments: none by default, and a deliberate one is flagged for you (H4).",
+      "Outside quotes: name and role in the prose, page and source in the end note (my reading).",
+      "The \"planning agent only\" memory line goes, since you want tasks done for you.",
+      "Insight 3: a question for a reader in your shoes, from an angle Insight 1 did not take.",
+      "One rules table in the brain, with copies written to the project and your Mac."
+     ],
+     "options": [["go", "Go on all"], ["except", "Go, except the numbers in my note"]],
+     "placeholder": "Numbers to leave out, if any"
+    }
+   ]
+  }
+ ]
+}

@@ -321,7 +321,7 @@
    "title": "Protect the author",
    "outputs": "ALCKS",
    "check": "checker",
-   "what it will hold (proposed for step 8, not final wording)": "His worst moments clearly in the past. No line that reads against him out of context. Recognition, never credit for being first. /privileged lines made acceptable."
+   "what it will hold (proposed for step 8, not final wording)": "Being open and vulnerable is welcome, often good (his note, 5 Nov). Out: a line that reads against him out of context, such as a bad practice or a wealth flex. A moment that shows him unfinished sits in the past, unless it pays off a vulnerable build. /privileged lines made acceptable. Recognition, never credit for being first."
   },
   {
    "id": "T1.17",
@@ -6802,6 +6802,14 @@
    "rows": "T2.10",
    "problem": "The Tier 2 pattern bank (about 25 small moves) never fails a draft but would load every time",
    "proposed fix": "Tier 0 and 1 always. A few Tier 2 lines per card. The rest in the style bank",
+   "status": "flagged"
+  },
+  {
+   "n": "30",
+   "kind": "badly made",
+   "rows": "BR-R21a, MP-77, T1.16",
+   "problem": "\"Protect the author\" read vulnerability as looking bad. His note (5 Nov): the two are a thin line AI often gets wrong, and vulnerability is fine, even good",
+   "proposed fix": "Reword T1.16 (decision page, card 24)",
    "status": "flagged"
   }
  ]

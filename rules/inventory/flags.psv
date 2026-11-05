@@ -28,3 +28,4 @@ n|kind|rows|problem|proposed fix|status
 27|clouds context|BR-R40|Status notes inside rules ("the build doesn't handle figures yet")|To the handoff|flagged
 28|clouds context|RS-03, BT-01, BV-06|Answered items still marked open or proposed (Reel open items, Taste "not stated yet", Voice "approve or strike")|Cut the stale labels when those cards are built|flagged
 29|clouds context|T2.10|The Tier 2 pattern bank (about 25 small moves) never fails a draft but would load every time|Tier 0 and 1 always. A few Tier 2 lines per card. The rest in the style bank|flagged
+30|badly made|BR-R21a, MP-77, T1.16|"Protect the author" read vulnerability as looking bad. His note (5 Nov): the two are a thin line AI often gets wrong, and vulnerability is fine, even good|Reword T1.16 (decision page, card 24)|flagged
