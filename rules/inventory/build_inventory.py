@@ -63,6 +63,7 @@ def main():
     rows = read_psv("inventory.psv")
     targets = read_psv("targets.psv")
     clashes = read_psv("clashes.psv")
+    flags = read_psv("flags.psv")
     tids = {t["id"] for t in targets}
     errors = []
     seen = set()
@@ -112,6 +113,12 @@ def main():
         for f in t.values():
             if "—" in f or ";" in f:
                 errors.append(f"target {t['id']}: em dash or semicolon")
+    for f in flags:
+        for ref in re.findall(r"\b([A-Z]{2,3}-[\w.]+)", f["rows"]):
+            if ref not in seen and ref not in tids:
+                errors.append(f"flag {f['n']}: unknown row {ref}")
+        if any(";" in v or "\u2014" in v for v in f.values()):
+            errors.append(f"flag {f['n']}: em dash or semicolon")
     if errors:
         print("\n".join(errors))
         sys.exit(1)
@@ -133,7 +140,7 @@ def main():
 
     (HERE / "inventory.json").write_text(json.dumps(
         {"built": "2026-11-05", "step": 6, "sources": meta, "targets": targets,
-         "rows": rows, "clashes": clashes}, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+         "rows": rows, "clashes": clashes, "flags": flags}, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
     md = []
     w = md.append
@@ -248,6 +255,16 @@ def main():
     w("|---|---|---|---|---|---|")
     for c in clashes:
         w(f"| {c['id']} | {c['topic']} | {c['one side']} | {c['other side']} | {c['status']} | {c['how it settles, or his options']} |")
+    w("")
+
+    w("## Flags: rules to cut or rethink (5 Nov, for his pass)")
+    w("")
+    w("Tested against the business requirements: counterproductive or beyond what the model can do, unneeded after a business change, badly made, or noise.")
+    w("")
+    w("| # | Kind | Rows | Problem | Proposed fix | Status |")
+    w("|---|---|---|---|---|---|")
+    for f in flags:
+        w(f"| {f['n']} | {f['kind']} | {f['rows']} | {f['problem']} | {f['proposed fix']} | {f['status']} |")
     w("")
 
     w("## Every row, by source")
