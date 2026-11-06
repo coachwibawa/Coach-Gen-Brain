@@ -45,8 +45,8 @@ Checks done on 5 Nov: the Mac Book Rules master and the project mirror have the 
 ## Counts
 
 - **447 rows** from 21 sources. Big sources are listed rule by rule. Out-of-scope docs (social, reel, brand, content) are listed by section.
-- By action: keep 124, merge 158, cut 89, move 41, out 33, open 2.
-- **181 rows fold into 37 rules** (Tier 0: 7, Tier 1: 18, Tier 2: 12). 36 rows go to the 5 output cards.
+- By action: keep 124, merge 157, cut 91, move 41, out 33, open 1.
+- **180 rows fold into 37 rules** (Tier 0: 7, Tier 1: 18, Tier 2: 12). 36 rows go to the 5 output cards.
 - By source: LR 152, BR 84, MP 76, WS 34, GR 13, SP 10, BV 10, MW 10, PL 9, MA 9, PD 7, CR 7, RS 4, PI 4, MF 4, Book_Writing_Handoff 3, BS 3, OS 3, BT 2, FL 2, WB 1.
 
 ## The proposed rulebook (merge targets)
@@ -58,7 +58,7 @@ A skeleton for step 8, not the final wording. Each line lists the rows that feed
 | Rule | Outputs | Check | Holds | Fed by |
 |---|---|---|---|---|
 | **T0.1 Banned marks and words** | ALCKS | mech | No em dashes, no semicolons, no emojis, never "my clients". Lint blocks delivery. | LR-3.18, LR-3.19, LR-3.20, LR-4.07, BR-R14 |
-| **T0.2 His words stay his** | ALCKS | mech | Text he typed keeps its wording and tense. "" lines change at most a tenth. Keeper lines, brain quotes and locked names (Laws, tagline, coined terms) printed exactly. Doubt means ask, never change. | LR-8.09, BR-0.2, BV-05, MP-40, MF-02, MF-04 |
+| **T0.2 His words stay his** | ALCKS | mech | Text he typed keeps its wording and tense. "" lines change at most a tenth. Keeper lines, brain quotes and locked names (Laws, tagline, coined terms) printed exactly. Doubt means ask, never change. | LR-8.09, BV-05, MP-40, MF-02, MF-04 |
 | **T0.3 True material only** | ALCKS | checker | Every fact traces to the brain or his published pieces. Transcripts only check facts. No invented biography, title, subtitle, citation, book claim or fact under his name. Missing material is marked, never filled. | LR-4.05, LR-4.09, LR-8.10, LR-10.01, BR-R3, GR-13, WS-09, MP-37, MW-06 |
 | **T0.4 His method and his thesis** | ALCKS | checker | The method and the closing third come from the Law's own material. Argue his thesis, never the genre's or a book author's. | LR-8.01, LR-8.02 |
 | **T0.5 Built-detail hard lines** | ALCKS | checker | R3b Never list plus R3 health and money: no better result or raised stakes, no past, no moved insight, no family scene, no unseen sensory detail, nothing no real person would do, no made-up research data, no condition, diagnosis, medicine, reading or weight, money only with a human side. | BR-R3a, BR-R3m, BR-R3b, BR-R3b.9-15, BR-R3b.39 |
@@ -131,7 +131,7 @@ A skeleton for step 8, not the final wording. Each line lists the rows that feed
 | out:reel | Out of scope (deferred). | 4: RS-00, RS-01, RS-02, RS-03 |
 | out:brand | Out of scope (deferred). | 8: BV-00, BV-01, BV-02, BV-04, BV-08, BV-09, BT-00, BT-01 |
 | out:content | Out of scope (deferred). | 10: LR-8.14, CR-00, CR-01, CR-02, CR-03, CR-04, CR-05, CR-06, MA-02, MW-02 |
-| open | Not placed until he decides. | 2: BR-R41, MW-05 |
+| open | Not placed until he decides. | 1: BR-R41 |
 
 ## Test set cover (a first look, proven in steps 12 and 13)
 
@@ -152,7 +152,7 @@ Every fail case should break at least one Tier 0 or Tier 1 rule, and no pass cas
 - **The semicolon ban** is stated in 25 files (15 project docs, 10 skills). Two memory lines (account preferences, ways-of-working) offer the semicolon as the em dash substitute (clash C1).
 - **Files that mention** British spelling 15, digits 17, "my clients" 9, the Oxford comma 8, the sign-off 13, emojis 15.
 - **Review checklists repeat the rules:** Book Rules section I (30 items) and Language Rules section 12 (18 items) restate rules already listed. Both become the checker set and lint, not text the writer loads.
-- **Memory repeats the rule docs:** 37 memory lines are cut as duplicates or stale (step 19). Working style stays.
+- **Memory repeats the rule docs:** 38 memory lines are cut as duplicates or stale (step 19). Working style stays.
 - **Most-copied rules** (3 or more copies named in the row's note): LR-3.10 (5), LR-8.02 (5), BR-R33 (5), LR-2.01 (4), LR-4.07 (4), LR-8.10 (4), BR-R17 (4), GR-04 (4), PL-04 (4), LR-1.05 (3), LR-3.22 (3), LR-3.23 (3), BR-R2 (3), BR-R4 (3), BR-R12 (3), BR-R14 (3), BR-R15a (3), BR-R24 (3), SP-S4 (3), MW-09 (3).
 
 ## History inside rule files
@@ -178,7 +178,7 @@ Every fail case should break at least one Tier 0 or Tier 1 rule, and no pass cas
 | C5 | Where material comes from | LR-8.02, BR-R3, MW-08 name build_worksheet.js and the Testimony collection | WS-03, WS-09: the brain replaced them on 27 Oct | settled, go (card 42-56) | His 27 Oct move to the brain. The rulebook names the brain only |
 | C6 | Vocabulary and length | LR-3.03, LR-3.24, MA-07: simple words, vocabulary diff, 600 ballpark | BR-H3, BR-H8: richer book vocabulary, no length target | settled by card 8 (book way everywhere) | H3 (4 Oct), H8, WS-05. Cards: A, L and S simple words. C and K richer but still plain |
 | C7 | Never condense | LR-00e, BR-00g, PD-02, MA-09 and the out-of-scope docs: add and annotate only | GR-02: condensing allowed off the protected list | settled, go (card 42-56) | Decision 4 (4 Nov) for rule docs. History lives in git and the change log. Social, Reel, Taste and Content docs keep their own rule until their cards are built |
-| C8 | Text he puts in double quotes | BR-0.2, MP-54 (15 Oct): a "" sentence changes at most a tenth | MW-05 (older): his explanation in quotation marks is a brief, rebuilt from scratch | decided, card 39: see note | (a) Both stand, scoped: "" in a draft or comment keeps 90%, a quoted explanation in chat is a brief. (b) "" always keeps 90%. The older line goes |
+| C8 | Text he puts in double quotes | BR-0.2, MP-54 (15 Oct): a "" sentence changes at most a tenth | MW-05 (older): his explanation in quotation marks is a brief, rebuilt from scratch | settled, card 39: drop both (confirmed 6 Nov) | His call: the "" markup rule and the older brief line both go. Neither is in the rulebook |
 | C9 | "We" | LR-4.08: "we" is his bridge to the shared human beat. BR-R34 summary in "we" | BV-03, BV-06: never "we", "our team" | decided, card 40: business | (a) Only the business "we" (the company speaking) is banned. The shared human "we" stays everywhere. (b) "we" is banned in brand copy only (bios, ads, pages). Articles and the book keep it |
 | C10 | Checker agents | WS-02, WS-19: no checker agent. Fresh agents only for blind A/B tests | Plan steps 12 and 13: one-rule checkers run in parallel | settled, go (card 42-56) | The plan he approved on 4 Nov. The skill is fixed in step 14 |
 | C11 | Letter length | WS-B: aim at about 320 words, the article range | LR 15 Oct: no glue budget, 600 a loose ballpark | settled, go (card 42-56) | The newer LR lines. The stale line is cut |
@@ -402,7 +402,7 @@ Tested against the business requirements: counterproductive or beyond what the m
 | BR-00f | L17 | meta | Protected since 5 Oct, same level as LR | - | - | - | move | brain-table | Step 9 |
 | BR-00g | L19 | meta | Add and annotate, never condense | - | - | - | cut | brain-table | Decision 4. Clash C7 |
 | BR-0.1 | §0 L27 | process | [Square brackets] mean a suggestion: about half may be rewritten | - | ALCKS | - | move | skill:writer | Markup round. Dup MP-54, OS-02 |
-| BR-0.2 | §0 L28 | rule | "Double quotes" mean a sentence he strongly believes: change at most a tenth, keep his voice | 0 | ALCKS | mech | merge | T0.2 | Dup MP-54. Clash C8 with MW-05 |
+| BR-0.2 | §0 L28 | rule | "Double quotes" mean a sentence he strongly believes: change at most a tenth, keep his voice | - | ALCKS | - | cut | - | Dup MP-54. Clash C8 with MW-05. Card 39: drop both (confirmed 6 Nov) |
 | BR-0.3 | §0 L29 | process | A newer note wins over a "" line | - | ALCKS | - | move | skill:writer | - |
 | BR-0.4 | §0 L30-31 | rule | Paragraphs: a visible gap in drafts, but chapter drafts indent with no gap (3 Nov) | 2 | ALCKS | mech | merge | card-C | Gap for A, L, K, S. Clash C14. Dup MP-55, WS-C5 |
 | BR-0.5 | §0 L32 | rule | /privileged: keep the fact, make it acceptable, say where it was a privilege | 1 | ALCKS | checker | merge | T1.16 | Code handling to skill:writer. Dup MP-84 |
@@ -752,7 +752,7 @@ Tested against the business requirements: counterproductive or beyond what the m
 | MW-01 | L10-11 | process | Claude is a planning agent only. Never prompt him to execute, film or post | - | - | - | cut | - | Clash C19: stale against MP-64 and MP-79 (step 19) |
 | MW-02 | L15 | rule | Question-type content: exactly 3 candidates | - | content | - | out | out:content | - |
 | MW-03 | L16-17 | process | Worksheet transcription verbatim with zero cleanup. Amplification is a separate pass | - | - | - | keep | memory | Now applies to mining into the brain |
-| MW-05 | L18 | rule | His explanation in quotation marks is a brief: rebuild the idea from scratch | - | ALCKS | - | open | open | Clash C8 with BR-0.2 |
+| MW-05 | L18 | rule | His explanation in quotation marks is a brief: rebuild the idea from scratch | - | ALCKS | - | cut | - | Clash C8 with BR-0.2. Card 39: drop both (confirmed 6 Nov). Memory line fixed in step 19 |
 | MW-06 | L22-23 | rule | Keep his verbatim words apart from Claude's synthesis. Never present Claude's content as his philosophy | 0 | ALCKS | checker | merge | T0.3 | - |
 | MW-08 | L24 | rule | Everything in build_worksheet.js is real unless marked | - | ALCKS | - | cut | - | Clash C5: now the brain (WS-09) |
 | MW-09 | L28 | rule | Brand voice: Strunk and White, active voice, no jargon, no emojis | - | ALCKS | - | cut | - | Dup T0.1, T1.18, T2.10 |

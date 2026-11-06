@@ -159,7 +159,7 @@ BR-00e|BR|L15|process|Not a checklist while drafting: draft whole, then use sect
 BR-00f|BR|L17|meta|Protected since 5 Oct, same level as LR|-|-|-|move|brain-table|Step 9
 BR-00g|BR|L19|meta|Add and annotate, never condense|-|-|-|cut|brain-table|Decision 4. Clash C7
 BR-0.1|BR|§0 L27|process|[Square brackets] mean a suggestion: about half may be rewritten|-|ALCKS|-|move|skill:writer|Markup round. Dup MP-54, OS-02
-BR-0.2|BR|§0 L28|rule|"Double quotes" mean a sentence he strongly believes: change at most a tenth, keep his voice|0|ALCKS|mech|merge|T0.2|Dup MP-54. Clash C8 with MW-05
+BR-0.2|BR|§0 L28|rule|"Double quotes" mean a sentence he strongly believes: change at most a tenth, keep his voice|-|ALCKS|-|cut|-|Dup MP-54. Clash C8 with MW-05. Card 39: drop both (confirmed 6 Nov)
 BR-0.3|BR|§0 L29|process|A newer note wins over a "" line|-|ALCKS|-|move|skill:writer|-
 BR-0.4|BR|§0 L30-31|rule|Paragraphs: a visible gap in drafts, but chapter drafts indent with no gap (3 Nov)|2|ALCKS|mech|merge|card-C|Gap for A, L, K, S. Clash C14. Dup MP-55, WS-C5
 BR-0.5|BR|§0 L32|rule|/privileged: keep the fact, make it acceptable, say where it was a privilege|1|ALCKS|checker|merge|T1.16|Code handling to skill:writer. Dup MP-84
@@ -432,7 +432,7 @@ MP-84|MP|L84|rule|/privileged flags privileged context|-|ALCKS|-|cut|-|Dup BR-0.
 MW-01|MW|L10-11|process|Claude is a planning agent only. Never prompt him to execute, film or post|-|-|-|cut|-|Clash C19: stale against MP-64 and MP-79 (step 19)
 MW-02|MW|L15|rule|Question-type content: exactly 3 candidates|-|content|-|out|out:content|-
 MW-03|MW|L16-17|process|Worksheet transcription verbatim with zero cleanup. Amplification is a separate pass|-|-|-|keep|memory|Now applies to mining into the brain
-MW-05|MW|L18|rule|His explanation in quotation marks is a brief: rebuild the idea from scratch|-|ALCKS|-|open|open|Clash C8 with BR-0.2
+MW-05|MW|L18|rule|His explanation in quotation marks is a brief: rebuild the idea from scratch|-|ALCKS|-|cut|-|Clash C8 with BR-0.2. Card 39: drop both (confirmed 6 Nov). Memory line fixed in step 19
 MW-06|MW|L22-23|rule|Keep his verbatim words apart from Claude's synthesis. Never present Claude's content as his philosophy|0|ALCKS|checker|merge|T0.3|-
 MW-08|MW|L24|rule|Everything in build_worksheet.js is real unless marked|-|ALCKS|-|cut|-|Clash C5: now the brain (WS-09)
 MW-09|MW|L28|rule|Brand voice: Strunk and White, active voice, no jargon, no emojis|-|ALCKS|-|cut|-|Dup T0.1, T1.18, T2.10

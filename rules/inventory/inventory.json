@@ -2667,12 +2667,12 @@
    "loc": "§0 L28",
    "kind": "rule",
    "rule": "\"Double quotes\" mean a sentence he strongly believes: change at most a tenth, keep his voice",
-   "tier": "0",
+   "tier": "-",
    "out": "ALCKS",
-   "check": "mech",
-   "action": "merge",
-   "target": "T0.2",
-   "note": "Dup MP-54. Clash C8 with MW-05"
+   "check": "-",
+   "action": "cut",
+   "target": "-",
+   "note": "Dup MP-54. Clash C8 with MW-05. Card 39: drop both (confirmed 6 Nov)"
   },
   {
    "id": "BR-0.3",
@@ -6219,9 +6219,9 @@
    "tier": "-",
    "out": "ALCKS",
    "check": "-",
-   "action": "open",
-   "target": "open",
-   "note": "Clash C8 with BR-0.2"
+   "action": "cut",
+   "target": "-",
+   "note": "Clash C8 with BR-0.2. Card 39: drop both (confirmed 6 Nov). Memory line fixed in step 19"
   },
   {
    "id": "MW-06",
@@ -6455,8 +6455,8 @@
    "topic": "Text he puts in double quotes",
    "one side": "BR-0.2, MP-54 (15 Oct): a \"\" sentence changes at most a tenth",
    "other side": "MW-05 (older): his explanation in quotation marks is a brief, rebuilt from scratch",
-   "status": "decided, card 39: see note",
-   "how it settles, or his options": "(a) Both stand, scoped: \"\" in a draft or comment keeps 90%, a quoted explanation in chat is a brief. (b) \"\" always keeps 90%. The older line goes"
+   "status": "settled, card 39: drop both (confirmed 6 Nov)",
+   "how it settles, or his options": "His call: the \"\" markup rule and the older brief line both go. Neither is in the rulebook"
   },
   {
    "id": "C9",
