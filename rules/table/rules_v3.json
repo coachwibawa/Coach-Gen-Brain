@@ -1,0 +1,3370 @@
+{
+ "source": "Coach Gen Writing Rulebook, v3 (Google Doc 1tIfyVrZn34JMATZHWJ72Cc9OvojNzuIlU-g2BOEQPvk), approved 6 Nov 2026",
+ "source_file": "rules/rulebook/rulebook_v3.txt",
+ "source_md5": "a80b78c1b69fc97be58cdbad021f8138",
+ "added_on": "2026-11-06",
+ "approved_on": "2026-11-06",
+ "added_by": "rules refactor step 9",
+ "rows": [
+  {
+   "sort": 10,
+   "body": "# Coach Gen Writing Rulebook\nOne rulebook for everything written in your voice: articles, letters, chapters, key moments and case studies. It replaces the Language Rules, the Book Rules and the writing rules spread across skills and memory. Your quotes and the evidence behind each rule stay with the rule in the rules table, not here.\nTier 0 and Tier 1 fail a draft. Tier 2 is polish and never fails one. The writer loads Tier 0, Tier 1, its output's card and the Tier 2 rules that card names. A script checks the marks, and one checker per Tier 1 rule reads the whole draft.\nLines are numbered straight through, so any line can be marked by its number. Nothing goes live until you say go.",
+   "v3_first": null,
+   "v3_last": null,
+   "code": "title",
+   "kind": "frame",
+   "tier": null,
+   "heading": "Coach Gen Writing Rulebook",
+   "outputs": [],
+   "check_type": null,
+   "evidence": {},
+   "beats": [],
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 20,
+   "body": "## Tier 0: never in a delivered draft",
+   "v3_first": null,
+   "v3_last": null,
+   "code": "tier0",
+   "kind": "frame",
+   "tier": 0,
+   "heading": "Tier 0: never in a delivered draft",
+   "outputs": [],
+   "check_type": null,
+   "evidence": {},
+   "beats": [],
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 30,
+   "body": "### Banned marks and words\n- No em dashes. Use a full stop, comma, colon or brackets.\n- No semicolons.\n- No emojis.\n- Never \"my clients\". Say \"someone I coach\" or \"the people I coach\", or the person's name.\n- Never the business \"we\" or \"our team\" (the company speaking). The shared human \"we\" is fine.",
+   "v3_first": 1,
+   "v3_last": 5,
+   "code": "R0.1",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "Banned marks and words",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "mechanical",
+   "beats": [
+    "LR-3.18",
+    "LR-3.19",
+    "LR-3.20",
+    "LR-4.07",
+    "BR-R14"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.1"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.18",
+      "src": "LR",
+      "loc": "§3 L138",
+      "rule": "No em dashes",
+      "action": "keep",
+      "note": "Stated in 43 files (see INVENTORY.md, duplicates)"
+     },
+     {
+      "id": "LR-3.19",
+      "src": "LR",
+      "loc": "§3 L139",
+      "rule": "No semicolons",
+      "action": "keep",
+      "note": "Decision 1. Clash C1 with MA-03 and MW-10"
+     },
+     {
+      "id": "LR-3.20",
+      "src": "LR",
+      "loc": "§3 L140",
+      "rule": "No clichés, no corporate jargon, no emojis",
+      "action": "merge",
+      "note": "Emojis to T0.1 lint. Clichés and jargon to T1.18. Dup PI-03, MW-09"
+     },
+     {
+      "id": "LR-4.07",
+      "src": "LR",
+      "loc": "§4 L179",
+      "rule": "Never \"my clients\"",
+      "action": "merge",
+      "note": "Dup BR-H9, BV-06, WS-14, WS-18"
+     },
+     {
+      "id": "BR-R14",
+      "src": "BR",
+      "loc": "R14 L185-187",
+      "rule": "The colon does the joining: no semicolons, no em dashes",
+      "action": "merge",
+      "note": "Dup LR-3.18, LR-3.19, BR-H6"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 40,
+   "body": "### His words stay his\n- What he wrote by hand keeps his voice. Text he typed, and lines he marked as keepers, keep his wording and tense.\n- A fix to his text (tense, grammar, a clearer word) is a proposal he accepts or rejects, never applied on its own.\n- Before proposing a change to the punctuation around his words, work out what each phrase is doing there (an item in a list, a lead-in, a quote), so the fix never changes his meaning.\n- The brain holds the truth of what happened and what was said. How a recorded line is quoted on the page follows \"A quote earns its marks\" (Tier 1).\n- Locked names and lines are spelled exactly: Lasting Change, the 5 Laws of Lasting Change, Reset My Course, Reframe Past Regret, Resolve Present Friction, Reap Future Habits, Relax To Results, the 3 Stages of Consistency (Consistent Effort, Momentum Engine, Effortless Result), the Energy Audit, \"If you keep trying, but never finish, this is why.\", and \"Every time you fail to make change, you succeed at staying who you are.\"",
+   "v3_first": 6,
+   "v3_last": 10,
+   "code": "R0.2",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "His words stay his",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "mechanical",
+   "beats": [
+    "LR-8.09",
+    "BV-05",
+    "MP-40",
+    "MF-02",
+    "MF-04"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.2"
+    ],
+    "inventory": [
+     {
+      "id": "LR-8.09",
+      "src": "LR",
+      "loc": "§8 L316",
+      "rule": "Never smooth his worksheet wording when quoting it directly",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BV-05",
+      "src": "BV",
+      "loc": "§6, Always",
+      "rule": "Exact names: Lasting Change, the 5 Laws and their names, 3 Stages, Energy Audit, \"keep trying, but never finish\", \"someone I coach\"",
+      "action": "merge",
+      "note": "Locked names. Dup MF-02"
+     },
+     {
+      "id": "MP-40",
+      "src": "MP",
+      "loc": "L40",
+      "rule": "Never keep \"correcting\" a phrase he typed. His wording and tense stay. Read what each phrase does before touching punctuation",
+      "action": "keep",
+      "note": "Source of test case F7"
+     },
+     {
+      "id": "MF-02",
+      "src": "MF",
+      "loc": "\"Word-choice rationale\"",
+      "rule": "The load-bearing \"but\" in the tagline, \"Reap\", \"My\", \"To\"",
+      "action": "merge",
+      "note": "Locked words. Dup BV-05"
+     },
+     {
+      "id": "MF-04",
+      "src": "MF",
+      "loc": "\"Law 1 vs Law 2 boundary\"",
+      "rule": "The foot on the brake. Law 1 vs Law 2 hidden rewards. The full thesis line",
+      "action": "merge",
+      "note": "\"If I don't try and fail, I'm lazy. If I try and fail, I'm incompetent.\" is a locked line"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 50,
+   "body": "### True material only\n- Every fact comes from the brain or his published pieces. A transcript only checks a fact, never adds one.\n- Everything in the brain is real unless its certainty says built. Never ask him to verify it.\n- Never invent his biography, a title, a subtitle, a citation, a claim about a book, or any fact under his name. When a piece needs a detail from his life that the brain lacks, ask him.\n- Missing material is marked [MATERIAL NEEDED: what, and where it would go], never filled.\n- His words and Claude's wording stay apart. Never present Claude's idea as his philosophy.\n- A book is checked before it is quoted: names, terms, years and claims are verified, never recalled.",
+   "v3_first": 11,
+   "v3_last": 16,
+   "code": "R0.3",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "True material only",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-4.05",
+    "LR-4.09",
+    "LR-8.10",
+    "LR-10.01",
+    "BR-R3",
+    "GR-13",
+    "WS-09",
+    "MP-37",
+    "MW-06"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.3"
+    ],
+    "inventory": [
+     {
+      "id": "LR-4.05",
+      "src": "LR",
+      "loc": "§4 L171-175",
+      "rule": "Never invent biography. The four legitimate first-person entries",
+      "action": "merge",
+      "note": "Dup BR-R3b.39, LR-12.00"
+     },
+     {
+      "id": "LR-4.09",
+      "src": "LR",
+      "loc": "§4 L183",
+      "rule": "Standing gap: ask him for a real detail from his life, never manufacture one",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.10",
+      "src": "LR",
+      "loc": "§8 L318",
+      "rule": "Never invent titles, subtitles or citations. Flag an unverified fact and ask",
+      "action": "merge",
+      "note": "Dup LR-10.01, GR-13, WS-A, WS-B"
+     },
+     {
+      "id": "LR-10.01",
+      "src": "LR",
+      "loc": "§10 L353",
+      "rule": "No unrequested titles or framing elements",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R3",
+      "src": "BR",
+      "loc": "R3 L52-54",
+      "rule": "Only approved material. A transcript only checks a fact. Composite names in print",
+      "action": "keep",
+      "note": "Source list is stale (clash C5). Names go to T0.6"
+     },
+     {
+      "id": "GR-13",
+      "src": "GR",
+      "loc": "\"Never without asking\"",
+      "rule": "Never without asking: publish, create or delete a doc, write a protected doc, invent a title or citation, add an unconfirmed fact under his name",
+      "action": "merge",
+      "note": "Titles, citations and facts to T0.3. The rest stays in guardrails"
+     },
+     {
+      "id": "WS-09",
+      "src": "WS",
+      "loc": "§6 L82-84",
+      "rule": "Take material from the brain. Read all of the Law's material. Real unless certainty says built. Gold only",
+      "action": "merge",
+      "note": "Procedure to skill:writer. Dup MW-08 (worksheet form)"
+     },
+     {
+      "id": "MP-37",
+      "src": "MP",
+      "loc": "L37",
+      "rule": "Round 3 \"healthy\" failure. If overfitting, write from a different piece of material",
+      "action": "merge",
+      "note": "\"Different material\" half to skill:writer (BR-R4)"
+     },
+     {
+      "id": "MW-06",
+      "src": "MW",
+      "loc": "L22-23",
+      "rule": "Keep his verbatim words apart from Claude's synthesis. Never present Claude's content as his philosophy",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 60,
+   "body": "### His method and his thesis\n- The method, and an article's closing third, come from the Law's own material in the brain: its Core Exercise, Hidden Reward, self-directed questions and DoD lines.\n- Argue his thesis, never the genre's and never a book author's. An invention that fits well is still a failure.",
+   "v3_first": 17,
+   "v3_last": 18,
+   "code": "R0.4",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "His method and his thesis",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-8.01",
+    "LR-8.02"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.4"
+    ],
+    "inventory": [
+     {
+      "id": "LR-8.01",
+      "src": "LR",
+      "loc": "§8 L298",
+      "rule": "Argue his thesis, not the genre's",
+      "action": "keep",
+      "note": "Dup WS-H (letters: the author's thesis)"
+     },
+     {
+      "id": "LR-8.02",
+      "src": "LR",
+      "loc": "§8 L300-304",
+      "rule": "The prescription comes from his material, never from invention",
+      "action": "keep",
+      "note": "Names build_worksheet.js: now the brain (clash C5). Dup LR-10.09, LR-12.00, WS-10, WS-C3, WS-H"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 70,
+   "body": "### Built details: the hard lines\n- In a story about someone he coaches, the core stays true: what they were stuck on, what they did, what changed, and which Law it shows.\n- Never a better or invented result, or raised stakes: a setback, loss or threat the record does not show. A persona invented only to show a point may get a result.\n- Never the person's past (childhood, family history, why they became who they are) unless they told him.\n- Never move an insight or a line from the person to someone else.\n- Never family members acting or speaking. A family event offstage, used as a cause, can pass.\n- Never sensory detail from a scene he was not in.\n- Never what no real person would do.\n- In research, never a made-up participant, an unchecked number, or a feeling given to the researchers.\n- Health is fine when the record holds it. A built health detail (a condition, diagnosis, medicine, reading or weight the record does not hold) is never added.\n- Money only when it shows a struggle or a human side, never as a flex or a promise of wealth.\n- His own stories follow the same lines. A true event may move to another day. Never a built action of his own, never his family.",
+   "v3_first": 19,
+   "v3_last": 29,
+   "code": "R0.5",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "Built details: the hard lines",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R3a",
+    "BR-R3m",
+    "BR-R3b",
+    "BR-R3b.9-15",
+    "BR-R3b.39"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.5"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R3a",
+      "src": "BR",
+      "loc": "R3 L56",
+      "rule": "For people he coaches, R3b governs the surface and R3 the core",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R3m",
+      "src": "BR",
+      "loc": "R3 L58-61",
+      "rule": "Money only with a struggle or a human side, never as a flex. An everyday illness as a cause is not health framing. Conditions, diagnoses, medicines, readings and weights stay out",
+      "action": "merge",
+      "note": "Replaces R3's blanket money ban. Clash C12 with WS-11"
+     },
+     {
+      "id": "BR-R3b",
+      "src": "BR",
+      "loc": "R3b L63-67",
+      "rule": "True core, built surface: a built detail makes the core clearer and the person harder to recognise, never changes what happened",
+      "action": "keep",
+      "note": "Listing duty goes to T1.11. Dup WS-14, MP-45"
+     },
+     {
+      "id": "BR-R3b.9-15",
+      "src": "BR",
+      "loc": "R3b L82-90",
+      "rule": "Never: a better or invented result or raised stakes. The person's past. A moved insight. Family acting or speaking. Sensory detail he was not there for. What no real person would do. Made-up research data",
+      "action": "keep",
+      "note": "Line 9 exception: an invented persona may get a result"
+     },
+     {
+      "id": "BR-R3b.39",
+      "src": "BR",
+      "loc": "R3b L124-126",
+      "rule": "His own stories: the same lines hold. A true event may move days. No built action of his own, no family",
+      "action": "merge",
+      "note": "Dup LR-4.05"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 80,
+   "body": "### Quotes: the hard lines\n- Never put a claim, motive or feeling in a person's mouth that none of their records supports.\n- Never make a person sharper, wittier or wiser than their records show: no wording they would never use, no new beats, no author-grade images.\n- Never drop a word the person owns: their image, their signature phrase.",
+   "v3_first": 30,
+   "v3_last": 32,
+   "code": "R0.6",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "Quotes: the hard lines",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R3a",
+    "BR-R3m",
+    "BR-R3b",
+    "BR-R3b.9-15",
+    "BR-R3b.39"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.5"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R3a",
+      "src": "BR",
+      "loc": "R3 L56",
+      "rule": "For people he coaches, R3b governs the surface and R3 the core",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R3m",
+      "src": "BR",
+      "loc": "R3 L58-61",
+      "rule": "Money only with a struggle or a human side, never as a flex. An everyday illness as a cause is not health framing. Conditions, diagnoses, medicines, readings and weights stay out",
+      "action": "merge",
+      "note": "Replaces R3's blanket money ban. Clash C12 with WS-11"
+     },
+     {
+      "id": "BR-R3b",
+      "src": "BR",
+      "loc": "R3b L63-67",
+      "rule": "True core, built surface: a built detail makes the core clearer and the person harder to recognise, never changes what happened",
+      "action": "keep",
+      "note": "Listing duty goes to T1.11. Dup WS-14, MP-45"
+     },
+     {
+      "id": "BR-R3b.9-15",
+      "src": "BR",
+      "loc": "R3b L82-90",
+      "rule": "Never: a better or invented result or raised stakes. The person's past. A moved insight. Family acting or speaking. Sensory detail he was not there for. What no real person would do. Made-up research data",
+      "action": "keep",
+      "note": "Line 9 exception: an invented persona may get a result"
+     },
+     {
+      "id": "BR-R3b.39",
+      "src": "BR",
+      "loc": "R3b L124-126",
+      "rule": "His own stories: the same lines hold. A true event may move days. No built action of his own, no family",
+      "action": "merge",
+      "note": "Dup LR-4.05"
+     }
+    ],
+    "docs": [
+     "claude/Case_Study_Quotes_Report_2026-11-05.md"
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 90,
+   "body": "### Print names and hidden people\n- Print names come only from brain.personas. Never a real client's name.\n- Never a detail that identifies the person. Anything marked never use stays out.",
+   "v3_first": 33,
+   "v3_last": 34,
+   "code": "R0.7",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "Print names and hidden people",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "mechanical",
+   "beats": [
+    "WS-11",
+    "MP-11"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.6"
+    ],
+    "inventory": [
+     {
+      "id": "WS-11",
+      "src": "WS",
+      "loc": "§6 L86",
+      "rule": "Testimony and cast exactly as written. Never print never-use material (weights, health, money, third parties)",
+      "action": "merge",
+      "note": "The money part is stale. Clash C12"
+     },
+     {
+      "id": "MP-11",
+      "src": "MP",
+      "loc": "L11",
+      "rule": "Real client names fine in internal docs. Composite names in anything client-facing",
+      "action": "merge",
+      "note": "Internal half stays in memory"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 100,
+   "body": "### His stance\n- Everyone is resourceful. The reader and the people he coaches are not broken: their power is pointed the wrong way or doubted, not missing.\n- He is the editor who helps someone rewrite their story, never the hero who saves them.\n- Never pitying, diagnosing or know-it-all. No labels for the reader (\"lazy\", \"broken\", \"your anxiety\").",
+   "v3_first": 35,
+   "v3_last": 37,
+   "code": "R0.8",
+   "kind": "rule",
+   "tier": 0,
+   "heading": "His stance",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "PI-01"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T0.7"
+    ],
+    "inventory": [
+     {
+      "id": "PI-01",
+      "src": "PI",
+      "loc": "\"Core philosophy\"",
+      "rule": "Everyone is resourceful. Clients are not broken. He is the editor, not the hero. Empowering, never diagnostic, never pitying",
+      "action": "keep",
+      "note": "\"do not violate\". Dup BV-01, BR-R19"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 110,
+   "body": "## Tier 1: core craft (a break fails the draft)",
+   "v3_first": null,
+   "v3_last": null,
+   "code": "tier1",
+   "kind": "frame",
+   "tier": 1,
+   "heading": "Tier 1: core craft (a break fails the draft)",
+   "outputs": [],
+   "check_type": null,
+   "evidence": {},
+   "beats": [],
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 120,
+   "body": "### One thread\n- Before drafting, fill in \"this piece is about ____\" and the one thought the reader leaves with.\n- Both go at the top of the draft as one grey line, so he reads the draft against what it aimed for.\n- Every paragraph is a step on that thread and helps the reader relate to their own ____. The second half is tested too: a supporting idea never takes it over.\n- An idea, story or quote another chapter owns (Book_Status.md) gets one callback line at most.\n- Anything off the thread is cut, not parked, however true or interesting.",
+   "v3_first": 38,
+   "v3_last": 42,
+   "code": "R1.1",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "One thread",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-2.01",
+    "LR-2.04",
+    "LR-8.08",
+    "BR-R1",
+    "BR-R1a",
+    "BR-R2",
+    "BS-02",
+    "WS-06"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.1"
+    ],
+    "inventory": [
+     {
+      "id": "LR-2.01",
+      "src": "LR",
+      "loc": "§2 L64-70",
+      "rule": "Fill \"this piece is about ____\" first, then test every beat: does it make the reader relate to their own ____?",
+      "action": "keep",
+      "note": "The overriding test. Dup BR-R1, BR-I, LR-12.00, WS-06"
+     },
+     {
+      "id": "LR-2.04",
+      "src": "LR",
+      "loc": "§2 L76",
+      "rule": "Re-run the blank on the second half: a supporting idea must not take it over",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.08",
+      "src": "LR",
+      "loc": "§8 L314",
+      "rule": "Research serves the piece: a finding that does not earn its place is cut everywhere",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R1",
+      "src": "BR",
+      "loc": "R1 L38-40",
+      "rule": "Fill the blank and pick one thread: every paragraph is a step on it",
+      "action": "keep",
+      "note": "Dup LR-2.01"
+     },
+     {
+      "id": "BR-R1a",
+      "src": "BR",
+      "loc": "R1 L42-46",
+      "rule": "The one thought carries the whole chapter. Sections plant arguments that a later section joins (pattern)",
+      "action": "merge",
+      "note": "The pattern half goes to card-C"
+     },
+     {
+      "id": "BR-R2",
+      "src": "BR",
+      "loc": "R2 L48-50",
+      "rule": "Every idea lives in the chapter that owns it: no previews, no repeats",
+      "action": "keep",
+      "note": "Ledger in Book_Status. Dup WS-12, BS-02, BR-I"
+     },
+     {
+      "id": "BS-02",
+      "src": "BS",
+      "loc": "§Ownership ledger",
+      "rule": "An idea, story or quote a chapter owns gets at most one callback elsewhere",
+      "action": "merge",
+      "note": "Rule half dup BR-R2, WS-12. The ledger itself stays as state"
+     },
+     {
+      "id": "WS-06",
+      "src": "WS",
+      "loc": "§3 L68-70",
+      "rule": "Settle the blank and give it back in one line before drafting. In a letter it is his realisation",
+      "action": "merge",
+      "note": "The give-it-back step goes to skill:writer"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 130,
+   "body": "### Joins answer the reader's question\n- Between every two paragraphs the reader has a one-line question. The next paragraph's first sentence answers it.\n- Every beat is joined to the one before. The reader never has to guess the link.\n- A switch of person or mode (story to \"you\", third person to first) gets a bridge sentence that names the turn and its reason.\n- The join from a story to its takeaway finishes the story first, then turns.",
+   "v3_first": 43,
+   "v3_last": 46,
+   "code": "R1.2",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Joins answer the reader's question",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-4.10",
+    "LR-5.06",
+    "LR-5.07",
+    "BR-R5"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.2"
+    ],
+    "inventory": [
+     {
+      "id": "LR-4.10",
+      "src": "LR",
+      "loc": "§4 L185-189",
+      "rule": "A switch of POV or mode needs a reasoned bridge sentence",
+      "action": "merge",
+      "note": "Dup LR-11.11"
+     },
+     {
+      "id": "LR-5.06",
+      "src": "LR",
+      "loc": "§5 L211",
+      "rule": "Glue between beats: never make the reader infer a transition",
+      "action": "merge",
+      "note": "Dup BR-R5, LR-12.00"
+     },
+     {
+      "id": "LR-5.07",
+      "src": "LR",
+      "loc": "§5 L213",
+      "rule": "The story-to-takeaway glue concludes the story first",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R5",
+      "src": "BR",
+      "loc": "R5 L139-142",
+      "rule": "The reader's question sits between paragraphs, and the next first sentence answers it",
+      "action": "keep",
+      "note": "Dup BR-I, WS-16. F3 fails it"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 140,
+   "body": "### Links are real\n- Each sentence takes something from the one before: a repeated key word, a pronoun with one clear referent, a question and its answer, a time word, a \"but\" at a real turn.\n- \"So\", \"then\", \"because\" and \"but\" claim true relations. A false \"so\" fails.\n- Repeat the words, never a far \"it\" or \"this\". When the reader must recall a sentence, give its words again. You hold context far longer than he or a reader does, so an \"it\" that is clear to you is often lost to them.\n- Every sentence has an owner. No passive that hides who did it.\n- A sentence that only says the last one again, louder, is cut. Test: delete it, and if only volume is lost, it was a repeat.",
+   "v3_first": 47,
+   "v3_last": 51,
+   "code": "R1.3",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Links are real",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-5.11",
+    "LR-5.17",
+    "BR-R6",
+    "BR-R7"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.3"
+    ],
+    "inventory": [
+     {
+      "id": "LR-5.11",
+      "src": "LR",
+      "loc": "§5 L223",
+      "rule": "Reference decay: re-name the thing instead of pointing at it",
+      "action": "merge",
+      "note": "Dup BR-R7"
+     },
+     {
+      "id": "LR-5.17",
+      "src": "LR",
+      "loc": "§5 L235",
+      "rule": "Every sentence needs an owner: no agentless passives",
+      "action": "merge",
+      "note": "Dup LR-10.08, LR-12.00"
+     },
+     {
+      "id": "BR-R6",
+      "src": "BR",
+      "loc": "R6 L144-148",
+      "rule": "Each sentence hands something to the next. Connectors name the real relation",
+      "action": "keep",
+      "note": "Dup BR-I, WS-16"
+     },
+     {
+      "id": "BR-R7",
+      "src": "BR",
+      "loc": "R7 L150-152",
+      "rule": "Repeat the words, not the idea: no far \"it\", and a louder restatement is cut",
+      "action": "merge",
+      "note": "Dup LR-5.11, LR-10.15"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 150,
+   "body": "### Few names, one each\n- List the terms and names the reader must carry out of the piece. Keep 2 or 3.\n- Each keeps the same words every time. No second name for a named thing.\n- Labels from the source (Act 1, Insight 2, \"the pattern\") are not the reader's words. Say the thing plainly.\n- A name the reader need not keep (a researcher, a YouTuber) appears once with a role, or not at all.",
+   "v3_first": 52,
+   "v3_last": 55,
+   "code": "R1.4",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Few names, one each",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R32"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.4"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R32",
+      "src": "BR",
+      "loc": "R32 L162-167",
+      "rule": "Few things to remember, one name each: keep 2 or 3, same words every time. Source labels are not reader words",
+      "action": "keep",
+      "note": "Dup BR-I, WS-16"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 160,
+   "body": "### Nothing arrives bare\n- Show it, then name it, then say it plainly. Nothing is named before the reader has seen it.\n- A surprising idea comes with one of these beside it: an example the reader has lived, its reason in the next sentence, premises the reader already accepts, or the reader getting there first.\n- A new idea is explained in plain words. Imagery is never spent on it.\n- One leap of logic per step. List the steps before drafting, give each its own paragraph, and write every step the argument needs. Never merge steps to stay short.\n- Each paragraph leans only on ideas the reader brought or met earlier in the piece.",
+   "v3_first": 56,
+   "v3_last": 60,
+   "code": "R1.5",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Nothing arrives bare",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-1.07",
+    "LR-8.16",
+    "BR-R8",
+    "BR-R9",
+    "BR-R37",
+    "WS-08",
+    "MP-58"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.5"
+    ],
+    "inventory": [
+     {
+      "id": "LR-1.07",
+      "src": "LR",
+      "loc": "§1 L42",
+      "rule": "Never assume the piece must be short: write every step the argument needs",
+      "action": "merge",
+      "note": "Pairs with BR-R37"
+     },
+     {
+      "id": "LR-8.16",
+      "src": "LR",
+      "loc": "§8 L332",
+      "rule": "One step of the reasoning per paragraph, laid out before drafting",
+      "action": "merge",
+      "note": "Dup BR-R37, MP-58"
+     },
+     {
+      "id": "BR-R8",
+      "src": "BR",
+      "loc": "R8 L154-156",
+      "rule": "Show it, then name it, then say it plainly",
+      "action": "keep",
+      "note": "Dup BR-I"
+     },
+     {
+      "id": "BR-R9",
+      "src": "BR",
+      "loc": "R9 L158-160",
+      "rule": "A surprising idea never arrives bare",
+      "action": "merge",
+      "note": "Marked strong, not yet proven"
+     },
+     {
+      "id": "BR-R37",
+      "src": "BR",
+      "loc": "R37 L274-277",
+      "rule": "One leap of logic per step: list the steps first, never merge them to stay short",
+      "action": "merge",
+      "note": "Dup LR-8.16, MP-58"
+     },
+     {
+      "id": "WS-08",
+      "src": "WS",
+      "loc": "§5 L76-80",
+      "rule": "Ground the reader: each paragraph leans only on ideas the reader brought or met earlier",
+      "action": "merge",
+      "note": "A/B test: about 8.1 and 7.3 with it, 4.3 without"
+     },
+     {
+      "id": "MP-58",
+      "src": "MP",
+      "loc": "L58",
+      "rule": "Lay out the science step by step and discuss it in parts before drafting. Uncommented lines are not approved",
+      "action": "merge",
+      "note": "Discuss-first and uncommented-lines halves to skill:writer"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 170,
+   "body": "### Images from the reader's life\n- An image comes from the reader's own life, his life, the person's own words, or a story everyone knows. Never a made-up metaphor.\n- One image at a time. Never two image systems in one passage. Pay it off in one plain line.",
+   "v3_first": 61,
+   "v3_last": 62,
+   "code": "R1.6",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Images from the reader's life",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-6.04",
+    "LR-9.07",
+    "BR-R24"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.6"
+    ],
+    "inventory": [
+     {
+      "id": "LR-6.04",
+      "src": "LR",
+      "loc": "§6 L256-260",
+      "rule": "Vividness needs an experience the reader has: explain new ideas plainly, spend imagery only on lived experience",
+      "action": "keep",
+      "note": "Plain-new-idea half also in T1.5. Dup BR-R24, LR-12.00"
+     },
+     {
+      "id": "LR-9.07",
+      "src": "LR",
+      "loc": "§9 L346",
+      "rule": "One governing image per beat: never stack unrelated vehicles",
+      "action": "merge",
+      "note": "Dup LR-10.03, BR-R24"
+     },
+     {
+      "id": "BR-R24",
+      "src": "BR",
+      "loc": "R24 L281-284",
+      "rule": "An image must already be in the reader's life: hold one, pay it off plainly",
+      "action": "keep",
+      "note": "Dup LR-6.04, BR-I, WS-H. F2 flag"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 180,
+   "body": "### One story, told once\n- One arc, told forward. You can say in one sentence which story you are telling.\n- A person's story is told whole in one place, including the part that pays off later. After that they return only as a callback: the same words, a new layer, no new scene.\n- No return trips to a story already told, and no new pieces of it later.\n- A cut arc is never replaced by another arc. The hole usually wants stakes.\n- Close every loop you open by carrying the timeline on, never by announcing the ending early.",
+   "v3_first": 63,
+   "v3_last": 67,
+   "code": "R1.7",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "One story, told once",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-5.01",
+    "LR-5.04",
+    "LR-5.05",
+    "LR-5.12",
+    "BR-R38"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.7"
+    ],
+    "inventory": [
+     {
+      "id": "LR-5.01",
+      "src": "LR",
+      "loc": "§5 L197-201",
+      "rule": "One arc, told forward: \"the story of X getting rejected, or getting in?\" answered in one sentence",
+      "action": "keep",
+      "note": "Dup LR-12.00. F6 fails it"
+     },
+     {
+      "id": "LR-5.04",
+      "src": "LR",
+      "loc": "§5 L207",
+      "rule": "One story, one turn, no return trips",
+      "action": "merge",
+      "note": "Dup LR-10.07, BR-R38"
+     },
+     {
+      "id": "LR-5.05",
+      "src": "LR",
+      "loc": "§5 L209",
+      "rule": "Never replace a cut arc with another arc",
+      "action": "merge",
+      "note": "Dup LR-10.13"
+     },
+     {
+      "id": "LR-5.12",
+      "src": "LR",
+      "loc": "§5 L225",
+      "rule": "Close every loop, never by spoiling the arc: continue the timeline",
+      "action": "merge",
+      "note": "Dup LR-12.00"
+     },
+     {
+      "id": "BR-R38",
+      "src": "BR",
+      "loc": "R38 L240-248",
+      "rule": "Tell a person's story once, then call back. A new piece reads as a retcon. Default: tell it whole",
+      "action": "keep",
+      "note": "Dup BR-I"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 190,
+   "body": "### Stakes, not more story\n- When a beat is weak, raise what is at risk. Never add narrative.\n- Raise stakes to what they really are, concrete and plural. A claimed danger gets a clause that shows the danger.",
+   "v3_first": 68,
+   "v3_last": 69,
+   "code": "R1.8",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Stakes, not more story",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-5.15",
+    "LR-6.01",
+    "LR-6.03"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.8"
+    ],
+    "inventory": [
+     {
+      "id": "LR-5.15",
+      "src": "LR",
+      "loc": "§5 L231",
+      "rule": "Show the peril you claim, in a clause",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-6.01",
+      "src": "LR",
+      "loc": "§6 L245-250",
+      "rule": "When a beat is weak, raise the stakes, do not add story",
+      "action": "keep",
+      "note": "Dup LR-10.12, LR-12.00"
+     },
+     {
+      "id": "LR-6.03",
+      "src": "LR",
+      "loc": "§6 L254",
+      "rule": "Raise stakes to what they actually are: a concrete, plural cost",
+      "action": "merge",
+      "note": "Dup LR-9.05"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 200,
+   "body": "### Warm the water\n- Before a client's line, give the facts the reader lacks, never the meaning. Background is short and comes first.\n- A one-sentence quote gets a longer setup, or runs a little longer itself, so it carries its own relatability.\n- His records were said inside hours of shared context. Every leap that context took for granted is served on the page, over paragraphs if needed.\n- A gap between two recorded moments gets one or two reasonable bridges from the allowed list.",
+   "v3_first": 70,
+   "v3_last": 73,
+   "code": "R1.9",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Warm the water",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R17",
+    "MP-21",
+    "MP-50"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.9"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R17",
+      "src": "BR",
+      "loc": "R17 L206-208",
+      "rule": "Warm the water before a client's line: facts first, never the meaning. A one-sentence quote gets longer setup or runs longer",
+      "action": "keep",
+      "note": "Dup MP-32, MP-33, BR-I, WS-H"
+     },
+     {
+      "id": "MP-21",
+      "src": "MP",
+      "loc": "L21",
+      "rule": "Drafts too concise. Client scenes warm with him a great coach. The setup paints the session. A vague \"it\" becomes a paraphrase",
+      "action": "merge",
+      "note": "Warmth to T2.9, \"it\" to T1.3"
+     },
+     {
+      "id": "MP-50",
+      "src": "MP",
+      "loc": "L50",
+      "rule": "Every leap of logic in his verbatim stories is surgically served over paragraphs, even pages",
+      "action": "merge",
+      "note": "His main gripe with the Law 1 stories"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 210,
+   "body": "### A quote earns its marks\n- The goal: a quoted person sounds like the capable person they are, to a reader who was not in the room.\n- Why it matters: in a session, English may not be the person's first language, they may be overwhelmed, and they are often putting into words something they never thought about before. Several of these can be true at once. Said aloud, with the session around it, that is fine. In print, with no context, it reads as choppy fragments.\n- First ask whether the line should be a quote at all. Quote a feeling, the person's view, an image, a phrase they own, or the turn or payoff. Report facts and logistics in prose.\n- Then read it cold, after its setup only. If a capable person would say it and it makes sense without the session, keep it as said, cleaned of filler and grammar slips.\n- If not, rebuild it only as far as it needs: think each sentence through, then find the words the session held. Use the person's own words first, from any of their records. Two lines from one session may join into one quote. Stance words they never said (\"In my head\") only where a record supports that stance.\n- Every quote does a job: a contrast, a turn, or a payoff.\n- Thinking out loud is never quoted as said.\n- A verbatim quote that fails the cold read fails the draft, the same as a bad rebuild. Keeping a line as said is never the safe choice by default.\n- His own lines follow the same rule.\n- Every rebuilt quote is listed in the end note: the record's words, what changed, and the record each borrowed word came from.",
+   "v3_first": 74,
+   "v3_last": 83,
+   "code": "R1.10",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "A quote earns its marks",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-3.14",
+    "LR-3.15",
+    "LR-3.16"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.11"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.14",
+      "src": "LR",
+      "loc": "§3 L128",
+      "rule": "Filler: cut uncertainty hedges, keep vulnerability markers (\"honestly\", \"genuinely\")",
+      "action": "keep",
+      "note": "-"
+     },
+     {
+      "id": "LR-3.15",
+      "src": "LR",
+      "loc": "§3 L130",
+      "rule": "Tell talking-out-loud apart from crafted content before building on a phrase",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-3.16",
+      "src": "LR",
+      "loc": "§3 L132",
+      "rule": "Read what a recurring detail is evidence of",
+      "action": "merge",
+      "note": "-"
+     }
+    ],
+    "docs": [
+     "claude/Case_Study_Quotes_Report_2026-11-05.md",
+     "rules/rulebook/README.md (v2, v3 line 75)"
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 220,
+   "body": "### Bring it to the reader's life\n- After a case or idea from one area of life, show how it reaches the reader's other areas, often by shotgunning several quick examples.",
+   "v3_first": 84,
+   "v3_last": 84,
+   "code": "R1.11",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Bring it to the reader's life",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R16a"
+   ],
+   "evidence": {
+    "step6_groups": [],
+    "inventory": [
+     {
+      "id": "BR-R16a",
+      "src": "BR",
+      "loc": "R16 L204",
+      "rule": "Carry a case from one area of life into at least one other the reader lives in",
+      "action": "merge",
+      "note": "T1 because he named the gap as a failure (\"it's missing and it feels\"). Dup BR-I"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 230,
+   "body": "### Research backs, never interrupts\n- The idea comes first, in his words. Then the study in 2 to 5 sentences: who was studied, what was done, what happened. One finding. Then its meaning in one plain line.\n- In the prose, no year and no university, and at most one name with a role the reader can use (\"the psychologist Carol Dweck\"). Otherwise \"researchers\" or \"in one study\". Full source details go in the end note, and in an article's Insight 2.\n- Never inside his story's timeline. A study waits until the story ends or the piece turns to the reader.\n- The reader's words, not the paper's. The facts stay true, the presentation is free.\n- A study gets only the sentences its step needs. Quote the original work a book cites, not the book, and never over-quote the reference books.\n- Nothing is added for protection. A caveat passes the same reader test as any other line, or it goes. Where the frame is his, it is marked by what it did to him, never by what the study does not prove.\n- Outside voices: name and role in the prose, page and full source in the end note. Always their idea, never his.",
+   "v3_first": 85,
+   "v3_last": 91,
+   "code": "R1.12",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Research backs, never interrupts",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-8.05",
+    "LR-8.06",
+    "LR-8.07",
+    "LR-8.12",
+    "LR-8.13",
+    "LR-8.17",
+    "BR-R28",
+    "MP-70",
+    "OS-03"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.10"
+    ],
+    "inventory": [
+     {
+      "id": "LR-8.05",
+      "src": "LR",
+      "loc": "§8 L310",
+      "rule": "An article, not a literature review: the facts stay true, the presentation is free",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.06",
+      "src": "LR",
+      "loc": "§8 L312",
+      "rule": "No mid-narrative attribution: credit once up front and in the citation layer",
+      "action": "merge",
+      "note": "Up-front credit superseded by R28 (decision 2)"
+     },
+     {
+      "id": "LR-8.07",
+      "src": "LR",
+      "loc": "§8 L313",
+      "rule": "The reader's words, not the paper's",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.12",
+      "src": "LR",
+      "loc": "§8 L322",
+      "rule": "Mark his own layer by what it did to him, never by what the study does not prove",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.13",
+      "src": "LR",
+      "loc": "§8 L324",
+      "rule": "Anything added for protection passes the reader test: no permanent disclaimer seat",
+      "action": "merge",
+      "note": "Dup WS-H (the disclaimer paragraph)"
+     },
+     {
+      "id": "LR-8.17",
+      "src": "LR",
+      "loc": "§8 L334",
+      "rule": "Give a study only the sentences its step needs",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R28",
+      "src": "BR",
+      "loc": "R28 L221-224",
+      "rule": "Research backs an idea, never interrupts a story: idea first, 2 to 5 sentences, one finding, meaning in a line, no year, no university, at most one name with a role",
+      "action": "keep",
+      "note": "Decision 2 extends it to articles. Dup BR-I"
+     },
+     {
+      "id": "MP-70",
+      "src": "MP",
+      "loc": "L70",
+      "rule": "Book: don't over-quote the reference books. Quote the original work they cite",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "OS-03",
+      "src": "OS",
+      "loc": "cite-outside-voices",
+      "rule": "Cite outside voices by author, book, page and exact words. Always their idea. One or two sentences, then his idea",
+      "action": "merge",
+      "note": "Clash C17 with R28's one-name rule in the prose"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 240,
+   "body": "### Built details serve the reader\n- The record is the default for what happened. Build only to answer a question the reader will ask, or to hide the person.\n- Each built detail does work for the reader. One that only decorates is cut, even when allowed.\n- Where a record allows several builds, choose the one or two that do the most, and ask whether you can picture this person doing it.\n- Allowed only when the condition in brackets holds, otherwise left out: an action built from something the person only said (only a small, ordinary action that carries the talk, never a staged action that proves a point), a feeling they did not name (only as his hunch, earned by their own words), and another person's act (only when it does not change the tone of the story). A session number or an exact time the record does not hold is never added.\n- Use very carefully: a line built for him (it must fit him and be the best way to make the point), his built first move (only a question, or what a coach would do), what the person did after the session, \"almost everyone I coach\" with three quick examples, his observations (one thing noticed, then a question, never three stacked into a judgement), and Singlish or other local words.\n- A detail not on the allowed list is left out and asked about in the end note. Every built detail is listed in the end note next to what the record says.\n- After building, read the whole passage again as the reader would.",
+   "v3_first": 92,
+   "v3_last": 98,
+   "code": "R1.13",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Built details serve the reader",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R3b.1-8",
+    "BR-R3b.16-20",
+    "BR-R3b.33-38"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.11"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R3b.1-8",
+      "src": "BR",
+      "loc": "R3b L69-80",
+      "rule": "Read this first: limits, not musts. The record is the default. Build only for a reader's question or to hide the person. A detail must do work. Reread the whole. Imagine this person. Off the list means leave out and ask",
+      "action": "keep",
+      "note": "-"
+     },
+     {
+      "id": "BR-R3b.16-20",
+      "src": "BR",
+      "loc": "R3b L92-98",
+      "rule": "Border, no unless: an action built from talk. An unnamed feeling, only as an earned hunch. Another person's tone-changing act. False precision. A reworded coaching line when his words exist",
+      "action": "keep",
+      "note": "-"
+     },
+     {
+      "id": "BR-R3b.33-38",
+      "src": "BR",
+      "loc": "R3b L115-122",
+      "rule": "Use very carefully: a built line for him. His built first move. After-session acts. \"almost everyone I coach\" with 3 examples. One observation then a question. Singlish",
+      "action": "keep",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 250,
+   "body": "### No meta-narration\n- Never explain the piece's shape (\"two lessons, 10 years apart\"). In the book, a signpost the reader needs is fine (\"But first, some background\").",
+   "v3_first": 99,
+   "v3_last": 99,
+   "code": "R1.14",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "No meta-narration",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-5.13",
+    "BR-H5"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.12"
+    ],
+    "inventory": [
+     {
+      "id": "LR-5.13",
+      "src": "LR",
+      "loc": "§5 L227",
+      "rule": "Never narrate your own structure",
+      "action": "keep",
+      "note": "Book signpost exception BR-H5. Clash C15. Dup LR-10.10"
+     },
+     {
+      "id": "BR-H5",
+      "src": "BR",
+      "loc": "H5 L351",
+      "rule": "The book may signpost what the reader needs, never explain its shape",
+      "action": "merge",
+      "note": "Clash C15"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 260,
+   "body": "### Rhythm without choppiness\n- A short sentence has a job: to compress, turn, reveal, answer, or hold a beat. Never to bring a new fact.\n- One event, one sentence. A long sentence may hold a sequence in time order.\n- After 3 or 4 sentences of the same shape, write one that moves the idea on in a new shape. No runs of clipped fragments.\n- Fragments: none by default. A deliberate one is flagged in the end note for his call.",
+   "v3_first": 100,
+   "v3_last": 103,
+   "code": "R1.15",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Rhythm without choppiness",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-5.19",
+    "LR-10.04",
+    "BR-R10",
+    "BR-R11",
+    "BR-R13",
+    "BR-H4"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.13"
+    ],
+    "inventory": [
+     {
+      "id": "LR-5.19",
+      "src": "LR",
+      "loc": "§5 L239",
+      "rule": "Vary sentence length, with some long winding sentences",
+      "action": "merge",
+      "note": "Dup LR-12.00, PI-03"
+     },
+     {
+      "id": "LR-10.04",
+      "src": "LR",
+      "loc": "§10 L356",
+      "rule": "Rhythmic monotony from clipped fragments, even when every rule is followed",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R10",
+      "src": "BR",
+      "loc": "R10 L171-173",
+      "rule": "Sentences under 8 words have a job. About 1 in 7 to 1 in 5",
+      "action": "keep",
+      "note": "Lint counts, checker judges. Dup BR-I"
+     },
+     {
+      "id": "BR-R11",
+      "src": "BR",
+      "loc": "R11 L175-176",
+      "rule": "One event, one sentence. A long sentence may hold a sequence in time order",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R13",
+      "src": "BR",
+      "loc": "R13 L182-183",
+      "rule": "Break a run of 3 or 4 same-shape sentences with a long one that moves on",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-H4",
+      "src": "BR",
+      "loc": "H4 L349",
+      "rule": "Fragments: none by default. A deliberate one is flagged for his call",
+      "action": "merge",
+      "note": "Qualifier inside T1.13. Clash C16"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 270,
+   "body": "### Parallels that truly match\n- Parallel only for items that truly match. Keep the subject parallel: both \"the\", or both \"you\".\n- A mirror (a case, then his own story) needs matching beats and enough material on both sides. Otherwise, no mirror.",
+   "v3_first": 104,
+   "v3_last": 105,
+   "code": "R1.16",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Parallels that truly match",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "BR-R12",
+    "BR-R20"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.14"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R12",
+      "src": "BR",
+      "loc": "R12 L178",
+      "rule": "Parallel only for items that truly match, with the frame and subject kept exact",
+      "action": "keep",
+      "note": "Dup MP-34, MP-38, BR-I. F1 flag"
+     },
+     {
+      "id": "BR-R20",
+      "src": "BR",
+      "loc": "R20 L218-219",
+      "rule": "A mirror needs matching beats: case, hinge, explicit link, second story with the same beats",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 280,
+   "body": "### Plain words he would say\n- Prefer concrete nouns. Explain ideas plainly.\n- Use words he would fully understand on first read: his comprehension is the bar for his readers. A few strong, concrete words are welcome, never a general lift in register.\n- Plain, not crafted, where the piece explains how something works.\n- A call, session or talk is rewritten as prose in his voice, never copied in the order it was said. Each quoted line is as well written as the prose around it.",
+   "v3_first": 106,
+   "v3_last": 109,
+   "code": "R1.17",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Plain words he would say",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-3.01",
+    "LR-3.02",
+    "LR-3.03",
+    "LR-3.11",
+    "LR-3.17",
+    "LR-3.24",
+    "BR-R3c",
+    "BR-R30a",
+    "BR-H3",
+    "BV-03"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.15"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.01",
+      "src": "LR",
+      "loc": "§3 L92",
+      "rule": "Specificity beats abstraction (\"courage to do the hard things\", not \"courage\")",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-3.02",
+      "src": "LR",
+      "loc": "§3 L94-102",
+      "rule": "Every noun is something the reader can see, touch or count: swap abstract for concrete, one for one",
+      "action": "keep",
+      "note": "Dup LR-12.00, PI-03"
+     },
+     {
+      "id": "LR-3.03",
+      "src": "LR",
+      "loc": "§3 L104",
+      "rule": "Flagged words that are always replaceable (circuit, variable, consequences and 16 more)",
+      "action": "merge",
+      "note": "Lint warning list. Chapters relaxed by BR-H3"
+     },
+     {
+      "id": "LR-3.11",
+      "src": "LR",
+      "loc": "§3 L120-122",
+      "rule": "Plain over crafted at the mechanism: the honest looser word over a false exact one",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-3.17",
+      "src": "LR",
+      "loc": "§3 L134",
+      "rule": "A few strong, concrete unfamiliar words are welcome, never a general lift in register",
+      "action": "merge",
+      "note": "Qualifier inside T1.15. Dup MA-07"
+     },
+     {
+      "id": "LR-3.24",
+      "src": "LR",
+      "loc": "§3 L144",
+      "rule": "His readers read English as a second language. Many sophisticated words are ones he would not use",
+      "action": "merge",
+      "note": "Chapters relaxed by BR-H3. Dup MA-07, OS-02"
+     },
+     {
+      "id": "BR-R3c",
+      "src": "BR",
+      "loc": "R3b L66",
+      "rule": "Never quote a client's thinking-out-loud as a line: write the line she would say once she had found the words",
+      "action": "merge",
+      "note": "Root of the half-vague, choppy client story (5 Oct). With BR-R30a"
+     },
+     {
+      "id": "BR-R30a",
+      "src": "BR",
+      "loc": "R30 L230-235",
+      "rule": "A call or session is rewritten as book prose, never copied in call order. Each quoted line as well written as the prose",
+      "action": "merge",
+      "note": "Line 5 is context, not a rule. Dup MP-76, WS-SC"
+     },
+     {
+      "id": "BR-H3",
+      "src": "BR",
+      "loc": "H3 L346-347",
+      "rule": "Book vocabulary may be richer: vivid and precise, never long or fancy",
+      "action": "merge",
+      "note": "Per-output qualifier inside T1.15. Clash C6. Dup MP-35"
+     },
+     {
+      "id": "BV-03",
+      "src": "BV",
+      "loc": "§4",
+      "rule": "Voice traits: plain and concrete, calm and certain, on your side, from me and true",
+      "action": "merge",
+      "note": "\"Never sounds like: We, our team\" is clash C9"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 290,
+   "body": "### Protect the author\n- Being open and vulnerable is welcome, often good.\n- Out: a line that reads against him out of context, such as a bad practice or a wealth flex.\n- A moment that shows him unfinished sits clearly in the past, unless it pays off a vulnerable build.\n- Recognition, never credit: when his practice shows up in someone else's work, it is a surprise, never \"I did it first\".\n- A line marked /privileged keeps its fact, is made acceptable, and says plainly where it was a privilege.",
+   "v3_first": 110,
+   "v3_last": 114,
+   "code": "R1.18",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Protect the author",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-4.06",
+    "BR-0.5",
+    "BR-R21a",
+    "MP-77"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.16"
+    ],
+    "inventory": [
+     {
+      "id": "LR-4.06",
+      "src": "LR",
+      "loc": "§4 L177",
+      "rule": "Recognition, not credit: never frame his practice as having done it first",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-0.5",
+      "src": "BR",
+      "loc": "§0 L32",
+      "rule": "/privileged: keep the fact, make it acceptable, say where it was a privilege",
+      "action": "merge",
+      "note": "Code handling to skill:writer. Dup MP-84"
+     },
+     {
+      "id": "BR-R21a",
+      "src": "BR",
+      "loc": "R21 L262",
+      "rule": "Anything showing the author negative or unfinished is clearly in the past, unless a deliberate payoff",
+      "action": "keep",
+      "note": "Dup BR-I, WS-H"
+     },
+     {
+      "id": "MP-77",
+      "src": "MP",
+      "loc": "L77",
+      "rule": "Avoid lines that could be taken out of context to make him look bad",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 300,
+   "body": "### Turns and endings\n- A section rises to one turn, then hands off: hook, build, turn, one hand-off line. Examples and proof come before the turn.\n- At the turn, prescriptive, not philosophical.\n- An article or letter never ends on the hard question alone: a concrete possibility follows, and it promises liberation, not survival.\n- No teacher's summary in the prose. A chapter ends on the relationship, an echo, or one sayable line.",
+   "v3_first": 115,
+   "v3_last": 118,
+   "code": "R1.19",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "Turns and endings",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-7.01",
+    "LR-7.02",
+    "LR-7.05",
+    "BR-R26",
+    "BR-R39"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.17"
+    ],
+    "inventory": [
+     {
+      "id": "LR-7.01",
+      "src": "LR",
+      "loc": "§7 L284",
+      "rule": "Never end on the hard question alone: follow it with demonstrated possibility",
+      "action": "keep",
+      "note": "Dup LR-12.00, LR-11.10"
+     },
+     {
+      "id": "LR-7.02",
+      "src": "LR",
+      "loc": "§7 L286",
+      "rule": "The coda is concrete and promises liberation, not survival",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-7.05",
+      "src": "LR",
+      "loc": "§7 L292",
+      "rule": "Prescriptive, not philosophical, at the hinge",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R26",
+      "src": "BR",
+      "loc": "R26 L299",
+      "rule": "Endings: the relationship, the echo, or one sayable line, never a teacher's summary in the prose",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R39",
+      "src": "BR",
+      "loc": "R39 L321-326",
+      "rule": "A section rises to one turn, then hands off: nothing after the turn but the hand-off",
+      "action": "keep",
+      "note": "Dup BR-I"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 310,
+   "body": "### AI tells\n- No \"Stop X. Start Y.\" pairs.\n- No \"not just X. Y.\" where the second half only repeats the first, louder.\n- No templated headlines (\"The [Noun] Nobody [Verb]\", \"The Truth About X\"), clichés, corporate jargon or hype (transform your life, unlock your potential, level up, game-changer, journey, hack, guru, secret).\n- No clipped, over-simple prose stripped of names and numbers.\n- Only bust a myth almost every reader already holds. No cleverness the audience will not recognise.",
+   "v3_first": 119,
+   "v3_last": 123,
+   "code": "R1.20",
+   "kind": "rule",
+   "tier": 1,
+   "heading": "AI tells",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "checker",
+   "beats": [
+    "LR-1.10",
+    "LR-10.02",
+    "LR-10.06",
+    "LR-10.14",
+    "LR-10.15",
+    "LR-10.17",
+    "BV-06"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T1.18"
+    ],
+    "inventory": [
+     {
+      "id": "LR-1.10",
+      "src": "LR",
+      "loc": "§1 L54",
+      "rule": "Too light: clipped, over-simplified prose with no proper nouns is an AI tell",
+      "action": "merge",
+      "note": "Dup LR-10.06"
+     },
+     {
+      "id": "LR-10.02",
+      "src": "LR",
+      "loc": "§10 L354",
+      "rule": "No cliché templates (\"The [Noun] Nobody [Verb]\", \"The Truth About X\")",
+      "action": "merge",
+      "note": "Regex in lint plus the checker"
+     },
+     {
+      "id": "LR-10.06",
+      "src": "LR",
+      "loc": "§10 L358",
+      "rule": "Over-simplification is a tell",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-10.14",
+      "src": "LR",
+      "loc": "§10 L366",
+      "rule": "No \"Stop X. Start Y.\" bald imperative pairs",
+      "action": "merge",
+      "note": "Regex plus the checker"
+     },
+     {
+      "id": "LR-10.15",
+      "src": "LR",
+      "loc": "§10 L367",
+      "rule": "No \"not just X. Y.\" when the second half only restates the first, louder",
+      "action": "merge",
+      "note": "Also T1.3"
+     },
+     {
+      "id": "LR-10.17",
+      "src": "LR",
+      "loc": "§10 L369",
+      "rule": "Cleverness over audience fit: only bust a myth almost every reader already knows",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BV-06",
+      "src": "BV",
+      "loc": "§6, Never",
+      "rule": "Never: \"my clients\", \"we\", \"our team\", \"Coach Wibawa\", \"broken\", \"fix you\", \"lazy\" as a label, hype clichés, health labels at the reader, scare stats, ™",
+      "action": "merge",
+      "note": "\"my clients\" to T0.1, labels to T0.7, hype list to T1.18 lint. \"we\" is clash C9"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 320,
+   "body": "## Tier 2: polish (never fails a draft)",
+   "v3_first": null,
+   "v3_last": null,
+   "code": "tier2",
+   "kind": "frame",
+   "tier": 2,
+   "heading": "Tier 2: polish (never fails a draft)",
+   "outputs": [],
+   "check_type": null,
+   "evidence": {},
+   "beats": [],
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 330,
+   "body": "### Mechanics, fixed silently\n- British spelling. \"Everyday\" is one word only as an adjective (\"an everyday habit\"). As an adverb it is \"every day\".\n- Oxford comma.\n- Numbers the books' way: small counts in words (three times, two months), digits for measures, percentages, years and labels (a 30-minute walk, Chapter 3, Law 1).\n- In Claude's own text, grammar and spelling are fixed silently, in his voice: tense (has and had, was and were), agreement and fragments. In his text, they are proposals (Tier 0).\n- Contractions where the line is spoken or warm.",
+   "v3_first": 124,
+   "v3_last": 128,
+   "code": "R2.1",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Mechanics, fixed silently",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "mechanical",
+   "beats": [
+    "LR-3.06",
+    "LR-3.10",
+    "BR-R15",
+    "BR-R15a",
+    "BR-R33",
+    "BR-H1"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.1"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.06",
+      "src": "LR",
+      "loc": "§3 L110",
+      "rule": "Numbers as digits, never spelled out",
+      "action": "merge",
+      "note": "Articles and letters only. Book follows BR-H1. Clash C4. Dup BV-07, LR-12.00"
+     },
+     {
+      "id": "LR-3.10",
+      "src": "LR",
+      "loc": "§3 L118",
+      "rule": "British spelling, \"everyday\" as one word",
+      "action": "merge",
+      "note": "Dup BV-07, BR-I, WS-18, PL-05, OS-02"
+     },
+     {
+      "id": "BR-R15",
+      "src": "BR",
+      "loc": "R15 L189-191",
+      "rule": "Grammar correct in his voice: tense, agreement, fragments",
+      "action": "keep",
+      "note": "Fragments per BR-H4. Dup MP-39"
+     },
+     {
+      "id": "BR-R15a",
+      "src": "BR",
+      "loc": "R15 L192",
+      "rule": "Articles too: fix spelling and grammar silently, keep his voice",
+      "action": "merge",
+      "note": "Dup MP-46, BR-I, WS-17"
+     },
+     {
+      "id": "BR-R33",
+      "src": "BR",
+      "loc": "R33 L194-197",
+      "rule": "Oxford comma",
+      "action": "merge",
+      "note": "Dup MP-17, BR-I, BV-07, SP-S4, PL-05"
+     },
+     {
+      "id": "BR-H1",
+      "src": "BR",
+      "loc": "H1 L342",
+      "rule": "Book numbers follow the books: small counts in words, digits for measures and labels",
+      "action": "keep",
+      "note": "Articles and letters keep digits (WS-05). Clash C4"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 340,
+   "body": "### Length and numbers are guardrails\n- Length follows the material. Never pad, never compress steps.\n- The script reports the word count and reading grade. They catch gross failure only and never prove a draft good.",
+   "v3_first": 129,
+   "v3_last": 130,
+   "code": "R2.2",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Length and numbers are guardrails",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments"
+   ],
+   "check_type": "mechanical",
+   "beats": [
+    "LR-1.05",
+    "LR-1.08",
+    "LR-1.09",
+    "BR-H8"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.2"
+    ],
+    "inventory": [
+     {
+      "id": "LR-1.05",
+      "src": "LR",
+      "loc": "§1 L36-38",
+      "rule": "Word count is a ballpark: Insight 1 about 600, longer when the story needs it, never padded",
+      "action": "merge",
+      "note": "Dup MP-47, WS-05, BR-H8"
+     },
+     {
+      "id": "LR-1.08",
+      "src": "LR",
+      "loc": "§1 L44-48",
+      "rule": "The numbers are guardrails, never proof",
+      "action": "merge",
+      "note": "Dup WS-19, WS-H"
+     },
+     {
+      "id": "LR-1.09",
+      "src": "LR",
+      "loc": "§1 L50-52",
+      "rule": "Too heavy comes from length, turns and abstract nouns, not long words",
+      "action": "merge",
+      "note": "Diagnostic note"
+     },
+     {
+      "id": "BR-H8",
+      "src": "BR",
+      "loc": "H8 L357",
+      "rule": "Article length ranges do not apply to the book",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 350,
+   "body": "### Specific detail\n- Name the books, places, brands, people and exact numbers.\n- A place name gets its category (\"Kibale National Park, Uganda\").",
+   "v3_first": 131,
+   "v3_last": 132,
+   "code": "R2.3",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Specific detail",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "LR-3.05",
+    "LR-3.08",
+    "LR-5.16"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.3"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.05",
+      "src": "LR",
+      "loc": "§3 L108",
+      "rule": "What he actually names: books, places, brands, people, exact numbers",
+      "action": "keep",
+      "note": "The example list goes to ref"
+     },
+     {
+      "id": "LR-3.08",
+      "src": "LR",
+      "loc": "§3 L114",
+      "rule": "Name the characters, and give a name openly where the source has none",
+      "action": "merge",
+      "note": "Print names come from T0.6"
+     },
+     {
+      "id": "LR-5.16",
+      "src": "LR",
+      "loc": "§5 L233",
+      "rule": "A place name needs its category",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 360,
+   "body": "### Quoted self-talk\n- The reader's inner voice goes in quotes, in first person (\"It won't feel like me\").\n- Quotes sit inside the sentence by default. A quoted line may stand on its own for effect.\n- When a quoted line moves into a first-person passage, its \"you\" may become \"I\" (\"You should never give up\" becomes \"I will never give up\"). A slogan whose punch is in its exact words keeps them.",
+   "v3_first": 133,
+   "v3_last": 135,
+   "code": "R2.4",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Quoted self-talk",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "LR-4.01",
+    "LR-4.02",
+    "LR-4.11",
+    "LR-11.04",
+    "BR-R30"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.4"
+    ],
+    "inventory": [
+     {
+      "id": "LR-4.01",
+      "src": "LR",
+      "loc": "§4 L150",
+      "rule": "First person for the reader's self-talk, second person for coach address",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-4.02",
+      "src": "LR",
+      "loc": "§4 L152-159",
+      "rule": "Quoted self-talk is a core device",
+      "action": "keep",
+      "note": "Placement differs by output. Clash C3"
+     },
+     {
+      "id": "LR-4.11",
+      "src": "LR",
+      "loc": "§4 L191",
+      "rule": "A quote may change person across a switch, unless its power is in the exact words",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-11.04",
+      "src": "LR",
+      "loc": "§11 L380",
+      "rule": "Quoted self-talk dropped in as its own beat",
+      "action": "merge",
+      "note": "Clash C3"
+     },
+     {
+      "id": "BR-R30",
+      "src": "BR",
+      "loc": "R30 L226-228",
+      "rule": "Quotes sit inside the prose, except quick dialogue, a list of sample sentences, or the payoff line",
+      "action": "keep",
+      "note": "Clash C3 for articles. Dup BR-I"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 370,
+   "body": "### Raw emotion\n- Show raw emotions and downs: small, specific humiliations the reader has lived. Raw beats tasteful.",
+   "v3_first": 136,
+   "v3_last": 136,
+   "code": "R2.5",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Raw emotion",
+   "outputs": [
+    "article",
+    "letter"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "LR-2.05",
+    "LR-2.06",
+    "LR-6.11",
+    "LR-11.09"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.5"
+    ],
+    "inventory": [
+     {
+      "id": "LR-2.05",
+      "src": "LR",
+      "loc": "§2 L78-84",
+      "rule": "The goal is emotional relation: show raw emotions and downs, small specific humiliations",
+      "action": "keep",
+      "note": "-"
+     },
+     {
+      "id": "LR-2.06",
+      "src": "LR",
+      "loc": "§2 L86",
+      "rule": "Raw beats tasteful: the line the thing says to you is the one that hurts",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-6.11",
+      "src": "LR",
+      "loc": "§6 L278",
+      "rule": "External pressure is a deliberate theme worth drawing out",
+      "action": "merge",
+      "note": "Dup LR-9.04"
+     },
+     {
+      "id": "LR-11.09",
+      "src": "LR",
+      "loc": "§11 L385-387",
+      "rule": "His themes: escape and refuge for excuses, failed suppression, identity mismatch drives quitting",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 380,
+   "body": "### Lists of three\n- A list of three spans different areas of life, never three takes on one.\n- The first two items are in the reader's words. The third calls back to the story, so the aha lands there.\n- Vary the counts. Twos and fours work too. Sometimes even fives when we’re really talking about a broad term.",
+   "v3_first": 137,
+   "v3_last": 139,
+   "code": "R2.6",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Lists of three",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "LR-6.05",
+    "LR-6.06",
+    "LR-6.07",
+    "LR-6.08"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.6"
+    ],
+    "inventory": [
+     {
+      "id": "LR-6.05",
+      "src": "LR",
+      "loc": "§6 L262",
+      "rule": "A group of three signals a swappable category, so vary the examples",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-6.06",
+      "src": "LR",
+      "loc": "§6 L264-268",
+      "rule": "A triplet spans different aspects of life. Vary counts elsewhere",
+      "action": "keep",
+      "note": "Dup LR-10.05, LR-12.00"
+     },
+     {
+      "id": "LR-6.07",
+      "src": "LR",
+      "loc": "§6 L270",
+      "rule": "End a list of three on the callback: reader lines first, the story last",
+      "action": "merge",
+      "note": "Dup MP-57"
+     },
+     {
+      "id": "LR-6.08",
+      "src": "LR",
+      "loc": "§6 L272",
+      "rule": "A series of ages works as a beat",
+      "action": "merge",
+      "note": "One instance"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 390,
+   "body": "### Author presence\n- Warmth comes from his own short story, admitting something, mirrored on the case it follows. Only from the brain, where one fits, never to fill a slot.\n- Flat claims where the evidence is solid. A hedge only at a real limit. Verdicts in the first person.\n- Check in with the reader: answer the question they are already asking, and say their doubt before they raise it.",
+   "v3_first": 140,
+   "v3_last": 142,
+   "code": "R2.7",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Author presence",
+   "outputs": [
+    "chapter",
+    "key moments"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "BR-R21",
+    "BR-R22",
+    "BR-R23",
+    "PI-04"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.7"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R21",
+      "src": "BR",
+      "loc": "R21 L260",
+      "rule": "Warmth is the author's own story: short, mirrored, admitting something. Take the blame off the reader",
+      "action": "keep",
+      "note": "Dup BR-I"
+     },
+     {
+      "id": "BR-R22",
+      "src": "BR",
+      "loc": "R22 L264-265",
+      "rule": "Confidence calibrated: flat where solid, a hedge only at a real limit, first-person verdicts",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R23",
+      "src": "BR",
+      "loc": "R23 L267-268",
+      "rule": "Check in with the reader: answer their question at once, voice their doubt first",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "PI-04",
+      "src": "PI",
+      "loc": "\"Style rules\"",
+      "rule": "Positive, definite statements",
+      "action": "merge",
+      "note": "With calibrated confidence"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 400,
+   "body": "### Callbacks and staying close\n- Once the piece turns to the reader, the next paragraphs open on the reader's life, not the far-off frame.\n- After a story ends, the second half calls back to it at least once.\n- A thing comes back in the exact words the reader first met, with a short tag. Each callback adds a layer.",
+   "v3_first": 143,
+   "v3_last": 145,
+   "code": "R2.8",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Callbacks and staying close",
+   "outputs": [
+    "article",
+    "letter",
+    "chapter",
+    "key moments"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "BR-R36",
+    "BR-R25",
+    "BR-R25a"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.8"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R36",
+      "src": "BR",
+      "loc": "R36 L270-272",
+      "rule": "Once the piece turns to the reader, the next paragraphs open on the reader's life",
+      "action": "keep",
+      "note": "Dup MP-56"
+     },
+     {
+      "id": "BR-R25",
+      "src": "BR",
+      "loc": "R25 L288",
+      "rule": "Plant and pay off threads: call back in exact words with a reminder tag, each time adding a layer",
+      "action": "keep",
+      "note": "-"
+     },
+     {
+      "id": "BR-R25a",
+      "src": "BR",
+      "loc": "R25 L290",
+      "rule": "Article: after the story ends, the second half calls back to it at least once",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 410,
+   "body": "### People on the page\n- A case: one sentence gives the person and what is at stake. The situation comes before they speak. An action or a feeling comes right before a short quote. Then one sentence of meaning, using a word planted earlier.\n- Two or three exchanges are told in prose. Quote the turns that carry feeling, report the turns that carry facts, use plain verbs (asked, went on, pressed), and put something human between the lines.\n- A coaching scene is warm and shows him as a good coach. \"In a session\" alone reads as a transaction.\n- Set up a scene with the body, setting only where it carries feeling, the inner voice, and one confident chain of cause and effect.",
+   "v3_first": 146,
+   "v3_last": 149,
+   "code": "R2.9",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "People on the page",
+   "outputs": [
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "BR-R16",
+    "BR-R18",
+    "BR-R19"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.9"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R16",
+      "src": "BR",
+      "loc": "R16 L201-202",
+      "rule": "A case has a set shape: the person in one sentence, stakes before speech, action or feeling before a short quote, one sentence of meaning",
+      "action": "keep",
+      "note": "Core of card-S"
+     },
+     {
+      "id": "BR-R18",
+      "src": "BR",
+      "loc": "R18 L210-212",
+      "rule": "Two or 3 exchanges told in prose: quote feeling, report facts, plain intent verbs, a human beat. Sessions warm, him a great coach",
+      "action": "keep",
+      "note": "Dup MP-21"
+     },
+     {
+      "id": "BR-R19",
+      "src": "BR",
+      "loc": "R19 L214-216",
+      "rule": "Set up a scene like Courage's narrator: body, setting only where it carries feeling, inner voice, one chain of cause and effect",
+      "action": "merge",
+      "note": "No-pity line goes to T0.7"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 420,
+   "body": "### Moves that work\n- A reveal gets its own paragraph, then is said once more in plain words. Each side of an inner conflict gets its own line.\n- \"One day\" turns a habit into a single scene when the cost lands.\n- A suspense opener is short.\n- After a story, let the reader draw the line in their own terms.\n- A directive only with a concrete, literal action.\n- A compressed line works as a payoff after setup, never alone.\n- His material may hold its own ending. Look for it before writing one.\n- \"However\" may open a sentence when it turns the story.",
+   "v3_first": 150,
+   "v3_last": 157,
+   "code": "R2.10",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Moves that work",
+   "outputs": [
+    "article",
+    "letter"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "LR-3.21",
+    "LR-4.03",
+    "LR-4.08",
+    "LR-5.03",
+    "LR-5.08",
+    "LR-5.09",
+    "LR-5.10",
+    "LR-5.14",
+    "LR-6.09",
+    "LR-6.10",
+    "LR-8.04",
+    "LR-8.11",
+    "LR-9.01",
+    "LR-9.02",
+    "LR-9.03",
+    "LR-9.06",
+    "LR-9.08",
+    "LR-10.16",
+    "LR-11.05",
+    "LR-11.06",
+    "LR-11.07",
+    "BR-R12a",
+    "BR-H2",
+    "BR-H7"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.10"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.21",
+      "src": "LR",
+      "loc": "§3 L141",
+      "rule": "Active voice. Address the reader as \"you\", except in self-talk",
+      "action": "merge",
+      "note": "Agentless passives are T1.3. Dup PI-03"
+     },
+     {
+      "id": "LR-4.03",
+      "src": "LR",
+      "loc": "§4 L161-165",
+      "rule": "Repeat a quoted line word for word to bridge two registers (his chimp rewrite)",
+      "action": "merge",
+      "note": "Clash C3"
+     },
+     {
+      "id": "LR-4.08",
+      "src": "LR",
+      "loc": "§4 L181",
+      "rule": "\"We\" is his bridge to the shared human beat",
+      "action": "merge",
+      "note": "Clash C9 with BV-06"
+     },
+     {
+      "id": "LR-5.03",
+      "src": "LR",
+      "loc": "§5 L205",
+      "rule": "A reveal gets its own paragraph and is said once more plainly. Each side of a conflict gets its own line",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-5.08",
+      "src": "LR",
+      "loc": "§5 L215",
+      "rule": "After a story, let the reader draw the line: their terms, not the story's image again",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-5.09",
+      "src": "LR",
+      "loc": "§5 L217",
+      "rule": "A suspense opener is short",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-5.10",
+      "src": "LR",
+      "loc": "§5 L219-221",
+      "rule": "The force paragraph: name the reader's default fix and why it fails, extending the piece's own image",
+      "action": "merge",
+      "note": "One instance, a pattern to reach for"
+     },
+     {
+      "id": "LR-5.14",
+      "src": "LR",
+      "loc": "§5 L229",
+      "rule": "Presentize the tragedy: \"one day\" turns a habit into one scene",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-6.09",
+      "src": "LR",
+      "loc": "§6 L274",
+      "rule": "Compression is a payoff after setup, never standalone",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-6.10",
+      "src": "LR",
+      "loc": "§6 L276",
+      "rule": "A directive tone only with a concrete, literal action",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.04",
+      "src": "LR",
+      "loc": "§8 L308",
+      "rule": "Watch for the structural gift: his material may hold its own ending",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-8.11",
+      "src": "LR",
+      "loc": "§8 L320",
+      "rule": "How he handles research: names the researcher, one soft verb where thin, coins terms, research as something that happened to him",
+      "action": "merge",
+      "note": "Naming half superseded by decision 2. The soft-verb and coined-term moves are patterns"
+     },
+     {
+      "id": "LR-9.01",
+      "src": "LR",
+      "loc": "§9 L340",
+      "rule": "Extended metaphor: strict internal chronology",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-9.02",
+      "src": "LR",
+      "loc": "§9 L341",
+      "rule": "Foreshadow the hoped-for outcome before the letdown",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-9.03",
+      "src": "LR",
+      "loc": "§9 L342",
+      "rule": "Keep the question cadence once it is set",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-9.06",
+      "src": "LR",
+      "loc": "§9 L345",
+      "rule": "Split a sharp contrasting fact into its own short sentence",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-9.08",
+      "src": "LR",
+      "loc": "§9 L347",
+      "rule": "The paired analogy with \"similarly:\" is his move",
+      "action": "merge",
+      "note": "Dup LR-11.08"
+     },
+     {
+      "id": "LR-10.16",
+      "src": "LR",
+      "loc": "§10 L368",
+      "rule": "Build toward a genre-cliché word (\"why\"), never name it",
+      "action": "merge",
+      "note": "Pattern, not a fail"
+     },
+     {
+      "id": "LR-11.05",
+      "src": "LR",
+      "loc": "§11 L381",
+      "rule": "A long winding sentence, then a very short one",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-11.06",
+      "src": "LR",
+      "loc": "§11 L382",
+      "rule": "Direct address slipped inside a first-person passage",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-11.07",
+      "src": "LR",
+      "loc": "§11 L383",
+      "rule": "Two-part contrast ending on a rhetorical question, different content in each half",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R12a",
+      "src": "BR",
+      "loc": "R12 L180",
+      "rule": "Paragraphs that build on the same idea open in the same frame",
+      "action": "merge",
+      "note": "Dup BR-I"
+     },
+     {
+      "id": "BR-H2",
+      "src": "BR",
+      "loc": "H2 L344",
+      "rule": "Contractions are fine where the line is spoken or warm",
+      "action": "merge",
+      "note": "Dup MP-41, WS-05"
+     },
+     {
+      "id": "BR-H7",
+      "src": "BR",
+      "loc": "H7 L355",
+      "rule": "\"However\" may open a sentence when it turns the story",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 430,
+   "body": "### Built details you may use\n- A cause between two recorded events, if real life works that way, even one that makes the person look weak.\n- What an unnamed thing was, and what usually happens next.\n- Small facts the person could have told him: when, what, how long.\n- Small things he saw in the session: a pause, a silence, where they looked, how loud they said it.\n- A plain scene of the problem that serves the reader.\n- The person's own odd fixes, if plausible. People solve their problems in their own odd ways: raising chickens, wearing a tie to work every day, or David's daily score of 0, half or 1 point, with money owed to a friend when it ran too low.\n- A result that matches the record, told as a light scene.\n- His narration taking the person's image a step further, or explaining their move.\n- Swaps that hide the person: the object, the job, the meeting. Every other detail stays consistent with the swap. The role changes rarely.\n- In research: a scene the reader is asked to picture (\"Picture yourself in that room\").",
+   "v3_first": 158,
+   "v3_last": 167,
+   "code": "R2.11",
+   "kind": "rule",
+   "tier": 2,
+   "heading": "Built details you may use",
+   "outputs": [
+    "chapter",
+    "key moments",
+    "case study"
+   ],
+   "check_type": "judgment",
+   "beats": [
+    "BR-R3b.21-32"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "T2.12"
+    ],
+    "inventory": [
+     {
+      "id": "BR-R3b.21-32",
+      "src": "BR",
+      "loc": "R3b L100-113",
+      "rule": "Allowed: causes between events. What an unnamed thing was. Small facts. Small things he saw. Plain problem scenes. Odd fixes. A light matching result. His narration extending their image. Their meaning in clearer words. Hiding swaps. Money with a human side. Research names and year from the citation",
+      "action": "keep",
+      "note": "Line 32 sits beside R28's no-year rule: the citation layer only. Clash C2"
+     }
+    ]
+   },
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 440,
+   "body": "## Cards",
+   "v3_first": null,
+   "v3_last": null,
+   "code": "cards",
+   "kind": "frame",
+   "tier": null,
+   "heading": "Cards",
+   "outputs": [],
+   "check_type": null,
+   "evidence": {},
+   "beats": [],
+   "extends": null,
+   "loads": []
+  },
+  {
+   "sort": 450,
+   "body": "### Article (Inside The Introvert)\n- Three fields, each opening with its header line: \"Insights from me, to you.\", \"Insights from other experts.\", \"Insight from within you.\" A blank line between paragraphs. Insight 1 ends with \"Coach Gen\".\n- Insight 1 is from him: it opens in first person with him inside the piece, through his scene, his coaching or his reading.\n- When the piece is a realisation, tell it in the order it happened.\n- Science belongs in Insight 1 when it is done to book standard.\n- Insight 2 is the expert layer: names, sources and years live here. It sounds different from Insight 1 and never restates it.\n- Insight 3 is one question for a reader who was in his shoes in Insight 1, from an angle Insight 1 did not take. No possibility line after it.\n- No title, subtitle or category until he says publish. Then ask once. If he does not answer, pick a category, leave the subtitle empty and say what you picked. Never invent a title.\n- Drafts go in a Google Doc with a visible gap after every paragraph.\n- Tier 2 rules loaded: Mechanics, Length, Specific detail, Quoted self-talk, Raw emotion, Lists of three, Callbacks and staying close, Moves that work.",
+   "v3_first": 168,
+   "v3_last": 176,
+   "code": "card:article",
+   "kind": "card",
+   "tier": null,
+   "heading": "Article (Inside The Introvert)",
+   "extends": null,
+   "loads": [
+    "R2.1",
+    "R2.2",
+    "R2.3",
+    "R2.4",
+    "R2.5",
+    "R2.6",
+    "R2.8",
+    "R2.10"
+   ],
+   "outputs": [
+    "article",
+    "letter"
+   ],
+   "check_type": null,
+   "beats": [
+    "LR-1.06",
+    "LR-3.09",
+    "LR-3.23",
+    "LR-4.04",
+    "LR-7.03",
+    "LR-7.04",
+    "LR-8.15",
+    "LR-11.01",
+    "WS-05",
+    "WS-A",
+    "MP-12",
+    "MP-13"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "card-A"
+    ],
+    "inventory": [
+     {
+      "id": "LR-1.06",
+      "src": "LR",
+      "loc": "§1 L40",
+      "rule": "Insight 1 readability band: grade 3 to 7, ease 72 to 93, 11 to 15 words per sentence",
+      "action": "merge",
+      "note": "Reported, never a target (T2.2). Dup MP-47"
+     },
+     {
+      "id": "LR-3.09",
+      "src": "LR",
+      "loc": "§3 L116",
+      "rule": "Diff the vocabulary against the true corpus: keep unseen abstract nouns of 7 or more letters low",
+      "action": "merge",
+      "note": "Lint report. Dup WS-18, LR-12.00"
+     },
+     {
+      "id": "LR-3.23",
+      "src": "LR",
+      "loc": "§3 L143",
+      "rule": "Sign-off \"Coach Gen.\"",
+      "action": "merge",
+      "note": "Dup SP-S1, WS-A, BV-07"
+     },
+     {
+      "id": "LR-4.04",
+      "src": "LR",
+      "loc": "§4 L167-169",
+      "rule": "The piece is \"from me\": Insight 1 opens in first person with him inside it",
+      "action": "keep",
+      "note": "Field premise \"Insights from me, to you\""
+     },
+     {
+      "id": "LR-7.03",
+      "src": "LR",
+      "loc": "§7 L288",
+      "rule": "Insight 3 is the reader's open question, with no coda",
+      "action": "keep",
+      "note": "-"
+     },
+     {
+      "id": "LR-7.04",
+      "src": "LR",
+      "loc": "§7 L290",
+      "rule": "Insight 3 opens a new angle, never restates Insight 1's question",
+      "action": "merge",
+      "note": "With MP-13 and WS-A. Clash C20"
+     },
+     {
+      "id": "LR-8.15",
+      "src": "LR",
+      "loc": "§8 L330",
+      "rule": "Science belongs in Insight 1 when done properly, to book quality",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "LR-11.01",
+      "src": "LR",
+      "loc": "§11 L377",
+      "rule": "Opens in first person with a concrete dated scene",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "WS-05",
+      "src": "WS",
+      "loc": "§2 L64",
+      "rule": "Articles and letters keep LR numbers (digits) and simple words. Contractions fine. Word counts reported, never cut to",
+      "action": "merge",
+      "note": "Settles H1 to H3 per output. Dup MP-41, MP-47"
+     },
+     {
+      "id": "WS-A",
+      "src": "WS",
+      "loc": "Ending A L145-159",
+      "rule": "Article: 3 Insight fields. Insight 3 a question for a reader in his shoes. No title until publish. Ask once for name, subtitle, category. Notion schema, header lines, categories. Sha256 check",
+      "action": "keep",
+      "note": "The only copy of the schema"
+     },
+     {
+      "id": "MP-12",
+      "src": "MP",
+      "loc": "L12",
+      "rule": "Likes a 3-act structure for articles, across 3 pieces or inside one",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "MP-13",
+      "src": "MP",
+      "loc": "L13",
+      "rule": "Insight 3's question relates to Insight 1, for a reader who was in his shoes",
+      "action": "merge",
+      "note": "Clash C20 (settled by wording)"
+     }
+    ]
+   }
+  },
+  {
+   "sort": 460,
+   "body": "### Letter (Lasting Change Letters)\n- Everything on the article card, plus the lines below.\n- The blank is his realisation, never the book's subject.\n- The realisation is told in the order it happened: the book in its own world, the moment he recognises himself, the reveal, then the reader's turn. The topic is named early, the realisation late.\n- Not a book review: no summary, no chapter walk, no verdict. The book gets only the words it takes to make his point land.\n- The author is named at first mention (\"Never Split The Difference, by Chris Voss\"). After that, only what the setup needs.\n- The author wrote for their reader. He writes for his. The piece is the translation between the two.\n- The book never takes over Insight 1, and the piece never argues the author's thesis in place of his.\n- His material is chosen by fit: name the core of the book's idea, take the item that shows it happening, and prefer a live session over an exercise.\n- Insight 2 is the book layer: the author, the title, and what the book says in its own terms.\n- Never pick a book for him, and never write about one he has not read.\n- Named \"Lasting Change Letters #N\", with the book's title as subtitle and the Law it serves as category.",
+   "v3_first": 177,
+   "v3_last": 187,
+   "code": "card:letter",
+   "kind": "card",
+   "tier": null,
+   "heading": "Letter (Lasting Change Letters)",
+   "extends": "card:article",
+   "loads": [
+    "R2.1",
+    "R2.2",
+    "R2.3",
+    "R2.4",
+    "R2.5",
+    "R2.6",
+    "R2.8",
+    "R2.10"
+   ],
+   "outputs": [
+    "letter"
+   ],
+   "check_type": null,
+   "beats": [
+    "LR-3.13",
+    "LR-5.02",
+    "LR-8.03",
+    "WS-B"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "card-L"
+    ],
+    "inventory": [
+     {
+      "id": "LR-3.13",
+      "src": "LR",
+      "loc": "§3 L126",
+      "rule": "Name the topic early, not the realization",
+      "action": "merge",
+      "note": "With LR-5.02"
+     },
+     {
+      "id": "LR-5.02",
+      "src": "LR",
+      "loc": "§5 L203",
+      "rule": "A realization is told in the order it happened, held back until the reader can have it with him",
+      "action": "keep",
+      "note": "Also article realizations"
+     },
+     {
+      "id": "LR-8.03",
+      "src": "LR",
+      "loc": "§8 L306",
+      "rule": "Find material by fit: name the inspiration's core, take the item that shows it happening, prefer a live session",
+      "action": "keep",
+      "note": "Dup WS-13"
+     },
+     {
+      "id": "WS-B",
+      "src": "WS",
+      "loc": "Ending B L161-187",
+      "rule": "Letter: not a review. Author named at first mention. The book only as setup. Check the book before quoting. Insight 2 is the book layer. Name and subtitle pattern. Categories",
+      "action": "keep",
+      "note": "L173 \"aim at about 320 words\" is the retired glue budget: cut (clash C11). Fidelity lines to T0.3"
+     }
+    ]
+   }
+  },
+  {
+   "sort": 470,
+   "body": "### Chapter (5 Laws of Lasting Change)\n- Point of view: he is the author \"I\", telling other people's stories and his own, speaking to the reader as \"you\".\n- The one thought carries the whole chapter. A pattern to reach for: sections plant arguments that a later section joins into one picture.\n- Many people, not one. He has coached tens of people, but the records go deep for only a few, so no one persona carries the book. Material is spread across print names where a hiding swap allows it, and quick examples from other people show the range.\n- Parents appear among the examples (worry about their children, parenting), for credibility and reach.\n- A recurring feature of the book: each person beats the same pattern with their own odd fix. When the record holds one, show it.\n- The opening story has no heading. A heading marks a turn to a new idea, never a mid-thread break and never an act of the story. It names the idea by default, asks a question only where the reader is truly asking it, and is fresh and human, sometimes a pun.\n- Each chapter opens where the last left the reader. A chapter is named only when the reader must go back and use a tool.\n- Default shape, a menu and not a sequence: the opening story, the stuck point in the reader's life, myth and reality, the idea shown then named, the method (his Core Exercise, never invented), what changes, why this Law comes here and what it opens, the From Within You box, the Chapter Summary box.\n- An article's Insight 2 and 3 are optional in a chapter. Kept questions go in From Within You.\n- The Chapter Summary box is never in \"I\". It holds the chapter's key phrases, and every line comes from the chapter.\n- Only the line the chapter is built to deliver is set apart (the pull line). Most chapters have one, some none.\n- A figure is a tool or model the reader will use: numbered by chapter (Figure 3.1), with a one-sentence caption, pointed to once, never in place of the prose.\n- The flagship exercises (the thought map, the page and its marks) are alluded to and built up before they arrive.\n- The Introduction is written last and promises only what the chapters deliver. It opens like Dweck's: a short origin scene with a person in it, his standing, the promise to \"you\", then what is inside, with the anonymity line. The subtitle is never repeated in the opening pages.\n- No conclusion unless he asks.\n- The end note (grey, after a page break, starting \"From Claude,\") holds the [MATERIAL NEEDED] list, every built detail beside its record, any deliberate fragment, at most 3 questions about facts or missing material, and the exact phrase and full source of every study or book cited.\n- Paragraphs are indented with no gap, as in the printed book.\n- Tier 2 rules loaded: Mechanics, Length, Specific detail, Quoted self-talk, Lists of three, Author presence, Callbacks and staying close, People on the page, Built details you may use.",
+   "v3_first": 188,
+   "v3_last": 205,
+   "code": "card:chapter",
+   "kind": "card",
+   "tier": null,
+   "heading": "Chapter (5 Laws of Lasting Change)",
+   "extends": null,
+   "loads": [
+    "R2.1",
+    "R2.2",
+    "R2.3",
+    "R2.4",
+    "R2.6",
+    "R2.7",
+    "R2.8",
+    "R2.9",
+    "R2.11"
+   ],
+   "outputs": [
+    "chapter",
+    "key moments"
+   ],
+   "check_type": null,
+   "beats": [
+    "BR-0.4",
+    "BR-R29",
+    "BR-R35",
+    "BR-R38a",
+    "BR-R25b",
+    "BR-R27",
+    "BR-R31",
+    "BR-R31a",
+    "BR-R34",
+    "BR-R40",
+    "WS-C1",
+    "WS-C3",
+    "PI-02",
+    "MP-29",
+    "MP-51",
+    "MP-68",
+    "MF-03"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "card-C"
+    ],
+    "inventory": [
+     {
+      "id": "BR-0.4",
+      "src": "BR",
+      "loc": "§0 L30-31",
+      "rule": "Paragraphs: a visible gap in drafts, but chapter drafts indent with no gap (3 Nov)",
+      "action": "merge",
+      "note": "Gap for A, L, K, S. Clash C14. Dup MP-55, WS-C5"
+     },
+     {
+      "id": "BR-R29",
+      "src": "BR",
+      "loc": "R29 L131-135",
+      "rule": "An article's Insight 2 and 3 are optional in a chapter. A kept study follows R28. Kept questions go in From Within You",
+      "action": "keep",
+      "note": "Dup BR-I"
+     },
+     {
+      "id": "BR-R35",
+      "src": "BR",
+      "loc": "R35 L237-238",
+      "rule": "Only the line a chapter is built to deliver is set apart",
+      "action": "keep",
+      "note": "Dup BR-I"
+     },
+     {
+      "id": "BR-R38a",
+      "src": "BR",
+      "loc": "R38 L250-254",
+      "rule": "\"Once\" means one story. Pattern to try: the story follows the chapter's own shape",
+      "action": "merge",
+      "note": "Claude's reading plus his suggestion, unconfirmed"
+     },
+     {
+      "id": "BR-R25b",
+      "src": "BR",
+      "loc": "R25 L292-297",
+      "rule": "Name a chapter only for a tool. Each chapter opens where the last left the reader",
+      "action": "merge",
+      "note": "Dup BR-I"
+     },
+     {
+      "id": "BR-R27",
+      "src": "BR",
+      "loc": "R27 L301-304",
+      "rule": "Open the book like Dweck. Chapter 1 in time order. Never repeat the subtitle in the opening pages",
+      "action": "keep",
+      "note": "Introduction and Chapter 1 only"
+     },
+     {
+      "id": "BR-R31",
+      "src": "BR",
+      "loc": "R31 L306-309",
+      "rule": "Headings mark a new idea, never an act of the story. No heading on the opening story. About one per 400 to 600 words",
+      "action": "keep",
+      "note": "Clash C13 (settled). Dup BR-I"
+     },
+     {
+      "id": "BR-R31a",
+      "src": "BR",
+      "loc": "R31 L311-316",
+      "rule": "Headings name the idea by default, a question only where the reader asks it, fresh and human",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "BR-R34",
+      "src": "BR",
+      "loc": "R34 L318-319",
+      "rule": "Chapter Summary box: never \"I\", holds the key phrases, every line from the chapter",
+      "action": "keep",
+      "note": "Dup MP-18, BR-I"
+     },
+     {
+      "id": "BR-R40",
+      "src": "BR",
+      "loc": "R40 L328-336",
+      "rule": "Figures: numbered x.y, a one-sentence caption, pointed to once, never instead of the prose",
+      "action": "keep",
+      "note": "Dup BR-I. Build gap (L336) is a process note"
+     },
+     {
+      "id": "WS-C1",
+      "src": "WS",
+      "loc": "Ending C L189-205",
+      "rule": "Chapter: two stops. Book map with old material names. No conclusion unless asked. Insight 2 and 3 optional",
+      "action": "keep",
+      "note": "Map rows name frozen sources: remap to the brain"
+     },
+     {
+      "id": "WS-C3",
+      "src": "WS",
+      "loc": "Ending C L219-231",
+      "rule": "Law chapter default shape, a 9-slot menu. [MATERIAL NEEDED] instead of invention",
+      "action": "keep",
+      "note": "[MATERIAL NEEDED] dup T0.3"
+     },
+     {
+      "id": "PI-02",
+      "src": "PI",
+      "loc": "\"Content formats\"",
+      "rule": "Myth vs Reality, Diagnostic Questions, Micro Tools, Client Stories, Identity Shifts",
+      "action": "merge",
+      "note": "Overlaps the chapter default shape"
+     },
+     {
+      "id": "MP-29",
+      "src": "MP",
+      "loc": "L29",
+      "rule": "Book point of view: Dweck and Clear blend (author \"I\" tells others' stories and his own, speaks to \"you\")",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "MP-51",
+      "src": "MP",
+      "loc": "L51",
+      "rule": "David's case may be split into several people under different names. Ask him for the names",
+      "action": "merge",
+      "note": "-"
+     },
+     {
+      "id": "MP-68",
+      "src": "MP",
+      "loc": "L68",
+      "rule": "Parents (worry about their kids, parenting) are \"EXTREMELY IMPORTANT\" examples to include",
+      "action": "merge",
+      "note": "Content guidance"
+     },
+     {
+      "id": "MF-03",
+      "src": "MF",
+      "loc": "\"Coined terms\"",
+      "rule": "Energy Audit. The thought map and the page are flagship exercises, alluded to and hyped like Clear",
+      "action": "merge",
+      "note": "-"
+     }
+    ]
+   }
+  },
+  {
+   "sort": 480,
+   "body": "### Key moments\n- The 5 or 6 places that carry a chapter: its opening, its turns, its payoff, its hand-off.\n- Each moment is written three ways, built differently and not reworded (time order, his line first, the reader first, the payoff first, a callback, a mirror), and each version is labelled with how it is built.\n- Every fact comes from the chapter's fact sheet. Every version follows the chapter card.\n- Delivered in a Google Doc, \"5 Laws Manuscript, <Chapter> Key Moments\", with one grey line at the top asking him to pick or mix one version per moment, and a visible gap after every paragraph.\n- Tier 2 rules loaded: the chapter card's.",
+   "v3_first": 206,
+   "v3_last": 210,
+   "code": "card:key-moments",
+   "kind": "card",
+   "tier": null,
+   "heading": "Key moments",
+   "extends": "card:chapter",
+   "loads": [
+    "R2.1",
+    "R2.2",
+    "R2.3",
+    "R2.4",
+    "R2.6",
+    "R2.7",
+    "R2.8",
+    "R2.9",
+    "R2.11"
+   ],
+   "outputs": [
+    "key moments"
+   ],
+   "check_type": null,
+   "beats": [
+    "WS-K"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "card-K"
+    ],
+    "inventory": [
+     {
+      "id": "WS-K",
+      "src": "WS",
+      "loc": "Ending C L233",
+      "rule": "Key moments: 5 or 6, each written 3 ways built differently and labelled. Facts from the fact sheet. Grey top line",
+      "action": "keep",
+      "note": "The only source of key-moment rules"
+     }
+    ]
+   }
+  },
+  {
+   "sort": 490,
+   "body": "### Case study\n- The aim: it reads like Dweck (the reader trusts it, it moves fast, it lands on the person's own line), it sounds like him (curious, the editor not the hero, the person already capable, his simple vivid words), and it stays inside the built-detail lines.\n- Length follows the story. Short works only when every step is there.\n- A case may carry an argument, proving a point on the way.\n- Every line the person says follows \"A quote earns its marks\". It decides whether the person reads as capable.\n- Tier 2 rules loaded: Mechanics, Specific detail, Quoted self-talk, People on the page, Built details you may use.",
+   "v3_first": 211,
+   "v3_last": 215,
+   "code": "card:case-study",
+   "kind": "card",
+   "tier": null,
+   "heading": "Case study",
+   "extends": null,
+   "loads": [
+    "R2.1",
+    "R2.3",
+    "R2.4",
+    "R2.9",
+    "R2.11"
+   ],
+   "outputs": [
+    "case study"
+   ],
+   "check_type": null,
+   "beats": [
+    "CS-01",
+    "CS-02"
+   ],
+   "evidence": {
+    "step6_groups": [
+     "card-S"
+    ],
+    "inventory": [
+     {
+      "id": "CS-01",
+      "src": "Book_Writing_Handoff",
+      "loc": "§10 L213-219",
+      "rule": "Case study objective: reads like Dweck (trusted, fast, lands on the person's own line), sounds like him (curious, editor not hero, client capable, simple vivid words), stays inside the built-detail lines",
+      "action": "keep",
+      "note": "Claude's words that he holds it to (4 Nov). In no rule doc yet"
+     },
+     {
+      "id": "CS-02",
+      "src": "Book_Writing_Handoff",
+      "loc": "§10 L228-241",
+      "rule": "Round 1 readings: under-built gaps need one or two bridges. Length follows the story. The best cases carry an argument. No advice, diagnosis or know-it-all voice. Keep his short session line",
+      "action": "merge",
+      "note": "Claude's reading of his marks. Round 2 not run yet. Bridges in T1.9, no-advice in T0.7"
+     }
+    ]
+   }
+  }
+ ]
+}
