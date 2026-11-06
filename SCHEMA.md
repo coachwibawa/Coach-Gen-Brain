@@ -92,6 +92,7 @@ Every change to the shape of the brain is a numbered file in `migrations/`, appl
 - `001_brain_schema.sql`: tables, lists, lock, history, privacy, window
 - `002_pin_function_search_path.sql`: security fix from the Supabase advisor
 - `003_certainty_optional_and_staging.sql`: certainty may be blank (ideas, framework text, outside voices); a private `staging` schema for the one-time move-in
+- Later migrations are described in their own sections below. `019_rules_table.sql` and `020_entry_quote_context.sql`: see "The rules table".
 
 ## Move-in record (2026-10-27)
 802 entries, 47 sources and 11 people moved in from the worksheet (403), the Testimony collection (114), the New Material bank F-01 to F-150 and W-01 to W-19 (217) and the Obsidian Book Map vault (68). `added_by` on these rows is `move-in 2026-10-27 (mining chat)`. Every field was checked against the original files by hash and matched exactly. Old IDs live in `legacy_ref`.
@@ -171,3 +172,13 @@ Known limits:
 - Loaded on 31 Oct 2026 or earlier: chunks show headings with the author as speaker. Later loads mark them "Section title".
 
 Books in the raw layer: The War of Art (doc 3), Mindset (source 54, docs 4 to 31), Atomic Habits (source 47, docs 66 to 90), The Courage to Be Disliked (source 45, docs 93 to 107). Regression keys for all four in `tests/expected/`.
+
+## The rules table (6 Nov 2026, Rules Refactor Plan step 9)
+
+- `019_rules_table.sql`: `brain.rules`, one row per block of the writing rulebook. 49 rows from rulebook v3: 5 frame rows, 39 rules (`R0.1` to `R0.8`, `R1.1` to `R1.20`, `R2.1` to `R2.11`) and 5 cards (`card:article`, `card:letter`, `card:chapter`, `card:key-moments`, `card:case-study`). Add-only (delete and truncate refused), every insert and update copied into `change_log`, not reachable by anon or authenticated.
+- Columns: code, kind (frame, rule, card), tier, heading, body (the exact block of the rulebook), sort, outputs, check_type (mechanical, checker, judgment), v3_first and v3_last, extends and loads (cards only), evidence (step 6 groups and inventory rows), status (active, retired, with retired_note). Fold fields: beats, source, added_on, fold_stage (captured, judged, merged, gated, approved, stored), test_gate, approved_on.
+- Only rows that are active and stored are served. A rule cannot be approved or stored without approved_on.
+- Read: `brain.get_card('chapter')` (rows in rulebook order), `brain.card_text('chapter')` (one text), `brain.rulebook_text()` (every live row, equals `rules/rulebook/rulebook_v3.txt` byte for byte, md5 `a80b78c1b69fc97be58cdbad021f8138`).
+- Load: `brain.load_rules('rules/table/rules_v3.json')` reads a file made by `rules/table/build_rules_load.py` from the repo. Inserts only, refuses codes already in the table. See `rules/table/README.md`.
+- Applied and checked on 6 Nov 2026: a dry run in the live brain (rolled back), then the real run. rulebook md5 matched the file, all five card md5 values matched the script, 49 log rows.
+- `020_entry_quote_context.sql`: entries get `answers` (what the line answered), `context` (one line of session context) and `owned_words` (words the person owns, never dropped). Added to the end of `entries_full`. The mine skill starts filling them in Phase 4. Entries text stays frozen: "never reword" is now a storage rule only.
