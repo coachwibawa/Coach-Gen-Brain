@@ -45,7 +45,7 @@ Checks done on 5 Nov: the Mac Book Rules master and the project mirror have the 
 ## Counts
 
 - **447 rows** from 21 sources. Big sources are listed rule by rule. Out-of-scope docs (social, reel, brand, content) are listed by section.
-- By action: keep 124, merge 157, cut 91, move 41, out 33, open 1.
+- By action: keep 124, merge 157, cut 92, move 41, out 33, open 0.
 - **180 rows fold into 37 rules** (Tier 0: 7, Tier 1: 18, Tier 2: 12). 36 rows go to the 5 output cards.
 - By source: LR 152, BR 84, MP 76, WS 34, GR 13, SP 10, BV 10, MW 10, PL 9, MA 9, PD 7, CR 7, RS 4, PI 4, MF 4, Book_Writing_Handoff 3, BS 3, OS 3, BT 2, FL 2, WB 1.
 
@@ -131,7 +131,7 @@ A skeleton for step 8, not the final wording. Each line lists the rows that feed
 | out:reel | Out of scope (deferred). | 4: RS-00, RS-01, RS-02, RS-03 |
 | out:brand | Out of scope (deferred). | 8: BV-00, BV-01, BV-02, BV-04, BV-08, BV-09, BT-00, BT-01 |
 | out:content | Out of scope (deferred). | 10: LR-8.14, CR-00, CR-01, CR-02, CR-03, CR-04, CR-05, CR-06, MA-02, MW-02 |
-| open | Not placed until he decides. | 1: BR-R41 |
+| open | Not placed until he decides. | 0:  |
 
 ## Test set cover (a first look, proven in steps 12 and 13)
 
@@ -781,7 +781,7 @@ Tested against the business requirements: counterproductive or beyond what the m
 
 | ID | Loc | Kind | Rule | Tier | Out | Check | Action | Target | Note |
 |---|---|---|---|---|---|---|---|---|---|
-| BR-R41 | §10 L274-280 | open | "Look in the brain first" before writing any detail of a person, story or quote | - | ALCKS | - | open | open | Removed 4 Nov at his order. Whether it returns is his call only |
+| BR-R41 | §10 L274-280 | open | "Look in the brain first" before writing any detail of a person, story or quote | - | ALCKS | - | cut | - | Removed 4 Nov at his order. Card 13 (5 Nov): stays out |
 | CS-01 | §10 L213-219 | rule | Case study objective: reads like Dweck (trusted, fast, lands on the person's own line), sounds like him (curious, editor not hero, client capable, simple vivid words), stays inside the built-detail lines | 1 | S | checker | keep | card-S | Claude's words that he holds it to (4 Nov). In no rule doc yet |
 | CS-02 | §10 L228-241 | rule | Round 1 readings: under-built gaps need one or two bridges. Length follows the story. The best cases carry an argument. No advice, diagnosis or know-it-all voice. Keep his short session line | 1 | S | checker | merge | card-S | Claude's reading of his marks. Round 2 not run yet. Bridges in T1.9, no-advice in T0.7 |
 

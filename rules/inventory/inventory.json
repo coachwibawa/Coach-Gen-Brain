@@ -3658,9 +3658,9 @@
    "tier": "-",
    "out": "ALCKS",
    "check": "-",
-   "action": "open",
-   "target": "open",
-   "note": "Removed 4 Nov at his order. Whether it returns is his call only"
+   "action": "cut",
+   "target": "-",
+   "note": "Removed 4 Nov at his order. Card 13 (5 Nov): stays out"
   },
   {
    "id": "CS-01",
