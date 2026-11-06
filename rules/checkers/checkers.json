@@ -1,0 +1,202 @@
+[
+ {
+  "code": "R1.1",
+  "heading": "One thread",
+  "v3_lines": [
+   38,
+   42
+  ],
+  "rule_md5": "3d88e8dc5226e65a00f9612e47381863",
+  "tokens_est": 566
+ },
+ {
+  "code": "R1.2",
+  "heading": "Joins answer the reader's question",
+  "v3_lines": [
+   43,
+   46
+  ],
+  "rule_md5": "4723a55e39e686a32b084addd5bcaa65",
+  "tokens_est": 541
+ },
+ {
+  "code": "R1.3",
+  "heading": "Links are real",
+  "v3_lines": [
+   47,
+   51
+  ],
+  "rule_md5": "9594920a591923f523c9b91a77295772",
+  "tokens_est": 600
+ },
+ {
+  "code": "R1.4",
+  "heading": "Few names, one each",
+  "v3_lines": [
+   52,
+   55
+  ],
+  "rule_md5": "822f43869311aa28f804424780f184f0",
+  "tokens_est": 528
+ },
+ {
+  "code": "R1.5",
+  "heading": "Nothing arrives bare",
+  "v3_lines": [
+   56,
+   60
+  ],
+  "rule_md5": "61f992ba0cf0c92673d7ff99cc1da2e6",
+  "tokens_est": 589
+ },
+ {
+  "code": "R1.6",
+  "heading": "Images from the reader's life",
+  "v3_lines": [
+   61,
+   62
+  ],
+  "rule_md5": "f0b223fbc7a13dca23f94a38af4c323e",
+  "tokens_est": 495
+ },
+ {
+  "code": "R1.7",
+  "heading": "One story, told once",
+  "v3_lines": [
+   63,
+   67
+  ],
+  "rule_md5": "55acf1eaadd133fe260086f66c572867",
+  "tokens_est": 562
+ },
+ {
+  "code": "R1.8",
+  "heading": "Stakes, not more story",
+  "v3_lines": [
+   68,
+   69
+  ],
+  "rule_md5": "328e03c2072e458b48f96b1c91b54ca4",
+  "tokens_est": 482
+ },
+ {
+  "code": "R1.9",
+  "heading": "Warm the water",
+  "v3_lines": [
+   70,
+   73
+  ],
+  "rule_md5": "6920a05f0e4ea1d8de300f6c293b050b",
+  "tokens_est": 552
+ },
+ {
+  "code": "R1.10",
+  "heading": "A quote earns its marks",
+  "v3_lines": [
+   74,
+   83
+  ],
+  "rule_md5": "861205a2f23f36af18aac99081e617ec",
+  "tokens_est": 818
+ },
+ {
+  "code": "R1.11",
+  "heading": "Bring it to the reader's life",
+  "v3_lines": [
+   84,
+   84
+  ],
+  "rule_md5": "0e6b346ae9d0f30a91a8341c3b157b56",
+  "tokens_est": 474
+ },
+ {
+  "code": "R1.12",
+  "heading": "Research backs, never interrupts",
+  "v3_lines": [
+   85,
+   91
+  ],
+  "rule_md5": "de1c4979ba28dc3d004ea7f59b474d88",
+  "tokens_est": 706
+ },
+ {
+  "code": "R1.13",
+  "heading": "Built details serve the reader",
+  "v3_lines": [
+   92,
+   98
+  ],
+  "rule_md5": "0408a2490ae288cb53abfa5eff839e41",
+  "tokens_est": 794
+ },
+ {
+  "code": "R1.14",
+  "heading": "No meta-narration",
+  "v3_lines": [
+   99,
+   99
+  ],
+  "rule_md5": "7e96168ec28950ad347a2d5fb93d1bda",
+  "tokens_est": 473
+ },
+ {
+  "code": "R1.15",
+  "heading": "Rhythm without choppiness",
+  "v3_lines": [
+   100,
+   103
+  ],
+  "rule_md5": "d206db0ad9ea67b74a76ec44b7f29bd8",
+  "tokens_est": 538
+ },
+ {
+  "code": "R1.16",
+  "heading": "Parallels that truly match",
+  "v3_lines": [
+   104,
+   105
+  ],
+  "rule_md5": "3938d882fe7eca1e6d383572abb5b6a4",
+  "tokens_est": 492
+ },
+ {
+  "code": "R1.17",
+  "heading": "Plain words he would say",
+  "v3_lines": [
+   106,
+   109
+  ],
+  "rule_md5": "ff776b7591a3395003d57591a99cb4d3",
+  "tokens_est": 551
+ },
+ {
+  "code": "R1.18",
+  "heading": "Protect the author",
+  "v3_lines": [
+   110,
+   114
+  ],
+  "rule_md5": "9180871eefca6a1e4ba7ea75e2b6419e",
+  "tokens_est": 556
+ },
+ {
+  "code": "R1.19",
+  "heading": "Turns and endings",
+  "v3_lines": [
+   115,
+   118
+  ],
+  "rule_md5": "24eff28d3745b75ea9ad13578df55bcf",
+  "tokens_est": 540
+ },
+ {
+  "code": "R1.20",
+  "heading": "AI tells",
+  "v3_lines": [
+   119,
+   123
+  ],
+  "rule_md5": "24d5d68c36836195044f3783d812784b",
+  "tokens_est": 554
+ }
+]

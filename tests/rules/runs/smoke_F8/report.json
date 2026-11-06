@@ -1,0 +1,184 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 52,
+  "sentences": 4,
+  "reading_grade": 6.3
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "rule": "R1.1",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He tried out his opening line on his morning customers.",
+     "why": "No earlier sentence mentions an opening line or any work done with the coach, so the reader must guess where this line came from and how it links to the deadline."
+    },
+    {
+     "quote": "Before December, he was confident.",
+     "why": "Nothing joins the customer test to the new confidence, so the reader has to guess what changed and why."
+    },
+    {
+     "quote": "In late October, he came to me with a deadline",
+     "why": "The turn from years of sending an assistant to coming to the coach is not bridged, so the reader guesses why he came now and what changed."
+    }
+   ]
+  },
+  {
+   "rule": "R1.3",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.4",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.5",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "The result arrives bare: the reader is not shown what changed, how one rehearsal on customers made a man who always sent a stand-in confident, so they must guess the steps."
+    },
+    {
+     "quote": "the December meeting, in his own voice",
+     "why": "The meeting is named as if the reader already knew it, but the draft never shows what it is or why speaking there himself was a big deal."
+    }
+   ]
+  },
+  {
+   "rule": "R1.6",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.7",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "The December meeting loop is closed by announcing a feeling instead of carrying the timeline on to what happened, so the reader never learns if he spoke in his own voice."
+    }
+   ]
+  },
+  {
+   "rule": "R1.8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "he came to me with a deadline: the December meeting, in his own voice.",
+     "why": "The deadline is claimed as pressure but no clause shows what Aiman could lose if he misses it, so the reader has to guess the stakes."
+    },
+    {
+     "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+     "why": "The weak ending is propped up with an extra scene and a flat claim of confidence instead of raising what is at risk."
+    }
+   ]
+  },
+  {
+   "rule": "R1.9",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "The reader gets no bridge between trying a line on customers and being confident, so they must guess what changed."
+    },
+    {
+     "quote": "the December meeting, in his own voice",
+     "why": "The reader is never told what this meeting is or why it matters, a leap that only the shared context of the call would cover."
+    },
+    {
+     "quote": "He tried out his opening line on his morning customers.",
+     "why": "The reader is never shown the opening line or how the customers reacted, so the moment has no content to carry."
+    }
+   ]
+  },
+  {
+   "rule": "R1.10",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.11",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "The case about Aiman ends without any step to the reader's own life (work, family, friends), so the reader is left with one man's story and no way to see how it applies to them."
+    }
+   ]
+  },
+  {
+   "rule": "R1.12",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.13",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He tried out his opening line on his morning customers.",
+     "why": "This is a built action the person did after the session, staged to show progress, with no record behind it, so the reader is told something the writer cannot vouch for."
+    },
+    {
+     "quote": "Before December, he was confident.",
+     "why": "A feeling he did not name is stated as fact instead of as the coach's earned hunch, so the reader cannot tell what he actually said or felt."
+    },
+    {
+     "quote": "even in his own boardroom",
+     "why": "This extra scene detail answers no question the reader would ask and looks built only to add colour."
+    }
+   ]
+  },
+  {
+   "rule": "R1.14",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.15",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.16",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.17",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.18",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.19",
+   "verdict": "pass",
+   "breaks": []
+  },
+  {
+   "rule": "R1.20",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "A flat, clipped result line with no opening line quoted, no number and no detail, so the reader must guess what changed or how he got confident."
+    }
+   ]
+  }
+ ],
+ "missing": []
+}
