@@ -2683,9 +2683,9 @@
    "tier": "-",
    "out": "ALCKS",
    "check": "-",
-   "action": "move",
-   "target": "skill:writer",
-   "note": "-"
+   "action": "cut",
+   "target": "-",
+   "note": "Card 39: the \"\" markup rule is out, so this goes with it (6 Nov)"
   },
   {
    "id": "BR-0.4",

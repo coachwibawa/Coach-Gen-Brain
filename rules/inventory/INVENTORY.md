@@ -45,7 +45,7 @@ Checks done on 5 Nov: the Mac Book Rules master and the project mirror have the 
 ## Counts
 
 - **447 rows** from 21 sources. Big sources are listed rule by rule. Out-of-scope docs (social, reel, brand, content) are listed by section.
-- By action: keep 124, merge 157, cut 92, move 41, out 33, open 0.
+- By action: keep 124, merge 157, cut 93, move 40, out 33, open 0.
 - **180 rows fold into 37 rules** (Tier 0: 7, Tier 1: 18, Tier 2: 12). 36 rows go to the 5 output cards.
 - By source: LR 152, BR 84, MP 76, WS 34, GR 13, SP 10, BV 10, MW 10, PL 9, MA 9, PD 7, CR 7, RS 4, PI 4, MF 4, Book_Writing_Handoff 3, BS 3, OS 3, BT 2, FL 2, WB 1.
 
@@ -119,7 +119,7 @@ A skeleton for step 8, not the final wording. Each line lists the rows that feed
 
 | Destination | What goes there | Rows |
 |---|---|---|
-| skill:writer | Process: load the card, draft, lint, check, deliver. | 35: LR-2.03, LR-5.18, LR-11.00, BR-00e, BR-0.1, BR-0.3, BR-R4, GR-09, BS-01, BS-03, WS-00, WS-01, WS-02, WS-03, WS-04, WS-07, WS-15, WS-16, WS-18, WS-19, WS-20, WS-21, WS-C2, WS-C4, WS-C5, WS-SC, WS-BL, MP-19, MP-22, MP-42, MP-53, MP-61, MP-62, MP-63, MP-72 |
+| skill:writer | Process: load the card, draft, lint, check, deliver. | 34: LR-2.03, LR-5.18, LR-11.00, BR-00e, BR-0.1, BR-R4, GR-09, BS-01, BS-03, WS-00, WS-01, WS-02, WS-03, WS-04, WS-07, WS-15, WS-16, WS-18, WS-19, WS-20, WS-21, WS-C2, WS-C4, WS-C5, WS-SC, WS-BL, MP-19, MP-22, MP-42, MP-53, MP-61, MP-62, MP-63, MP-72 |
 | skill:propose | Rule-change process, admission test, wording format, test-set gate. | 16: BR-00c, PD-03, PD-04, WS-22, PL-00, PL-01, PL-02, PL-03, PL-04, PL-05, PL-06, PL-07, PL-08, FL-07, MP-26, MP-80 |
 | guardrails | Working rules that are not about the writing. | 8: GR-02, GR-03, GR-04, GR-05, GR-06, GR-07, GR-08, GR-10 |
 | memory | Working style that stays in memory. | 29: GR-12, MA-01, MA-04, MA-05, MA-06, MP-07, MP-08, MP-09, MP-10, MP-14, MP-20, MP-48, MP-49, MP-60, MP-64, MP-67, MP-69, MP-71, MP-73, MP-74, MP-75, MP-78, MP-79, MP-81, MP-82, MP-83, MW-03, MW-11, MF-01 |
@@ -403,7 +403,7 @@ Tested against the business requirements: counterproductive or beyond what the m
 | BR-00g | L19 | meta | Add and annotate, never condense | - | - | - | cut | brain-table | Decision 4. Clash C7 |
 | BR-0.1 | §0 L27 | process | [Square brackets] mean a suggestion: about half may be rewritten | - | ALCKS | - | move | skill:writer | Markup round. Dup MP-54, OS-02 |
 | BR-0.2 | §0 L28 | rule | "Double quotes" mean a sentence he strongly believes: change at most a tenth, keep his voice | - | ALCKS | - | cut | - | Dup MP-54. Clash C8 with MW-05. Card 39: drop both (confirmed 6 Nov) |
-| BR-0.3 | §0 L29 | process | A newer note wins over a "" line | - | ALCKS | - | move | skill:writer | - |
+| BR-0.3 | §0 L29 | process | A newer note wins over a "" line | - | ALCKS | - | cut | - | Card 39: the "" markup rule is out, so this goes with it (6 Nov) |
 | BR-0.4 | §0 L30-31 | rule | Paragraphs: a visible gap in drafts, but chapter drafts indent with no gap (3 Nov) | 2 | ALCKS | mech | merge | card-C | Gap for A, L, K, S. Clash C14. Dup MP-55, WS-C5 |
 | BR-0.5 | §0 L32 | rule | /privileged: keep the fact, make it acceptable, say where it was a privilege | 1 | ALCKS | checker | merge | T1.16 | Code handling to skill:writer. Dup MP-84 |
 | BR-R1 | R1 L38-40 | rule | Fill the blank and pick one thread: every paragraph is a step on it | 1 | ALCKS | checker | keep | T1.1 | Dup LR-2.01 |
