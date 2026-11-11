@@ -26,6 +26,8 @@
 
 - Never delete. Retire with `status = 'retired'` and a `retired_note`. Every insert and update is copied into `brain.change_log`.
 - A new rule climbs the fold stages: captured, judged, merged, gated (the test set), approved (his go), stored. It records what it beats, its source and its date. It cannot reach `approved` or `stored` without `approved_on`.
+- The fold path (step 16, 11 Nov 2026): `tools/cg_fold.py` and `brain.fold_load`, `brain.fold_store`, `brain.fold_decline` (migration 021). Steps and the spec format: `rules/folds/README.md`. Rule codes never change: a changed rule is updated in place when its fold is stored, and the fold row stays as the record.
+- After the first stored fold, the rules as they stand are `rules/table/rules_live.json` and `rules/rulebook/rulebook_live.txt` (v3 plus the stored folds, rebuilt by `cg_fold.py live`). `rules_v3.json` and `rulebook_v3.txt` stay as the first load and are never edited.
 
 Size per card at about 4 characters a token: article 5,050, letter 5,360, chapter 5,850, key moments 6,010, case study 4,970.
 

@@ -92,7 +92,7 @@ Every change to the shape of the brain is a numbered file in `migrations/`, appl
 - `001_brain_schema.sql`: tables, lists, lock, history, privacy, window
 - `002_pin_function_search_path.sql`: security fix from the Supabase advisor
 - `003_certainty_optional_and_staging.sql`: certainty may be blank (ideas, framework text, outside voices); a private `staging` schema for the one-time move-in
-- Later migrations are described in their own sections below. `019_rules_table.sql` and `020_entry_quote_context.sql`: see "The rules table".
+- Later migrations are described in their own sections below. `019_rules_table.sql`, `020_entry_quote_context.sql` and `021_rule_folds.sql`: see "The rules table".
 
 ## Move-in record (2026-10-27)
 802 entries, 47 sources and 11 people moved in from the worksheet (403), the Testimony collection (114), the New Material bank F-01 to F-150 and W-01 to W-19 (217) and the Obsidian Book Map vault (68). `added_by` on these rows is `move-in 2026-10-27 (mining chat)`. Every field was checked against the original files by hash and matched exactly. Old IDs live in `legacy_ref`.
@@ -181,4 +181,5 @@ Books in the raw layer: The War of Art (doc 3), Mindset (source 54, docs 4 to 31
 - Read: `brain.get_card('chapter')` (rows in rulebook order), `brain.card_text('chapter')` (one text), `brain.rulebook_text()` (every live row, equals `rules/rulebook/rulebook_v3.txt` byte for byte, md5 `a80b78c1b69fc97be58cdbad021f8138`).
 - Load: `brain.load_rules('rules/table/rules_v3.json')` reads a file made by `rules/table/build_rules_load.py` from the repo. Inserts only, refuses codes already in the table. See `rules/table/README.md`.
 - Applied and checked on 6 Nov 2026: a dry run in the live brain (rolled back), then the real run. rulebook md5 matched the file, all five card md5 values matched the script, 49 log rows.
+- `021_rule_folds.sql` (11 Nov 2026, step 16): the fold pipeline. `brain.fold_load(path)` puts the rows of a fold file (`rules/folds/*.json`, built by `tools/cg_fold.py`) in `brain.rules` at a stage up to gated. `brain.fold_store(path)` stores an approved fold (the file carries `approved_on`): a new rule goes live, a change is copied onto its target row (codes never change, the old text stays in `change_log`), a retire retires the target, and the fold row stays as the record. It returns the md5 of the rulebook and of each card. `brain.fold_decline(code, note)` retires an open fold with his words. Functions only. Applied from the repo file pinned to commit `194d432`. See `rules/folds/README.md`.
 - `020_entry_quote_context.sql`: entries get `answers` (what the line answered), `context` (one line of session context) and `owned_words` (words the person owns, never dropped). Added to the end of `entries_full`. The mine skill starts filling them in Phase 4. Entries text stays frozen: "never reword" is now a storage rule only.

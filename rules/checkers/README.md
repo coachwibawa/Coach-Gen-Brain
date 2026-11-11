@@ -1,6 +1,6 @@
 # The one-rule checkers (step 12)
 
-One template per Tier 1 rule (`R1.1.md` to `R1.20.md`), built by `python3 tools/cg_check.py build` from `rules/table/rules_v3.json`, the same data as `brain.rules`. Each template carries its rule word for word. `checkers.json` lists each rule's md5. Rebuild after any rule change, never edit by hand.
+One template per Tier 1 rule (`R1.1.md` to `R1.20.md`), built by `python3 tools/cg_check.py build` from the rules table data (`rules/table/rules_live.json` once a fold is stored, else `rules/table/rules_v3.json`), the same data as `brain.rules`. Each template carries its rule word for word. `checkers.json` lists each rule's md5. Rebuild after any rule change, never edit by hand.
 
 Each checker reads the whole draft against its one rule and answers JSON: pass or fail, with up to three exact quotes and what the reader loses at each. A draft fails if the lint (`tools/cg_lint.py`) has a break or any checker fails. Tier 2 is never checked.
 
@@ -8,7 +8,8 @@ Each checker reads the whole draft against its one rule and answers JSON: pass o
 
 - With an API key: `cg_check.py prepare DRAFT --output chapter --dir RUN`, then `cg_check.py run RUN` (20 calls in parallel, Sonnet), then `cg_check.py collect RUN`.
 - In a chat with no key: `prepare`, then one Sonnet helper per `RUN/R1.x.prompt.md`, each saving its JSON as `RUN/R1.x.json`, then `collect`.
-- Many drafts at once (calibration): `cg_check.py batch MANIFEST --dir RUN` makes one prompt per rule carrying every draft, then `split RUN` and `collect RUN/<id>` per draft.
+- Many drafts at once (calibration): `cg_check.py batch MANIFEST --dir RUN` makes one prompt per rule carrying every draft, then `split RUN` and `collect RUN/<id>` per draft. `--only R1.7,R1.19` keeps the run to the named checkers.
+- The test-set gate for a new or changed rule (step 16): `tools/cg_fold.py gate` and `result` do the batch, the split and the join with the last full run. See `rules/folds/README.md`.
 
 ## Cost
 
