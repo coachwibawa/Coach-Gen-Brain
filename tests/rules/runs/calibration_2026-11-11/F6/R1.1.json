@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+   "why": "The piece sets up a second lesson (earning your way in through risk) and then never uses it, so the reader is left waiting for a payoff that does not come."
+  },
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.",
+   "why": "The thread swaps from the chimpanzee's two lessons to regret as a messenger, so the reader no longer knows what the piece is about."
+  },
+  {
+   "quote": "That is why there is a chimpanzee in my notes.",
+   "why": "The stated reason (telling it as a story about somebody else) differs from the chimp story the piece actually told, so the opening promise and the close do not connect."
+  }
+ ],
+ "rule": "R1.1"
+}

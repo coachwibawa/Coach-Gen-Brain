@@ -1,0 +1,11 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him",
+   "why": "This built scene contradicts the line just before it (\"He did nothing wrong\") and is not flagged as invented in Insight 2, so the reader is confused about what Reddy actually found."
+  }
+ ],
+ "rule": "R1.13"
+}

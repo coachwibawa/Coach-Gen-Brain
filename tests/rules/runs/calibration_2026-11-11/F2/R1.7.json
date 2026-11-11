@@ -1,0 +1,19 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Even her nutritionist once told her that if she were really consistent she would see results every week",
+   "why": "Melina's story was already told whole, and this new scene arrives on a return trip after the break, so the reader gets a second telling with new pieces added."
+  },
+  {
+   "quote": "So what I realised is, that’s why I almost never finish anything.",
+   "why": "The passage opens on Melina's realisation, the ending of her story, before the story earns it, then repeats it when it finally arrives."
+  },
+  {
+   "quote": "It looks easy on other people. I guess I just can’t.",
+   "why": "The sentence is set apart and then re-set after the divider to restart Melina's arc, so the reader meets the same story twice."
+  }
+ ],
+ "rule": "R1.7"
+}

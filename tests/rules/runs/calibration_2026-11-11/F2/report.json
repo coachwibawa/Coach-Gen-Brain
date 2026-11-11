@@ -1,0 +1,154 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 611,
+  "sentences": 46,
+  "reading_grade": 5.8
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "a plan so big it never left the page",
+     "why": "A made-up metaphor the reader has to decode, instead of an image from their own life or Melina's words."
+    },
+    {
+     "quote": "closes the case on her: if she just can’t, there is nothing left to try",
+     "why": "A courtroom image (case, verdict, closes, opens again) sits in the same passage as the earlier page image, so the reader meets two image systems."
+    }
+   ],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Even her nutritionist once told her that if she were really consistent she would see results every week",
+     "why": "Melina's story was already told whole, and this new scene arrives on a return trip after the break, so the reader gets a second telling with new pieces added."
+    },
+    {
+     "quote": "So what I realised is, that’s why I almost never finish anything.",
+     "why": "The passage opens on Melina's realisation, the ending of her story, before the story earns it, then repeats it when it finally arrives."
+    },
+    {
+     "quote": "It looks easy on other people. I guess I just can’t.",
+     "why": "The sentence is set apart and then re-set after the divider to restart Melina's arc, so the reader meets the same story twice."
+    }
+   ],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+   "why": "The change from avoiding the stage to confidence is given with no steps between, so the reader must guess how a rehearsal produced it."
+  }
+ ],
+ "rule": "R1.5"
+}

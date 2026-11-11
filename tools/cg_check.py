@@ -32,7 +32,12 @@ LOAD = ROOT / "rules/table/rules_v3.json"
 TPL_DIR = ROOT / "rules/checkers"
 OUTPUTS = {"article": "an article (Inside The Introvert)", "letter": "a letter (Lasting Change Letters)",
            "chapter": "a passage from a chapter of his book, 5 Laws of Lasting Change",
+           "chapter-excerpt": "an excerpt from a chapter of his book, 5 Laws of Lasting Change (the paragraphs before and after it are not shown)",
            "key-moments": "a key moment from a chapter of his book", "case-study": "a case study for his book"}
+CARD_OF = {"article": "card:article", "letter": "card:letter", "chapter": "card:chapter", "chapter-excerpt": "card:chapter",
+           "key-moments": "card:key-moments", "case-study": "card:case-study"}
+LINT_OUTPUT = {"chapter-excerpt": "chapter", "key-moments": None, "case-study": None}
+CAL = ROOT / "rules/checkers/calibration.json"
 
 TEMPLATE = """You check one draft against ONE rule from Coach Gen's writing rulebook. Check nothing else. Other checkers cover the other rules, the marks and the spelling.
 
@@ -45,6 +50,11 @@ How to judge.
 - Judge only what is on the page. Some lines of the rule are about how the writer works or about parts this draft may not include (a grey line at the top, an end note, a list made before drafting). If the draft does not include that part, skip those lines and judge the prose.
 - Lines in bold with "Insight" are field headings, not prose. Skip them.
 - Quote the draft's own words exactly.
+{{NOTES}}
+The shape this kind of piece takes (its card). This is context only, so you know what the piece is meant to look like. Do not check it.
+<card>
+{{CARD}}
+</card>
 
 The rule ({{CODE}}):
 <rule>
@@ -73,12 +83,32 @@ def tier1():
     return t1
 
 
+def notes_for(code):
+    cal = json.loads(CAL.read_text(encoding="utf-8")) if CAL.exists() else {}
+    lines = [n["note"] for n in cal.get("all", []) + cal.get(code, [])]
+    if not lines:
+        return ""
+    return "\nHow to read this rule, from his verdicts on past drafts:\n" + "\n".join("- " + l for l in lines) + "\n"
+
+
+def card_text(output):
+    rows = {r["code"]: r for r in json.loads(LOAD.read_text(encoding="utf-8"))["rows"]}
+    chain, k = [], CARD_OF[output]
+    while k:
+        chain.insert(0, k)
+        k = rows[k]["extends"]
+    keep = []
+    for c in chain:
+        keep += [l for l in rows[c]["body"].split("\n") if not l.startswith("- Tier 2 rules loaded")]
+    return "\n".join(keep)
+
+
 def cmd_build(_):
     TPL_DIR.mkdir(parents=True, exist_ok=True)
     manifest = []
     for r in tier1():
         body = r["body"]
-        tpl = TEMPLATE.replace("{{CODE}}", r["code"]).replace("{{RULE}}", body)
+        tpl = TEMPLATE.replace("{{CODE}}", r["code"]).replace("{{RULE}}", body).replace("{{NOTES}}", notes_for(r["code"]))
         if body not in tpl:
             fail(r["code"] + ": rule text not carried word for word")
         if "—" in tpl or ";" in TEMPLATE:
@@ -97,7 +127,8 @@ def cmd_prepare(a):
     out = Path(a.dir)
     out.mkdir(parents=True, exist_ok=True)
     for f in sorted(TPL_DIR.glob("R1.*.md"), key=lambda p: int(p.stem.split(".")[1])):
-        text = f.read_text(encoding="utf-8").replace("{{OUTPUT}}", OUTPUTS[a.output]).replace("{{DRAFT}}", draft)
+        text = (f.read_text(encoding="utf-8").replace("{{OUTPUT}}", OUTPUTS[a.output])
+                .replace("{{CARD}}", card_text(a.output)).replace("{{DRAFT}}", draft))
         (out / f"{f.stem}.prompt.md").write_text(text, encoding="utf-8")
     (out / "draft.md").write_text(draft + "\n", encoding="utf-8")
     (out / "output.txt").write_text(a.output + "\n", encoding="utf-8")
@@ -153,7 +184,12 @@ Coach Gen is a coach for introverts. He writes in plain, vivid English for reade
 
 def batch_prompt(code, body, drafts):
     one = TEMPLATE.split("What fail means.", 1)[1].split("Answer with JSON only", 1)[0]
-    parts = [BATCH_HEAD, "What fail means." + one.replace("({{CODE}})", f"({code})").replace("{{RULE}}", body)]
+    kinds = sorted({d["output"] for d in drafts}, key=list(OUTPUTS).index)
+    cards = "\n\n".join(f"For {OUTPUTS[k].split(' (')[0]}:\n" + card_text(k) for k in kinds)
+    one = (one.replace("({{CODE}})", f"({code})").replace("{{RULE}}", body).replace("{{NOTES}}", notes_for(code))
+           .replace("The shape this kind of piece takes (its card)", "The shape each kind of piece takes (its card)")
+           .replace("{{CARD}}", cards))
+    parts = [BATCH_HEAD, "What fail means." + one]
     parts.append("""Answer with JSON only, no other text:
 {"rule": "%s", "results": [{"id": "the draft's id", "verdict": "pass" or "fail", "breaks": [{"quote": "exact words from that draft, at most 25", "why": "one plain sentence: what the reader loses here"}]}]}
 One result per draft, in the order given. "breaks" is empty for a pass. For a fail, give at most 3, the worst first.
@@ -205,7 +241,7 @@ def cmd_collect(a):
     output = a.output or ((d / "output.txt").read_text().strip() if (d / "output.txt").exists() else None)
     sys.path.insert(0, str(ROOT / "tools"))
     from cg_lint import lint
-    findings, st = lint(draft.read_text(encoding="utf-8"), output)
+    findings, st = lint(draft.read_text(encoding="utf-8"), LINT_OUTPUT.get(output, output))
     lint_breaks = [f for f in findings if f["level"] in ("FAIL", "FORM")]
     verdicts, missing = [], []
     for code in heads:

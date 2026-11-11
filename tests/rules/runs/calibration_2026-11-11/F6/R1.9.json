@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "So why does it still shout at you at 2am, 20 years later?",
+   "why": "\"It\" and the regret it stands for were never introduced, so the reader cannot tell what is shouting or how the chimpanzee story led here."
+  },
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.",
+   "why": "The jump from Melvin's two lessons to a person's old regret is asserted, not built, so the reader has to guess the link."
+  },
+  {
+   "quote": "And when you cannot answer, tell it as a story about somebody else and find the moral.",
+   "why": "The chimpanzee-as-story move is never shown or explained, so the reader does not see why a chimp stands in for their own memory."
+  }
+ ],
+ "rule": "R1.9"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+   "why": "The writer stops the story to describe its own shape (two lessons, years apart) instead of letting the reader see it."
+  },
+  {
+   "quote": "That is why there is a chimpanzee in my notes.",
+   "why": "It explains the piece's own design and why the story was chosen, which pulls the reader out of the point."
+  }
+ ],
+ "rule": "R1.14"
+}

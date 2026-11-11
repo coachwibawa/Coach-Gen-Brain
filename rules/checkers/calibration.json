@@ -1,0 +1,171 @@
+{
+ "about": "How each checker reads its rule, learned from his verdicts on the test set (step 13). These notes never change a rule. They tell the checker where the line is, so it neither misses his failures nor fails his approved passages. Each note names the cases it came from.",
+ "all": [
+  {
+   "note": "You cannot see his records, the brain or the session. Never fail a draft because you cannot tell whether a detail, a feeling or a quote is in the record. Judge what the page does for the reader.",
+   "from": [
+    "P9"
+   ]
+  },
+  {
+   "note": "His own typed wording can be a little rough (an odd word order, a tense slip). If a reader still follows it, that is a grammar matter for another check, not a break of this rule.",
+   "from": [
+    "P5",
+    "P9"
+   ]
+  },
+  {
+   "note": "An approved piece he would score 90% can still have lines you would polish. Fail only a break that would make him say the passage fails, not one that would make him edit a line.",
+   "from": [
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P10"
+   ]
+  }
+ ],
+ "R1.1": [
+  {
+   "note": "In an excerpt, the thread is the excerpt's own line of thought. Fail when the passage swaps the cause or the point it set up, or opens an idea it never uses, so the reader no longer knows what it is about.",
+   "from": [
+    "F3"
+   ]
+  }
+ ],
+ "R1.2": [
+  {
+   "note": "Opening on where a person is now, then going back once to tell how they got there in order, is a join the reader can follow. It is not a missing link.",
+   "from": [
+    "P5"
+   ]
+  },
+  {
+   "note": "When a paragraph answers a question raised two or more paragraphs earlier, the page must link back to that question. Without the link, the reader feels they missed several paragraphs. That is a break.",
+   "from": [
+    "F3"
+   ]
+  }
+ ],
+ "R1.3": [
+  {
+   "note": "A pronoun or a short phrase that points back to something the reader just met (\"the word\", \"the pattern\") is a real link, even in an excerpt where that thing came just before the excerpt starts.",
+   "from": [
+    "P9"
+   ]
+  }
+ ],
+ "R1.4": [
+  {
+   "note": "In an article, Insight 2 is the expert layer: researchers, sources and years are meant to be named there. Only names in Insight 1 or 3 count against this rule. A label from his own framework used once to place the idea (\"Law 4 in my coaching\") is not a second name for a thing.",
+   "from": [
+    "P5"
+   ]
+  }
+ ],
+ "R1.5": [
+  {
+   "note": "In an excerpt, an idea or image the chapter set up before the excerpt starts has not arrived bare. Fail only what is new inside the passage and given no example, reason or step.",
+   "from": [
+    "P7",
+    "P8",
+    "P9"
+   ]
+  },
+  {
+   "note": "A surprising claim fails when nothing beside it lets the reader accept it: no example, no reason, no premise they hold. A claim the next lines go on to show is not bare.",
+   "from": [
+    "F1",
+    "P4"
+   ]
+  },
+  {
+   "note": "Opening on where someone ended up, then showing the steps in order, does not show an idea out of order. A label from his own framework named once in passing (\"Law 4 in my coaching\") is not a new idea that must be explained.",
+   "from": [
+    "P5"
+   ]
+  }
+ ],
+ "R1.6": [
+  {
+   "note": "Everyday images every reader has lived (driving a car, a full tank, a road, a table) count as images from the reader's own life. So does an image taken from the book or source the piece is about, named as such. A made-up metaphor is an image no one uses that the reader has to decode (\"a plan so big it never left the page\").",
+   "from": [
+    "P2",
+    "P7",
+    "P8",
+    "F2"
+   ]
+  }
+ ],
+ "R1.7": [
+  {
+   "note": "Naming where a person is now, then telling once, in order, how they got there, is one arc told forward. A return trip is coming back later to a story already finished to add new scenes. Announcing the lessons or the ending before the story earns them breaks the rule.",
+   "from": [
+    "P5",
+    "F6"
+   ]
+  }
+ ],
+ "R1.11": [
+  {
+   "note": "In an excerpt, the turn to the reader's life may come after the excerpt ends. Do not fail an excerpt only because it stays inside the story.",
+   "from": [
+    "F3",
+    "P9"
+   ]
+  }
+ ],
+ "R1.15": [
+  {
+   "note": "A quick run of examples, each a short noun phrase (\"The video we recorded 12 times and never posted. The application we filled in and never sent.\"), is a shotgun of examples, which the rulebook asks for. It is not a run of clipped fragments. A run of clipped fragments is plain story told in broken pieces.",
+   "from": [
+    "P2"
+   ]
+  }
+ ],
+ "R1.16": [
+  {
+   "note": "A mirror fails when the reader cannot see what matches. A short own side is fine when the match is named plainly and the beats line up.",
+   "from": [
+    "P6"
+   ]
+  }
+ ],
+ "R1.18": [
+  {
+   "note": "A plain account of what he has done (a marathon, his certification, a language), told where the story needs it, is not a flex. Out is a line that reads against him to a cold reader: a bad practice, a money flex, a claim to have done it first.",
+   "from": [
+    "P4"
+   ]
+  }
+ ],
+ "R1.19": [
+  {
+   "note": "In an article or letter, Insight 1 may end on a question that Insight 2 and 3 go on to answer. Only the end of the whole piece must not be the hard question alone. Insight 3 is a question by design.",
+   "from": [
+    "P6"
+   ]
+  }
+ ],
+ "R1.20": [
+  {
+   "note": "A hype word used to name the reader's own hope or a false promise they have heard (\"finally get the secret that will last a lifetime\") is not hype from the writer. Fail hype the writer uses to sell his own idea.",
+   "from": [
+    "P4"
+   ]
+  }
+ ],
+ "R1.13": [
+  {
+   "note": "Assume every detail, cause and feeling on the page is in his record unless the page itself shows it is a guess. Fail a built detail only when it does no work for the reader, or when it breaks a condition you can see on the page: a staged action that proves a point, a detail that changes the story's tone, a session number or an exact time with nothing to support it.",
+   "from": [
+    "P9",
+    "F8"
+   ]
+  }
+ ]
+}

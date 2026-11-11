@@ -1,0 +1,15 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Before December, he was confident.",
+   "why": "The reader gets no bridge from a customer trial to confidence, so the change is stated and not shown."
+  },
+  {
+   "quote": "he sent his assistant to present for him, even in his own boardroom",
+   "why": "Why a cafe owner avoided speaking, and what the December meeting or his opening line was, is never given, so the reader must guess."
+  }
+ ],
+ "rule": "R1.9"
+}

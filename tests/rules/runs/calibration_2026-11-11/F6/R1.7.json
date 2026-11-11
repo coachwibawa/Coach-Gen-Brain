@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Reddy calls it close to hazing, and it runs for 10 years, until the day they finally let him in.",
+   "why": "The ending of Melvin's arc is announced before the story gets there, and 'Then one day Melvin makes the mistake' is then told after the 10 years already ran, so the timeline is muddled."
+  },
+  {
+   "quote": "That is only half of what Reddy watched.",
+   "why": "The chimp story is cut in two and the second half is added later, so the reader gets the arc in pieces rather than told forward once."
+  },
+  {
+   "quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon",
+   "why": "A new, unexplained coaching scene is dropped in after the question has closed the piece, a stray new piece of story with no setup."
+  }
+ ],
+ "rule": "R1.7"
+}

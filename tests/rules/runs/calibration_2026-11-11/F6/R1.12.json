@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "One honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee.",
+   "why": "A protective caveat about what the study does not prove, added for safety rather than for the reader, which the rule says to cut."
+  },
+  {
+   "quote": "In Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing",
+   "why": "The study opens Insight 1 and runs for many paragraphs with place and group detail, instead of his idea coming first and then 2 to 5 sentences of one finding."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him",
+   "why": "A made-up scene is told as part of the research, so the reader cannot tell what the study found from what was added, and the facts are not kept true."
+  }
+ ],
+ "rule": "R1.12"
+}

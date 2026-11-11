@@ -1,0 +1,15 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "a plan so big it never left the page",
+   "why": "A made-up metaphor the reader has to decode, instead of an image from their own life or Melina's words."
+  },
+  {
+   "quote": "closes the case on her: if she just can’t, there is nothing left to try",
+   "why": "A courtroom image (case, verdict, closes, opens again) sits in the same passage as the earlier page image, so the reader meets two image systems."
+  }
+ ],
+ "rule": "R1.6"
+}

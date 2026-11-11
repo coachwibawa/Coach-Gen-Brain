@@ -17,3 +17,11 @@ In a chat, each helper carries about 74,000 tokens of overhead before it reads a
 ## Smoke test (6 Nov 2026)
 
 F8 (Aiman, his "nothing after the first sentence make any sense"), on Sonnet: FAIL, 8 of 20 checkers fail (joins, nothing arrives bare, one story, stakes, warm the water, bring it to the reader's life, built details, AI tells). Every one names the bare ending or the missing bridges. Saved in `tests/rules/runs/smoke_F8/`.
+
+## Calibration (step 13, 6 to 11 Nov 2026)
+
+Done: all 5 fail cases fail and all 9 approved passages pass. Report: `tests/rules/runs/calibration_2026-11-11/REPORT.md`.
+- `calibration.json` holds the notes each checker reads: how to read its rule, learned from his verdicts. Each note names the cases it came from. A note never changes a rule.
+- Each prompt now carries the card for its output (context only) and says when a draft is an excerpt (`--output chapter-excerpt`).
+- Thin margins: F1 is caught by one checker and F3 by one. Run a fresh full pass before daily use leans on it.
+- Daily runs use Sonnet.

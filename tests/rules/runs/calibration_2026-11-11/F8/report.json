@@ -1,0 +1,151 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 52,
+  "sentences": 4,
+  "reading_grade": 6.3
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+     "why": "The change from avoiding the stage to confidence is given with no steps between, so the reader must guess how a rehearsal produced it."
+    }
+   ],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "he came to me with a deadline: the December meeting, in his own voice.",
+     "why": "The deadline is named but nothing shows what is at risk if he misses it, so the beat stays weak and the reader has no reason to feel the stakes."
+    }
+   ],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "The reader gets no bridge from a customer trial to confidence, so the change is stated and not shown."
+    },
+    {
+     "quote": "he sent his assistant to present for him, even in his own boardroom",
+     "why": "Why a cafe owner avoided speaking, and what the December meeting or his opening line was, is never given, so the reader must guess."
+    }
+   ],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

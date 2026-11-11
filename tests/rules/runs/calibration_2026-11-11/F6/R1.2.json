@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "The story has already run to the day he is let in, so this jumps back in time with no link, and the reader cannot tell how it fits 'He did nothing wrong' or the 10 years."
+  },
+  {
+   "quote": "So why does it still shout at you at 2am, 20 years later?",
+   "why": "'It' has no clear referent after the paragraph of three stories, so the reader has to guess what is shouting."
+  },
+  {
+   "quote": "Because it is not finished with you.",
+   "why": "Regret appears with no bridge from the 15-year-old's written sentence or the stories, so the reader has to guess how the idea is connected."
+  }
+ ],
+ "rule": "R1.2"
+}

@@ -1,0 +1,11 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.",
+   "why": "The danger is only claimed (\"never forgets it\") with no clause showing what is done to him, and the extra beat adds story while muddying the hazing timeline."
+  }
+ ],
+ "rule": "R1.8"
+}

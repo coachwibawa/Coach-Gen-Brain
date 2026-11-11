@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "he came to me with a deadline: the December meeting, in his own voice.",
+   "why": "The deadline is named but nothing shows what is at risk if he misses it, so the beat stays weak and the reader has no reason to feel the stakes."
+  }
+ ],
+ "rule": "R1.8"
+}

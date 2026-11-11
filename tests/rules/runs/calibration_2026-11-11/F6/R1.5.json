@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.",
+   "why": "The surprising claim that a old memory holds a lesson comes with no example or reason, and \"it\" has no clear referent, so the reader has to guess what is shouting."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him",
+   "why": "It contradicts the earlier \"He did nothing wrong\" and adds a new event with no step linking it to the hazing, so the reader loses the thread of the story."
+  },
+  {
+   "quote": "In humans, we sometimes make that mistake at 15. And at 15, we write it down.",
+   "why": "The leap from chimps to a teenager's written rule skips a step, and \"that mistake\" and the second lesson are never plainly named, so the reader must guess the link."
+  }
+ ],
+ "rule": "R1.5"
+}

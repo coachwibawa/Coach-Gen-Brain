@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "So why does it still shout at you at 2am, 20 years later?",
+   "why": "\"it\" has no referent: the sentence before lists three painful memories, and the word \"regret\" only appears two sentences later, so the reader must guess what is shouting."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "\"Then\" and \"the mistake\" contradict the earlier \"He did nothing wrong\" and the 10 years of hazing already told, so the reader cannot tell when this happens or why he is punished."
+  },
+  {
+   "quote": "In humans, we sometimes make that mistake at 15.",
+   "why": "\"that mistake\" could point to reaching above standing or to learning only the first lesson, so the reader has to guess which one is meant."
+  }
+ ],
+ "rule": "R1.3"
+}

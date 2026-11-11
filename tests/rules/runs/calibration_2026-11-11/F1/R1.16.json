@@ -1,0 +1,11 @@
+{
+ "id": "F1",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "If the diet slips, make it stricter. If you miss a morning run, set 2 alarms.",
+   "why": "The three parallel \"if\" lines switch subject from \"the diet\" to \"you\" and back to \"the plan\", so the list does not read as one matched set."
+  }
+ ],
+ "rule": "R1.16"
+}
