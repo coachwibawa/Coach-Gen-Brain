@@ -3,8 +3,10 @@
 
 One short prompt per Tier 1 rule (20 in v3). Each checker reads the whole draft
 against its one rule and returns pass or fail, with the lines that break it.
-The rule text comes from the rules table data (rules/table/rules_v3.json, the
-file loaded into brain.rules), so a checker never drifts from the rulebook.
+The rule text comes from the rules table data (rules/table/rules_live.json once a
+fold is stored, else rules/table/rules_v3.json: the same rows as brain.rules), so a
+checker never drifts from the rulebook. A gate run sets CG_RULES to its candidate
+rules file and CG_CHECKERS to its own template folder (tools/cg_fold.py does this).
 
 Commands:
   build                          write rules/checkers/<code>.md, one template per Tier 1 rule
@@ -12,8 +14,10 @@ Commands:
                                  fill the 20 templates with one draft, ready to run
   run DIR [--model M]            run them in parallel through the Anthropic API
                                  (needs ANTHROPIC_API_KEY). Writes DIR/<code>.json
-  batch MANIFEST --dir DIR       one prompt per rule carrying many drafts (calibration).
+  batch MANIFEST --dir DIR [--only R1.7,R1.19]
+                                 one prompt per rule carrying many drafts (calibration, gates).
                                  MANIFEST is JSON: [{"id", "output", "draft" (path)}]
+                                 --only keeps the run to the named checkers
   split DIR                      split DIR/<code>.json batch answers into DIR/<id>/<code>.json
   collect DIR [--draft DRAFT --output OUT]
                                  read DIR/<code>.json (from run, or from helpers in a chat),
@@ -27,9 +31,12 @@ Tier 2 is never checked here.
 import argparse, concurrent.futures, hashlib, json, os, re, sys, urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import cg_rules  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
-LOAD = ROOT / "rules/table/rules_v3.json"
-TPL_DIR = ROOT / "rules/checkers"
+LOAD = cg_rules.rules_path()
+TPL_DIR = Path(os.environ.get("CG_CHECKERS") or ROOT / "rules/checkers")
 OUTPUTS = {"article": "an article (Inside The Introvert)", "letter": "a letter (Lasting Change Letters)",
            "chapter": "a passage from a chapter of his book, 5 Laws of Lasting Change",
            "chapter-excerpt": "an excerpt from a chapter of his book, 5 Laws of Lasting Change (the paragraphs before and after it are not shown)",
@@ -77,10 +84,21 @@ def fail(m):
 
 def tier1():
     rows = json.loads(LOAD.read_text(encoding="utf-8"))["rows"]
-    t1 = [r for r in rows if r["kind"] == "rule" and r["tier"] == 1]
-    if len(t1) != 20:
-        fail(f"expected 20 Tier 1 rules, found {len(t1)}")
+    t1 = sorted((r for r in rows if r["kind"] == "rule" and r["tier"] == 1), key=lambda r: r["sort"])
+    if not t1:
+        fail(f"no Tier 1 rules in {LOAD}")
     return t1
+
+
+def only(rules, codes):
+    """Keep the named checkers (--only R1.7,R1.19). Empty means all."""
+    if not codes:
+        return rules
+    want = [c.strip() for c in codes.split(",") if c.strip()]
+    missing = [c for c in want if c not in {r["code"] for r in rules}]
+    if missing:
+        fail("not a live Tier 1 rule: " + ", ".join(missing))
+    return [r for r in rules if r["code"] in want]
 
 
 def notes_for(code):
@@ -116,6 +134,11 @@ def cmd_build(_):
         (TPL_DIR / f"{r['code']}.md").write_text(tpl, encoding="utf-8")
         manifest.append({"code": r["code"], "heading": r["heading"], "v3_lines": [r["v3_first"], r["v3_last"]],
                          "rule_md5": hashlib.md5(body.encode()).hexdigest(), "tokens_est": round(len(tpl) / 4)})
+    live = {m["code"] for m in manifest}
+    for old in TPL_DIR.glob("R1.*.md"):
+        if old.stem not in live:
+            old.unlink()
+            print(f"  removed {old.name}: no longer a live Tier 1 rule")
     (TPL_DIR / "checkers.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"ok: {len(manifest)} checker templates in {TPL_DIR.relative_to(ROOT)}, each carries its rule word for word")
     for m in manifest:
@@ -126,13 +149,15 @@ def cmd_prepare(a):
     draft = Path(a.draft).read_text(encoding="utf-8").strip()
     out = Path(a.dir)
     out.mkdir(parents=True, exist_ok=True)
+    n = 0
     for f in sorted(TPL_DIR.glob("R1.*.md"), key=lambda p: int(p.stem.split(".")[1])):
         text = (f.read_text(encoding="utf-8").replace("{{OUTPUT}}", OUTPUTS[a.output])
                 .replace("{{CARD}}", card_text(a.output)).replace("{{DRAFT}}", draft))
         (out / f"{f.stem}.prompt.md").write_text(text, encoding="utf-8")
+        n += 1
     (out / "draft.md").write_text(draft + "\n", encoding="utf-8")
     (out / "output.txt").write_text(a.output + "\n", encoding="utf-8")
-    print(f"ok: 20 prompts in {out}")
+    print(f"ok: {n} prompts in {out}")
 
 
 def parse_verdict(raw, code):
@@ -205,7 +230,8 @@ def cmd_batch(a):
         d["text"] = Path(d["draft"]).read_text(encoding="utf-8").strip()
     out = Path(a.dir)
     out.mkdir(parents=True, exist_ok=True)
-    for r in tier1():
+    rules = only(tier1(), a.only)
+    for r in rules:
         (out / f"{r['code']}.prompt.md").write_text(batch_prompt(r["code"], r["body"], man), encoding="utf-8")
     for d in man:
         sub = out / d["id"]
@@ -213,17 +239,20 @@ def cmd_batch(a):
         (sub / "draft.md").write_text(d["text"] + "\n", encoding="utf-8")
         (sub / "output.txt").write_text(d["output"] + "\n", encoding="utf-8")
     (out / "manifest.json").write_text(json.dumps([{k: d[k] for k in ("id", "output")} for d in man], indent=1), encoding="utf-8")
-    print(f"ok: 20 batch prompts for {len(man)} drafts in {out}")
+    print(f"ok: {len(rules)} batch prompts for {len(man)} drafts in {out}")
 
 
 def cmd_split(a):
     d = Path(a.dir)
     ids = [m["id"] for m in json.loads((d / "manifest.json").read_text(encoding="utf-8"))]
+    done = 0
     for r in tier1():
         p = d / f"{r['code']}.json"
         if not p.exists():
-            print(f"  missing {p.name}")
+            if (d / f"{r['code']}.prompt.md").exists():
+                print(f"  missing {p.name}")
             continue
+        done += 1
         raw = p.read_text(encoding="utf-8")
         m = re.search(r"\{.*\}", raw, re.S)
         got = {x.get("id"): x for x in json.loads(m.group(0)).get("results", [])} if m else {}
@@ -231,7 +260,7 @@ def cmd_split(a):
             v = got.get(i, {"verdict": "error", "breaks": [], "raw": "no result for this draft"})
             v = dict(v, rule=r["code"])
             (d / i / f"{r['code']}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"ok: split into {len(ids)} draft folders")
+    print(f"ok: {done} checker answers split into {len(ids)} draft folders")
 
 
 def cmd_collect(a):
@@ -283,6 +312,7 @@ def main():
     b = sub.add_parser("batch")
     b.add_argument("manifest")
     b.add_argument("--dir", required=True)
+    b.add_argument("--only", default="")
     sp = sub.add_parser("split")
     sp.add_argument("dir")
     c = sub.add_parser("collect")

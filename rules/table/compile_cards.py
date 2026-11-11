@@ -2,12 +2,15 @@
 """Step 10: the card compiler.
 
 Builds the five writing cards (article, letter, chapter, key moments, case study)
-from the rules table data (rules/table/rules_v3.json, the exact file loaded into
-brain.rules), the same way brain.get_card() picks rows: Tier 0, Tier 1, the card
-and the card it extends, and the Tier 2 rules the card names, in rulebook order.
+from the rules table data, the same way brain.get_card() picks rows: Tier 0, Tier 1,
+the card and the card it extends, and the Tier 2 rules the card names, in rulebook order.
+The data is rules/table/rules_live.json once a fold is stored (written by
+tools/cg_fold.py from v3 plus the stored folds), else rules/table/rules_v3.json, the
+first load. The rulebook text is rules/rulebook/rulebook_live.txt or rulebook_v3.txt
+in the same way.
 
 Checks, each of which fails the run:
- 1. Every card line is a line of rulebook_v3.txt, word for word, in the same order.
+ 1. Every card line is a line of the rulebook, word for word, in the same order.
  2. Each card's md5 equals the md5 of brain.card_text(output) read from the live
     brain (pass them in with --brain-md5 output=md5, or the script uses the
     values recorded in rules/table/cards/MANIFEST.md5).
@@ -19,8 +22,13 @@ import hashlib, json, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = ROOT / "rules/rulebook/rulebook_v3.txt"
-LOAD = ROOT / "rules/table/rules_v3.json"
+sys.path.insert(0, str(ROOT / "tools"))
+import cg_rules  # noqa: E402
+
+LOAD = cg_rules.rules_path()
+SRC = ROOT / "rules/rulebook/rulebook_live.txt"
+if LOAD == cg_rules.V3 or not SRC.exists():
+    SRC = ROOT / "rules/rulebook/rulebook_v3.txt"
 OUTPUTS = ["article", "letter", "chapter", "key moments", "case study"]
 FILES = {"article": "Card_Article.md", "letter": "Card_Letter.md", "chapter": "Card_Chapter.md",
          "key moments": "Card_Key_Moments.md", "case study": "Card_Case_Study.md"}
@@ -89,7 +97,8 @@ def main():
     if used != every:
         fail("rows never served by any card: " + ", ".join(sorted(every - used)))
     (outdir / "MANIFEST.md5").write_text("\n".join(manifest) + "\n", encoding="utf-8")
-    print(f"ok: 5 cards in {outdir}, every line word for word from rulebook_v3.txt, every rule and card used")
+    print(f"ok: 5 cards in {outdir}, every line word for word from {SRC.name}, every rule and card used")
 
 
-main()
+if __name__ == "__main__":
+    main()
