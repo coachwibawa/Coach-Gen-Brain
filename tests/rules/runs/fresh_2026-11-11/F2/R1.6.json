@@ -1,0 +1,11 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "with a plan so big it never left the page",
+   "why": "A made-up metaphor the reader has to decode instead of a plain statement of what happened to her plans."
+  }
+ ],
+ "rule": "R1.6"
+}

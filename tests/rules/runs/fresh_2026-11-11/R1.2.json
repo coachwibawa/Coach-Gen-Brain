@@ -1,0 +1,20 @@
+{"rule": "R1.2", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "The paragraph before said he did nothing wrong and was let in after 10 years, so this new mistake has no link and the reader has to guess how the story fits."},
+{"quote": "In humans, we sometimes make that mistake at 15.", "why": "The switch from chimpanzees to people has no bridge, and the reader cannot tell which mistake is meant or why the story turns here."},
+{"quote": "I have watched a load come off someone's chest for the first time in 20 years", "why": "This paragraph follows the closing question with no link to it, so the reader does not know why the piece goes back to a claim after asking."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

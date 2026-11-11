@@ -1,0 +1,16 @@
+{"rule": "R1.11", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "fail", "breaks": [{"quote": "Melina saw through hers in 3 sessions. It took me years to see through mine.", "why": "The passage stays with Melina's health story and his own 20s, and never shows the reader how a verdict sentence like this shows up in the reader's own work, money, relationships or other areas."}]},
+{"id": "F3", "verdict": "fail", "breaks": [{"quote": "He didn't need more options. He needed the focus to stick with what he picked.", "why": "The case ends inside David's business and projects, with no turn to the reader and no quick examples of where else the reader's own life works this way."}]},
+{"id": "F6", "verdict": "pass", "breaks": []},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

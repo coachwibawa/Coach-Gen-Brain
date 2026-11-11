@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Before December, he was confident.",
+   "why": "The reader gets no step between the deadline and his confidence, so they must guess how he got from avoiding the boardroom to feeling ready."
+  }
+ ],
+ "rule": "R1.9"
+}

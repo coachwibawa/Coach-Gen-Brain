@@ -1,0 +1,15 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "So what I realised is, that's why I almost never finish anything.",
+   "why": "Thinking out loud kept as said: the stumbling \"So what I realised is\" opener, and as the passage's first line \"that's why\" points to nothing, so the reader has to guess."
+  },
+  {
+   "quote": "\"That's always been my mindset,\" she said. \"Can you picture it?\"",
+   "why": "\"Can you picture it?\" has nothing to picture and reads as a stray spoken fragment, so the reader has to guess what she means."
+  }
+ ],
+ "rule": "R1.10"
+}

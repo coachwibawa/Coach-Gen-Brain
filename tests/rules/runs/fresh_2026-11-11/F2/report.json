@@ -1,0 +1,160 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 611,
+  "sentences": 46,
+  "reading_grade": 5.8
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "with a plan so big it never left the page",
+     "why": "A made-up metaphor the reader has to decode instead of a plain statement of what happened to her plans."
+    }
+   ],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "For years, that sentence ended every attempt Melina made at getting healthier.",
+     "why": "Melina's story was already told whole in the first half, and this section returns to it with new scenes instead of a callback, so the reader meets her story twice."
+    },
+    {
+     "quote": "Even her nutritionist once told her that if she were really consistent she would see results every week",
+     "why": "This is a brand new scene added after the story was finished, which the reader never saw in the first telling."
+    }
+   ],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "So what I realised is, that's why I almost never finish anything.",
+     "why": "Thinking out loud kept as said: the stumbling \"So what I realised is\" opener, and as the passage's first line \"that's why\" points to nothing, so the reader has to guess."
+    },
+    {
+     "quote": "\"That's always been my mindset,\" she said. \"Can you picture it?\"",
+     "why": "\"Can you picture it?\" has nothing to picture and reads as a stray spoken fragment, so the reader has to guess what she means."
+    }
+   ],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Melina saw through hers in 3 sessions. It took me years to see through mine.",
+     "why": "The passage stays with Melina's health story and his own 20s, and never shows the reader how a verdict sentence like this shows up in the reader's own work, money, relationships or other areas."
+    }
+   ],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

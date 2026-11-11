@@ -1,0 +1,72 @@
+[
+ {
+  "id": "F1",
+  "output": "chapter",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/F1.md"
+ },
+ {
+  "id": "F2",
+  "output": "chapter",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/F2.md"
+ },
+ {
+  "id": "F3",
+  "output": "chapter",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/F3.md"
+ },
+ {
+  "id": "F6",
+  "output": "article",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/F6.md"
+ },
+ {
+  "id": "F8",
+  "output": "case-study",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/F8.md"
+ },
+ {
+  "id": "P2",
+  "output": "letter",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P2.md"
+ },
+ {
+  "id": "P3",
+  "output": "chapter",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P3.md"
+ },
+ {
+  "id": "P4",
+  "output": "chapter",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P4.md"
+ },
+ {
+  "id": "P5",
+  "output": "article",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P5.md"
+ },
+ {
+  "id": "P6",
+  "output": "article",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P6.md"
+ },
+ {
+  "id": "P7",
+  "output": "chapter-excerpt",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P7.md"
+ },
+ {
+  "id": "P8",
+  "output": "chapter-excerpt",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P8.md"
+ },
+ {
+  "id": "P9",
+  "output": "chapter-excerpt",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P9.md"
+ },
+ {
+  "id": "P10",
+  "output": "case-study",
+  "draft": "tests/rules/runs/fresh_2026-11-11/src/P10.md"
+ }
+]

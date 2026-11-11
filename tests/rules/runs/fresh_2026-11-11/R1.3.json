@@ -1,0 +1,20 @@
+{"rule": "R1.3", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "So why does it still shout at you at 2am, 20 years later?", "why": "\"it\" has no clear referent (the three stories were listed, not a single thing), so the reader must guess what is shouting."},
+{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "The text just said he did nothing wrong and the hazing began because he turned 10, so this \"then\" and \"mistake\" contradict the order and cause already given."},
+{"quote": "Because it is not finished with you. It still has a lesson to teach", "why": "\"it\" again floats free of any named noun until \"Regret\" appears a sentence later, so the reader has to recall and guess."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

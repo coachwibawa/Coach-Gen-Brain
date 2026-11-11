@@ -1,0 +1,137 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 420,
+  "sentences": 36,
+  "reading_grade": 4.9
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F3",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He didn't need more options. He needed the focus to stick with what he picked.",
+     "why": "The case ends inside David's business and projects, with no turn to the reader and no quick examples of where else the reader's own life works this way."
+    }
+   ],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F3",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

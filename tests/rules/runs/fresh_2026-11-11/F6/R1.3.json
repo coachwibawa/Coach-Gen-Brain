@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "So why does it still shout at you at 2am, 20 years later?",
+   "why": "\"it\" has no clear referent (the three stories were listed, not a single thing), so the reader must guess what is shouting."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "The text just said he did nothing wrong and the hazing began because he turned 10, so this \"then\" and \"mistake\" contradict the order and cause already given."
+  },
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach",
+   "why": "\"it\" again floats free of any named noun until \"Regret\" appears a sentence later, so the reader has to recall and guess."
+  }
+ ],
+ "rule": "R1.3"
+}

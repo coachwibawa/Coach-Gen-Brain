@@ -1,0 +1,161 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 52,
+  "sentences": 4,
+  "reading_grade": 6.3
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+     "why": "The change from sending an assistant to being confident is given as an outcome with no steps between, so the reader has to guess how it happened."
+    }
+   ],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "he came to me with a deadline: the December meeting, in his own voice.",
+     "why": "The deadline is the only pressure, and nothing shows what Aiman stands to lose if he misses it, so the reader cannot feel why the beat matters."
+    }
+   ],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "The reader gets no step between the deadline and his confidence, so they must guess how he got from avoiding the boardroom to feeling ready."
+    }
+   ],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He tried out his opening line on his morning customers.",
+     "why": "A staged action built from nothing the person said, which proves the point and which the reader has to take on trust."
+    },
+    {
+     "quote": "Before December, he was confident.",
+     "why": "A feeling stated as fact with no words from Aiman to earn it, so the reader cannot trust the case."
+    }
+   ],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F8",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Before December, he was confident.",
+     "why": "A short closing sentence carries the whole outcome as a new fact, so the reader gets the result without the steps that led to it."
+    }
+   ],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F8",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

@@ -1,0 +1,16 @@
+{"rule": "R1.16", "results": [
+{"id": "F1", "verdict": "fail", "breaks": [{"quote": "If the diet slips, make it stricter. If you miss a morning run, set 2 alarms. If the plan falls apart in week 2", "why": "The subject flips between 'the diet', 'you' and 'the plan' inside one parallel run, so the three cases do not line up as a matching set."}]},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "pass", "breaks": []},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

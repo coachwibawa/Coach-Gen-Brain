@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Reddy calls it close to hazing, and it runs for 10 years, until the day they finally let him in.",
+   "why": "The ending of Melvin's arc is announced early, then the story is reopened later, so the timeline is not carried forward."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "A new scene is added to a story already told (he 'did nothing wrong'), so the reader has to guess how it fits the arc."
+  },
+  {
+   "quote": "That is only half of what Reddy watched.",
+   "why": "This is a return trip to the chimp story to add new scenes after it seemed finished."
+  }
+ ],
+ "rule": "R1.7"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He tried out his opening line on his morning customers.",
+   "why": "A staged action built from nothing the person said, which proves the point and which the reader has to take on trust."
+  },
+  {
+   "quote": "Before December, he was confident.",
+   "why": "A feeling stated as fact with no words from Aiman to earn it, so the reader cannot trust the case."
+  }
+ ],
+ "rule": "R1.13"
+}

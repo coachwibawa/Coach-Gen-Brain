@@ -1,0 +1,11 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him",
+   "why": "This built chimp event contradicts the line just before it (\"He did nothing wrong\"), is not in the expert note, and leaves the reader unsure what actually happened to the young male."
+  }
+ ],
+ "rule": "R1.13"
+}

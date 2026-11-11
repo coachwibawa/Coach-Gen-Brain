@@ -1,0 +1,16 @@
+{"rule": "R1.13", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [{"quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him", "why": "This built chimp event contradicts the line just before it (\"He did nothing wrong\"), is not in the expert note, and leaves the reader unsure what actually happened to the young male."}]},
+{"id": "F8", "verdict": "fail", "breaks": [{"quote": "He tried out his opening line on his morning customers.", "why": "A staged action built from nothing the person said, which proves the point and which the reader has to take on trust."}, {"quote": "Before December, he was confident.", "why": "A feeling stated as fact with no words from Aiman to earn it, so the reader cannot trust the case."}]},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

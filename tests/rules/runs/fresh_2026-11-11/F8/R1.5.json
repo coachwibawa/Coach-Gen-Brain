@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+   "why": "The change from sending an assistant to being confident is given as an outcome with no steps between, so the reader has to guess how it happened."
+  }
+ ],
+ "rule": "R1.5"
+}

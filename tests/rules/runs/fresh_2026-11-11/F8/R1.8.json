@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "he came to me with a deadline: the December meeting, in his own voice.",
+   "why": "The deadline is the only pressure, and nothing shows what Aiman stands to lose if he misses it, so the reader cannot feel why the beat matters."
+  }
+ ],
+ "rule": "R1.8"
+}

@@ -1,0 +1,23 @@
+{"rule": "R1.7", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "fail", "breaks": [
+{"quote": "For years, that sentence ended every attempt Melina made at getting healthier.", "why": "Melina's story was already told whole in the first half, and this section returns to it with new scenes instead of a callback, so the reader meets her story twice."},
+{"quote": "Even her nutritionist once told her that if she were really consistent she would see results every week", "why": "This is a brand new scene added after the story was finished, which the reader never saw in the first telling."}
+]},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Reddy calls it close to hazing, and it runs for 10 years, until the day they finally let him in.", "why": "The ending of Melvin's arc is announced early, then the story is reopened later, so the timeline is not carried forward."},
+{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "A new scene is added to a story already told (he 'did nothing wrong'), so the reader has to guess how it fits the arc."},
+{"quote": "That is only half of what Reddy watched.", "why": "This is a return trip to the chimp story to add new scenes after it seemed finished."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

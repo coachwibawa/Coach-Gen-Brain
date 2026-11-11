@@ -1,0 +1,15 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "a primatologist named Rachna Reddy spent years watching one thing",
+   "why": "A researcher who need not be kept is named in Insight 1, then repeated as 'Reddy calls it' and 'what Reddy watched', so the reader carries a name they did not need."
+  },
+  {
+   "quote": "Call him Melvin.",
+   "why": "An invented chimp name is added on top of the researcher, the park and the group, so the reader holds several names for a story they only need for its lesson."
+  }
+ ],
+ "rule": "R1.4"
+}

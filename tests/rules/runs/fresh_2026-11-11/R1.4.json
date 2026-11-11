@@ -1,0 +1,16 @@
+{"rule": "R1.4", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [{"quote": "a primatologist named Rachna Reddy spent years watching one thing", "why": "A researcher who need not be kept is named in Insight 1, then repeated as 'Reddy calls it' and 'what Reddy watched', so the reader carries a name they did not need."}, {"quote": "Call him Melvin.", "why": "An invented chimp name is added on top of the researcher, the park and the group, so the reader holds several names for a story they only need for its lesson."}]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

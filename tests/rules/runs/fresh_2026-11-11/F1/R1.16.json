@@ -1,0 +1,11 @@
+{
+ "id": "F1",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "If the diet slips, make it stricter. If you miss a morning run, set 2 alarms. If the plan falls apart in week 2",
+   "why": "The subject flips between 'the diet', 'you' and 'the plan' inside one parallel run, so the three cases do not line up as a matching set."
+  }
+ ],
+ "rule": "R1.16"
+}

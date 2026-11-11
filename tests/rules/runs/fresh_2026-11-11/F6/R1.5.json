@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.",
+   "why": "The reader is told that a memory that shouts at 2am holds an unlearned lesson, with no example or reason to accept it, so they must take it on faith."
+  },
+  {
+   "quote": "tell it as a story about somebody else and find the moral. That is why there is a chimpanzee in my notes.",
+   "why": "The step from the chimp story to this technique is never explained, so the reader has to guess how a story about someone else unlocks the lesson."
+  },
+  {
+   "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+   "why": "The human second lesson is never stated, so the reader cannot see what the missing half is for people before the piece asks them to apply it."
+  }
+ ],
+ "rule": "R1.5"
+}

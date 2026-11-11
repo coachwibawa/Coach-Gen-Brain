@@ -23,5 +23,11 @@ F8 (Aiman, his "nothing after the first sentence make any sense"), on Sonnet: FA
 Done: all 5 fail cases fail and all 9 approved passages pass. Report: `tests/rules/runs/calibration_2026-11-11/REPORT.md`.
 - `calibration.json` holds the notes each checker reads: how to read its rule, learned from his verdicts. Each note names the cases it came from. A note never changes a rule.
 - Each prompt now carries the card for its output (context only) and says when a draft is an excerpt (`--output chapter-excerpt`).
-- Thin margins: F1 is caught by one checker and F3 by one. Run a fresh full pass before daily use leans on it.
+- Thin margins: F1 is caught by one checker and F3 by one.
 - Daily runs use Sonnet.
+
+## Fresh full pass (11 Nov 2026)
+
+Confirmed: 5 of 5 fail cases fail and 9 of 9 approved passages pass, all 20 checkers from one fresh run. Report: `tests/rules/runs/fresh_2026-11-11/REPORT.md`, printed by `tests/rules/report_run.py`.
+- One flip on the way: R1.19 failed P6, then P10. Two notes for R1.19 fixed it (each names its case), and two reruns of R1.19 came back 14 of 14.
+- Thin margins still: F1 only by R1.16, F3 only by R1.11, the same as before.

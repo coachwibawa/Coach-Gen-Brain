@@ -1,0 +1,19 @@
+{"rule": "R1.12", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Her research does not claim to measure regret as a feeling inside a chimpanzee.", "why": "A protective caveat about what the study does not prove, which the rule bans, and it makes the reader doubt the piece's own frame."},
+{"quote": "That is only half of what Reddy watched.", "why": "The study runs across many paragraphs with two findings and comes before the idea, so the research leads instead of backing his point."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}
