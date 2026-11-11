@@ -4,7 +4,7 @@ Result: all 5 fail cases fail and all 9 approved passages pass, between the lint
 
 How it ran: Sonnet helpers, one per rule, each judging all 14 drafts (`cg_check.py batch`). Round 1 (6 Nov): every fail caught, 7 approved passages falsely failed. Round 2 (6 Nov): calibration notes, card context and excerpt framing added, 2 false fails left and F3 missed (it had wrongly been framed as an excerpt). Round 3 (11 Nov): notes added to R1.2, R1.5 and R1.13, F3 framed as the chapter opening it is, and the 5 changed checkers rerun (R1.1, R1.2, R1.5, R1.11, R1.13). The other 15 answers are from round 2.
 
-Thin margins to watch: F1 is caught by one checker (R1.16, on a weaker reason than his own: R1.5 caught it in round 2 but not after its round 3 note) and F3 by one (R1.11). A fresh full run should confirm the result holds before daily use leans on it. A fresh full run should confirm the result holds.
+Thin margins to watch: F1 is caught by one checker (R1.16, on a weaker reason than his own: R1.5 caught it in round 2 but not after its round 3 note) and F3 by one (R1.11). A fresh full run should confirm the result holds before daily use leans on it.
 
 | Case | What it is | Expected | Got | Caught by |
 | --- | --- | --- | --- | --- |
