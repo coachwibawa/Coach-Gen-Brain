@@ -63,7 +63,8 @@ data = json.dumps(spec, ensure_ascii=False).replace("</", "<\\/")
 e = html.escape
 intro = "".join(f"<p>{e(p)}</p>" for p in spec["intro"])
 
-page = f'''<title>{e(spec["title"])}</title>
+page = f'''<!DOCTYPE html>
+<title>{e(spec["title"])}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap">

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<title>Rules Refactor, Phase 4: what waits for you</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column, each decision a sheet with its verdict strip at the foot */
+:root{
+ --paper:#f6f7f9; --sheet:#ffffff; --ink:#1b2430; --muted:#5b6676; --rule:#d9dee6;
+ --accent:#2a6fb0; --accentbg:#e3eef9; --call:#8a5a00; --callbg:#f8ecd2; --cut:#a8323a; --cutbg:#f9e3e4; --ok:#1f7a4d; --okbg:#dcf1e5;
+ --serif:"Libre Baskerville",Georgia,"Times New Roman",serif;
+ --sans:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --paper:#11161d; --sheet:#18202a; --ink:#e4e9f0; --muted:#9aa6b6; --rule:#2c3644;
+ --accent:#7fb4e8; --accentbg:#1c2f45; --call:#f0c26b; --callbg:#3d2f12; --cut:#ff8a90; --cutbg:#45212a; --ok:#6fd3a0; --okbg:#173a2a; color-scheme:dark}}
+:root[data-theme="dark"]{
+ --paper:#11161d; --sheet:#18202a; --ink:#e4e9f0; --muted:#9aa6b6; --rule:#2c3644;
+ --accent:#7fb4e8; --accentbg:#1c2f45; --call:#f0c26b; --callbg:#3d2f12; --cut:#ff8a90; --cutbg:#45212a; --ok:#6fd3a0; --okbg:#173a2a; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;
+ padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1{font-family:var(--serif);font-size:1.9rem;line-height:1.2;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:1.3rem;line-height:1.3;margin:0;text-wrap:balance}
+h3{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0;font-weight:600}
+p{margin:0}
+.lede{display:flex;flex-direction:column;gap:10px;color:var(--muted)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding-block:10px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:.9rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.bar strong{font-variant-numeric:tabular-nums}
+.status{color:var(--muted)}
+.part{display:flex;flex-direction:column;gap:6px;padding-top:12px}
+.part p{color:var(--muted)}
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;scroll-margin-top:64px}
+.head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.tag{font-size:.75rem;font-weight:600;letter-spacing:.04em;padding:2px 9px;border-radius:99px;font-variant-numeric:tabular-nums;white-space:nowrap;background:var(--accentbg);color:var(--accent)}
+.tag.call{background:var(--callbg);color:var(--call)} .tag.change{background:var(--cutbg);color:var(--cut)} .tag.settled{background:var(--okbg);color:var(--ok)}
+.ctx{color:var(--muted);font-size:.95rem}
+.said{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.said li{font-family:var(--serif);font-style:italic;font-size:.95rem}
+.rows{display:grid;grid-template-columns:max-content 1fr;gap:8px 14px;margin:0}
+.rows dt{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-top:3px}
+.rows dd{margin:0;font-family:var(--serif);min-width:0}
+@media (max-width:480px){.rows{grid-template-columns:1fr}.rows dd{margin-bottom:6px}}
+ol.items{margin:0;padding-left:2.4em;display:flex;flex-direction:column;gap:8px;font-family:var(--serif)}
+ol.items li::marker{font-family:var(--sans);font-variant-numeric:tabular-nums;color:var(--muted);font-size:.9em}
+.verdict{border-top:1px dashed var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.choices{display:flex;flex-direction:column;gap:8px}
+.choices label{display:flex;align-items:flex-start;gap:8px;border:1px solid var(--rule);border-radius:12px;padding:8px 12px;cursor:pointer;font-size:.95rem}
+.choices input{accent-color:var(--accent);margin-top:4px}
+.choices label:has(input:checked){border-color:var(--accent);color:var(--accent);font-weight:600}
+.choices label:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+textarea{width:100%;box-sizing:border-box;min-height:56px;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;resize:vertical}
+textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.saved{font-size:.8rem;color:var(--muted);min-height:1.2em}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+ <header class="lede">
+  <h1>Rules Refactor, Phase 4: what waits for you</h1>
+  <p>Steps 16 to 19 are built. This page holds only what Claude could not do or decide alone. Nothing here is urgent, and nothing is deleted or changed until you pick.</p><p>Every bigger call Claude made without you is in the Decisions log of the Autopilot doc, each with how to undo it.</p>
+ </header>
+ <div class="bar"><span><strong id="done">0</strong> of <strong id="total">0</strong> decided</span><span class="status" id="status">Connecting…</span></div>
+ <main id="list" class="wrap" style="gap:24px"></main>
+</div>
+<script id="spec" type="application/json">{"title": "Rules Refactor, Phase 4: what waits for you", "description": "Everything from steps 16 to 19 that needs your hand or your call: 3 things to do, 2 calls, the project docs that can leave, and the memory cleanup.", "collection": "picks", "intro": ["Steps 16 to 19 are built. This page holds only what Claude could not do or decide alone. Nothing here is urgent, and nothing is deleted or changed until you pick.", "Every bigger call Claude made without you is in the Decisions log of the Autopilot doc, each with how to undo it."], "sections": [{"title": "Yours to do", "sub": "Only you can press these buttons.", "cards": [{"id": "1", "title": "Save the 4 skill cards", "rows": [["Where", "coach-gen-writer is in the first Phase 4 chat (11 Nov). The other 3 are in the chat of 11 to 15 Nov."], ["coach-gen-writer", "From 6,400 words to about 2,000. It loads a card from the rules table, lints every pass and runs the checkers once."], ["propose-language-rule", "It now also does the work of fold-article-lessons. A new rule must pass your test set before you see it, and is stored only on your go."], ["mine, extract-fathom", "Two lines each. Every new entry also keeps what the line answered, one line of context and the words the person owns."], ["After saving", "Delete fold-article-lessons and write-book-from-material in Settings, if they are still there."]], "options": [["done", "Saved"], ["later", "Later"], ["change", "Something is off (say what)"]], "placeholder": "Optional", "tag": "1"}, {"id": "2", "title": "Paste the new project instructions", "rows": [["Now", "They open with \"Coach Wibawa (Coach Gen), ICF-certified coach\" and repeat style rules that now live in the rules table."], ["Change", "10 lines: who you are, your stance, the marks, where the material and the rules live, how a draft is checked, the brand guide, the guardrails, the handoffs."], ["Why", "Every chat in the project reads them first. A rule repeated there drifts from the table."], ["Where", "The 10 lines are in the Autopilot doc, under \"Paste text for the project instructions\". Paste them over the old ones in the project settings."]], "options": [["done", "Pasted"], ["keep", "Keep the old ones"], ["change", "Change a line (say which)"]], "placeholder": "Which line, and how", "tag": "2"}, {"id": "3", "title": "Take the semicolon out of your account-level preferences", "rows": [["Now", "One line says: \"use period, comma, colon, semicolon, or parentheses instead\"."], ["Change", "The word \"semicolon\" comes out."], ["Why", "You banned semicolons everywhere on 4 Nov. Claude cannot edit account-level memory from inside this project."], ["How", "In any chat outside the project, say: update my preference, no semicolons either."]], "options": [["done", "Done"], ["later", "Later"]], "placeholder": "Optional", "tag": "3"}]}, {"title": "Your calls", "sub": "No pick from Claude on these.", "cards": [{"id": "4", "kind": "call", "title": "The locked line has two wordings. Which one, where?", "rows": [["Older", "\"You do not fail to make lasting change. You succeed at staying who you are.\""], ["Newer", "\"Every time you fail to make change, you succeed at staying who you are.\""], ["The newer one is in", "The rules table (Tier 0, locked lines) and Chapter 1 of the master draft."], ["The older one is in", "The brand guide (01_CORE, 02_VOICE, 18_COPY-KITS), the Social Posting Rules, 2 sample texts in the template script, and project memory."]], "options": [["new", "a. The newer one everywhere"], ["split", "b. The book keeps the newer one, the brand keeps the older one"], ["other", "c. Something else (say what)"]], "placeholder": "Optional", "tag": "4"}, {"id": "5", "kind": "call", "title": "The 5 Full Read Notes: about 137,300 tokens, a third of the project", "context": "The raw notes from the full read of Elements, Zinsser, Atomic Habits, Mindset and Courage. The two Findings docs and the taste tests stay either way.", "rows": [["For moving", "The writer loads the two Findings docs, and opens a Notes file only when a finding cites it. They are safe in the repo archive, byte for byte."], ["For keeping", "You called the research the most important context for writing to book standard. In the project, a chat can search them."]], "options": [["move", "a. Move them out"], ["keep", "b. Keep them"], ["mix", "c. Mix (say which)"]], "placeholder": "Optional", "tag": "5"}]}, {"title": "Project docs that can leave", "sub": "All 92 docs were looked at. 34 can go, about 260,500 of the 406,000 tokens. Every one is in the repo archive, and each is read fresh and compared before it is removed.", "cards": [{"id": "6-19", "title": "Replaced or finished: 14 docs, about 94,100 tokens", "items": ["Coach_Gen_Language_Rules.md, about 16,200 tokens. The old voice rules. The rules table replaces them.", "Coach_Gen_Book_Rules.md, about 15,400 tokens. The project copy of the old Book Rules. The rules table replaces it.", "Testimony_Mastertext_Collection.md, about 22,100 tokens. Client lines. All in the brain since 27 Oct.", "New_Material_21Oct.md, about 20,600 tokens. 175 mined pieces. All in the brain since 27 Oct.", "Brainstorm_Log.md, about 4,500 tokens. 65 brainstorm notes. All in the brain since 27 Oct.", "Fathom_Mined_Log.md, about 1,900 tokens. The brain's own record of each call replaces it.", "Main_Brain_Input_Handoff.md, about 1,600 tokens. Replaced by the Brain Mining handoff on 27 Oct.", "Full_Read_Progress.md, about 1,100 tokens. The checklist for the full read. Every box ticked on 5 Oct.", "Full_Read_Agent_Brief.md, about 2,700 tokens. The brief the reading helpers used. The read is over.", "Universal_Parser_Plan.md, about 2,600 tokens. The book parser is built. Its rules are in the repo and the Brain Rule.", "Concat_Trial_Handoff.md, about 1,300 tokens. The Concat trial of 21 Oct. Concat is in daily use now.", "Icebreaker_Video_Edit_Plan.md, about 1,600 tokens. The Icebreaker edit, delivered 27 Oct. Still open inside it: your pick for the end card.", "Icebreaker_Build_Log.md, about 1,300 tokens. Build notes for the same video. The method is in the Video Pipeline doc.", "Icebreaker_Brand_Restyle_Log.md, about 1,200 tokens. The 30 Oct restyle of the same video."], "options": [["go", "Go on all"], ["except", "Go, except the numbers in my note"], ["keep", "Keep them all"]], "placeholder": "Numbers to keep", "start": 6, "tag": "6 to 19"}, {"id": "20-23", "title": "The 4 Word uploads: only you can remove an upload", "items": ["5_Laws_Reference_Document.docx, about 3,900 tokens. The first reference document. The brain and the book draft replace it.", "Law1_Client_Worksheet.docx, about 400 tokens. Check that your Mac or Drive holds the real file first.", "Coach_Gen_Invoice_Template.docx, about 400 tokens. Check that the billing skill's copy on your Mac or Drive is safe first.", "Coach_Gen_Coaching_Agreement_DRAFT.docx, about 2,800 tokens. Still with the lawyer (task 19). Remove it only once the working draft is safe in Drive."], "options": [["done", "Removed"], ["later", "Later"], ["keep", "Keep some (say which)"]], "placeholder": "Numbers to keep", "start": 20, "tag": "20 to 23"}, {"id": "24-27", "kind": "call", "title": "Still useful to someone: 4 docs, about 11,800 tokens", "items": ["Brand_Direction_Phase1.md, about 3,500 tokens. Why each brand decision was made. For moving: the brand guide says agents never need to load it. For keeping: it is the only record of the reasons.", "Brain_RAG_Plan.md, about 3,100 tokens. The search plan, built on 27 Oct. For moving: the work is done. For keeping: the parked search tuning starts from it.", "AB_Test_Writing_Skills.md, about 2,500 tokens. The 19 Oct A/B method. For moving: its result is in the writer skill. For keeping: step 20 runs a new blind A/B and can reuse the method.", "Raw_Take_Edit_Plan_Jikoshoukai.md, about 2,700 tokens. The edit plan for the Japanese self-introduction video. For moving: it is one video. For keeping: the Indonesian for Japanese idea is parked, not dropped."], "options": [["move", "Move all"], ["keep", "Keep all"], ["mix", "Mix (numbers to move in my note)"]], "placeholder": "Numbers", "start": 24, "tag": "24 to 27"}, {"id": "28-34", "title": "Book notes from 20 to 27 Oct: check them against your Mac, then move", "context": "Each may hold something that never reached Book_Status.md on your Mac. A chat with the Mac linked checks first.", "items": ["Overnight_Book_Run_Ledger.md, about 1,200 tokens. Chapter ownership from the overnight run of 20 Oct.", "Book_Map_Continuity.md, about 1,300 tokens. The book map and the open questions per chapter from that run.", "Experimental_Book_Branch_Handoff.md, about 1,200 tokens. How to build the experimental branch of the book.", "Book_Edit_Full_Scope.md, about 1,000 tokens. The open list for the experimental book's edit (22 Oct).", "Book_Alpha_Handoff.md, about 1,200 tokens. The alpha booklet path (27 Oct). The Book Writing handoff is the current one.", "Persona_Impact_Notes.md, about 2,200 tokens. Thinking notes on the cast and the Keeper, with questions for you.", "Tool_Audit.md, about 1,700 tokens. The audit of every tool in the experimental draft."], "options": [["go", "Check, then move"], ["except", "Go, except the numbers in my note"], ["keep", "Keep them all"]], "placeholder": "Numbers to keep", "start": 28, "tag": "28 to 34"}, {"id": "35-40", "title": "Pointers that must move with the docs", "context": "Nothing live should still send a chat to a doc that left.", "items": ["Guardrails.md: its first line and one section still send every chat to the Language Rules. The new text is ready.", "The Protected Docs list: the rows for the Language Rules and the Book Rules get a dated line saying they moved out and where the history is.", "brand/00_START-HERE, brand/02_VOICE and the Content Rules: one added, dated line each, pointing sentence checks at the card. The brand guide is add-only, so you see the exact lines before they go in.", "The Toastmasters handoff: its material pointer goes from New_Material_21Oct to the brain.", "Two saved skills cite old rule numbers (rhyme-this, merge-epoch-to-book). They get the rule names the next time each is edited.", "If the Full Read Notes move (card 5): one line of the new coach-gen-writer points at the repo archive."], "options": [["go", "Go on all"], ["except", "Go, except the numbers in my note"]], "placeholder": "Numbers to hold", "start": 35, "tag": "35 to 40"}]}, {"title": "Project memory", "sub": "Writing rules leave. How you want Claude to work stays.", "cards": [{"id": "41", "title": "62 memory lines leave, about 30 stay", "rows": [["Now in a skill", "14 lines, such as \"resolve Google Doc comments when sure\" and \"the newer context wins\". They leave only after card 1 is done."], ["Now in the rules table", "33 lines, such as the Oxford comma, the list of three and \"never keep correcting a phrase he typed\". Each was checked against its rule."], ["History", "7 lines, such as the epoch scores. They are word for word in the calibration log."], ["Stale", "5 lines, such as \"Claude is a planning agent only\", which clashes with \"do tasks for me\"."], ["Newer", "3 lines from 5 and 11 Nov that are now in the rules table, or run out on 18 Nov."], ["Stays", "About 30 lines: concise replies, do tasks for you, numbered options, your English level, the decision page, and every fact about you, the 5 Laws and your projects."], ["Full list", "rules/step19/memory_dedupe.md in the Coach-Gen-Brain repo, 65 numbered lines."]], "options": [["go", "Go"], ["except", "Go, but keep some (say which)"], ["keep", "Keep everything"]], "placeholder": "What to keep", "tag": "41"}]}]}</script>
+<script>
+const SPEC = JSON.parse(document.getElementById('spec').textContent);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const list = document.getElementById('list');
+const CARDS = [];
+for (const s of SPEC.sections){
+  const sec = document.createElement('section'); sec.className = 'part';
+  sec.innerHTML = `<h2>${esc(s.title)}</h2>` + (s.sub ? `<p>${esc(s.sub)}</p>` : '');
+  list.appendChild(sec);
+  for (const c of s.cards){
+    CARDS.push(c);
+    const id = String(c.id);
+    const el = document.createElement('article'); el.className = 'card'; el.id = 'd-' + id;
+    let b = `<div class="head"><span class="tag ${esc(c.kind||'')}">${esc(c.tag)}</span><h2>${esc(c.title)}</h2></div>`;
+    if (c.context) b += `<p class="ctx">${esc(c.context)}</p>`;
+    if (c.rows && c.rows.length) b += `<dl class="rows">${c.rows.map(([k,v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+    if (c.items && c.items.length) b += `<ol class="items" start="${c.start}">${c.items.map(t => `<li>${esc(t)}</li>`).join('')}</ol>`;
+    if (c.said && c.said.length) b += `<div><h3>What you said</h3><ul class="said">${c.said.map(w => `<li>“${esc(w)}”</li>`).join('')}</ul></div>`;
+    b += `<div class="verdict"><h3>Your call</h3><div class="choices" role="radiogroup" aria-label="${esc(c.title)}">${c.options.map(([v,l]) => `<label><input type="radio" name="v-${id}" id="v-${id}-${esc(v)}" value="${esc(v)}"> <span>${esc(l)}</span></label>`).join('')}</div>
+      <textarea id="why-${id}" aria-label="Note for ${esc(c.title)}" placeholder="${esc(c.placeholder || 'Note (optional)')}"></textarea><p class="saved" id="saved-${id}"></p></div>`;
+    el.innerHTML = b; list.appendChild(el);
+  }
+}
+document.getElementById('total').textContent = CARDS.length;
+const state = {};
+function count(){ document.getElementById('done').textContent = Object.values(state).filter(s => s && s.call).length; }
+(async () => {
+  const st = document.getElementById('status');
+  let db = null;
+  try { db = await claude.use('db'); } catch (e) {}
+  if (!db){ st.textContent = 'Saving is unavailable in this view. Open the page signed in to claude.ai.'; return; }
+  const col = SPEC.collection || 'picks';
+  const timer = setTimeout(() => { st.textContent = 'Still loading your picks…'; }, 10000);
+  db.collection(col).onSnapshot(snap => {
+    clearTimeout(timer); st.textContent = 'Picks save as you go.';
+    for (const d of snap.docs){ const v = d.data(); state[d.id] = v;
+      const r = document.getElementById(`v-${d.id}-${v.call}`); if (r && !r.checked) r.checked = true;
+      const t = document.getElementById('why-' + d.id); if (t && document.activeElement !== t && v.why !== undefined) t.value = v.why; }
+    count();
+  }, err => { clearTimeout(timer); st.textContent = 'Could not load saved picks. Reload the page to try again.'; });
+  const busy = {}, again = {};
+  async function save(id){
+    if (busy[id]){ again[id] = true; return; }
+    busy[id] = true;
+    const call = (document.querySelector(`input[name="v-${id}"]:checked`) || {}).value || '';
+    const why = document.getElementById('why-' + id).value;
+    const msg = document.getElementById('saved-' + id);
+    try { await db.doc(col + '/' + id).set({call, why, at: new Date().toISOString()}); msg.textContent = 'Saved.'; state[id] = {call, why}; count(); }
+    catch (e){ msg.textContent = 'Not saved. ' + (e && e.message ? e.message : 'Try again.'); }
+    finally { busy[id] = false; if (again[id]){ again[id] = false; save(id); } }
+  }
+  for (const c of CARDS){
+    const id = String(c.id);
+    document.querySelectorAll(`input[name="v-${id}"]`).forEach(r => r.addEventListener('change', () => save(id)));
+    let t; document.getElementById('why-' + id).addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => save(id), 800); });
+  }
+})();
+</script>
