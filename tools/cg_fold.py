@@ -13,14 +13,16 @@ Commands:
   build SPEC|FOLD            check a fold spec and write rules/folds/<date>_<slug>.json.
                              Prints the proposal (what he must see) and the checkers it touches.
                              Run it again on the fold file after editing its "spec" part
-  gate FOLD --dir RUN [--all] [--origin DRAFT --origin-output OUT]
+  gate FOLD --dir RUN [--all] [--fresh R1.7,R1.19] [--origin DRAFT --origin-output OUT]
                              the test-set gate with the fold applied: the lint, and one batch
                              prompt per touched Tier 1 checker (--all: every checker).
-                             --origin adds the draft the lesson came from. It must fail
+                             --origin adds the draft the lesson came from. It must fail.
+                             --fresh throws away the saved answer of the named checkers (a rerun)
   result FOLD --dir RUN      after the helpers saved RUN/<code>.json: join them with the last
                              full run, print each case (expected, got, caught by) and write
                              the gate into the fold file
   approve FOLD [--on DATE]   record his go on the exact text. Only a gated fold can be approved
+  reopen FOLD                undo approve (never a stored fold), so the fold can be built and gated again
   decline FOLD N --note "…"  lesson N is out (his words in the note). The rest is rebuilt
   stored FOLD --md5 rulebook=… article=… letter=… chapter=… key_moments=… case_study=…
                              after brain.fold_store: mark it stored, rebuild the live files, check
@@ -116,6 +118,24 @@ def live_rows():
     return rows, stored
 
 
+def check_bases(rows, fold):
+    """A change or retire is built on one exact text of its target. If the live rule has
+    changed since (another fold was stored), this fold must be built again."""
+    body = {r["code"]: r["body"] for r in rows}
+    for fr in fold["rows"]:
+        if fr["action"] == "new":
+            continue
+        if fr["target"] not in body:
+            fail(f"{fr['code']}: {fr['target']} is no longer a live row. Build this fold again")
+        if cg_rules.md5(body[fr["target"]]) != fr.get("base_md5"):
+            fail(f"{fr['code']}: {fr['target']} has changed since this fold was built (another fold was stored). "
+                 "Run build on the fold file again, then gate again")
+        if fr["action"] == "change":
+            body[fr["target"]] = fr["body"]
+        else:
+            del body[fr["target"]]
+
+
 def check_rows(rows):
     """What brain.fold_store checks at the end, plus the text marks."""
     live = {r["code"]: r for r in rows}
@@ -196,7 +216,7 @@ def find_line(lines, wanted, what):
 
 def used_codes(rows, skip=None):
     codes = {r["code"] for r in cg_rules.load_rows(cg_rules.V3)} | {r["code"] for r in rows}
-    sorts = {r["sort"] for r in rows}
+    sorts = {r["sort"] for r in rows} | {r["sort"] for r in cg_rules.load_rows(cg_rules.V3)}
     for p in fold_files():
         f = read(p)
         mine = skip and p.resolve() == Path(skip).resolve()
@@ -220,12 +240,16 @@ def free_sort(rows, after_code, taken):
     cand = [s for s in range(lo + 1, hi) if s not in taken]
     if not cand:
         fail(f"no free place after {after_code}. The sort values there need a new migration to spread them")
+    if order[i + 1].get("frame"):
+        return cand[0]
     mid = (lo + hi) // 2
     return min(cand, key=lambda s: abs(s - mid))
 
 
 def evidence(lesson):
     ev = {k: lesson[k] for k in ("his_words", "support", "diagnosis", "why") if lesson.get(k)}
+    if not ev.get("why") or not (ev.get("his_words") or ev.get("support")):
+        fail("each lesson needs a why, and his_words or support: a rule rests on something he said or on a count")
     for q in ev.get("his_words", []):
         if not (q.get("quote") and q.get("on") and q.get("about")):
             fail("each his_words entry needs quote, on (the date) and about (what it was said about)")
@@ -257,7 +281,7 @@ def build_rows(spec, rows, path=None):
     codes, sorts = used_codes(rows, skip=path)
     date = spec["date"]
     out, card_loads = [], {}                    # card_loads: card code -> new loads, built up across lessons
-    order_rows, chain = [{"code": r["code"], "sort": r["sort"]} for r in rows], {}
+    order_rows, chain = [{"code": r["code"], "sort": r["sort"], "frame": r["kind"] != "rule"} for r in rows], {}
 
     def fold_code(target):
         for letter in "abcdefghijklmnopqrstuvwxyz":
@@ -283,6 +307,8 @@ def build_rows(spec, rows, path=None):
             lines = [clean_line(l, what) for l in lesson["lines"]]
             if not lines:
                 fail(f"{what}: a rule needs at least one line")
+            if lesson.get("code") and not lesson["code"].startswith(f"R{tier}."):
+                lesson.pop("code"); lesson.pop("sort", None)      # the tier was corrected: a new code and place
             code = lesson.get("code") or next_rule_code(tier, codes)
             codes.add(code)
             lesson["code"] = code
@@ -310,6 +336,9 @@ def build_rows(spec, rows, path=None):
                 check = lesson.get("check_type") or ("checker" if tier == 1 else None)
                 if check not in ("mechanical", "checker", "judgment"):
                     fail(f"{what}: a Tier 0 rule says its check_type: mechanical (the lint) or checker")
+            for l in lines:
+                if any("- " + l in r["body"].split("\n") for r in cand.values()):
+                    fail(f"{what}: another live rule already has the line \"{l[:60]}\"")
             row = {"lesson": n, "code": code, "action": "new", "target": None, "kind": "rule", "tier": tier,
                    "heading": heading, "body": "### " + heading + "\n" + "\n".join("- " + l for l in lines),
                    "sort": sort, "outputs": outputs, "check_type": check, "extends": None, "loads": [],
@@ -332,8 +361,10 @@ def build_rows(spec, rows, path=None):
             code = lesson.get("code") or fold_code(target)
             codes.add(code)
             lesson["code"] = code
+            if "tier" in lesson and lesson["tier"] != t["tier"]:
+                fail(f"{what}: a change keeps the rule's tier. To move a rule to another tier, retire it and add a new one")
             base = {"lesson": n, "code": code, "action": act, "target": target, "kind": t["kind"], "tier": t["tier"],
-                    "sort": None, "outputs": list(t["outputs"]), "check_type": t["check_type"],
+                    "base_md5": cg_rules.md5(t["body"]), "sort": None, "outputs": list(t["outputs"]), "check_type": t["check_type"],
                     "extends": t["extends"], "loads": list(t["loads"]), "beats": [target], "evidence": ev}
             if act == "retire":
                 if t["kind"] != "rule":
@@ -360,8 +391,8 @@ def build_rows(spec, rows, path=None):
                 changed.append(("remove", lines.pop(i)[2:], None))
             for x in lesson.get("add", []):
                 new = "- " + clean_line(x["line"], what)
-                if new in lines:
-                    fail(f"{what}: the rule already has that line")
+                if new in lines or any(new in r["body"].split("\n") for r in cand.values()):
+                    fail(f"{what}: a live rule already has that line: {new[2:62]}")
                 if x.get("first"):
                     i = 0
                 elif x.get("after"):
@@ -397,7 +428,7 @@ def build_rows(spec, rows, path=None):
             mine.update(loads=loads, body=body)
         else:
             out.append({"lesson": 0, "code": fold_code(cc), "action": "change", "target": cc, "kind": "card",
-                        "tier": None, "heading": card["heading"], "body": body, "sort": None,
+                        "base_md5": cg_rules.md5(by[cc]["body"]), "tier": None, "heading": card["heading"], "body": body, "sort": None,
                         "outputs": list(card["outputs"]), "check_type": None, "extends": card["extends"],
                         "loads": loads, "beats": [cc],
                         "evidence": {"why": "The Tier 2 rules this card loads changed in the same fold."}})
@@ -434,11 +465,21 @@ def show(fold, rows):
             for l in ol:
                 if l not in nl:
                     print("  - " + l[2:])
-            for l in nl:
+            for k, l in enumerate(nl):
                 if l not in ol:
-                    print("  + " + l[2:])
+                    print("  + " + l[2:] + ("   (after: " + nl[k - 1][2:50] + "...)" if k else "   (first line)"))
             if old["loads"] != fr["loads"]:
                 print(f"  loads: {', '.join(old['loads'])} -> {', '.join(fr['loads'])}")
+    for fr in fold["rows"]:
+        ev = fr.get("evidence", {})
+        if fr["lesson"] and (ev.get("his_words") or ev.get("support") or ev.get("diagnosis")):
+            print(f"\nBehind {fr['target'] or fr['code']}:")
+            for q in ev.get("his_words", []):
+                print(f"  his words ({q['on']}, {q['about']}): \"{q['quote']}\"")
+            for sup in ev.get("support", []):
+                print(f"  support: {sup}")
+            if ev.get("diagnosis"):
+                print(f"  diagnosis (Claude's reading, to confirm): {ev['diagnosis']}")
     t = touched(fold)
     print("\nCheckers this fold touches: " + (", ".join(t) if t else "none (no Tier 1 rule text changes)"))
     t0 = [fr for fr in fold["rows"] if fr["kind"] == "rule" and fr["tier"] == 0 and fr["check_type"] == "mechanical"]
@@ -479,6 +520,8 @@ def cmd_build(a):
     out = build_rows(spec, rows, path)
     if not out:
         fail("no lesson left to fold")
+    was = read(path)["rows"] if path.exists() else []
+    left = [r["code"] for r in was if r["code"] not in {x["code"] for x in out}]
     for r in out:
         r["fold_stage"], r["test_gate"] = stage, None
     fold = {"fold": name, "source": spec["source"], "added_on": spec["date"],
@@ -489,7 +532,9 @@ def cmd_build(a):
     cg_rules.FOLDS.mkdir(parents=True, exist_ok=True)
     write(path, fold)
     show(fold, rows)
-    print(f"\nok: {rel(path)}, stage {stage}. Commit and push, then: select * from brain.fold_load('{rel(path)}');")
+    for c in left:
+        print(f"\n{c} left this fold. If it was loaded in the brain: select brain.fold_decline('{c}', 'left the fold on rebuild');")
+    print(f"\nok: {rel(path)}, stage {stage}. Commit and push to main, then: select * from brain.fold_load('{rel(path)}');")
 
 
 # ---------- the gate ----------
@@ -518,9 +563,13 @@ def cmd_gate(a):
     run.mkdir(parents=True, exist_ok=True)
     (run / ".gitignore").write_text("*.prompt.md\nsrc/\n*/draft.md\ncheckers/\nrules_candidate.json\n", encoding="utf-8")
     rows, _ = live_rows()
+    check_bases(rows, fold)
     cand = apply_fold(rows, fold)
     check_rows(cand)
     write(run / "rules_candidate.json", {"rows": cand})
+    for c in [x.strip() for x in (a.fresh or "").split(",") if x.strip()]:
+        if (run / f"{c}.json").exists():
+            (run / f"{c}.json").unlink()
     env = run_env(run)
     code, outp = sh(["tests/rules/run_lint_on_testset.py"])
     print("lint on the test set: " + outp.splitlines()[-1])
@@ -548,7 +597,7 @@ def cmd_gate(a):
         man.append({"id": "ORIGIN", "output": a.origin_output, "draft": str(p)})
     write(run / "manifest_in.json", man)
     meta = {"fold": fold["fold"], "rerun": rerun, "all": bool(a.all), "base": None if a.all else base_dir().name,
-            "origin": bool(a.origin), "body_md5": {r["code"]: cg_rules.md5(r["body"]) for r in fold["rows"]}}
+            "origin": bool(a.origin), "live_md5": cg_rules.md5(cg_rules.rulebook_text(rows)), "body_md5": {r["code"]: cg_rules.md5(r["body"]) for r in fold["rows"]}}
     write(run / "gate.json", meta)
     if not rerun:
         print("No Tier 1 rule text changes, so no checker is rerun. Next: cg_fold.py result FOLD --dir " + rel(run))
@@ -577,6 +626,8 @@ def cmd_gate(a):
 
 def cmd_result(a):
     fold = read(a.fold)
+    if fold.get("approved_on"):
+        fail("this fold is already approved")
     run = Path(a.dir).resolve()
     meta = read(run / "gate.json")
     if meta["body_md5"] != {r["code"]: cg_rules.md5(r["body"]) for r in fold["rows"]}:
@@ -600,7 +651,7 @@ def cmd_result(a):
     base = RUNS / meta["base"] if meta["base"] else None
     os.environ.update(CG_RULES=env["CG_RULES"], CG_CHECKERS=env["CG_CHECKERS"])
     import cg_check
-    rows_out, wrong, caught_by = [], 0, {}
+    rows_out, wrong, caught_by, flips = [], 0, {}, []
     for m in man:
         d = run / m["id"]
         if m["id"] == "ORIGIN":
@@ -618,11 +669,22 @@ def cmd_result(a):
             for stale in d.glob("R1.*.json"):
                 if stale.stem not in heads:
                     stale.unlink()
+            for c in meta["rerun"]:
+                old = base / m["id"] / f"{c}.json" if base else None
+                if old and old.exists():
+                    v0 = cg_check.parse_verdict(old.read_text(encoding="utf-8"), c)["verdict"]
+                    v1 = cg_check.parse_verdict((d / f"{c}.json").read_text(encoding="utf-8"), c)["verdict"]
+                    if v0 != v1:
+                        flips.append(f"{c} on {m['id']}: {v0} before, {v1} now")
             with contextlib.redirect_stdout(io.StringIO()):
                 res = cg_check.cmd_collect(argparse.Namespace(dir=str(d), draft=None, output=None))
             rep = read(d / "report.json")
             who = (["lint"] if rep["lint"] else []) + [v["rule"] for v in rep["checkers"] if v["verdict"] == "fail"]
             got, exp = res.lower(), ("fail" if m["id"].startswith("F") else "pass")
+            if got == "incomplete":
+                fail(f"{m['id']}: a helper answer is missing or unreadable ("
+                     + ", ".join(v["rule"] for v in rep["checkers"] if v["verdict"] not in ("pass", "fail"))
+                     + "). This is not a rule problem. Run that helper again, save its answer, and run result again")
         ok = got == exp
         wrong += not ok
         caught_by[m["id"]] = who
@@ -634,6 +696,10 @@ def cmd_result(a):
     print(f"{'Case':7} {'Expected':9} {'Got':11} {'':6} Caught by")
     for r in rows_out:
         print(f"{r[0]:7} {r[1]:9} {r[2]:11} {r[3]:6} {r[4]}")
+    if flips:
+        print("Changed since the last full run (look at each, even when the case still comes out right):")
+        for f in flips:
+            print("  " + f)
     if wrong:
         print("\nGATE FAILED. Either the wording is wrong, or a checker misreads the rule. For a misread, add a note to "
               "rules/checkers/calibration.json that names the case and comes from his verdict on it, then run gate "
@@ -641,25 +707,48 @@ def cmd_result(a):
         sys.exit(1)
     gate = {"on": today(), "run": rel(run), "base": meta["base"], "rerun": meta["rerun"],
             "fails_caught": f"{fails} of {fails}", "passes_kept": f"{passes} of {passes}", "lint": "all as expected",
-            "caught_by": {k: v for k, v in caught_by.items() if v}}
+            "caught_by": {k: v for k, v in caught_by.items() if v}, "flips": flips, "live_md5": meta.get("live_md5")}
     for r in fold["rows"]:
         r["fold_stage"], r["test_gate"] = "gated", gate
     write(a.fold, fold)
-    print(f"\nok: gated. Commit and push, then: select * from brain.fold_load('{rel(a.fold)}');")
+    print(f"\nok: gated. Commit and push to main, then run this again (the brain must hold the gated text): "
+          f"select * from brain.fold_load('{rel(a.fold)}');")
 
 
 # ---------- his go, and after ----------
 
 def cmd_approve(a):
     fold = read(a.fold)
+    if fold.get("approved_on"):
+        fail(f"already approved on {fold['approved_on']}. To change it, run reopen")
     if any(r["fold_stage"] != "gated" or not r["test_gate"] for r in fold["rows"]):
         fail("only a gated fold can be approved. Run gate and result first")
+    rows, _ = live_rows()
+    check_bases(rows, fold)
+    if fold["rows"][0]["test_gate"].get("live_md5") != cg_rules.md5(cg_rules.rulebook_text(rows)):
+        fail("the live rules changed after this fold was gated (another fold was stored). Run gate and result again")
+    if a.on and a.on > today():
+        fail("the date of his go cannot be in the future")
     fold["approved_on"] = a.on or today()
     for r in fold["rows"]:
         r["fold_stage"] = "approved"
     write(a.fold, fold)
     print(f"ok: approved on {fold['approved_on']}. Commit and push, then, on his go only:\n"
           f"  select * from brain.fold_store('{rel(a.fold)}');")
+
+
+def cmd_reopen(a):
+    fold = read(a.fold)
+    if fold.get("stored_on"):
+        fail("this fold is stored. A further change is a new fold")
+    if not fold.get("approved_on"):
+        fail("this fold is not approved, so there is nothing to reopen")
+    fold["approved_on"] = None
+    for r in fold["rows"]:
+        r["fold_stage"], r["test_gate"] = "merged", None
+    write(a.fold, fold)
+    print(f"ok: reopened. Nothing changed in the brain. Next: build {rel(a.fold)} (if the text changes), gate, result, "
+          "push, brain.fold_load, then his go again.")
 
 
 def cmd_decline(a):
@@ -679,7 +768,12 @@ def cmd_decline(a):
         print(f"  in the brain, if it was loaded: select brain.fold_decline('{r['code']}', '{a.note.replace(chr(39), chr(39) * 2)}');")
     if any(not l.get("declined") for l in lessons):
         cmd_build(argparse.Namespace(spec=a.fold))
+        print("The fold changed, so the gate must run again (answers to unchanged prompts are kept).")
     else:
+        for r in fold["rows"]:
+            print(f"  also, if loaded: select brain.fold_decline('{r['code']}', 'its lesson was declined');")
+        fold["rows"] = []
+        write(a.fold, fold)
         print("No lesson left in this fold.")
 
 
@@ -687,10 +781,11 @@ def cmd_stored(a):
     fold = read(a.fold)
     if not fold.get("approved_on"):
         fail("not approved")
-    if fold.get("stored_on"):
-        fail("already marked stored")
+    again = bool(fold.get("stored_on"))
     brain = {}
     for kv in a.md5:
+        if "=" not in kv:
+            fail("give each md5 as key=value, for example rulebook=abc123")
         k, v = kv.split("=", 1)
         if k not in MD5_KEYS:
             fail(f"unknown md5 key {k}. Use: " + ", ".join(MD5_KEYS))
@@ -698,18 +793,19 @@ def cmd_stored(a):
     if set(brain) != set(MD5_KEYS.values()):
         fail("give all six md5 values that brain.fold_store returned: " + ", ".join(MD5_KEYS))
     before = Path(a.fold).read_text(encoding="utf-8")
-    seqs = [read(p).get("stored_seq") or 0 for p in fold_files()]
-    fold["stored_on"], fold["stored_seq"] = today(), max(seqs + [0]) + 1
-    for r in fold["rows"]:
-        r["fold_stage"] = "stored"
-    write(a.fold, fold)
+    if not again:
+        seqs = [read(p).get("stored_seq") or 0 for p in fold_files()]
+        fold["stored_on"], fold["stored_seq"] = today(), max(seqs + [0]) + 1
+        for r in fold["rows"]:
+            r["fold_stage"] = "stored"
+        write(a.fold, fold)
     rows, mine = cmd_live(quiet=True)
     bad = [k for k in brain if brain[k] != mine[k]]
     if bad:
         Path(a.fold).write_text(before, encoding="utf-8")
         cmd_live(quiet=True)
-        fail("the repo and the brain disagree on: " + ", ".join(bad) + ". Nothing was marked stored. "
-             "Compare select brain.rulebook_text() with a rebuild before going on")
+        fail("the repo and the brain disagree on: " + ", ".join(bad) + ". The brain HAS stored this fold. "
+             "The repo file is not marked stored. Compare select brain.rulebook_text() with a rebuild before going on")
     print("ok: the live files equal the brain (rulebook and all five cards, md5 for md5)")
     args = ["rules/table/compile_cards.py", "rules/table/cards", "--brain-md5"] + [f"{k}={brain[v]}" for k, v in MD5_KEYS.items() if k != "rulebook"]
     code, outp = sh(args)
@@ -754,14 +850,17 @@ def main():
     g.add_argument("fold")
     g.add_argument("--dir", required=True)
     g.add_argument("--all", action="store_true")
+    g.add_argument("--fresh", default="")
     g.add_argument("--origin")
-    g.add_argument("--origin-output")
+    g.add_argument("--origin-output", choices=["article", "letter", "chapter", "chapter-excerpt", "key-moments", "case-study"])
     r = sub.add_parser("result")
     r.add_argument("fold")
     r.add_argument("--dir", required=True)
     ap_ = sub.add_parser("approve")
     ap_.add_argument("fold")
     ap_.add_argument("--on")
+    ro = sub.add_parser("reopen")
+    ro.add_argument("fold")
     d = sub.add_parser("decline")
     d.add_argument("fold")
     d.add_argument("lesson", type=int)
@@ -772,7 +871,7 @@ def main():
     sub.add_parser("live")
     sub.add_parser("status")
     a = ap.parse_args()
-    {"build": cmd_build, "gate": cmd_gate, "result": cmd_result, "approve": cmd_approve, "decline": cmd_decline,
+    {"build": cmd_build, "gate": cmd_gate, "result": cmd_result, "approve": cmd_approve, "reopen": cmd_reopen, "decline": cmd_decline,
      "stored": cmd_stored, "live": cmd_live, "status": cmd_status}[a.cmd](a)
 
 

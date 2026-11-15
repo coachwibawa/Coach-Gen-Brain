@@ -25,15 +25,15 @@ SPEC = {
          "why": "self-test",
          "his_words": [{"on": "11 Nov 2026", "about": "a made-up draft", "quote": "made-up words"}]},
         {"action": "new", "tier": 1, "heading": "Selftest rule one", "after": "R1.7",
-         "lines": ["SELFTEST the goal of this made-up rule.", "SELFTEST its test."], "why": "self-test"},
+         "lines": ["SELFTEST the goal of this made-up rule.", "SELFTEST its test."], "why": "self-test", "support": ["made up"]},
         {"action": "new", "tier": 1, "heading": "Selftest rule two", "after": "R1.7",
-         "lines": ["SELFTEST second new rule after the same rule."], "why": "self-test"},
+         "lines": ["SELFTEST second new rule after the same rule."], "why": "self-test", "support": ["made up"]},
         {"action": "new", "tier": 2, "heading": "Selftest polish, in full", "short": "Selftest polish", "after": "R2.6",
-         "cards": ["article", "chapter"], "lines": ["SELFTEST a polish line."], "why": "self-test"},
-        {"action": "retire", "target": "R2.5", "why": "self-test: raw emotion leaves"},
-        {"action": "change", "target": "card:case-study", "add": [{"line": "SELFTEST a new card line."}], "why": "self-test"},
+         "cards": ["article", "chapter"], "lines": ["SELFTEST a polish line."], "why": "self-test", "support": ["made up"]},
+        {"action": "retire", "target": "R2.5", "why": "self-test: raw emotion leaves", "support": ["made up"]},
+        {"action": "change", "target": "card:case-study", "add": [{"line": "SELFTEST a new card line."}], "why": "self-test", "support": ["made up"]},
         {"action": "new", "tier": 0, "heading": "Selftest hard line", "check_type": "checker",
-         "lines": ["SELFTEST never this."], "why": "self-test, declined below"},
+         "lines": ["SELFTEST never this."], "why": "self-test, declined below", "support": ["made up"]},
     ],
 }
 
@@ -150,10 +150,51 @@ def main():
     out = run(tmp, "tools/cg_fold.py", "build", str(fold), ok=False)
     check("approved" in out, "an approved fold cannot be rebuilt")
     # a second fold builds on the first
-    spec2 = dict(SPEC, slug="selftest-two", lessons=[{"action": "change", "target": "R1.21", "add": [{"line": "SELFTEST second fold."}], "why": "self-test"}])
+    spec2 = dict(SPEC, slug="selftest-two", lessons=[{"action": "change", "target": "R1.21", "add": [{"line": "SELFTEST second fold."}], "why": "self-test", "support": ["made up"]}])
     spec.write_text(json.dumps(spec2), encoding="utf-8")
     out = run(tmp, "tools/cg_fold.py", "build", str(spec))
     check("CHANGE R1.21" in out, "a second fold can change a rule the first one added")
+    # two folds on one rule: the second must be rebuilt once the first is stored
+    def spec_for(slug, line, **extra):
+        spec.write_text(json.dumps(dict(SPEC, slug=slug, lessons=[dict({"action": "change", "target": "R2.1", "add": [{"line": line}],
+                                                                    "why": "self-test", "support": ["made up"]}, **extra)])), encoding="utf-8")
+        run(tmp, "tools/cg_fold.py", "build", str(spec))
+        return tmp / f"rules/folds/2026-11-11_{slug}.json"
+    fx, fy = spec_for("selftest-x", "SELFTEST fold x."), spec_for("selftest-y", "SELFTEST fold y.")
+    rx, ry = tmp / "tests/rules/runs/selftest_x", tmp / "tests/rules/runs/selftest_y"
+    for f_, r_ in ((fx, rx), (fy, ry)):
+        run(tmp, "tools/cg_fold.py", "gate", str(f_), "--dir", str(r_))
+        run(tmp, "tools/cg_fold.py", "result", str(f_), "--dir", str(r_))
+    run(tmp, "tools/cg_fold.py", "approve", str(fx))
+    out = run(tmp, "tools/cg_fold.py", "approve", str(fx), ok=False)
+    check("already approved" in out, "a second approve says it is already approved")
+    run(tmp, "tools/cg_fold.py", "reopen", str(fx))
+    check(json.loads(fx.read_text())["rows"][0]["fold_stage"] == "merged", "reopen takes an approved fold back to merged")
+    run(tmp, "tools/cg_fold.py", "gate", str(fx), "--dir", str(rx))
+    run(tmp, "tools/cg_fold.py", "result", str(fx), "--dir", str(rx))
+    run(tmp, "tools/cg_fold.py", "approve", str(fx))
+    import importlib
+    live_now = cg_fold.apply_fold(cg_rules.load_rows(tmp / "rules/table/rules_live.json"), json.loads(fx.read_text()))
+    w = cg_rules.all_md5(live_now)
+    run(tmp, "tools/cg_fold.py", "stored", str(fx), "--md5", *[f"{k}={w[v]}" for k, v in keys.items()])
+    out = run(tmp, "tools/cg_fold.py", "approve", str(fy), ok=False)
+    check("has changed since this fold was built" in out, "a fold built on the old text of a rule is refused once another fold changed that rule")
+    out = run(tmp, "tools/cg_fold.py", "build", str(fy))
+    check("SELFTEST fold x." in json.loads(fy.read_text())["rows"][0]["body"], "built again, it keeps the first fold's line")
+    # a corrected tier gets a new code, a used sort is never given again, a line cannot stand twice
+    spec.write_text(json.dumps(dict(SPEC, slug="selftest-z", lessons=[{"action": "new", "tier": 1, "heading": "Selftest z", "lines": ["SELFTEST z."], "why": "t", "support": ["s"]}])), encoding="utf-8")
+    run(tmp, "tools/cg_fold.py", "build", str(spec))
+    fz = tmp / "rules/folds/2026-11-11_selftest-z.json"
+    z = json.loads(fz.read_text()); z["spec"]["lessons"][0].update(tier=2, cards=["chapter"]); fz.write_text(json.dumps(z))
+    run(tmp, "tools/cg_fold.py", "build", str(fz))
+    z = json.loads(fz.read_text())["rows"][0]
+    check(z["code"].startswith("R2.") and z["tier"] == 2 and 330 < z["sort"] < 440 and z["sort"] != 370, "a corrected tier gets a Tier 2 code and place, and never the retired rule's sort")
+    spec.write_text(json.dumps(dict(SPEC, slug="selftest-dup", lessons=[{"action": "change", "target": "R1.3", "add": [{"line": "SELFTEST fold x."}], "why": "t", "support": ["s"]}])), encoding="utf-8")
+    out = run(tmp, "tools/cg_fold.py", "build", str(spec), ok=False)
+    check("already has that line" in out, "a line that stands in another rule is refused")
+    spec.write_text(json.dumps(dict(SPEC, slug="selftest-bare", lessons=[{"action": "change", "target": "R1.3", "add": [{"line": "SELFTEST bare."}]}])), encoding="utf-8")
+    out = run(tmp, "tools/cg_fold.py", "build", str(spec), ok=False)
+    check("needs a why" in out, "a lesson with no why and no support is refused")
     print("\nself-test: every check passed")
     if "--keep" in sys.argv:
         print(tmp)
