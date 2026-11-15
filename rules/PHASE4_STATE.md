@@ -37,3 +37,21 @@ Saved in a hurry, on his word ("save before hitting limit"). This file is NEWER 
 ## What waits for him
 
 Everything is on the decision page: save 4 skill cards, paste the 10 lines, fix the semicolon line in his account-level preferences, 2 calls (the locked line, the Full Read Notes), the go on the docs list and the go on the memory list.
+
+## 16 Nov, 01:40: he handed the calls to Claude
+
+His words: "seems everything is arbitrary decisions with obvious calls on what is better. if it's something I have to do, like skill cards etc, say it again or propose it again so I never have to dig old turns." Saved to project memory.
+
+All 4 skill cards are SAVED (checked against the installed skills on 16 Nov): coach-gen-writer, propose-language-rule, mine, extract-fathom. One small card is open: one line added to coach-gen-writer on how to read `answers`, `context` and `owned_words` (proposed 16 Nov).
+
+Claude's calls on the decision page, to carry out in the next chat (each doc read fresh and compared with its archive copy before it is removed, newer versions archived first):
+
+1. Card 4, the locked line: the newer wording everywhere. He approved it as the locked line in rulebook v3. Add the dated CORRECTION lines to the brand docs and the Social Posting Rules, and fix `overview.md` in project memory.
+2. Card 5, the Full Read Notes: move out. The writer skill then points at the repo archive.
+3. Cards 6 to 19: remove all 14.
+4. Cards 24 to 27: move Brand_Direction_Phase1 and Brain_RAG_Plan. Keep AB_Test_Writing_Skills until step 20 is done, and keep Raw_Take_Edit_Plan_Jikoshoukai (that idea is parked, not dropped).
+5. Cards 28 to 34: check each against Book_Status.md on his Mac, then move.
+6. Cards 35 to 40: all pointer fixes, with Guardrails written once he has pasted the instructions.
+7. Card 41: the memory cleanup as listed. The cards are saved, so group A can go too.
+
+Still his, because only he can: paste the 10 lines into the project settings, take "semicolon" out of his account-level preference, remove the 4 Word uploads, delete fold-article-lessons and write-book-from-material in Settings if they still show, save the one-line writer card.

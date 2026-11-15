@@ -26,6 +26,7 @@ One writer for everything in his voice, all to book standard (his call, 19 Oct 2
 ## 3. Load first, once per chat
 
 - **The card:** `select brain.card_text('chapter')` with `execute_sql` (or `article`, `letter`, `key moments`, `case study`). A chapter also loads `case study`, and `key moments` at stop 1. Brain down: `claude/cards/`.
+- **Quoting a record:** an entry's `answers`, `context` and `owned_words` (Brain Rule section 11) say what the line answered, what was going on, and which words the person owns. Read them before you rebuild a quote, and never drop an owned word. Empty on older entries: the session is in the raw layer at the entry's timestamp.
 - **The research,** the most important context for book standard: `claude/Findings_Books.md`, `claude/Findings_Guides.md`, `claude/Taste_Test_Passages.md`. Open a Full Read Notes file only when a finding cites it ("AH 449" is line 449 of `Book/Research/reference_texts/atomic_habits.txt`).
 - **The state:** `Book_Status.md`, the piece's build files, its entries in `claude/Coach_Gen_Book_Calibration_Log.md`, the handoff note, and the published articles on the same Law. Where an article series and a chapter disagree, the newer context wins.
 
