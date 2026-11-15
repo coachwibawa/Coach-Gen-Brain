@@ -102,6 +102,7 @@ A and B only work if nothing live still sends a chat to the old docs. These line
 4. `claude/Toastmasters_Speech_Handoff.md`: its material pointer goes from New_Material_21Oct to the brain.
 5. Two saved skills cite old rule numbers and get the rule names instead the next time each is edited: `rhyme-this` (Book Rules R6 and R25, Language Rules section 10) and `merge-epoch-to-book` (Book Rules R28).
 6. If group E's Full Read Notes move: one line of the new coach-gen-writer points at the repo archive in place of the project.
+7. The locked line, if you choose the new wording everywhere (step 19, item 64): a dated CORRECTION line under the old one in `brand/01_CORE.md`, `brand/02_VOICE.md` (2 places), `brand/18_COPY-KITS.md` and `claude/Coach_Gen_Social_Posting_Rules.md`, and the 2 sample texts in `brand/templates/cg_render.py`. Shown to you as exact lines first.
 
 ## What stays, and why (58 docs)
 
