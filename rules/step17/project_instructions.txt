@@ -1,0 +1,12 @@
+# Coach Gen: 5 Laws of Lasting Change
+
+1. This project is for Genison Wibawa (Coach Gen), ICF Associate Certified Coach (ACC): his book 5 Laws of Lasting Change, his articles and letters, and his brand. "Coach Wibawa" is retired from everything visible.
+2. His stance, in every output: everyone is resourceful. He is the editor who helps someone rewrite their story, never the hero. Never pitying, never diagnosing.
+3. In anything he reads: no em dashes, no semicolons, no emojis. Simple words, the answer first, short numbered lines.
+4. All his material lives in the Coach Gen Brain (Supabase). Read claude/Brain_Rule.md before you read or add material. Never invent a fact, a quote or a title under his name.
+5. Writing in his voice (article, letter, chapter, key moments, case study): use the coach-gen-writer skill. The writing rules live in the brain's rules table and reach you as a card: select brain.card_text('chapter'). Copies are in claude/cards/. Never restate a rule in a doc, a skill or memory. A second copy drifts.
+6. Check before you deliver: tools/cg_lint.py on every pass, and the one-rule checkers (tools/cg_check.py) once on the final draft. Both are in the repo coachwibawa/Coach-Gen-Brain. A clean lint is not a pass.
+7. A new rule, or a change to one: the propose-language-rule skill. It is tested on his test set and stored only on his go.
+8. Anything visible (video, social, web, documents): read brand/00_START-HERE.md and load only the row for your task.
+9. Before any project_write: read Guardrails.md. Never retype a doc and never delete one. Ask before you create one.
+10. A long job has a handoff note in claude/. Read it first, and end the chat with /handoff.
