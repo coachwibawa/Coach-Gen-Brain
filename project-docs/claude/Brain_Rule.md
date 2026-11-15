@@ -172,5 +172,5 @@ This section adds to sections 3, 4 and 6. Nothing above it changed.
 
 **Reading them (writing).**
 - `brain.entries_full` ends with `answers`, `context` and `owned_words`.
-- Entries mined before 11 Nov 2026 have them empty. For those, the session around the line is in the raw layer: the source's document in `brain.documents`, at the entry's timestamp.
-- The text of an entry is frozen, but these three fields are not. They can be added to an older entry later with an update, which is logged in `brain.change_log`.
+- Older entries have them empty: every entry mined before 11 Nov 2026, and any mined after it by a chat still running the older mine or extract-fathom skill. An empty `answers` there does not mean the line answered nothing. For those, the session around the line is in the raw layer: the source's document in `brain.documents`, at the entry's timestamp.
+- The text of an entry is frozen, but these three fields are not. They can be added to an older entry later, or corrected, from the transcript only, with an update that is logged in `brain.change_log`. Never empty a field that is filled.

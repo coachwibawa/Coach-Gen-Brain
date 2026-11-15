@@ -33,7 +33,7 @@ Size per card at about 4 characters a token: article 5,050, letter 5,360, chapte
 
 ## The card compiler (step 10)
 
-- `python3 rules/table/compile_cards.py rules/table/cards --brain-md5 article=... letter=... chapter=... key_moments=... case_study=...` builds the five cards from `rules_v3.json` (the file loaded into `brain.rules`), picking rows the way `brain.get_card()` does.
+- `python3 rules/table/compile_cards.py rules/table/cards --brain-md5 article=... letter=... chapter=... key_moments=... case_study=...` builds the five cards from the live rules (`rules_live.json` once a fold is stored, else `rules_v3.json`, the file loaded into `brain.rules`), picking rows the way `brain.get_card()` does.
 - It fails the run if any card line is not a line of `rulebook_v3.txt` word for word and in the same order, if a card's md5 differs from the md5 of `brain.card_text()` read from the live brain, or if any rule or card row is never served.
 - Output: `rules/table/cards/Card_Article.md`, `Card_Letter.md`, `Card_Chapter.md`, `Card_Key_Moments.md`, `Card_Case_Study.md` and `MANIFEST.md5`.
 - Copies: the project (`claude/cards/`) and his Mac (`Book/Rule Cards/` in the 5 Laws of Lasting Change folder). Both are overwritten by a rebuild, never edited by hand.

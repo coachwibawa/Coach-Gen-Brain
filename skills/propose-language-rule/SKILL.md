@@ -9,6 +9,8 @@ By "language rule" he means any rule that gets better by going through drafting 
 
 A lesson climbs six stages: **captured, judged, merged, gated, approved, stored.** It ends as a few strong lines in the right place, shown to him once in full, and stored only on his go.
 
+Three words used below. A **fold** is one round of feedback turned into rule changes, kept as one file. A **spec** is the short JSON you write to describe it. The **gate** is the test of the changed rules on his test set.
+
 ## 0. Where rules live
 
 - **The writing rules** (everything written in his voice: articles, letters, chapters, key moments, case studies) live in one table, `brain.rules`, in the Coach Gen Brain (Supabase, ref from `list_projects`). Tier 0 and Tier 1 fail a draft. Tier 2 is polish and never fails one. Five cards hold what belongs to one output. The card files in the project (`claude/cards/`) and on his Mac (`Book/Rule Cards/`) are compiled copies, never edited by hand.
@@ -16,6 +18,7 @@ A lesson climbs six stages: **captured, judged, merged, gated, approved, stored.
 - **Other rule docs** (Social Posting Rules, Content Rules, Reel Style Guide, the `brand/` docs): section 9.
 - **A lesson about process** (which step, which file, when to ask) is not a rule. It goes into the skill that runs that process, through `propose_skills`. How he wants Claude to work with him goes to project memory.
 - **Tools:** clone `coachwibawa/Coach-Gen-Brain` with push access (add_repo). `tools/cg_fold.py` runs the file side. Read `rules/folds/README.md` before the first fold of a chat: it has every command and the spec format.
+- Pull the repo before every `build`. The brain reads the repo's `main` branch, so every push goes to `main`.
 
 ## 1. Capture
 
@@ -33,7 +36,7 @@ Sort every note:
 - **His explicit rule:** he said "rule", "make this a rule", "general rule". Always a candidate.
 - **Praise with a reason:** "I like X", with the thing named. A candidate, worded as a pattern to reach for (Tier 2), never a required shape.
 - **Observation:** an edit with no reason, a word swap, a fact decided for one piece. Never a rule. What he typed is a keeper line for that piece, word for word. List the observations in one line at the end.
-- **Declined before:** `select heading, body, retired_note from brain.rules where retired_note like 'Declined%';`. Never bring one back.
+- **Declined before:** never bring one back. Look in three places: `python3 tools/cg_fold.py status` (declined lessons), `select heading, body, retired_note from brain.rules where retired_note like 'Declined%' or retired_note like 'Retired%';`, and the rules he cut on 5 Nov (`rules/inventory/inventory.psv`, action `cut`).
 
 Three tests for every candidate:
 
@@ -67,7 +70,9 @@ Place it by tier. Tier 0: a hard line never crossed in a delivered draft. Tier 1
   - The rule's lines stand without the quote.
 - **Something he offered to do himself** is worded as something to try, not left to him.
 - **His options:** when he gave several ways out and has not picked, list them in his words. No pick from Claude.
-- **Your diagnosis:** when the rule rests on your reading of why something failed, say so in `diagnosis` ("Claude's reading, to confirm on the next draft").
+- **Support:** what was counted or found in the books goes in `support`, with the lines looked at. Where the support is weak, say so there.
+- **Your diagnosis:** when the rule rests on your reading of why something failed, say so in `diagnosis` ("Claude's reading, to confirm on the next draft"). When he reacts on a later draft, write "confirmed" or "wrong" with the date in the piece's markup log, and carry it into the evidence of the next fold that touches the rule.
+- **Every lesson needs** a `why`, and `his_words` or `support`. The tool refuses a lesson without them.
 - **Mechanics:** no em dashes, no semicolons, British spelling, Oxford comma.
 
 ## 5. Gate on the test set
@@ -78,24 +83,32 @@ A fold must leave every fail case failing and every approved passage passing (`t
 2. `python3 tools/cg_fold.py gate FOLD --dir tests/rules/runs/<name>`. When the lesson came from a draft he failed, add `--origin DRAFT --origin-output chapter`: the changed rule must fail that draft.
 3. One Sonnet helper per prompt the gate names, each saving its JSON answer where the gate says. Only the checkers the fold touches run, at about 90,000 tokens each in a chat. Add `--all` only when he says tokens are no concern.
 4. `python3 tools/cg_fold.py result FOLD --dir <same>`. Show him the table it prints: each case, expected, got, caught by.
-5. **If the gate fails:** the wording is wrong, or the checker misreads the rule. For a misread, add a note to `rules/checkers/calibration.json` that names the case and comes from his verdict on it, run `gate` again, and rerun that checker twice before calling it held. A note never changes rule text.
-6. A Tier 2 rule or a card line reruns no checker. A Tier 0 rule the script can see needs `tools/cg_lint.py` changed to match first. Every gate runs the lint on the whole test set.
-7. Commit, push, and run `brain.fold_load` again, so the table holds the gated text.
+5. **If the gate fails:** the wording is wrong, or the checker misreads the rule. For a misread, add a note to `rules/checkers/calibration.json` that names the case and comes from his verdict on it, then run `gate` again. A note never changes rule text.
+6. **A note that fixes a flip is held only after two more runs:** `gate FOLD --dir <same> --fresh R1.x`, the helper, `result`, and the same again.
+7. `result` also lists every checker answer that changed since the last full run. Look at each one, even when the case still comes out right: a rule that stopped catching a fail case is a finding.
+8. If `result` says a helper answer is missing or unreadable, run that helper again. That is never a rule problem and never a reason for a note.
+9. A Tier 2 rule or a card line reruns no checker. A Tier 0 rule the script can see needs `tools/cg_lint.py` changed to match first. Every gate runs the lint on the whole test set.
+10. A Tier 0 rule that is judged against his records (true material, built details, the quote lines, his stance) has no checker. Its test is his own verdict on one named draft: put that verdict in `his_words`, and say in the proposal that no script tested it.
+11. Commit, push, and run `brain.fold_load` again, so the table holds the gated text. Skipping this makes the store refuse.
 
 ## 6. Show it once
 
 One message he can take in at a glance: short numbered lines, never a dense paragraph. Each chat reply starts its numbers at 1.
 
-1. Each lesson: the rule's name and tier, then its new or changed lines in full final wording. For a reworded line, the old line beside the new one.
+1. Each lesson: the rule's name and tier, then its new or changed lines in full final wording, and the line each new one comes after. For a reworded line, the old line beside the new one. Under it, what the lesson rests on: his words with their date and what they were said about, the support, and your diagnosis if there is one. `build` prints all of this.
 2. The gate in one line: fails caught, approved passages kept, checkers rerun.
 3. One line of observations, with no rules attached.
 4. "Go?"
 
-Never summarise instead of showing the text. If he corrects a line, edit the `spec` part of the fold file, run `build` on the fold file, gate again (answers to unchanged prompts are kept) and show only the changed lines. When he has many calls to make, use the decision-page skill.
+Never summarise instead of showing the text. When he has many calls to make, use the decision-page skill.
+
+If he corrects a line: edit the `spec` part of the fold file, then `build` on the fold file, `gate`, `result` (answers to unchanged prompts are kept), push, and `brain.fold_load` again. Show only the changed lines.
 
 ## 7. Store, on his go
 
-His "ok" or "fine" on the shown text is a go. Never ask twice. A no to one lesson: `python3 tools/cg_fold.py decline FOLD N --note "his words"`, then the `brain.fold_decline` line it prints.
+His "ok" or "fine" on the shown text is a go. Never ask twice.
+
+A no to one lesson: `python3 tools/cg_fold.py decline FOLD N --note "his words"`, then every `brain.fold_decline` line it prints. The fold changed, so gate it again before his go on the rest.
 
 1. `python3 tools/cg_fold.py approve FOLD`. Commit and push.
 2. `select * from brain.fold_store('rules/folds/<file>.json');`. It returns six md5 values.
@@ -104,18 +117,34 @@ His "ok" or "fine" on the shown text is a go. Never ask twice. A no to one lesso
 5. Commit and push.
 6. Report in a short list which lines went into which rule, and add one line to the piece's calibration log: rules folded, with their codes.
 
+When a step refuses:
+- `brain.fold_store` says a rule "has changed since this fold was built": another fold was stored first. `python3 tools/cg_fold.py reopen FOLD`, then `build` on the fold file, gate, load, and his go on the new text.
+- Any other refusal after `approve`: `reopen` takes the fold back so it can be gated and loaded again. Nothing in the brain changes.
+- The chat ended after `brain.fold_store` and before `stored`: get the six md5 values again with `select 'rulebook' as what, md5(brain.rulebook_text()) union all select o, md5(brain.card_text(o)) from unnest(array['article','letter','chapter','key moments','case study']) o;` and run `stored`. `stored` can also be run again on a stored fold to finish the cards and the checkers.
+
 ## 8. The fold check, at every handoff
 
-`python3 tools/cg_fold.py status`, and `select code, heading, fold_stage from brain.rules where status = 'active' and fold_stage <> 'stored';`. Every rule he asked for in the chat is stored, waiting at a named stage, or declined. Name each open one in the handoff.
+`python3 tools/cg_fold.py status`, and `select code, heading, fold_stage from brain.rules where status = 'active' and fold_stage <> 'stored';`. Every rule he asked for in the chat is stored, waiting at a named stage, or declined. Name each open one in the handoff. If the cards on his Mac were not updated after a store, name that too.
 
 ## 9. Other rule docs
 
-For the Social Posting Rules, the Content Rules, the Reel Style Guide and the brand docs, sections 1, 2, 4 and 6 apply as written. There is no test set for them. Then:
+For these docs, sections 1, 2, 4 and 6 apply as written. There is no test set for them.
+
+- `claude/Coach_Gen_Social_Posting_Rules.md`: platform copy for Instagram, Facebook and LinkedIn.
+- `claude/Coach_Gen_Content_Rules.md`: what content to make, such as the 5x5x5 passes.
+- `claude/Reel_Style_Guide.md`: reel structure and pacing.
+- The `brand/` docs: looks, public copy and links. Only he approves a change there.
+- A skill's own steps: `propose_skills`, with the changes as `edits` or the complete SKILL.md.
+
+Then:
 
 - Read `claude/Coach_Gen_Protected_Docs.md` and the doc's own top rule. That rule governs the write. An append-only doc takes a CORRECTION line under the old line, never an edit.
 - Name the exact existing line each addition goes after, and group related rules under one heading.
-- Write only on his go on the exact lines, and never retype a doc. Take its bytes by script: from the file path a fresh `project_read` gives, or, when the read comes back as text, from the doc's last committed copy in the repo (`project-docs/`, else `archive/pre-prune/project-docs/`), checked against that read. Insert at each anchor by script, assert insertions only and every old line still present, `project_write` with `local_path`, and commit the new copy to `project-docs/`.
+- Write only on his go on the exact lines, and never retype a doc.
+- Take the doc's bytes by script. Use the file path a fresh `project_read` gives. If the read comes back as text, use the doc's last committed copy in the repo (`project-docs/`, else `archive/pre-prune/project-docs/`) and check it against that read.
+- Insert at each anchor by script. Assert insertions only, and every old line still present. Then `project_write` with `local_path`, and commit the new copy to `project-docs/`.
 - Date every addition, for example "(Added 12 Nov 2026.)".
+- Report in a short list which lines went into which doc.
 
 ## What went wrong before
 

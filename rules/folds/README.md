@@ -24,6 +24,19 @@ If he says no to a lesson: `python3 tools/cg_fold.py decline FOLD N --note "his 
 
 `python3 tools/cg_fold.py status` lists every fold and its stage. Use it for the fold check at a handoff.
 
+## Guards, and the way back (added 16 Nov 2026, after the fresh review)
+
+- **A fold is tied to the text it was built on.** Each change or retire row carries `base_md5`, the md5 of its target as it stood at `build`. `gate`, `approve` and `brain.fold_store` refuse when the live rule has changed since (another fold was stored first). Then: `reopen` if it was approved, `build` on the fold file, gate and load again. Without this guard a second fold could wipe a line the first one added.
+- **The gate is tied to the live rules.** `approve` refuses when the live rulebook changed after the gate ran.
+- **`python3 tools/cg_fold.py reopen FOLD`** undoes `approve` (never a stored fold). Use it for any refusal after `approve`.
+- **`gate --fresh R1.x`** throws away that checker's saved answer, for a rerun.
+- **Pull before `build`.** `brain.fold_load` refuses to overwrite an open fold that came from another file, which is what two chats that have not pulled would do.
+- **After `brain.fold_store`, if the md5 values were lost:** `select 'rulebook' as what, md5(brain.rulebook_text()) union all select o, md5(brain.card_text(o)) from unnest(array['article','letter','chapter','key moments','case study']) o;`. `stored` can be run again on a stored fold to finish the cards and the checkers.
+- **A line stands in one rule only.** `build` refuses a line another live rule already has.
+- **Every lesson needs** a `why`, and `his_words` or `support`.
+- **Known limit:** places between two rules are finite (the sort values are 10 apart). When `build` says there is no free place, the sort values need a migration to spread them. None is written yet.
+- Migration: `migrations/022_rule_folds_guards.sql`.
+
 ## The spec
 
 ```json
@@ -61,6 +74,6 @@ If he says no to a lesson: `python3 tools/cg_fold.py decline FOLD N --note "his 
 ## What checks what
 
 - `tools/cg_rules.py` reads the rules for every tool: `rules_live.json` when a fold is stored, else `rules_v3.json`. It picks rows the way `brain.get_card()` does, so an md5 from the repo can be compared with one from the brain.
-- `tests/rules/test_fold.py` runs the whole path in a throwaway copy with made-up rules and answers (27 checks).
+- `tests/rules/test_fold.py` runs the whole path in a throwaway copy with made-up rules and answers (37 checks).
 - `tests/rules/fixtures/fold_selftest.json` is the same made-up fold, for a dry run inside the brain that undoes itself. Run 11 Nov 2026: after the fold, the brain's rulebook and all five cards equal the repo's, md5 for md5. Nothing was kept.
 - Migration: `migrations/021_rule_folds.sql`.
