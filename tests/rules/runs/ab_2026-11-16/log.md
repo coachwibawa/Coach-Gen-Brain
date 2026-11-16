@@ -39,4 +39,13 @@ Drafts: `final_old.md`, `final_new.md`. Checker folders: `check1` (D1 new first 
 
 ## His scores
 
-pending
+Logged at 19:40 (16 Nov), before the key was opened. His words, as typed.
+
+- In chat: "marked. I am not sure though, just a hunch that B is better but I can't pinpoint". B is the second draft, so Y.
+- On X (comment on its last word): "feels ok. a good article and a good read. but since it's isolated by nature, this doesn't feel like it was taken from a book chapter (which is not a negative thing per se)."
+- On Y (comment on its last word): "I think after reading both, I like the second one better. it is more book-y, like reading a penguin self help book. even though it both shares flaws due to the material and some approaches I no longer agree with, I like B better. but I still can't say for sure."
+- No numbers. His call: Y over X, low confidence.
+
+## The key (opened 19:41, after his verdict was logged)
+
+X = old | Y = new. He preferred the new stack: the new skill, the card, the lint and the checkers.
