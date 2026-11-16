@@ -1,0 +1,11 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+   "why": "The writer labels the shape of the story he just told instead of letting the reader see it, which is the exact meta-narration the rule bans."
+  }
+ ],
+ "rule": "R1.14"
+}

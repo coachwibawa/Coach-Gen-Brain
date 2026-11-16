@@ -1,0 +1,15 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "For years, that sentence ended every attempt Melina made at getting healthier.",
+   "why": "Melina's story was already told whole in the first half, and this section returns to it with new scenes instead of a callback, so the reader meets her story twice."
+  },
+  {
+   "quote": "Even her nutritionist once told her that if she were really consistent she would see results every week",
+   "why": "This is a brand new scene added after the story was finished, which the reader never saw in the first telling."
+  }
+ ],
+ "rule": "R1.7"
+}

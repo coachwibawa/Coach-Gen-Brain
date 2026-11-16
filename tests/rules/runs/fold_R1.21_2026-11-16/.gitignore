@@ -1,0 +1,5 @@
+*.prompt.md
+src/
+*/draft.md
+checkers/
+rules_candidate.json

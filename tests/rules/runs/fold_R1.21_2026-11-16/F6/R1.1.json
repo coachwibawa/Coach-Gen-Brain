@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+   "why": "The chimp story sets up two lessons (stay small, then take a risk to get in), but the piece drops the second and never turns it into anything the reader can use."
+  },
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.",
+   "why": "The thread swerves from an old sentence written at 15 that still governs us to regret as a teacher, so the reader no longer knows which one the piece is about."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "This reopens a punishment the paragraph above already described and adds an event the piece never uses, so the reader has to guess how it fits."
+  }
+ ],
+ "rule": "R1.1"
+}

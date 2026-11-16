@@ -1,0 +1,24 @@
+{"rule": "R1.21", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "So ask it straight. And when you cannot answer, tell it as a story about somebody else and find the moral.", "why": "The ask is a specific action, but it rests on the chimpanzee story and is squeezed into two sentences, so a doubtful reader can shrug."},
+{"quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.", "why": "The key reason that regret carries a lesson is only stated, not argued or shown in the reader's life, so the reader must take it on trust."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []},
+{"id": "ORIGIN", "verdict": "fail", "breaks": [
+{"quote": "If the answer is no, prune. Pick something that still matters to you and prune it.", "why": "The ask to end things that still matter rests mainly on the writer's own story, with the reader's own case given only in a short list, so a doubtful reader can shrug."},
+{"quote": "Pruning hurts, and it will hurt you too.", "why": "The cost is named in one sentence and answered only by saying they can restart later, which does not meet the reader's doubt about losing something that matters."},
+{"quote": "Don't wait for it to become useless first, because you may never be able to call any of them useless.", "why": "The ask is squeezed into the last paragraphs, and the reason why this change beats an easier one is a single sentence."}
+]}
+]}

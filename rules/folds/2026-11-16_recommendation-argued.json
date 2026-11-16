@@ -19,9 +19,9 @@
     "lines": [
      "The goal: when the piece asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.",
      "Build the case first, over as many paragraphs as it needs: why the reader's way now fails them, why this change and not an easier one, what it costs, and why it is worth the cost.",
-     "Think it through on the page. The reasons are argued in the prose, never left for a story to imply.",
-     "A story, another person's case or a study is a tool for the case, used where it fits. A story alone is not a case.",
-     "Name the reader's strongest doubt about the ask, and answer it before the ask.",
+     "Each reason is argued, not named: it says why it holds and shows it in the reader's life. A reason in one sentence is named, not argued.",
+     "A story, another person's case or a study is a tool for the case, used where it fits. One story with an ask after it is not a case, however well told.",
+     "Name the reader's strongest doubt about the ask, and answer it with a reason, before the ask. Saying the ask will hurt is not an answer.",
      "Deliver the ask once, plainly and with confidence: a concrete action, at the turn, after the case is built.",
      "The test: read the ask cold, as a doubtful reader. If they could shrug and carry on as before, the case is not built.",
      "Fails: an ask that is only stated, an ask that rests on one story, or an ask squeezed into the last lines."
@@ -56,7 +56,7 @@
    "kind": "rule",
    "tier": 1,
    "heading": "A recommendation is argued before it is asked",
-   "body": "### A recommendation is argued before it is asked\n- The goal: when the piece asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.\n- Build the case first, over as many paragraphs as it needs: why the reader's way now fails them, why this change and not an easier one, what it costs, and why it is worth the cost.\n- Think it through on the page. The reasons are argued in the prose, never left for a story to imply.\n- A story, another person's case or a study is a tool for the case, used where it fits. A story alone is not a case.\n- Name the reader's strongest doubt about the ask, and answer it before the ask.\n- Deliver the ask once, plainly and with confidence: a concrete action, at the turn, after the case is built.\n- The test: read the ask cold, as a doubtful reader. If they could shrug and carry on as before, the case is not built.\n- Fails: an ask that is only stated, an ask that rests on one story, or an ask squeezed into the last lines.",
+   "body": "### A recommendation is argued before it is asked\n- The goal: when the piece asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.\n- Build the case first, over as many paragraphs as it needs: why the reader's way now fails them, why this change and not an easier one, what it costs, and why it is worth the cost.\n- Each reason is argued, not named: it says why it holds and shows it in the reader's life. A reason in one sentence is named, not argued.\n- A story, another person's case or a study is a tool for the case, used where it fits. One story with an ask after it is not a case, however well told.\n- Name the reader's strongest doubt about the ask, and answer it with a reason, before the ask. Saying the ask will hurt is not an answer.\n- Deliver the ask once, plainly and with confidence: a concrete action, at the turn, after the case is built.\n- The test: read the ask cold, as a doubtful reader. If they could shrug and carry on as before, the case is not built.\n- Fails: an ask that is only stated, an ask that rests on one story, or an ask squeezed into the last lines.",
    "sort": 305,
    "outputs": [
     "article",
@@ -85,8 +85,57 @@
     "diagnosis": "Claude's reading, to confirm on the next draft: in both A/B drafts the ask to prune comes in the last two or three paragraphs and rests on his one story. Neither argues why pruning beats cutting back or pausing, neither answers the reader's doubt (what if the thing I end was the one that would grow), and no second case or study backs it. All 20 checkers passed both drafts, so no live rule holds this.",
     "why": "Without it, a book that tells the reader what to do reads as his story with an order at the end, and the reader does not act."
    },
-   "fold_stage": "merged",
-   "test_gate": null
+   "fold_stage": "gated",
+   "test_gate": {
+    "on": "2026-11-17",
+    "run": "tests/rules/runs/fold_R1.21_2026-11-16",
+    "base": "fresh_2026-11-11",
+    "rerun": [
+     "R1.21"
+    ],
+    "fails_caught": "5 of 5",
+    "passes_kept": "9 of 9",
+    "lint": "all as expected",
+    "caught_by": {
+     "F1": [
+      "R1.16"
+     ],
+     "F2": [
+      "R1.6",
+      "R1.7",
+      "R1.10",
+      "R1.11"
+     ],
+     "F3": [
+      "R1.11"
+     ],
+     "F6": [
+      "lint",
+      "R1.1",
+      "R1.2",
+      "R1.3",
+      "R1.4",
+      "R1.5",
+      "R1.7",
+      "R1.12",
+      "R1.13",
+      "R1.14",
+      "R1.21"
+     ],
+     "F8": [
+      "R1.5",
+      "R1.8",
+      "R1.9",
+      "R1.13",
+      "R1.15"
+     ],
+     "ORIGIN": [
+      "R1.21"
+     ]
+    },
+    "flips": [],
+    "live_md5": "a80b78c1b69fc97be58cdbad021f8138"
+   }
   }
  ]
 }

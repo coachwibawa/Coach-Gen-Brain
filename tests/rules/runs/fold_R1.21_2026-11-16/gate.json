@@ -1,0 +1,13 @@
+{
+ "fold": "2026-11-16_recommendation-argued",
+ "rerun": [
+  "R1.21"
+ ],
+ "all": false,
+ "base": "fresh_2026-11-11",
+ "origin": true,
+ "live_md5": "a80b78c1b69fc97be58cdbad021f8138",
+ "body_md5": {
+  "R1.21": "b0750e3d3047426fc9abfda0174bed9f"
+ }
+}

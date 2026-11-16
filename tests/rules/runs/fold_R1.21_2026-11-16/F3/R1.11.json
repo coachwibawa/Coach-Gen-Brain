@@ -1,0 +1,11 @@
+{
+ "id": "F3",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He didn't need more options. He needed the focus to stick with what he picked.",
+   "why": "The case ends inside David's business and projects, with no turn to the reader and no quick examples of where else the reader's own life works this way."
+  }
+ ],
+ "rule": "R1.11"
+}

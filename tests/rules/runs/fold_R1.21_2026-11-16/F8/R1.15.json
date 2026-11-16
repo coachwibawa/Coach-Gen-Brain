@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Before December, he was confident.",
+   "why": "A short closing sentence carries the whole outcome as a new fact, so the reader gets the result without the steps that led to it."
+  }
+ ],
+ "rule": "R1.15"
+}

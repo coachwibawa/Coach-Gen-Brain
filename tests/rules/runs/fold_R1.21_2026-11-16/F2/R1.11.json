@@ -1,0 +1,11 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Melina saw through hers in 3 sessions. It took me years to see through mine.",
+   "why": "The passage stays with Melina's health story and his own 20s, and never shows the reader how a verdict sentence like this shows up in the reader's own work, money, relationships or other areas."
+  }
+ ],
+ "rule": "R1.11"
+}
