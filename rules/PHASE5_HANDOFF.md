@@ -109,7 +109,7 @@ One card waits for his save: one line in coach-gen-writer that points the Full R
 1. **Step 20 ran** on Chapter 5 (Law 3), the pruning section, from 8 brain entries. Old stack: the pre-prune skill and rule docs. New stack: the skill, the chapter card, `cg_lint.py`, the 20 checkers. Record: `tests/rules/runs/ab_2026-11-16/log.md` (setup, incidents, cost, his words, the key).
 2. **Result:** he scored X 7 (old stack) and Y 8.25 (new stack), before he saw the key, a hunch, low confidence. Both drafts pass the lint and all 20 checkers. The new draft needed 2 checker fix rounds first.
 3. **Step 21:** the new stack wins, so it stays the default. Nothing restored. One round only. The next real chapter is the true test.
-4. **His reason, for both drafts:** the recommendation (pruning) is not argued, built up or delivered powerfully, which a book that gives specific advice must do. Neither stack caught it. The checkers have no rule for it.
+4. **His reason, for both drafts:** the recommendation (pruning) is not argued, built up or delivered powerfully, which a book that gives specific advice must do. Neither stack caught it. The checkers have no rule for it. His follow-up: it is solved by length and thought, and storytelling sometimes, and research. Word for word in the log.
 5. The key is in `tests/rules/runs/ab_2026-11-16/sealed/key.json`. It is open now.
 
 ## Next, in order (from 16 Nov, 20:00)

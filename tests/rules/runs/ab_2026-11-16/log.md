@@ -47,6 +47,7 @@ Logged at 19:40 (16 Nov), before the key was opened. His words, as typed.
 - His numbers, sent at 19:40 before he saw the key: "if it's numberic, I'll say 7 and 8.25". X 7, Y 8.25.
 - His call: Y over X, low confidence.
 - His reason for the verdict, sent 19:43, word for word: "it's just that the recommendation of pruning has not been argued or built up, or delivered powerfully; which are all a must for books that give a specific advice to follow". This applies to both drafts. It is a candidate rule (a recommendation in a book must be argued, built up and delivered powerfully), not yet proposed. It goes to propose-language-rule, tested on the test set, stored only on his go.
+- His follow-up at 19:44, word for word: "of course this problem is solved by length and thought, and storytelling sometimes and research, etc." So the fix is more room and more thinking in the section, not a changed line. Storytelling and research are tools for it, used when they fit, not always.
 
 ## The key (opened 19:41, after his verdict was logged)
 
