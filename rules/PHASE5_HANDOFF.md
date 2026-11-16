@@ -125,3 +125,12 @@ One card waits for his save: one line in coach-gen-writer that points the Full R
 1. Writers in a blind test get the same prompt but for one block. Read the prompt for stray lines before launch.
 2. Checkers run once on the final draft. After a fix, rerun only the checkers that failed, twice for a noisy one.
 3. Log his scores and words before opening the key.
+
+## 16 Nov, 20:05: step 22 done
+
+1. `claude/Rules_Refactor_Handoff.md` in the project has its dated section (sha256 `a38e79d4d35b...`, equal to `project-docs/claude/Rules_Refactor_Handoff.md`). The old text is byte for byte.
+2. Project memory points at the rules table: one line in `ways-of-working.md` ("Writing rules"), one in `areas/rules-refactor.md` (his A/B scores).
+3. **`AB_Test_Writing_Skills` was NOT removed.** The byte compare with `archive/pre-prune/project-docs/claude/AB_Test_Writing_Skills.md` needs the browser route (sign-in to claude.ai, fetch the docs, sha256), and the auto mode classifier blocked that call on 16 Nov evening. The doc is the older record of the Pocock A/B rounds and is safe in the archive. It leaves once a compare is possible, or once he says to remove it without one.
+4. The Phase 5 plan rows 20 to 22 and the Decisions log in the Autopilot doc are updated.
+
+The next chat starts at "Next, in order (from 16 Nov, 20:00)" above, step 1: propose the rule from his verdict reason.

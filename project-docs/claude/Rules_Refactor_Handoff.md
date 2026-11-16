@@ -207,3 +207,18 @@ Added to the rules for this work on 16 Nov:
 ## Log, continued
 
 - 16 Nov 2026: updated at the start of Phase 5, after step 1. This copy was rebuilt and matched the live doc's sha256 before the section was added. Fold check: he asked for no new writing rule in the 16 Nov chats.
+
+## Added 16 Nov 2026, evening: steps 20 and 21 done, step 22 under way
+
+Read `rules/PHASE5_HANDOFF.md` in the repo first. It has the newest state.
+
+1. **Step 20, the blind A/B, ran** on Chapter 5 (Law 3), the pruning section, from 8 brain entries. Old stack against the new one (skill, chapter card, lint, 20 checkers). Both drafts pass the lint and all 20 checkers. The new draft needed 2 checker fix rounds first.
+2. **His scores, given before the key was opened:** X 7 (old stack), Y 8.25 (new stack), a hunch, low confidence. Record, words and cost: `tests/rules/runs/ab_2026-11-16/log.md` in the repo.
+3. **Step 21:** the new stack wins, so it stays the default. Nothing restored. One round only, so the next real chapter is the true test.
+4. **His reason, for both drafts:** the recommendation (pruning) was not argued, built up or delivered powerfully, which a book that gives specific advice must do. It is solved by length and thought, and storytelling sometimes, and research. No rule yet. It goes through `propose-language-rule` (Next, step 1 in the repo note).
+5. **Still open:** the one-line coach-gen-writer card is his to save. `AB_Test_Writing_Skills` stays in the project: its byte compare with the archive was not possible in the 16 Nov evening chat (the browser route was blocked), so it leaves only after a compare.
+6. **Rules added:** read the blind-test prompts for stray lines before launch. Run the checkers once on the final draft. After a fix rerun only the checkers that failed. Log his scores and words before opening the key.
+
+## Log, continued again
+
+- 16 Nov 2026, evening: updated after steps 20 and 21. Fold check: he gave a reason for the verdict (a recommendation must be argued, built up and delivered powerfully, solved by length and thought, storytelling sometimes, research). It is not in the rules table yet. It is Next, step 1 in the repo note, so it is not lost, and it was not declined.
