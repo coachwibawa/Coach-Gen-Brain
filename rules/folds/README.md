@@ -67,6 +67,7 @@ If he says no to a lesson: `python3 tools/cg_fold.py decline FOLD N --note "his 
 - `add` without `after` goes at the end of the rule (`"first": true` puts it at the top).
 - A change keeps the rule's tier. To move a rule to another tier, retire it and add a new one.
 - A Tier 2 rule names the cards that load it: `article`, `chapter`, `case study`. The letter card follows the article card and key moments follows the chapter card. The tool rewrites each card's "Tier 2 rules loaded" line and adds those card rows to the fold itself.
+- A Tier 1 rule may name the outputs it covers: `"outputs": ["chapter", "key moments"]` (default: all five). The brain's cards already pick rules by outputs. Since 17 Nov 2026 the checkers do too: a draft of another output passes that rule without a call, marked "out of scope". Test: `tests/rules/test_check_scope.py`.
 - A new Tier 0 rule says its `check_type`: `mechanical` (then `tools/cg_lint.py` must be made to match before the gate) or `checker`.
 - His quote, the support and Claude's diagnosis live in the row's evidence, never in the rule's lines.
 - To correct the wording before his go: edit the `spec` part of the fold file and run `build` on the fold file. The codes stay. The gate must run again, and it keeps every answer whose prompt did not change.

@@ -610,6 +610,10 @@ def cmd_gate(a):
     todo = []
     for c in rerun:
         p, ans = run / f"{c}.prompt.md", run / f"{c}.json"
+        if not p.exists():
+            # No draft in the run is an output this rule covers (17 Nov 2026): nothing to ask.
+            ans.write_text(json.dumps({"rule": c, "results": []}), encoding="utf-8")
+            continue
         if ans.exists() and old.get(p.name) == cg_rules.md5(p.read_text(encoding="utf-8")):
             continue
         if ans.exists():

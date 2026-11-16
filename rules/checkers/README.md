@@ -40,3 +40,9 @@ Report: `tests/rules/runs/margins_2026-11-16/REPORT.md`.
 - R1.5 passed F1 twice and R1.2 passed F3 twice, though those are his own grounds for the two cases.
 - Three notes, each naming its case: R1.16 and R1.5 from F1, R1.2 from F3. Each checker was rerun twice after its note. F1 is now caught by R1.5 and R1.16, F3 by R1.2 and R1.11, and all 9 approved passages pass.
 - The notes quote words from F1 and F3, so the test set says less about a new draft with the same fault. Step 20 (the blind A/B) tests that.
+
+## Rules scoped to some outputs (17 Nov 2026)
+
+- A Tier 1 rule can cover only some outputs (its `outputs` in the rules table), the way the brain's cards already pick it. R1.21 is the first: chapter and key moments only.
+- `prepare` writes no prompt for a rule the draft's output is outside of, and saves a pass marked "out of scope" in its place. `batch` leaves such drafts out of that rule's prompt, and `split` gives them the same pass. `chapter-excerpt` counts as chapter, `key-moments` as key moments, `case-study` as case study.
+- Test: `python3 tests/rules/test_check_scope.py`.
