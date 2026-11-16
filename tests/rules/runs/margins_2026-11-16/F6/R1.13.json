@@ -1,0 +1,11 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.",
+   "why": "This is a built, staged event that contradicts the line just before it (\"He did nothing wrong\"), is not in the expert layer's account of Reddy's findings, and exists only to set up the \"do not reach above your standing\" lesson, so the reader cannot tell what is science and what is invented."
+  }
+ ],
+ "rule": "R1.13"
+}

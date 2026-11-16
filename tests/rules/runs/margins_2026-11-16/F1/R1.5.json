@@ -1,0 +1,15 @@
+{
+ "id": "F1",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "And it doesn’t start from zero. Somewhere in your life, you have already changed something without noticing.",
+   "why": "The closing lines drop in new ideas with no example, reason or step, so the reader is left holding claims they cannot use."
+  },
+  {
+   "quote": "Lasting Change works with the part of you that wants to stay the same, one step at a time, in an order it can accept.",
+   "why": "The idea is named and asserted but never shown, so the reader cannot picture what working with that part looks like."
+  }
+ ],
+ "rule": "R1.5"
+}

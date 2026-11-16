@@ -17,7 +17,7 @@
    46
   ],
   "rule_md5": "4723a55e39e686a32b084addd5bcaa65",
-  "tokens_est": 824
+  "tokens_est": 909
  },
  {
   "code": "R1.3",
@@ -47,7 +47,7 @@
    60
   ],
   "rule_md5": "61f992ba0cf0c92673d7ff99cc1da2e6",
-  "tokens_est": 928
+  "tokens_est": 1018
  },
  {
   "code": "R1.6",
@@ -157,7 +157,7 @@
    105
   ],
   "rule_md5": "3938d882fe7eca1e6d383572abb5b6a4",
-  "tokens_est": 721
+  "tokens_est": 792
  },
  {
   "code": "R1.17",

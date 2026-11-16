@@ -1,0 +1,15 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Even her nutritionist once told her that if she were really consistent she would see results every week",
+   "why": "After Melina's story is told whole, the second half returns to it and adds a new scene, which breaks 'no new pieces of it later'."
+  },
+  {
+   "quote": "For years, that sentence ended every attempt Melina made at getting healthier.",
+   "why": "This retells her story a second time after the divider instead of giving a short callback in the same words."
+  }
+ ],
+ "rule": "R1.7"
+}

@@ -1,0 +1,16 @@
+{"rule": "R1.8", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "pass", "breaks": []},
+{"id": "F8", "verdict": "fail", "breaks": [{"quote": "he came to me with a deadline: the December meeting, in his own voice.", "why": "The deadline is named but nothing shows what Aiman stands to lose if he misses it, so the beat has no stakes and the reader has no reason to care."}, {"quote": "He tried out his opening line on his morning customers.", "why": "A weak beat is filled with an extra scene instead of a concrete risk, so the story moves but nothing is on the line."}]},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Before December, he was confident.",
+   "why": "The ending is announced with no steps carried forward, so the reader is not told how Aiman got from a deadline to confidence."
+  }
+ ],
+ "rule": "R1.7"
+}

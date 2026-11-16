@@ -1,0 +1,15 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "he came to me with a deadline: the December meeting, in his own voice.",
+   "why": "The deadline is named but nothing shows what Aiman stands to lose if he misses it, so the beat has no stakes and the reader has no reason to care."
+  },
+  {
+   "quote": "He tried out his opening line on his morning customers.",
+   "why": "A weak beat is filled with an extra scene instead of a concrete risk, so the story moves but nothing is on the line."
+  }
+ ],
+ "rule": "R1.8"
+}

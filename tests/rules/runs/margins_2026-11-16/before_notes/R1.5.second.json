@@ -1,0 +1,22 @@
+{"rule": "R1.5", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.", "why": "The reader is asked to accept that a painful memory holds a lesson, with no example or reason, and the memory is never named as what 'it' means."},
+{"quote": "In humans, we sometimes make that mistake at 15.", "why": "The chimp story gave two lessons and a muddled order, so the reader has to guess which mistake is meant and how it maps to a teenager."},
+{"quote": "And when you cannot answer, tell it as a story about somebody else and find the moral. That is why there is a chimpanzee in my notes.", "why": "The method is a leap with no step linking it to the chimp story, so the reader cannot see why the chimpanzee helps."}
+]},
+{"id": "F8", "verdict": "fail", "breaks": [
+{"quote": "Before December, he was confident.", "why": "The whole change from sending an assistant to being confident is stated with no steps, so the reader has to guess how it happened."}
+]},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

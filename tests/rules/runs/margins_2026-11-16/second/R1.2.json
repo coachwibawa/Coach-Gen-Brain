@@ -1,0 +1,20 @@
+{"rule": "R1.2", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "The paragraph before says the hazing ended when they let him in, so this 'Then one day' mistake has no place in the timeline and the reader has to guess how it fits."},
+{"quote": "In humans, we sometimes make that mistake at 15.", "why": "'That mistake' is not named, so the reader must guess whether it is reaching above standing or learning only the first lesson."},
+{"quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon, once they finally heard what it was saying.", "why": "It lands after the closing question with no join, so the reader does not know why the piece turns to a new claim at the end."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

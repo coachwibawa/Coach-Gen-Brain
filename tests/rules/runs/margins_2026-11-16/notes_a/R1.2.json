@@ -1,0 +1,16 @@
+{"rule": "R1.2", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "fail", "breaks": [{"quote": "He had already answered his own question about clarity, in a picture of his own.", "why": "The clarity question was asked a full paragraph earlier and is only mentioned in passing here, so the reader has to hunt for what was asked and the picture seems to come from nowhere."}]},
+{"id": "F6", "verdict": "fail", "breaks": [{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "It follows a paragraph that said the hazing ends when they let him in and that he did nothing wrong, so the reader cannot tell how this fits or when it happens."}, {"quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon", "why": "It lands after the closing question with no link to it, so the reader does not know what it answers or why it comes here."}]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

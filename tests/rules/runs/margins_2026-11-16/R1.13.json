@@ -1,0 +1,16 @@
+{"rule": "R1.13", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [{"quote": "He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.", "why": "This is a built, staged event that contradicts the line just before it (\"He did nothing wrong\"), is not in the expert layer's account of Reddy's findings, and exists only to set up the \"do not reach above your standing\" lesson, so the reader cannot tell what is science and what is invented."}]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

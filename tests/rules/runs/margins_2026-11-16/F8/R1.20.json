@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+   "why": "The whole case is a clipped summary that jumps from a trial run to 'confident' with no scene, line or step, so the reader has to take the result on trust."
+  }
+ ],
+ "rule": "R1.20"
+}

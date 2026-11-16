@@ -49,6 +49,12 @@
    "from": [
     "F3"
    ]
+  },
+  {
+   "note": "A link back must bring the question back in words the reader will know. When a full paragraph or more on something else stands between a question and its answer, a passing mention (\"his own question about clarity\") is not a link: the reader has to hunt for what was asked, and the new picture seems to come from nowhere. That is a break.",
+   "from": [
+    "F3"
+   ]
   }
  ],
  "R1.3": [
@@ -87,6 +93,12 @@
    "note": "Opening on where someone ended up, then showing the steps in order, does not show an idea out of order. A label from his own framework named once in passing (\"Law 4 in my coaching\") is not a new idea that must be explained.",
    "from": [
     "P5"
+   ]
+  },
+  {
+   "note": "The end of a passage gets no pass. When the closing lines bring in two or more new ideas in a row, a sentence or two each, and none gets an example, a reason or a step (\"it doesn't start from zero\", \"you have already changed something without noticing\"), the reader is left holding ideas they cannot use. That is a break, even though nothing comes after them.",
+   "from": [
+    "F1"
    ]
   }
  ],
@@ -132,6 +144,12 @@
    "note": "A mirror fails when the reader cannot see what matches. A short own side is fine when the match is named plainly and the beats line up.",
    "from": [
     "P6"
+   ]
+  },
+  {
+   "note": "The subject line of the rule is a hard line. A run of side-by-side examples that starts on \"the\" things and switches to \"you\" partway (\"If the diet slips... If you miss...\") is a break, even when each example is clear on its own. He reads that switch as a failure, not as polish.",
+   "from": [
+    "F1"
    ]
   }
  ],

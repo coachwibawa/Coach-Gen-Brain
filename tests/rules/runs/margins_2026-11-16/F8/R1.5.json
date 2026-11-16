@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He tried out his opening line on his morning customers. Before December, he was confident.",
+   "why": "Steps are missing between avoiding his own voice and being confident, so the reader has to guess how the change happened."
+  }
+ ],
+ "rule": "R1.5"
+}

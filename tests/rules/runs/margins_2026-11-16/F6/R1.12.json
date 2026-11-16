@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "In Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing",
+   "why": "The study opens the piece and runs for many paragraphs with two findings, before his idea is stated, so the research carries the piece instead of backing it."
+  },
+  {
+   "quote": "One honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee.",
+   "why": "This caveat marks what the study does not prove instead of what the frame did to him, and it makes the reader doubt the chimp story they just followed."
+  },
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "The dramatised, named chimp story goes well past the facts of the study, so the reader cannot tell what the researcher found and what was added."
+  }
+ ],
+ "rule": "R1.12"
+}

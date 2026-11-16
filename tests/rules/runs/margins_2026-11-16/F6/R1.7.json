@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him",
+   "why": "A new scene is dropped in after the 10 years of hazing and 'He did nothing wrong', so the reader cannot tell when it happened or why the hazing began."
+  },
+  {
+   "quote": "it runs for 10 years, until the day they finally let him in.",
+   "why": "The ending is announced early, before the story tells how he gets in."
+  },
+  {
+   "quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon",
+   "why": "A new unnamed mini story appears after the closing question, with no setup or arc."
+  }
+ ],
+ "rule": "R1.7"
+}

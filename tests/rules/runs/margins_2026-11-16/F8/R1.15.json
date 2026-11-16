@@ -1,0 +1,11 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Before December, he was confident.",
+   "why": "A short closing sentence brings a new fact (his confidence) that no step in the story earned, so the reader has to guess how he got there."
+  }
+ ],
+ "rule": "R1.15"
+}

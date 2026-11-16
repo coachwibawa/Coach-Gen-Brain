@@ -1,0 +1,11 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+   "why": "The writer explains the piece's own shape (two lessons, 10 years apart) instead of letting the story carry it."
+  }
+ ],
+ "rule": "R1.14"
+}

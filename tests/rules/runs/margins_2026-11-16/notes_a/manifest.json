@@ -1,0 +1,58 @@
+[
+ {
+  "id": "F1",
+  "output": "chapter"
+ },
+ {
+  "id": "F2",
+  "output": "chapter"
+ },
+ {
+  "id": "F3",
+  "output": "chapter"
+ },
+ {
+  "id": "F6",
+  "output": "article"
+ },
+ {
+  "id": "F8",
+  "output": "case-study"
+ },
+ {
+  "id": "P2",
+  "output": "letter"
+ },
+ {
+  "id": "P3",
+  "output": "chapter"
+ },
+ {
+  "id": "P4",
+  "output": "chapter"
+ },
+ {
+  "id": "P5",
+  "output": "article"
+ },
+ {
+  "id": "P6",
+  "output": "article"
+ },
+ {
+  "id": "P7",
+  "output": "chapter-excerpt"
+ },
+ {
+  "id": "P8",
+  "output": "chapter-excerpt"
+ },
+ {
+  "id": "P9",
+  "output": "chapter-excerpt"
+ },
+ {
+  "id": "P10",
+  "output": "case-study"
+ }
+]

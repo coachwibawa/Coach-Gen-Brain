@@ -1,0 +1,155 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 611,
+  "sentences": 46,
+  "reading_grade": 5.8
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "a plan so big it never left the page",
+     "why": "A made-up metaphor the reader has to decode, not an image from their own life."
+    },
+    {
+     "quote": "it closes the case on her: if she just can’t, there is nothing left to try",
+     "why": "A courtroom image (verdict, closing and opening the case) is a second image system the reader must decode."
+    }
+   ],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Even her nutritionist once told her that if she were really consistent she would see results every week",
+     "why": "After Melina's story is told whole, the second half returns to it and adds a new scene, which breaks 'no new pieces of it later'."
+    },
+    {
+     "quote": "For years, that sentence ended every attempt Melina made at getting healthier.",
+     "why": "This retells her story a second time after the divider instead of giving a short callback in the same words."
+    }
+   ],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F2",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "A verdict is something you can only accept. A cause is something you can work on.",
+     "why": "The passage stays with Melina's health case and the writer's own 20s, and never shows how this sentence-as-verdict pattern reaches the reader's work, money, relationships or other areas."
+    }
+   ],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

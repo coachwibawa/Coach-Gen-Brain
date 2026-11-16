@@ -1,0 +1,11 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "A verdict is something you can only accept. A cause is something you can work on.",
+   "why": "The passage stays with Melina's health case and the writer's own 20s, and never shows how this sentence-as-verdict pattern reaches the reader's work, money, relationships or other areas."
+  }
+ ],
+ "rule": "R1.11"
+}

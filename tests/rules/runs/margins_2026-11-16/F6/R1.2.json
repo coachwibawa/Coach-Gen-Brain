@@ -1,0 +1,15 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Then one day Melvin makes the mistake that costs him.",
+   "why": "It follows a paragraph that said the hazing ends when they let him in and that he did nothing wrong, so the reader cannot tell how this fits or when it happens."
+  },
+  {
+   "quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon",
+   "why": "It lands after the closing question with no link to it, so the reader does not know what it answers or why it comes here."
+  }
+ ],
+ "rule": "R1.2"
+}

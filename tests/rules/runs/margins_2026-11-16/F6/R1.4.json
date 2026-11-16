@@ -1,0 +1,19 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Reddy calls it close to hazing, and it runs for 10 years",
+   "why": "The researcher is named again and again in Insight 1 (primatologist, Reddy twice more) when she should appear once with a role or not at all, which adds names the reader must carry."
+  },
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach",
+   "why": "The same thing is called a sentence, a memory, a lesson and regret, so the reader cannot tell what 'it' that shouts at 2am refers to."
+  },
+  {
+   "quote": "Regret is not punishment, it is there to stop you repeating something.",
+   "why": "'Regret' appears here as a new name for the thing earlier called 'that one sentence' and 'memory', so the reader has to guess it is the same thing."
+  }
+ ],
+ "rule": "R1.4"
+}

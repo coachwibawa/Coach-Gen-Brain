@@ -1,0 +1,20 @@
+{"rule": "R1.3", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "The false 'Then' puts a punishment-causing mistake after he was let in, and it contradicts the line 'He did nothing wrong', so the reader loses the timeline."},
+{"quote": "So why does it still shout at you at 2am, 20 years later?", "why": "'It' has no clear referent, since the reader must guess whether it means the written sentence, the memory or the regret."},
+{"quote": "Because it is not finished with you.", "why": "The far 'it' is left unnamed, and the answer only becomes clear when 'Regret' appears a line later."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

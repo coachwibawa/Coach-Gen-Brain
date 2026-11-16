@@ -1,0 +1,15 @@
+{
+ "id": "F6",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet. Regret is not punishment, it is there to stop you repeating something.",
+   "why": "A surprising claim about regret is stated flat with no example, reason or premise, so the reader must take it on trust."
+  },
+  {
+   "quote": "And when you cannot answer, tell it as a story about somebody else and find the moral.",
+   "why": "A new technique is handed over with no reason or step, and the jump from chimpanzees to the reader's own regret is not bridged."
+  }
+ ],
+ "rule": "R1.5"
+}

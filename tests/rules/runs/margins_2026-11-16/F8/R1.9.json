@@ -1,0 +1,19 @@
+{
+ "id": "F8",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "Before December, he was confident.",
+   "why": "The reader gets no steps between trying one line on customers and being confident, so they must guess how he got there."
+  },
+  {
+   "quote": "for years he sent his assistant to present for him, even in his own boardroom",
+   "why": "A cafe owner with a boardroom, and no reason given for sending an assistant, leaves the reader guessing the background."
+  },
+  {
+   "quote": "In late October, he came to me with a deadline: the December meeting, in his own voice.",
+   "why": "It does not say what made him come now or what his own voice means, so a leap is left unserved."
+  }
+ ],
+ "rule": "R1.9"
+}

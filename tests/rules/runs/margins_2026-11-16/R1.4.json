@@ -1,0 +1,20 @@
+{"rule": "R1.4", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Reddy calls it close to hazing, and it runs for 10 years", "why": "The researcher is named again and again in Insight 1 (primatologist, Reddy twice more) when she should appear once with a role or not at all, which adds names the reader must carry."},
+{"quote": "Because it is not finished with you. It still has a lesson to teach", "why": "The same thing is called a sentence, a memory, a lesson and regret, so the reader cannot tell what 'it' that shouts at 2am refers to."},
+{"quote": "Regret is not punishment, it is there to stop you repeating something.", "why": "'Regret' appears here as a new name for the thing earlier called 'that one sentence' and 'memory', so the reader has to guess it is the same thing."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

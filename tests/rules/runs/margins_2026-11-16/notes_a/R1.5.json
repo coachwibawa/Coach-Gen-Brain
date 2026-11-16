@@ -1,0 +1,16 @@
+{"rule": "R1.5", "results": [
+{"id": "F1", "verdict": "fail", "breaks": [{"quote": "And it doesn’t start from zero. Somewhere in your life, you have already changed something without noticing.", "why": "The closing lines drop in new ideas with no example, reason or step, so the reader is left holding claims they cannot use."}, {"quote": "Lasting Change works with the part of you that wants to stay the same, one step at a time, in an order it can accept.", "why": "The idea is named and asserted but never shown, so the reader cannot picture what working with that part looks like."}]},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [{"quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet. Regret is not punishment, it is there to stop you repeating something.", "why": "A surprising claim about regret is stated flat with no example, reason or premise, so the reader must take it on trust."}, {"quote": "And when you cannot answer, tell it as a story about somebody else and find the moral.", "why": "A new technique is handed over with no reason or step, and the jump from chimpanzees to the reader's own regret is not bridged."}]},
+{"id": "F8", "verdict": "fail", "breaks": [{"quote": "He tried out his opening line on his morning customers. Before December, he was confident.", "why": "Steps are missing between avoiding his own voice and being confident, so the reader has to guess how the change happened."}]},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

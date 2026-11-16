@@ -1,0 +1,15 @@
+{
+ "id": "F2",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "a plan so big it never left the page",
+   "why": "A made-up metaphor the reader has to decode, not an image from their own life."
+  },
+  {
+   "quote": "it closes the case on her: if she just can’t, there is nothing left to try",
+   "why": "A courtroom image (verdict, closing and opening the case) is a second image system the reader must decode."
+  }
+ ],
+ "rule": "R1.6"
+}

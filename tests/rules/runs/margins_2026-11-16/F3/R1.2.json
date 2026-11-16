@@ -1,0 +1,11 @@
+{
+ "id": "F3",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "He had already answered his own question about clarity, in a picture of his own.",
+   "why": "The clarity question was asked a full paragraph earlier and is only mentioned in passing here, so the reader has to hunt for what was asked and the picture seems to come from nowhere."
+  }
+ ],
+ "rule": "R1.2"
+}

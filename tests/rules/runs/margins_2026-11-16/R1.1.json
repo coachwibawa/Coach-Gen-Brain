@@ -1,0 +1,20 @@
+{"rule": "R1.1", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.", "why": "The second lesson (Melvin earns his place by taking risk) is set up and then never used for the human reader, so the chimp thread is dropped."},
+{"quote": "So why does it still shout at you at 2am, 20 years later?", "why": "The piece suddenly turns from a 15-year-old's written rule to regret and its lesson, a new idea the chimp story did not set up, so the reader loses what the piece is about."},
+{"quote": "tell it as a story about somebody else and find the moral. That is why there is a chimpanzee in my notes.", "why": "The stated reason for the chimp does not match how the chimp story was told, so the reader has to guess the link."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

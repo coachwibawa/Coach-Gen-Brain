@@ -1,0 +1,16 @@
+{"rule": "R1.2", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "fail", "breaks": [{"quote": "He had already answered his own question about clarity, in a picture of his own.", "why": "The clarity question was asked a full paragraph earlier and only mentioned in passing here, so the reader must hunt for what was asked and the car picture seems to come from nowhere."}]},
+{"id": "F6", "verdict": "fail", "breaks": [{"quote": "Then one day Melvin makes the mistake that costs him.", "why": "The hazing was said to run 10 years until he was let in, so this sudden mistake with no link to that timeline leaves the reader unsure when it happens and how it fits."}, {"quote": "In humans, we sometimes make that mistake at 15.", "why": "The chimp story ends on two lessons, then jumps to humans with no bridge naming the turn, and it is unclear which mistake is meant."}]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "pass", "breaks": []},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []}
+]}

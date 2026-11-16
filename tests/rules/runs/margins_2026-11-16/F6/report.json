@@ -1,0 +1,268 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 664,
+  "sentences": 61,
+  "reading_grade": 4.4
+ },
+ "lint": [
+  {
+   "level": "FAIL",
+   "rule": "T0 no em dashes",
+   "line": 1,
+   "excerpt": "**Insight 1 — Insights from me, to you.**  ...",
+   "msg": "em dash. Use a full stop, comma, colon or brackets"
+  },
+  {
+   "level": "FAIL",
+   "rule": "T0 no em dashes",
+   "line": 37,
+   "excerpt": "...ying.  Coach Gen  **Insight 2 — Insights from other experts.*...",
+   "msg": "em dash. Use a full stop, comma, colon or brackets"
+  },
+  {
+   "level": "FAIL",
+   "rule": "T0 no em dashes",
+   "line": 45,
+   "excerpt": "...her field notes.  **Insight 3 — Insight from within you.**  I...",
+   "msg": "em dash. Use a full stop, comma, colon or brackets"
+  },
+  {
+   "level": "FORM",
+   "rule": "article card headers",
+   "line": 0,
+   "excerpt": "",
+   "msg": "missing the header line \"Insights from me, to you.\" on a line of its own"
+  },
+  {
+   "level": "FORM",
+   "rule": "article card headers",
+   "line": 0,
+   "excerpt": "",
+   "msg": "missing the header line \"Insights from other experts.\" on a line of its own"
+  },
+  {
+   "level": "FORM",
+   "rule": "article card headers",
+   "line": 0,
+   "excerpt": "",
+   "msg": "missing the header line \"Insight from within you.\" on a line of its own"
+  }
+ ],
+ "checkers": [
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+     "why": "The second lesson (Melvin earns his place by taking risk) is set up and then never used for the human reader, so the chimp thread is dropped."
+    },
+    {
+     "quote": "So why does it still shout at you at 2am, 20 years later?",
+     "why": "The piece suddenly turns from a 15-year-old's written rule to regret and its lesson, a new idea the chimp story did not set up, so the reader loses what the piece is about."
+    },
+    {
+     "quote": "tell it as a story about somebody else and find the moral. That is why there is a chimpanzee in my notes.",
+     "why": "The stated reason for the chimp does not match how the chimp story was told, so the reader has to guess the link."
+    }
+   ],
+   "rule": "R1.1"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Then one day Melvin makes the mistake that costs him.",
+     "why": "It follows a paragraph that said the hazing ends when they let him in and that he did nothing wrong, so the reader cannot tell how this fits or when it happens."
+    },
+    {
+     "quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon",
+     "why": "It lands after the closing question with no link to it, so the reader does not know what it answers or why it comes here."
+    }
+   ],
+   "rule": "R1.2"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Then one day Melvin makes the mistake that costs him.",
+     "why": "The false 'Then' puts a punishment-causing mistake after he was let in, and it contradicts the line 'He did nothing wrong', so the reader loses the timeline."
+    },
+    {
+     "quote": "So why does it still shout at you at 2am, 20 years later?",
+     "why": "'It' has no clear referent, since the reader must guess whether it means the written sentence, the memory or the regret."
+    },
+    {
+     "quote": "Because it is not finished with you.",
+     "why": "The far 'it' is left unnamed, and the answer only becomes clear when 'Regret' appears a line later."
+    }
+   ],
+   "rule": "R1.3"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Reddy calls it close to hazing, and it runs for 10 years",
+     "why": "The researcher is named again and again in Insight 1 (primatologist, Reddy twice more) when she should appear once with a role or not at all, which adds names the reader must carry."
+    },
+    {
+     "quote": "Because it is not finished with you. It still has a lesson to teach",
+     "why": "The same thing is called a sentence, a memory, a lesson and regret, so the reader cannot tell what 'it' that shouts at 2am refers to."
+    },
+    {
+     "quote": "Regret is not punishment, it is there to stop you repeating something.",
+     "why": "'Regret' appears here as a new name for the thing earlier called 'that one sentence' and 'memory', so the reader has to guess it is the same thing."
+    }
+   ],
+   "rule": "R1.4"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet. Regret is not punishment, it is there to stop you repeating something.",
+     "why": "A surprising claim about regret is stated flat with no example, reason or premise, so the reader must take it on trust."
+    },
+    {
+     "quote": "And when you cannot answer, tell it as a story about somebody else and find the moral.",
+     "why": "A new technique is handed over with no reason or step, and the jump from chimpanzees to the reader's own regret is not bridged."
+    }
+   ],
+   "rule": "R1.5"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.6"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Then one day Melvin makes the mistake that costs him. He reaches for a female who belongs to a male above him",
+     "why": "A new scene is dropped in after the 10 years of hazing and 'He did nothing wrong', so the reader cannot tell when it happened or why the hazing began."
+    },
+    {
+     "quote": "it runs for 10 years, until the day they finally let him in.",
+     "why": "The ending is announced early, before the story tells how he gets in."
+    },
+    {
+     "quote": "I have watched a load come off someone's chest for the first time in 20 years, in a single afternoon",
+     "why": "A new unnamed mini story appears after the closing question, with no setup or arc."
+    }
+   ],
+   "rule": "R1.7"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.9"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.11"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "In Kibale National Park, Uganda, a primatologist named Rachna Reddy spent years watching one thing",
+     "why": "The study opens the piece and runs for many paragraphs with two findings, before his idea is stated, so the research carries the piece instead of backing it."
+    },
+    {
+     "quote": "One honest note. Her research does not claim to measure regret as a feeling inside a chimpanzee.",
+     "why": "This caveat marks what the study does not prove instead of what the frame did to him, and it makes the reader doubt the chimp story they just followed."
+    },
+    {
+     "quote": "Then one day Melvin makes the mistake that costs him.",
+     "why": "The dramatised, named chimp story goes well past the facts of the study, so the reader cannot tell what the researcher found and what was added."
+    }
+   ],
+   "rule": "R1.12"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "He reaches for a female who belongs to a male above him, and the older males make sure he never forgets it.",
+     "why": "This is a built, staged event that contradicts the line just before it (\"He did nothing wrong\"), is not in the expert layer's account of Reddy's findings, and exists only to set up the \"do not reach above your standing\" lesson, so the reader cannot tell what is science and what is invented."
+    }
+   ],
+   "rule": "R1.13"
+  },
+  {
+   "id": "F6",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "Two lessons, 10 years apart. Most of us only ever learn the first one.",
+     "why": "The writer explains the piece's own shape (two lessons, 10 years apart) instead of letting the story carry it."
+    }
+   ],
+   "rule": "R1.14"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "F6",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}
