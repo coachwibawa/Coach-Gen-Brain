@@ -701,7 +701,13 @@ def cmd_result(a):
         for f in flips:
             print("  " + f)
     if wrong:
-        print("\nGATE FAILED. Either the wording is wrong, or a checker misreads the rule. For a misread, add a note to "
+        only_retire = all(r.get("action") == "retire" for r in fold["rows"])
+        first = ("GATE FAILED. This fold only retires a rule, so the rule it retires was the one catching a fail case, "
+                 "or its checker's answers were holding a pass. Keep the rule, or move what it caught into another "
+                 "rule first. If a checker misreads a rule that stays, add a note to "
+                 if only_retire else
+                 "GATE FAILED. Either the wording is wrong, or a checker misreads the rule. For a misread, add a note to ")
+        print("\n" + first +
               "rules/checkers/calibration.json that names the case and comes from his verdict on it, then run gate "
               "again and rerun that checker twice. A note never changes rule text.")
         sys.exit(1)

@@ -32,3 +32,11 @@ Done: all 5 fail cases fail and all 9 approved passages pass. Report: `tests/rul
 Confirmed: 5 of 5 fail cases fail and 9 of 9 approved passages pass, all 20 checkers from one fresh run. Report: `tests/rules/runs/fresh_2026-11-11/REPORT.md`, printed by `tests/rules/report_run.py`.
 - One flip on the way: R1.19 failed P6, then P10. Two notes for R1.19 fixed it (each names its case), and two reruns of R1.19 came back 14 of 14.
 - Thin margins still: F1 only by R1.16, F3 only by R1.11, the same as before.
+
+## The two thin margins, full gate (16 Nov 2026)
+
+Report: `tests/rules/runs/margins_2026-11-16/REPORT.md`.
+- Before any change the fresh run gave 13 of 14: F1 passed every checker. R1.16 missed it twice, so the 11 Nov catch was luck.
+- R1.5 passed F1 twice and R1.2 passed F3 twice, though those are his own grounds for the two cases.
+- Three notes, each naming its case: R1.16 and R1.5 from F1, R1.2 from F3. Each checker was rerun twice after its note. F1 is now caught by R1.5 and R1.16, F3 by R1.2 and R1.11, and all 9 approved passages pass.
+- The notes quote words from F1 and F3, so the test set says less about a new draft with the same fault. Step 20 (the blind A/B) tests that.
