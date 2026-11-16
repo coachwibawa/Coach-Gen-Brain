@@ -4,15 +4,15 @@
  "breaks": [
   {
    "quote": "If the answer is no, prune. Pick something that still matters to you and prune it.",
-   "why": "The ask to end things that still matter rests mainly on the writer's own story, with the reader's own case given only in a short list, so a doubtful reader can shrug."
+   "why": "The ask to end things that still matter rests on one personal story and a short reader list, so a doubtful reader can shrug and keep everything."
   },
   {
    "quote": "Pruning hurts, and it will hurt you too.",
-   "why": "The cost is named in one sentence and answered only by saying they can restart later, which does not meet the reader's doubt about losing something that matters."
+   "why": "The cost is only stated, and the reader's strongest doubt (why end something valuable) is never answered with a reason before the ask."
   },
   {
-   "quote": "Don't wait for it to become useless first, because you may never be able to call any of them useless.",
-   "why": "The ask is squeezed into the last paragraphs, and the reason why this change beats an easier one is a single sentence."
+   "quote": "But what you truly need, you can go back to with a clear mind and restart from a fresh seed",
+   "why": "The benefit comes in one sentence after the ask, so the case for pruning is named, not built."
   }
  ],
  "rule": "R1.21"

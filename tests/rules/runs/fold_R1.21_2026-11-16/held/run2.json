@@ -1,0 +1,23 @@
+{"rule": "R1.21", "results": [
+{"id": "F1", "verdict": "pass", "breaks": []},
+{"id": "F2", "verdict": "pass", "breaks": []},
+{"id": "F3", "verdict": "pass", "breaks": []},
+{"id": "F6", "verdict": "fail", "breaks": [
+{"quote": "So ask it straight. And when you cannot answer, tell it as a story about somebody else and find the moral.", "why": "The ask is squeezed in near the end and rests on one chimpanzee story, so a doubtful reader can shrug and not try it."},
+{"quote": "Regret is not punishment, it is there to stop you repeating something.", "why": "The reason the memory is worth facing is stated in one sentence and never argued or shown in the reader's life, and the reader's doubt about reopening old pain is not answered."}
+]},
+{"id": "F8", "verdict": "pass", "breaks": []},
+{"id": "P2", "verdict": "fail", "breaks": [
+{"quote": "So do what a negotiator does. Stop arguing, and say out loud what the other side actually wants.", "why": "The ask rests on one Voss analogy and is delivered in a few lines, with no doubt named (why would saying it aloud change anything) and no cost or answer built before it."},
+{"quote": "It is often the first time that side has been heard instead of fought, and a side that feels heard is finally ready to make a deal.", "why": "The reason this works is named in one sentence and not shown in the reader's life, so a doubtful reader could shrug."}
+]},
+{"id": "P3", "verdict": "pass", "breaks": []},
+{"id": "P4", "verdict": "pass", "breaks": []},
+{"id": "P5", "verdict": "pass", "breaks": []},
+{"id": "P6", "verdict": "pass", "breaks": []},
+{"id": "P7", "verdict": "pass", "breaks": []},
+{"id": "P8", "verdict": "pass", "breaks": []},
+{"id": "P9", "verdict": "pass", "breaks": []},
+{"id": "P10", "verdict": "pass", "breaks": []},
+{"id": "ORIGIN", "verdict": "pass", "breaks": []}
+]}

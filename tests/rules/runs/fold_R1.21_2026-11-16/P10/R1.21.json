@@ -1,6 +1,6 @@
 {
- "id": "P10",
  "verdict": "pass",
  "breaks": [],
+ "note": "out of scope: the rule does not apply to this output",
  "rule": "R1.21"
 }

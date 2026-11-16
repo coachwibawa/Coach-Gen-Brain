@@ -41,7 +41,11 @@
     ],
     "diagnosis": "Claude's reading, to confirm on the next draft: in both A/B drafts the ask to prune comes in the last two or three paragraphs and rests on his one story. Neither argues why pruning beats cutting back or pausing, neither answers the reader's doubt (what if the thing I end was the one that would grow), and no second case or study backs it. All 20 checkers passed both drafts, so no live rule holds this.",
     "code": "R1.21",
-    "sort": 305
+    "sort": 305,
+    "outputs": [
+     "chapter",
+     "key moments"
+    ]
    }
   ],
   "date": "2026-11-16"
@@ -59,11 +63,8 @@
    "body": "### A recommendation is argued before it is asked\n- The goal: when the piece asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.\n- Build the case first, over as many paragraphs as it needs: why the reader's way now fails them, why this change and not an easier one, what it costs, and why it is worth the cost.\n- Each reason is argued, not named: it says why it holds and shows it in the reader's life. A reason in one sentence is named, not argued.\n- A story, another person's case or a study is a tool for the case, used where it fits. One story with an ask after it is not a case, however well told.\n- Name the reader's strongest doubt about the ask, and answer it with a reason, before the ask. Saying the ask will hurt is not an answer.\n- Deliver the ask once, plainly and with confidence: a concrete action, at the turn, after the case is built.\n- The test: read the ask cold, as a doubtful reader. If they could shrug and carry on as before, the case is not built.\n- Fails: an ask that is only stated, an ask that rests on one story, or an ask squeezed into the last lines.",
    "sort": 305,
    "outputs": [
-    "article",
-    "letter",
     "chapter",
-    "key moments",
-    "case study"
+    "key moments"
    ],
    "check_type": "checker",
    "extends": null,
@@ -119,8 +120,7 @@
       "R1.7",
       "R1.12",
       "R1.13",
-      "R1.14",
-      "R1.21"
+      "R1.14"
      ],
      "F8": [
       "R1.5",

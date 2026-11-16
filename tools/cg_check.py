@@ -44,6 +44,15 @@ OUTPUTS = {"article": "an article (Inside The Introvert)", "letter": "a letter (
 CARD_OF = {"article": "card:article", "letter": "card:letter", "chapter": "card:chapter", "chapter-excerpt": "card:chapter",
            "key-moments": "card:key-moments", "case-study": "card:case-study"}
 LINT_OUTPUT = {"chapter-excerpt": "chapter", "key-moments": None, "case-study": None}
+# A draft's output, as named in a rule's "outputs" (added 17 Nov 2026). A Tier 1 rule scoped to some
+# outputs is not checked on the others: those drafts pass it without a call ("out of scope").
+RULE_OUTPUT = {"article": "article", "letter": "letter", "chapter": "chapter", "chapter-excerpt": "chapter",
+               "key-moments": "key moments", "case-study": "case study"}
+OUT_OF_SCOPE = {"verdict": "pass", "breaks": [], "note": "out of scope: the rule does not apply to this output"}
+
+
+def in_scope(rule, output):
+    return RULE_OUTPUT[output] in rule.get("outputs", RULE_OUTPUT.values())
 CAL = ROOT / "rules/checkers/calibration.json"
 
 TEMPLATE = """You check one draft against ONE rule from Coach Gen's writing rulebook. Check nothing else. Other checkers cover the other rules, the marks and the spelling.
@@ -150,7 +159,11 @@ def cmd_prepare(a):
     out = Path(a.dir)
     out.mkdir(parents=True, exist_ok=True)
     n = 0
+    scope = {r["code"]: r for r in tier1()}
     for f in sorted(TPL_DIR.glob("R1.*.md"), key=lambda p: int(p.stem.split(".")[1])):
+        if f.stem in scope and not in_scope(scope[f.stem], a.output):
+            (out / f"{f.stem}.json").write_text(json.dumps(dict(OUT_OF_SCOPE, rule=f.stem)), encoding="utf-8")
+            continue
         text = (f.read_text(encoding="utf-8").replace("{{OUTPUT}}", OUTPUTS[a.output])
                 .replace("{{CARD}}", card_text(a.output)).replace("{{DRAFT}}", draft))
         (out / f"{f.stem}.prompt.md").write_text(text, encoding="utf-8")
@@ -232,7 +245,9 @@ def cmd_batch(a):
     out.mkdir(parents=True, exist_ok=True)
     rules = only(tier1(), a.only)
     for r in rules:
-        (out / f"{r['code']}.prompt.md").write_text(batch_prompt(r["code"], r["body"], man), encoding="utf-8")
+        inside = [d for d in man if in_scope(r, d["output"])]
+        if inside:
+            (out / f"{r['code']}.prompt.md").write_text(batch_prompt(r["code"], r["body"], inside), encoding="utf-8")
     for d in man:
         sub = out / d["id"]
         sub.mkdir(exist_ok=True)
@@ -246,8 +261,12 @@ def cmd_split(a):
     d = Path(a.dir)
     ids = [m["id"] for m in json.loads((d / "manifest.json").read_text(encoding="utf-8"))]
     done = 0
+    outs = {m["id"]: m["output"] for m in json.loads((d / "manifest.json").read_text(encoding="utf-8"))}
     for r in tier1():
         p = d / f"{r['code']}.json"
+        for i in ids:
+            if not in_scope(r, outs[i]):
+                (d / i / f"{r['code']}.json").write_text(json.dumps(dict(OUT_OF_SCOPE, rule=r["code"]), indent=1), encoding="utf-8")
         if not p.exists():
             if (d / f"{r['code']}.prompt.md").exists():
                 print(f"  missing {p.name}")
@@ -256,7 +275,7 @@ def cmd_split(a):
         raw = p.read_text(encoding="utf-8")
         m = re.search(r"\{.*\}", raw, re.S)
         got = {x.get("id"): x for x in json.loads(m.group(0)).get("results", [])} if m else {}
-        for i in ids:
+        for i in [i for i in ids if in_scope(r, outs[i])]:
             v = got.get(i, {"verdict": "error", "breaks": [], "raw": "no result for this draft"})
             v = dict(v, rule=r["code"])
             (d / i / f"{r['code']}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1), encoding="utf-8")

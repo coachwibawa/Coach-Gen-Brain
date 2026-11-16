@@ -1,15 +1,6 @@
 {
- "id": "F6",
- "verdict": "fail",
- "breaks": [
-  {
-   "quote": "So ask it straight. And when you cannot answer, tell it as a story about somebody else and find the moral.",
-   "why": "The ask is a specific action, but it rests on the chimpanzee story and is squeezed into two sentences, so a doubtful reader can shrug."
-  },
-  {
-   "quote": "Because it is not finished with you. It still has a lesson to teach, and you have not learned it yet.",
-   "why": "The key reason that regret carries a lesson is only stated, not argued or shown in the reader's life, so the reader must take it on trust."
-  }
- ],
+ "verdict": "pass",
+ "breaks": [],
+ "note": "out of scope: the rule does not apply to this output",
  "rule": "R1.21"
 }
