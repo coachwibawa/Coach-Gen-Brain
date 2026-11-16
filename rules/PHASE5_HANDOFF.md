@@ -73,3 +73,25 @@ NOT done, and why:
 8. Only read so far in this chat: Full_Read_Notes_1 and 4 (inline, not compared by script).
 
 Leaving list once the compare passes (26 docs): groups A, B, C of `rules/step18/stale_docs.md`, the 5 Full Read Notes, Brand_Direction_Phase1, Brain_RAG_Plan, Overnight_Book_Run_Ledger, Experimental_Book_Branch_Handoff.
+
+## 16 Nov, 13:20 to 13:50: step 1 finished
+
+He signed in to claude.ai in the browser pane and said go (also "ok" on the CORRECTION lines).
+
+1. **Compare:** one script in the page fetched all 88 docs and took the sha256 of each. All 37 docs that mattered (the leaving ones and the ones to edit) equalled their archive copy, byte for byte. Nothing newer had to be archived.
+2. **Removed, 23 docs:** groups A, B and C of `rules/step18/stale_docs.md` (14), the 5 Full Read Notes, Brand_Direction_Phase1, Brain_RAG_Plan, Overnight_Book_Run_Ledger, Experimental_Book_Branch_Handoff. The project holds 65 docs. (The note above says 26. That was a miscount.)
+3. **Stay on purpose:** AB_Test_Writing_Skills (until step 20), Raw_Take_Edit_Plan_Jikoshoukai, and 5 book notes with live items (`rules/step18/book_notes_check_2026-11-16.md`).
+4. **Written, each by `local_path` from the archive copy plus exact inserts** (copies in `project-docs/`, old lines all kept): Protected Docs, Toastmasters handoff, Content Rules, Social Posting Rules, brand 00_START-HERE, 01_CORE, 02_VOICE, 18_COPY-KITS, 99_CHANGELOG (v1.7), and `brand/templates/cg_render.py` (2 sample texts changed, a comment above each, compiles).
+5. **Mac mirror:** the 5 brand md files were copied to `Brand/Guide/`. `cg_render.py` has no copy in `Brand/Guide/templates/` on the Mac, so it was not mirrored.
+6. `project_write` refuses a doc this chat has not read with `project_read`, so each edited doc was read once first.
+7. He deleted the two old skills. Do not ask again.
+
+Still open from step 1:
+
+- `Book/Book_Status.md` on his Mac holds the older locked line. Not changed (his ledger, a book chat's job).
+- The 5 book notes leave once a book chat has merged their live items.
+- The autopilot line in project memory leaves after 18 Nov.
+- Two saved skills (`rhyme-this`, `merge-epoch-to-book`) still cite old rule numbers. They get rule names the next time each is edited.
+- coach-gen-writer may still point at the Full Read Notes in the project. They are now in `archive/pre-prune/project-docs/claude/`.
+
+Next: step 2 (bring `claude/Rules_Refactor_Handoff.md` up to date). The same browser route can fetch its bytes: the live sha256 on 16 Nov was `91b110c454cd...`, 26,953 bytes. Then step 3, the blind A/B.
