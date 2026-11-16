@@ -95,3 +95,11 @@ Still open from step 1:
 - coach-gen-writer may still point at the Full Read Notes in the project. They are now in `archive/pre-prune/project-docs/claude/`.
 
 Next: step 2 (bring `claude/Rules_Refactor_Handoff.md` up to date). The same browser route can fetch its bytes: the live sha256 on 16 Nov was `91b110c454cd...`, 26,953 bytes. Then step 3, the blind A/B.
+
+## 16 Nov, 13:55: step 2 done
+
+`claude/Rules_Refactor_Handoff.md` has its dated section (sha256 `91656d95717d...`). The copy in `project-docs/claude/` was rebuilt and matched the live doc's sha256 (`91b110c454cd...`, 26,953 bytes) before the section was appended, so the old text is byte for byte.
+
+One card waits for his save: one line in coach-gen-writer that points the Full Read Notes at the repo archive (proposed 16 Nov, 13:50).
+
+**Next: step 3 (plan step 20), the blind A/B, in a new chat.** Start it with: read `rules/PHASE5_HANDOFF.md` in the repo `coachwibawa/Coach-Gen-Brain` and continue from Next, step 3.
