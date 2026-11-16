@@ -71,6 +71,7 @@ All approved by him (2026-10-15), usable in any combination:
 - **Credential.** ICF Associate Certified Coach. Best as a passing mention, not the main brag.
 - **International reach.** Coaches across Indonesia and Singapore.
 - **Client's own words.** A client's line about the change, from `claude/Testimony_Mastertext_Collection.md`, under composite names in public posts.
+  - UPDATED (16 Nov 2026): that collection has left the project. The client lines are entries in the Coach Gen Brain (`claude/Brain_Rule.md`). Nothing with status `never use` is printed.
 - **Lived experience.** He was once the person who kept trying and never finished, and found the way out (his Laws of Lasting Change series).
 - **Own tools.** Named diagnostics: the 6C hexagon (Public Speaking) and the ILA triangle (Introvert coaching).
 - **Coined concepts.** "3 Stages of Consistency".
