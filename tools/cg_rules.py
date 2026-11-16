@@ -65,6 +65,15 @@ def card_text(rows, output):
     return "\n".join(r["body"] for r in pick(rows, output)) + "\n"
 
 
+def card_text_after(rows, output, after):
+    """One card without the rows another card already holds (same as brain.card_text(output, after),
+    migration 023). A chapter reads the chapter card whole, then the case study and key moments cards
+    this way, so Tier 0 and Tier 1 are not read twice."""
+    seen = {r["code"] for r in pick(rows, after)}
+    body = "\n".join(r["body"] for r in pick(rows, output) if r["code"] not in seen)
+    return f"# The {output} card, past the {after} card (only what that card does not hold)\n\n" + body + "\n"
+
+
 def rulebook_text(rows):
     return "\n".join(r["body"] for r in sorted(rows, key=lambda r: r["sort"])) + "\n"
 

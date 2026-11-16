@@ -6,7 +6,7 @@ Each checker reads the whole draft against its one rule and answers JSON: pass o
 
 ## Running
 
-- With an API key: `cg_check.py prepare DRAFT --output chapter --dir RUN`, then `cg_check.py run RUN` (20 calls in parallel, Sonnet), then `cg_check.py collect RUN`.
+- With an API key: `cg_check.py prepare DRAFT --output chapter --dir RUN`, then `cg_check.py run RUN` (20 calls in parallel, Sonnet), then `cg_check.py collect RUN`. The key is read from `CG_CHECK_API_KEY` (set in the cloud environment's Environment variables), else `ANTHROPIC_API_KEY` on his Mac. Never name it ANTHROPIC_API_KEY in the cloud environment: Claude itself could pick that up and bill the chat to the key. Cost, 17 Nov 2026: about 70,000 input tokens and 6,000 output tokens per draft, about US$0.20 on Sonnet 5.5 ($2 in, $10 out per million).
 - In a chat with no key: `prepare`, then one Sonnet helper per `RUN/R1.x.prompt.md`, each saving its JSON as `RUN/R1.x.json`, then `collect`.
 - Many drafts at once (calibration): `cg_check.py batch MANIFEST --dir RUN` makes one prompt per rule carrying every draft, then `split RUN` and `collect RUN/<id>` per draft. `--only R1.7,R1.19` keeps the run to the named checkers.
 - The test-set gate for a new or changed rule (step 16): `tools/cg_fold.py gate` and `result` do the batch, the split and the join with the last full run. See `rules/folds/README.md`.

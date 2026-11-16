@@ -12,7 +12,7 @@ Commands:
   build                          write rules/checkers/<code>.md, one template per Tier 1 rule
   prepare DRAFT --output OUT --dir DIR
                                  fill the 20 templates with one draft, ready to run
-  run DIR [--model M]            run them in parallel through the Anthropic API
+  run DIR [--model M]            run them in parallel through the Anthropic API (key: CG_CHECK_API_KEY)
                                  (needs ANTHROPIC_API_KEY). Writes DIR/<code>.json
   batch MANIFEST --dir DIR [--only R1.7,R1.19]
                                  one prompt per rule carrying many drafts (calibration, gates).
@@ -189,9 +189,12 @@ def parse_verdict(raw, code):
 
 
 def cmd_run(a):
-    key = os.environ.get("ANTHROPIC_API_KEY")
+    # CG_CHECK_API_KEY first (17 Nov 2026): in a cloud chat, a variable named ANTHROPIC_API_KEY could
+    # also be picked up by Claude itself and bill the whole chat to the key. ANTHROPIC_API_KEY stays as
+    # the fallback for a run on his Mac.
+    key = os.environ.get("CG_CHECK_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
     if not key:
-        fail("no ANTHROPIC_API_KEY. In a chat, run each .prompt.md with a Sonnet helper instead")
+        fail("no CG_CHECK_API_KEY. In a chat, run each .prompt.md with a Sonnet helper instead")
     d = Path(a.dir)
     prompts = sorted(d.glob("R1.*.prompt.md"))
 
