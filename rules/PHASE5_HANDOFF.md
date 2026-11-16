@@ -103,3 +103,25 @@ Next: step 2 (bring `claude/Rules_Refactor_Handoff.md` up to date). The same bro
 One card waits for his save: one line in coach-gen-writer that points the Full Read Notes at the repo archive (proposed 16 Nov, 13:50).
 
 **Next: step 3 (plan step 20), the blind A/B, in a new chat.** Start it with: read `rules/PHASE5_HANDOFF.md` in the repo `coachwibawa/Coach-Gen-Brain` and continue from Next, step 3.
+
+## 16 Nov, 19:00 to 20:00: step 20 and 21 done
+
+1. **Step 20 ran** on Chapter 5 (Law 3), the pruning section, from 8 brain entries. Old stack: the pre-prune skill and rule docs. New stack: the skill, the chapter card, `cg_lint.py`, the 20 checkers. Record: `tests/rules/runs/ab_2026-11-16/log.md` (setup, incidents, cost, his words, the key).
+2. **Result:** he scored X 7 (old stack) and Y 8.25 (new stack), before he saw the key, a hunch, low confidence. Both drafts pass the lint and all 20 checkers. The new draft needed 2 checker fix rounds first.
+3. **Step 21:** the new stack wins, so it stays the default. Nothing restored. One round only. The next real chapter is the true test.
+4. **His reason, for both drafts:** the recommendation (pruning) is not argued, built up or delivered powerfully, which a book that gives specific advice must do. Neither stack caught it. The checkers have no rule for it.
+5. The key is in `tests/rules/runs/ab_2026-11-16/sealed/key.json`. It is open now.
+
+## Next, in order (from 16 Nov, 20:00)
+
+1. **The candidate rule above:** run `propose-language-rule` on his sentence. It needs a test: write the pruning section again with the rule, check that the 5 fail and 9 pass cases hold, and that the new rule fails both A/B drafts. He sees the exact text and gives the go. Opus, high.
+2. **The cost of the checkers.** The A/B used about 2.4 million Sonnet tokens on 26 helper runs. Get an API key for `cg_check.py run` (about 20 small calls). That is his part.
+3. **Still his:** save the one-line coach-gen-writer card (the Full Read Notes pointer). Delete nothing else. The autopilot line in project memory leaves after 18 Nov.
+4. **Left on purpose:** review item 13 (spreading the sort values), the 5 book notes with live items, the two skills that cite old rule numbers (`rhyme-this`, `merge-epoch-to-book`).
+5. **The first real use:** the next chapter epoch with the new stack. Run the checkers once on the final draft only.
+
+## Rules added 16 Nov, from the A/B
+
+1. Writers in a blind test get the same prompt but for one block. Read the prompt for stray lines before launch.
+2. Checkers run once on the final draft. After a fix, rerun only the checkers that failed, twice for a noisy one.
+3. Log his scores and words before opening the key.

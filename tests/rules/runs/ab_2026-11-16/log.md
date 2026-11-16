@@ -46,6 +46,7 @@ Logged at 19:40 (16 Nov), before the key was opened. His words, as typed.
 - On Y (comment on its last word): "I think after reading both, I like the second one better. it is more book-y, like reading a penguin self help book. even though it both shares flaws due to the material and some approaches I no longer agree with, I like B better. but I still can't say for sure."
 - His numbers, sent at 19:40 before he saw the key: "if it's numberic, I'll say 7 and 8.25". X 7, Y 8.25.
 - His call: Y over X, low confidence.
+- His reason for the verdict, sent 19:43, word for word: "it's just that the recommendation of pruning has not been argued or built up, or delivered powerfully; which are all a must for books that give a specific advice to follow". This applies to both drafts. It is a candidate rule (a recommendation in a book must be argued, built up and delivered powerfully), not yet proposed. It goes to propose-language-rule, tested on the test set, stored only on his go.
 
 ## The key (opened 19:41, after his verdict was logged)
 
