@@ -55,3 +55,21 @@ Those in `claude/Rules_Refactor_Handoff.md` still hold. Added 16 Nov:
 ## Fold check for the 16 Nov chats
 
 He asked for no new writing rule. His working-style ask (make the obvious calls, repeat what is his to do) is in project memory and in the rules above.
+
+## 16 Nov, 08:35 to 09:15: step 1, first pass
+
+Done:
+
+1. `Guardrails.md` written to the project by `local_path` (sha256 `fa83a3fb0cf0935035d7673b308dc7fc8af1e08cd5ba24f9a041a2bb641b0289`, equal to `project-docs/Guardrails.md`).
+2. Card 41, the memory cleanup: done in `preferences.md` (83 lines to 31) and `ways-of-working.md` (21 lines to 10). The autopilot line stays until 18 Nov. The lines newer than the archive are in `rules/step19/removed_newer_lines.md`.
+3. Card 4, memory part: `overview.md` now holds the newer locked line.
+4. Cards 28 to 34 checked against `Book/Book_Status.md` on his Mac: `rules/step18/book_notes_check_2026-11-16.md`. 2 are covered. 5 hold live items and stay for now (Claude's call).
+
+NOT done, and why:
+
+5. **No doc has been removed.** `project_read` hands every doc over as chat text (even 182 KB), so no script can compare it with the archive. Helper agents have no Projects tool. The browser pane (claude.ai is allowed there now) is not signed in to claude.ai. Once he signs in there, one script can fingerprint all docs: fetch `/api/organizations/<org>/projects/01a004af-f98d-75a0-82ee-b053384bfff1/docs` in the page, sha256 each `content`, and compare with `sha256sum` of the archive copies. `project_write` also returns the sha256 of what it wrote as `version`.
+6. The pointer fixes that depend on the removals (Protected Docs rows, Toastmasters handoff, Content Rules) and the exact-byte edits need the same compare first.
+7. Card 4, the CORRECTION lines in the brand docs, `cg_render.py` and the Social Posting Rules: he sees the exact lines first (the docs' own rule).
+8. Only read so far in this chat: Full_Read_Notes_1 and 4 (inline, not compared by script).
+
+Leaving list once the compare passes (26 docs): groups A, B, C of `rules/step18/stale_docs.md`, the 5 Full Read Notes, Brand_Direction_Phase1, Brain_RAG_Plan, Overnight_Book_Run_Ledger, Experimental_Book_Branch_Handoff.
