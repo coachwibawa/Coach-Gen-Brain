@@ -1,0 +1,4 @@
+[
+ {"id": "D1", "output": "chapter-excerpt", "draft": "tests/rules/runs/ab_2026-11-16/src/D1.md"},
+ {"id": "D2", "output": "chapter-excerpt", "draft": "tests/rules/runs/ab_2026-11-16/src/D2.md"}
+]

@@ -1,0 +1,15 @@
+{
+ "id": "D1",
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "That is why killing hurts.",
+   "why": "The writer defined the thing as pruning (not weeding), then switches to 'killing' and 'killed them' as a second name, so the reader must guess whether it is the same act."
+  },
+  {
+   "quote": "A list like that is present friction at its quietest",
+   "why": "An unexplained label appears once from nowhere, so the reader has to guess what 'present friction' means and whether it is a term to keep."
+  }
+ ],
+ "rule": "R1.4"
+}

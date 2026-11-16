@@ -1,0 +1,132 @@
+{
+ "result": "PASS",
+ "stats": {
+  "words": 723,
+  "sentences": 43,
+  "reading_grade": 6.6
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.4"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.5"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.6"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.7"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.9"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.11"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.17"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "D2",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

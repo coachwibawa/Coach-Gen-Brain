@@ -1,0 +1,180 @@
+{
+ "result": "FAIL",
+ "stats": {
+  "words": 673,
+  "sentences": 36,
+  "reading_grade": 7.3
+ },
+ "lint": [],
+ "checkers": [
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.1"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.2"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.3"
+  },
+  {
+   "id": "D1",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "That is why killing hurts.",
+     "why": "The writer defined the thing as pruning (not weeding), then switches to 'killing' and 'killed them' as a second name, so the reader must guess whether it is the same act."
+    },
+    {
+     "quote": "A list like that is present friction at its quietest",
+     "why": "An unexplained label appears once from nowhere, so the reader has to guess what 'present friction' means and whether it is a term to keep."
+    }
+   ],
+   "rule": "R1.4"
+  },
+  {
+   "id": "D1",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "That is why killing hurts.",
+     "why": "The draft has only spoken of cutting back and pruning, so \"killing\" appears with no step showing that he ended these things for good, and the reader has to guess what he means."
+    },
+    {
+     "quote": "When you prune, you cut back something that is still alive.",
+     "why": "The new idea of pruning is explained by a garden picture (weeding versus pruning) when it needed plain words about what he stopped doing and what stays."
+    },
+    {
+     "quote": "A list like that is present friction at its quietest",
+     "why": "A new term is dropped into one sentence with no example or reason, so the reader cannot tell what it means or use it."
+    }
+   ],
+   "rule": "R1.5"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.6"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.7"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.8"
+  },
+  {
+   "id": "D1",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "I have room for more commitments now that I can 100% commit.",
+     "why": "A one-sentence quote sits alone as its own paragraph with no setup of who said it or when, so the reader cannot tell what it means or why it matters."
+    },
+    {
+     "quote": "Being a great evaluator at Toastmasters had been on my list.",
+     "why": "The reader was never told Toastmasters evaluating was pruned, so the return to it is a leap the writer's own context filled in."
+    },
+    {
+     "quote": "My BNI membership was one of the cuts, and so was the entrepreneur community.",
+     "why": "BNI and the evaluator role are never explained, so a reader not in the room, often an English second-language reader, has to guess what is being cut."
+    }
+   ],
+   "rule": "R1.9"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.10"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.11"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.12"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.13"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.14"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.15"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.16"
+  },
+  {
+   "id": "D1",
+   "verdict": "fail",
+   "breaks": [
+    {
+     "quote": "A list like that is present friction at its quietest",
+     "why": "An abstract, crafted phrase that a second-language reader must guess at, in a passage that should explain plainly."
+    },
+    {
+     "quote": "every day, 2 to 3 hours went to the mundane side of these things",
+     "why": "\"Mundane\" is a higher-register word he would not use and his readers may not know."
+    },
+    {
+     "quote": "or that one of the side hustles would not turn into a million-dollar business",
+     "why": "Nearby, \"fruitless endeavour\" lifts the register above his plain speech."
+    }
+   ],
+   "rule": "R1.17"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.18"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.19"
+  },
+  {
+   "id": "D1",
+   "verdict": "pass",
+   "breaks": [],
+   "rule": "R1.20"
+  }
+ ],
+ "missing": []
+}

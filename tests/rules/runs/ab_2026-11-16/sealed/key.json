@@ -1,0 +1,10 @@
+{
+ "X": "old",
+ "Y": "new",
+ "flip": 1,
+ "how": "secrets.randbelow(2): 0 puts new as X",
+ "md5": {
+  "X": "89109ffb15191d35794e6e15bc5ac2d5",
+  "Y": "7f75b76e2a2d4aa9b8dda2f40ece7e02"
+ }
+}
