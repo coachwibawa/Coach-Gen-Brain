@@ -151,3 +151,12 @@ He said this chat is the last one for the refactor, and asked for every loop clo
 Fold check: the one rule he asked for (his A/B reason) is R1.21, waiting at stage merged for his pick on card 1. No other rule was asked for.
 
 Left to book chats, not the refactor: the old locked line in `Book/Book_Status.md` on his Mac, the 5 book notes with live items (`rules/step18/book_notes_check_2026-11-16.md`), the first real chapter on the new stack.
+
+## 17 Nov, 11:06 to 11:20: his picks, and he is back
+
+1. Card 1 to 7: "use your recommendation, but I think this is essential enough to fail a draft". R1.21 stored as Tier 1, wording 3, chapters only, with a second note from his verdict on draft Y. Gate 15 of 15 in 3 runs out of 3, X fails alone, the rewrite passes. Rulebook md5 now `a5f30b2767d284d14ea6300248720560`, chapter card `4c2f86d419b31cd71cf0a8a6b7286291`, the other four cards unchanged. 21 checkers. Cards copied to the project and his Mac.
+2. Card 8: no pick. His question on the cost is answered in chat.
+3. Card 9: removed `claude/AB_Test_Writing_Skills.md` from the project on his "do it for me". The archive copy stays.
+4. Card 10: coach-gen-writer saved (04:05 UTC). rhyme-this and merge-epoch-to-book not seen as saved, proposed again.
+5. `Book/Book_Status.md` on his Mac: a CORRECTION line under the old locked line (insert only).
+6. He said he is back: the autopilot line left project memory, and the Autopilot doc says it ended.

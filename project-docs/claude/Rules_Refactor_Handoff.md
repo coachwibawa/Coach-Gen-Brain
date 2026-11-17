@@ -235,3 +235,4 @@ All 22 steps are done. This note is history now. No handoff follows.
 ## Log, closed
 
 - 17 Nov 2026: refactor closed. Fold check: the one rule he asked for (his A/B reason) is R1.21, waiting at stage merged for his pick. Nothing else was asked for.
+- 17 Nov 2026, 11:20: his picks. R1.21 is stored (Tier 1, chapters). The A/B record left the project. He is back, so the autopilot period is over.
