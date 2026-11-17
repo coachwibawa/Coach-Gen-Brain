@@ -1,0 +1,166 @@
+{
+ "title": "Rules Refactor close-out: 3 calls and 1 save",
+ "description": "The last things only you can decide or do, 17 Nov 2026. Writing and mining work without any of them.",
+ "collection": "picks",
+ "intro": [
+  "The refactor is finished. Writing and mining are ready for tomorrow morning without any pick on this page.",
+  "Cards 1 to 9 are calls. Card 10 is a save only you can press. Nothing changes until you pick."
+ ],
+ "sections": [
+  {
+   "title": "Your calls",
+   "sub": "Each option has its own reason. No pick from Claude.",
+   "cards": [
+    {
+     "id": "1-7",
+     "title": "The new rule from your A/B reason: R1.21, A recommendation is argued before it is asked",
+     "context": "Written from your three lines below, for book chapters only (not articles or letters). It sits after Turns and endings. Its 7 lines are numbered 1 to 7 below the notes.",
+     "said": [
+      "it's just that the recommendation of pruning has not been argued or built up, or delivered powerfully",
+      "which are all a must for books that give a specific advice to follow",
+      "of course this problem is solved by length and thought, and storytelling sometimes and research, etc."
+     ],
+     "items": [
+      "The goal: when a chapter asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.",
+      "Build the case before the ask, over as many paragraphs as it needs: why the reader's way now fails them, and why this change is worth what it costs.",
+      "Each reason is argued, not named: it says why it holds and shows it in the reader's life. A reason given in one sentence and left is named, not argued.",
+      "The tools are length and thought, a story, another person's case or a study, each used where it fits. One story with an ask after it is not a case, however well told.",
+      "Thought works through what his material already holds. A reason the brain lacks is [MATERIAL NEEDED], never invented.",
+      "Deliver the ask plainly and with confidence: a concrete action, after the case is built.",
+      "The test: before the ask, point to each reason and its why. Fails: an ask that is only stated, an ask that rests on one story alone, or an ask whose case is squeezed into the last lines."
+     ],
+     "rows": [
+      [
+       "Test",
+       "Your 14 test cases all come out right. But its checker passes both A/B drafts, X and Y, so it does not yet catch the problem you named. The section written again with the rule passes."
+      ],
+      [
+       "Wider wording",
+       "An earlier wording added four lines you did not say (why this change and not an easier one, name the reader's strongest doubt and answer it, deliver the ask once at the turn, a shrug test) and a strict checker note. It failed both A/B drafts in 3 runs of 3. A fresh review called it wider than your words."
+      ],
+      [
+       "Your scores",
+       "You scored the two drafts 7 and 8.25, not a fail."
+      ]
+     ],
+     "options": [
+      [
+       "t1",
+       "a. Store this wording as Tier 1. It fails a draft that breaks it, but today its checker misses the A/B drafts."
+      ],
+      [
+       "t2",
+       "b. Store this wording as Tier 2. The writer reads it on the chapter card. It never fails a draft, and no checker runs."
+      ],
+      [
+       "wide",
+       "c. Store the wider wording as Tier 1. It catches both A/B drafts, but holds lines you did not say."
+      ],
+      [
+       "hold",
+       "d. Store nothing yet. Wait until the next chapter shows the problem again, then word it from two cases."
+      ]
+     ],
+     "placeholder": "Optional. Any change to a line, say which and how."
+    },
+    {
+     "id": "8",
+     "title": "An API key for the checkers",
+     "rows": [
+      [
+       "Now",
+       "The 20 checkers run as helpers inside the chat: about 1.5 to 2 million tokens of your plan for each final draft."
+      ],
+      [
+       "With a key",
+       "The same check is about 20 small API calls: about US$0.20 per draft on Sonnet 5.5, billed to the key."
+      ],
+      [
+       "Your steps if yes",
+       "Make a key in the Claude Console and add a little credit. Then add it to the cloud environment this project's chats use, under Environment variables, named CG_CHECK_API_KEY. Never name it ANTHROPIC_API_KEY there: Claude itself could pick that up and bill the whole chat to the key."
+      ]
+     ],
+     "options": [
+      [
+       "yes",
+       "a. Get a key. Each check costs a little money and much less of your plan."
+      ],
+      [
+       "no",
+       "b. No key. Checks stay free beyond your plan and keep using its tokens."
+      ]
+     ],
+     "placeholder": "Optional"
+    },
+    {
+     "id": "9",
+     "title": "Remove the old A/B record from the project",
+     "rows": [
+      [
+       "Now",
+       "claude/AB_Test_Writing_Skills.md is still in the project. It is the October record of the A/B rounds that led to coach-gen-writer."
+      ],
+      [
+       "Archive",
+       "Its copy in the repo archive has the same sections and the same last line. A byte for byte check was not possible here."
+      ],
+      [
+       "Why it matters",
+       "Old rule talk in a project doc can surface in a writing chat's search."
+      ]
+     ],
+     "options": [
+      [
+       "remove",
+       "a. Remove it. Delete it in the project yourself, or say go in any chat."
+      ],
+      [
+       "keep",
+       "b. Keep it in the project."
+      ]
+     ],
+     "placeholder": "Optional"
+    }
+   ]
+  },
+  {
+   "title": "Your hands",
+   "sub": "Only you can press save.",
+   "cards": [
+    {
+     "id": "10",
+     "title": "Save the 3 skill cards at the end of this chat",
+     "rows": [
+      [
+       "coach-gen-writer",
+       "A chapter reads the case study and key moments cards without Tier 0 and Tier 1 a second time. That saves about 4,800 tokens at drafting and about 10,600 at stop 1. And the checker key's name."
+      ],
+      [
+       "rhyme-this",
+       "4 old rule numbers become rule names (Links are real, AI tells, Callbacks and staying close, and the codes in coach-gen-writer)."
+      ],
+      [
+       "merge-epoch-to-book",
+       "1 old rule number becomes a rule name (Research backs, never interrupts)."
+      ]
+     ],
+     "options": [
+      [
+       "done",
+       "Saved"
+      ],
+      [
+       "later",
+       "Later"
+      ],
+      [
+       "change",
+       "Something is off (say what)"
+      ]
+     ],
+     "placeholder": "Optional"
+    }
+   ]
+  }
+ ]
+}
