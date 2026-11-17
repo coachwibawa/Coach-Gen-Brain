@@ -59,7 +59,7 @@ Examples:
 | source_id | Where it came from (`brain.sources`) |
 | link | Timestamp link |
 | importance | `core`, `major`, `minor` (default `minor`) |
-| status | `raw` (default), `printable`, `placed`, `never use`, `retired` |
+| status | `raw` (default), `printable`, `placed`, `never use`, `retired`, `private` (migration 024) |
 | note | Why it matters, where it fits |
 | extra | Box for one-off details (JSON). If a key gets used a lot, it becomes a real column |
 | corrects_id | The entry this one corrects |
@@ -183,3 +183,11 @@ Books in the raw layer: The War of Art (doc 3), Mindset (source 54, docs 4 to 31
 - Applied and checked on 6 Nov 2026: a dry run in the live brain (rolled back), then the real run. rulebook md5 matched the file, all five card md5 values matched the script, 49 log rows.
 - `021_rule_folds.sql` (11 Nov 2026, step 16): the fold pipeline. `brain.fold_load(path)` puts the rows of a fold file (`rules/folds/*.json`, built by `tools/cg_fold.py`) in `brain.rules` at a stage up to gated. `brain.fold_store(path)` stores an approved fold (the file carries `approved_on`): a new rule goes live, a change is copied onto its target row (codes never change, the old text stays in `change_log`), a retire retires the target, and the fold row stays as the record. It returns the md5 of the rulebook and of each card. `brain.fold_decline(code, note)` retires an open fold with his words. Functions only. Applied from the repo file pinned to commit `194d432`. See `rules/folds/README.md`.
 - `020_entry_quote_context.sql`: entries get `answers` (what the line answered), `context` (one line of session context) and `owned_words` (words the person owns, never dropped). Added to the end of `entries_full`. The mine skill starts filling them in Phase 4. Entries text stays frozen: "never reword" is now a storage rule only.
+
+## The private layer (17 Nov 2026, migration 024)
+
+- Every call is mined in full. Sensitive parts (family, money, health, a third person's private story) are kept, not cut, and stored as `private`.
+- `documents.status` can be `private`. Both search functions serve chunks of `active` documents only, so private chunks never come back in search. They are still cut and embedded, so a release needs no rebuild.
+- `entries.status` can be `private`. `brain.entries_full` (read by writing chats and both search functions) leaves private entries out. `brain.entries_private` has the same columns, private entries only. Read it, or a private document, only when Coach Gen asks for private material by name.
+- `never use` stays for what he says must never be used. `private` means held back for now: if business needs change, a row is released by changing its status to `active` or `raw`, on his go, logged in `brain.change_log`.
+- Tested 17 Nov inside a rolled-back block: an active test chunk came back in `search_all` and `search_voices`, the same chunk marked private did not, and a private test entry was missing from `entries_full` and present in `entries_private`.
