@@ -83,8 +83,56 @@
     "diagnosis": "Claude's reading, to confirm on the next draft: in both A/B drafts the ask to prune comes after his one story, and each reason for it (the hours, the full months, the room it gives) is stated in a sentence or two, never argued or shown in the reader's life. All 20 checkers passed both drafts, so no live rule holds this. Reworded 17 Nov after a fresh review: the four-part case template, the strongest-doubt line and 'once' were Claude's additions and are out. The doubt line stays a Tier 2 matter (Author presence).",
     "why": "Without it, a book that tells the reader what to do reads as his story with an order at the end, and the reader does not act."
    },
-   "fold_stage": "merged",
-   "test_gate": null
+   "fold_stage": "gated",
+   "test_gate": {
+    "on": "2026-11-17",
+    "run": "tests/rules/runs/fold_R1.21_2026-11-16",
+    "base": "fresh_2026-11-11",
+    "rerun": [
+     "R1.21"
+    ],
+    "fails_caught": "5 of 5",
+    "passes_kept": "9 of 9",
+    "lint": "all as expected",
+    "caught_by": {
+     "F1": [
+      "R1.16"
+     ],
+     "F2": [
+      "R1.6",
+      "R1.7",
+      "R1.10",
+      "R1.11"
+     ],
+     "F3": [
+      "R1.11"
+     ],
+     "F6": [
+      "lint",
+      "R1.1",
+      "R1.2",
+      "R1.3",
+      "R1.4",
+      "R1.5",
+      "R1.7",
+      "R1.12",
+      "R1.13",
+      "R1.14"
+     ],
+     "F8": [
+      "R1.5",
+      "R1.8",
+      "R1.9",
+      "R1.13",
+      "R1.15"
+     ],
+     "ORIGIN": [
+      "R1.21"
+     ]
+    },
+    "flips": [],
+    "live_md5": "a80b78c1b69fc97be58cdbad021f8138"
+   }
   }
  ]
 }

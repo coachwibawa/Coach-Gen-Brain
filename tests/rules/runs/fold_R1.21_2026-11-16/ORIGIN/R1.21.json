@@ -1,6 +1,19 @@
 {
  "id": "ORIGIN",
- "verdict": "pass",
- "breaks": [],
+ "verdict": "fail",
+ "breaks": [
+  {
+   "quote": "If the answer is no, prune. Pick something that still matters to you and prune it.",
+   "why": "The reader is asked to end things they value, but the case for why this is worth the cost is mostly the writer's own story plus one short paragraph of the reader's list, so the ask is named and not argued."
+  },
+  {
+   "quote": "The hours were only part of the cost.",
+   "why": "The reason that the month is full of the same things gets only a sentence or two inside the writer's story, so the reader is not shown why it holds in their own life."
+  },
+  {
+   "quote": "None of them is useless. That is exactly why they stay.",
+   "why": "The reader's own case is one short paragraph just before the ask, which names the problem but does not argue why the reader's current way fails them or why pruning is worth the loss."
+  }
+ ],
  "rule": "R1.21"
 }
