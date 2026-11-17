@@ -1,0 +1,50 @@
+{
+ "slug": "recommendation-argued",
+ "source": "16 Nov 2026, his verdict reason after the step 20 blind A/B, Chapter 5 (Law 3), the pruning section (tests/rules/runs/ab_2026-11-16/log.md)",
+ "stage": "merged",
+ "lessons": [
+  {
+   "action": "new",
+   "tier": 1,
+   "heading": "A recommendation is argued before it is asked",
+   "after": "R1.19",
+   "lines": [
+    "The goal: when the piece asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.",
+    "Build the case first, over as many paragraphs as it needs: why the reader's way now fails them, why this change and not an easier one, what it costs, and why it is worth the cost.",
+    "Each reason is argued, not named: it says why it holds and shows it in the reader's life. A reason in one sentence is named, not argued.",
+    "A story, another person's case or a study is a tool for the case, used where it fits. One story with an ask after it is not a case, however well told.",
+    "Name the reader's strongest doubt about the ask, and answer it with a reason, before the ask. Saying the ask will hurt is not an answer.",
+    "Deliver the ask once, plainly and with confidence: a concrete action, at the turn, after the case is built.",
+    "The test: read the ask cold, as a doubtful reader. If they could shrug and carry on as before, the case is not built.",
+    "Fails: an ask that is only stated, an ask that rests on one story, or an ask squeezed into the last lines."
+   ],
+   "why": "Without it, a book that tells the reader what to do reads as his story with an order at the end, and the reader does not act.",
+   "his_words": [
+    {
+     "on": "16 Nov 2026",
+     "about": "his reason for the verdict on both drafts of the blind A/B (Law 3, the pruning section), sent after he scored them",
+     "quote": "it's just that the recommendation of pruning has not been argued or built up, or delivered powerfully; which are all a must for books that give a specific advice to follow"
+    },
+    {
+     "on": "16 Nov 2026",
+     "about": "his follow-up a minute later, on how that gap is fixed in a draft",
+     "quote": "of course this problem is solved by length and thought, and storytelling sometimes and research, etc."
+    }
+   ],
+   "diagnosis": "Claude's reading, to confirm on the next draft: in both A/B drafts the ask to prune comes after his one story, and each reason for it (the hours, the full months, the room it gives) is stated in a sentence or two, never argued or shown in the reader's life. All 20 checkers passed both drafts, so no live rule holds this. Reworded 17 Nov after a fresh review: the four-part case template, the strongest-doubt line and 'once' were Claude's additions and are out. The doubt line stays a Tier 2 matter (Author presence).",
+   "code": "R1.21",
+   "sort": 305,
+   "outputs": [
+    "chapter"
+   ]
+  }
+ ],
+ "date": "2026-11-16",
+ "calibration_note_R1.21": {
+  "note": "His verdict on 16 Nov, on a book section that told his own story and then asked the reader to act: the recommendation was not argued, built up or delivered powerfully. When a passage holds its own ask, the case for that ask must be inside the passage, even in an excerpt. A cost, a doubt or a benefit given in one or two sentences, then the ask, is a case named, not built: fail it. A well told story before the ask does not change this.",
+  "from": [
+   "ORIGIN: the 16 Nov blind A/B, Chapter 5 (Law 3) pruning section, draft Y (tests/rules/runs/ab_2026-11-16/final_new.md)"
+  ]
+ },
+ "about": "Wording 2 (16 to 17 Nov), the version that failed both A/B drafts. Gate: 15 of 15 in 3 runs out of 3 once scoped to chapter and key moments, with the note above. A fresh review (17 Nov) found it wider than his words and the note circular. Kept here as option (c) on the 17 Nov decision page. To use it: copy 'lessons' into the spec of rules/folds/2026-11-16_recommendation-argued.json, put the note under R1.21 in rules/checkers/calibration.json, build, gate, load, then his go."
+}

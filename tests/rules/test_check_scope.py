@@ -39,6 +39,11 @@ with tempfile.TemporaryDirectory(dir=ROOT / "tests/rules/runs", prefix="_scope_t
     check((t / "p_letter/R1.1.prompt.md").exists(), "prepare: unscoped rules still get a prompt")
     r = run("prepare", str(t / "c.md"), "--output", "chapter-excerpt", "--dir", str(t / "p_ch"))
     check((t / "p_ch/R1.99.prompt.md").exists(), "prepare: a chapter excerpt gets the scoped rule")
+    r = run("prepare", str(t / "a.md"), "--output", "letter", "--dir", str(t / "p_ch"))
+    check(not (t / "p_ch/R1.99.prompt.md").exists(), "re-prepare as a letter: the old chapter prompt is gone")
+    r = run("prepare", str(t / "c.md"), "--output", "chapter", "--dir", str(t / "p_letter"))
+    check(not (t / "p_letter/R1.99.json").exists() and (t / "p_letter/R1.99.prompt.md").exists(),
+          "re-prepare as a chapter: the old out-of-scope pass is gone, the prompt is there")
     man = [{"id": "A", "output": "letter", "draft": str(t / "a.md")}, {"id": "C", "output": "chapter", "draft": str(t / "c.md")}]
     (t / "man.json").write_text(json.dumps(man), encoding="utf-8")
     r = run("batch", str(t / "man.json"), "--dir", str(t / "b"), "--only", "R1.99")

@@ -47,7 +47,8 @@ LINT_OUTPUT = {"chapter-excerpt": "chapter", "key-moments": None, "case-study": 
 # A draft's output, as named in a rule's "outputs" (added 17 Nov 2026). A Tier 1 rule scoped to some
 # outputs is not checked on the others: those drafts pass it without a call ("out of scope").
 RULE_OUTPUT = {"article": "article", "letter": "letter", "chapter": "chapter", "chapter-excerpt": "chapter",
-               "key-moments": "key moments", "case-study": "case study"}
+               "key-moments": "key moments", "case-study": "case study",
+               "key moments": "key moments", "case study": "case study"}
 OUT_OF_SCOPE = {"verdict": "pass", "breaks": [], "note": "out of scope: the rule does not apply to this output"}
 
 
@@ -163,7 +164,11 @@ def cmd_prepare(a):
     for f in sorted(TPL_DIR.glob("R1.*.md"), key=lambda p: int(p.stem.split(".")[1])):
         if f.stem in scope and not in_scope(scope[f.stem], a.output):
             (out / f"{f.stem}.json").write_text(json.dumps(dict(OUT_OF_SCOPE, rule=f.stem)), encoding="utf-8")
+            (out / f"{f.stem}.prompt.md").unlink(missing_ok=True)  # a prompt left from an earlier prepare
             continue
+        old = out / f"{f.stem}.json"
+        if old.exists() and json.loads(old.read_text(encoding="utf-8") or "{}").get("note", "").startswith("out of scope"):
+            old.unlink()  # an out-of-scope pass left from an earlier prepare must not hide a missing answer
         text = (f.read_text(encoding="utf-8").replace("{{OUTPUT}}", OUTPUTS[a.output])
                 .replace("{{CARD}}", card_text(a.output)).replace("{{DRAFT}}", draft))
         (out / f"{f.stem}.prompt.md").write_text(text, encoding="utf-8")

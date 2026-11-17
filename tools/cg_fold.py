@@ -333,6 +333,9 @@ def build_rows(spec, rows, path=None):
                 check = lesson.get("check_type", "judgment")
             else:
                 cards, outputs = [], lesson.get("outputs") or list(cg_rules.OUTPUTS)
+                bad = [o for o in outputs if o not in cg_rules.OUTPUTS]
+                if bad:
+                    fail(f"{what}: unknown output {', '.join(bad)}. Outputs are: {', '.join(cg_rules.OUTPUTS)}")
                 check = lesson.get("check_type") or ("checker" if tier == 1 else None)
                 if check not in ("mechanical", "checker", "judgment"):
                     fail(f"{what}: a Tier 0 rule says its check_type: mechanical (the lint) or checker")
@@ -611,9 +614,7 @@ def cmd_gate(a):
     for c in rerun:
         p, ans = run / f"{c}.prompt.md", run / f"{c}.json"
         if not p.exists():
-            # No draft in the run is an output this rule covers (17 Nov 2026): nothing to ask.
-            ans.write_text(json.dumps({"rule": c, "results": []}), encoding="utf-8")
-            continue
+            fail(f"no draft in this run is an output {c} covers, so the gate cannot test it. Add a case of that output")
         if ans.exists() and old.get(p.name) == cg_rules.md5(p.read_text(encoding="utf-8")):
             continue
         if ans.exists():
