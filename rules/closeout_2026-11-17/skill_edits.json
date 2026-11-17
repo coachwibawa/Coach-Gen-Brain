@@ -1,0 +1,36 @@
+{
+ "coach-gen-writer": [
+  {
+   "old_string": "A chapter also loads `case study`, and `key moments` at stop 1. Brain down: `claude/cards/`.",
+   "new_string": "A chapter also loads `select brain.card_text('case study', 'chapter')`, and `select brain.card_text('key moments', 'chapter')` at stop 1: only what the chapter card does not already hold, so Tier 0 and Tier 1 are read once. Brain down: `claude/cards/`."
+  },
+  {
+   "old_string": "With an API key, `cg_check.py run RUN`.",
+   "new_string": "With an API key (`CG_CHECK_API_KEY` set in the environment), `cg_check.py run RUN`."
+  }
+ ],
+ "rhyme-this": [
+  {
+   "old_string": "(Book Rules section 0: [] means up to about half may be rewritten, keeping his essence)",
+   "new_string": "(the codes in coach-gen-writer: [text] means about half may be rewritten, keeping his essence)"
+  },
+  {
+   "old_string": "The word the next sentence picks up (Book Rules R6).",
+   "new_string": "The word the next sentence picks up (the rule \"Links are real\")."
+  },
+  {
+   "old_string": "(Language Rules section 10, item 15: no half that only repeats the first, louder)",
+   "new_string": "(the rule \"AI tells\": no half that only repeats the first, louder)"
+  },
+  {
+   "old_string": "so it sounds like a callback (Book Rules R25).",
+   "new_string": "so it sounds like a callback (the rule \"Callbacks and staying close\")."
+  }
+ ],
+ "merge-epoch-to-book": [
+  {
+   "old_string": "Book Rules R28 keeps years and journals out of the text.",
+   "new_string": "The rule \"Research backs, never interrupts\" keeps years and journals out of the text."
+  }
+ ]
+}

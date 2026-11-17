@@ -8,7 +8,7 @@ The last calls and the one save that wait for him, as one review page: 4 cards, 
 
 ## What each pick means for the chat that reads it
 
-1. `1-7`, `t1`: store R1.21 as it stands in `rules/folds/2026-11-16_recommendation-argued.json` (propose-language-rule, section 7). The gate is 14 of 15 (ORIGIN passes). `approve` refuses a fold whose gate did not pass, so first take his pick as the go and record it in the fold file, or ask the skill's way.
+1. `1-7`, `t1`: store R1.21 as it stands in `rules/folds/2026-11-16_recommendation-argued.json`. Its gate with the A/B draft as origin failed (the checker passes that draft), and `approve` only takes a gated fold. His pick accepts that, so: `gate` again without `--origin`, one Sonnet helper, `result` (14 of 14 expected), `brain.fold_load`, then `approve` and `brain.fold_store` (propose-language-rule, section 7). Say in the fold source that ORIGIN still passes.
 2. `1-7`, `t2`: change the spec to `"tier": 2`, `"cards": ["chapter"]`, drop `outputs`, build, gate (no checker reruns for Tier 2), load, approve, store.
 3. `1-7`, `wide`: copy `lessons` from `tests/rules/runs/fold_R1.21_2026-11-16/alt_wording2_spec.json` into the fold's spec, put its note under R1.21 in `rules/checkers/calibration.json`, build, gate, load, approve, store.
 4. `1-7`, `hold`: `cg_fold.py decline FOLD 1 --note "his words"` and `brain.fold_decline`. The lesson stays on file as declined for now, and comes back only with a second case from a real chapter.
