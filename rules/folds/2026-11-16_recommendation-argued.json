@@ -4,8 +4,8 @@
  "added_on": "2026-11-16",
  "added_by": "propose-language-rule",
  "approved_on": "2026-11-17",
- "stored_on": null,
- "stored_seq": null,
+ "stored_on": "2026-11-17",
+ "stored_seq": 1,
  "spec": {
   "slug": "recommendation-argued",
   "source": "16 Nov 2026, his verdict reason after the step 20 blind A/B, Chapter 5 (Law 3), the pruning section (tests/rules/runs/ab_2026-11-16/log.md)",
@@ -83,7 +83,7 @@
     "diagnosis": "Claude's reading, to confirm on the next draft: in both A/B drafts the ask to prune comes after his one story, and each reason for it (the hours, the full months, the room it gives) is stated in a sentence or two, never argued or shown in the reader's life. All 20 checkers passed both drafts, so no live rule holds this. Reworded 17 Nov after a fresh review: the four-part case template, the strongest-doubt line and 'once' were Claude's additions and are out. The doubt line stays a Tier 2 matter (Author presence).",
     "why": "Without it, a book that tells the reader what to do reads as his story with an order at the end, and the reader does not act."
    },
-   "fold_stage": "approved",
+   "fold_stage": "stored",
    "test_gate": {
     "on": "2026-11-17",
     "run": "tests/rules/runs/fold_R1.21_2026-11-16",

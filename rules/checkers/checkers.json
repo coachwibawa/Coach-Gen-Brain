@@ -190,6 +190,16 @@
   "tokens_est": 925
  },
  {
+  "code": "R1.21",
+  "heading": "A recommendation is argued before it is asked",
+  "v3_lines": [
+   null,
+   null
+  ],
+  "rule_md5": "65f393f21eb12c220d107c3e02ff1143",
+  "tokens_est": 1063
+ },
+ {
   "code": "R1.20",
   "heading": "AI tells",
   "v3_lines": [

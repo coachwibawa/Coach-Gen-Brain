@@ -149,6 +149,14 @@ Lines are numbered straight through, so any line can be marked by its number. No
 - At the turn, prescriptive, not philosophical.
 - An article or letter never ends on the hard question alone: a concrete possibility follows, and it promises liberation, not survival.
 - No teacher's summary in the prose. A chapter ends on the relationship, an echo, or one sayable line.
+### A recommendation is argued before it is asked
+- The goal: when a chapter asks the reader to do something specific, the reader is convinced before the ask, and the ask lands with force.
+- Build the case before the ask, over as many paragraphs as it needs: why the reader's way now fails them, and why this change is worth what it costs.
+- Each reason is argued, not named: it says why it holds and shows it in the reader's life. A reason given in one sentence and left is named, not argued.
+- The tools are length and thought, a story, another person's case or a study, each used where it fits. One story with an ask after it is not a case, however well told.
+- Thought works through what his material already holds. A reason the brain lacks is [MATERIAL NEEDED], never invented.
+- Deliver the ask plainly and with confidence: a concrete action, after the case is built.
+- The test: before the ask, point to each reason and its why. Fails: an ask that is only stated, an ask that rests on one story alone, or an ask whose case is squeezed into the last lines.
 ### AI tells
 - No "Stop X. Start Y." pairs.
 - No "not just X. Y." where the second half only repeats the first, louder.
