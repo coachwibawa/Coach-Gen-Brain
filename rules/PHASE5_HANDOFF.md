@@ -134,3 +134,20 @@ One card waits for his save: one line in coach-gen-writer that points the Full R
 4. The Phase 5 plan rows 20 to 22 and the Decisions log in the Autopilot doc are updated.
 
 The next chat starts at "Next, in order (from 16 Nov, 20:00)" above, step 1: propose the rule from his verdict reason.
+
+## 17 Nov, 00:10 to 01:30: the refactor is closed
+
+He said this chat is the last one for the refactor, and asked for every loop closed and a report. No handoff follows.
+
+1. **Report:** Claude Doc "Rules Refactor: close-out report", https://claude.ai/artifact/Tx5Z8zkebihtmmrP2DDWgT.
+2. **His last calls and save:** https://claude.ai/artifact/EHAQER2geMeTK5Ka5D5AxQ (spec and what each pick means: `rules/closeout_2026-11-17/`).
+3. **R1.21** (a recommendation is argued before it is asked): fold `rules/folds/2026-11-16_recommendation-argued.json`, stage merged, in the brain as a draft, not served. Wording 3, chapters only. Gate 14 of 15: its checker passes the A/B draft Y. Wording 2 (fails both drafts, 3 runs of 3, wider than his words) is kept as `tests/rules/runs/fold_R1.21_2026-11-16/alt_wording2_spec.json`. Every run: `NOTES.md` there. His call, card 1.
+4. **Migration 023:** `brain.card_text(output, after)`. Rulebook md5 `a80b78c1b69fc97be58cdbad021f8138` and all five card md5 values unchanged. The writer uses it once he saves the coach-gen-writer card (card 10).
+5. **Checkers:** a Tier 1 rule's `outputs` are honoured (`tests/rules/test_check_scope.py`), the gate refuses a rule no draft covers, `build` refuses an unknown output, the API route reads `CG_CHECK_API_KEY`.
+6. **Measured:** rule tokens before a chapter, old 43,400, new 15,400 now, 10,600 after card 10 (76% fewer). Stop 1: 21,400 now, 10,800 after.
+7. **Brain:** all 6 health checks pass. New to mine: Kin Coach Gen, 16 Nov (Fathom call 900262586).
+8. **Fresh review:** 11 points, all code points fixed, the rule narrowed, the token claim corrected.
+
+Fold check: the one rule he asked for (his A/B reason) is R1.21, waiting at stage merged for his pick on card 1. No other rule was asked for.
+
+Left to book chats, not the refactor: the old locked line in `Book/Book_Status.md` on his Mac, the 5 book notes with live items (`rules/step18/book_notes_check_2026-11-16.md`), the first real chapter on the new stack.

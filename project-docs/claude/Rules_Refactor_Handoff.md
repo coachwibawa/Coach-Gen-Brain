@@ -222,3 +222,16 @@ Read `rules/PHASE5_HANDOFF.md` in the repo first. It has the newest state.
 ## Log, continued again
 
 - 16 Nov 2026, evening: updated after steps 20 and 21. Fold check: he gave a reason for the verdict (a recommendation must be argued, built up and delivered powerfully, solved by length and thought, storytelling sometimes, research). It is not in the rules table yet. It is Next, step 1 in the repo note, so it is not lost, and it was not declined.
+
+## Added 17 Nov 2026: the refactor is closed
+
+All 22 steps are done. This note is history now. No handoff follows.
+
+1. Report: Claude Doc "Rules Refactor: close-out report", https://claude.ai/artifact/Tx5Z8zkebihtmmrP2DDWgT.
+2. His last calls and one save: https://claude.ai/artifact/EHAQER2geMeTK5Ka5D5AxQ. What each pick means is in the repo, `rules/closeout_2026-11-17/README.md`.
+3. The rule from his A/B reason, R1.21, waits there (card 1). It is in the brain as a draft and not served.
+4. The final state is the last section of `rules/PHASE5_HANDOFF.md` in the repo.
+
+## Log, closed
+
+- 17 Nov 2026: refactor closed. Fold check: the one rule he asked for (his A/B reason) is R1.21, waiting at stage merged for his pick. Nothing else was asked for.
