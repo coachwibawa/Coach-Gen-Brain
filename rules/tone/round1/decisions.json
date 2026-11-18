@@ -1,0 +1,73 @@
+{
+ "title": "Tone grilling, round 1",
+ "description": "Step 1 of the Tone Development Plan: who reads the book, who you are to them, your moods, and 6 lines from epoch 6. 18 Nov 2026.",
+ "collection": "picks",
+ "intro": [
+  "Step 1 of the Tone Development Plan. Your notes are saved word for word into Book/build/tone/grilling.md.",
+  "No pick from Claude on any card. Write as much or as little as you like in the notes."
+ ],
+ "sections": [
+  {
+   "title": "The reader and you",
+   "sub": "Who you picture, and who you are to them.",
+   "cards": [
+    {"id": "1", "kind": "call", "title": "When you write a chapter, who is reading it?",
+     "options": [["a", "a. A capable introvert who calls himself lazy and doesn't know why"], ["b", "b. One real client you picture while you write (name them in the note)"], ["c", "c. You, years ago, before coaching"], ["d", "d. Someone else (say who in the note)"]],
+     "placeholder": "Note (optional)"},
+    {"id": "2", "kind": "call", "title": "Who are you to that reader?",
+     "options": [["a", "a. Older brother"], ["b", "b. Fellow traveller, a few steps ahead"], ["c", "c. Editor who helps them reread their own story"], ["d", "d. Friend across the table"], ["e", "e. Something else, or a mix (say which shows up when)"]],
+     "placeholder": "Note (optional)"}
+   ]
+  },
+  {
+   "title": "Your moods",
+   "sub": "For each mood, how much it belongs in the book. In the note, say where: the opening story, the science part, the turn, or the ask at the end.",
+   "cards": [
+    {"id": "3", "kind": "call", "title": "Warm, like in a session",
+     "options": [["often", "Often"], ["sometimes", "Sometimes"], ["rarely", "Rarely"], ["never", "Never in the book"]], "placeholder": "Where it goes (optional)"},
+    {"id": "4", "kind": "call", "title": "Talking to yourself (\"What do you mean?\" I thought)",
+     "options": [["often", "Often"], ["sometimes", "Sometimes"], ["rarely", "Rarely"], ["never", "Never in the book"]], "placeholder": "Where it goes (optional)"},
+    {"id": "5", "kind": "call", "title": "Sure and decisive, like Clear",
+     "options": [["often", "Often"], ["sometimes", "Sometimes"], ["rarely", "Rarely"], ["never", "Never in the book"]], "placeholder": "Where it goes (optional)"},
+    {"id": "6", "kind": "call", "title": "Playful: puns and rhymes",
+     "options": [["often", "Often"], ["sometimes", "Sometimes"], ["rarely", "Rarely"], ["never", "Never in the book"]], "placeholder": "Where it goes (optional)"},
+    {"id": "7", "kind": "call", "title": "Blunt, a bit rough",
+     "options": [["often", "Often"], ["sometimes", "Sometimes"], ["rarely", "Rarely"], ["never", "Never in the book"]], "placeholder": "Where it goes (optional)"},
+    {"id": "8", "kind": "call", "title": "Amused by the crazy things people do",
+     "options": [["often", "Often"], ["sometimes", "Sometimes"], ["rarely", "Rarely"], ["never", "Never in the book"]], "placeholder": "Where it goes (optional)"},
+    {"id": "9", "kind": "call", "title": "A mood of yours that is not on this list",
+     "options": [["yes", "Yes, named in my note"], ["no", "No, the list covers it"]], "placeholder": "Name it, and where it goes"}
+   ]
+  },
+  {
+   "title": "The David opening",
+   "sub": "The part before The Thrill of the First Day.",
+   "cards": [
+    {"id": "10", "kind": "call", "title": "When the reader finishes the David opening, what should they feel?",
+     "options": [["written", "Written in my note"]], "placeholder": "One line in your words"},
+    {"id": "11", "kind": "call", "title": "David's quotes: which fits what you want?",
+     "context": "Your comment on epoch 6 asked if the problem is how the quoted lines are written.",
+     "options": [["a", "a. Fewer quotes: only the 2 or 3 lines that turn the story, and you tell the rest"], ["b", "b. Keep the quotes, but write them closer to how he really talked"], ["c", "c. Keep the quotes and the number, with more of your telling between them"], ["d", "d. Something else (say what in the note)"]],
+     "placeholder": "Note (optional)"}
+   ]
+  },
+  {
+   "title": "Right or wrong tone",
+   "sub": "Six lines from epoch 6. A word on why helps, but is not needed.",
+   "cards": [
+    {"id": "12", "kind": "call", "title": "\"Lazy people don't have weeks like that. Lazy people have empty weeks.\"",
+     "options": [["right", "Right"], ["between", "In between"], ["wrong", "Wrong"]], "placeholder": "Why (optional)"},
+    {"id": "13", "kind": "call", "title": "\"So on the days fun won, a zero cost him nothing he had chosen, and of course he felt little about it.\"",
+     "options": [["right", "Right"], ["between", "In between"], ["wrong", "Wrong"]], "placeholder": "Why (optional)"},
+    {"id": "14", "kind": "call", "title": "\"We live in a farmer's world with a gatherer's brain.\"",
+     "options": [["right", "Right"], ["between", "In between"], ["wrong", "Wrong"]], "placeholder": "Why (optional)"},
+    {"id": "15", "kind": "call", "title": "\"Could have is a comfortable place to live. Nothing ever happens there, and nothing ever goes wrong.\"",
+     "options": [["right", "Right"], ["between", "In between"], ["wrong", "Wrong"]], "placeholder": "Why (optional)"},
+    {"id": "16", "kind": "call", "title": "\"If you are a parent who has paid for your child's tutors, classes, or coaching, I don't think you did anything wrong.\"",
+     "options": [["right", "Right"], ["between", "In between"], ["wrong", "Wrong"]], "placeholder": "Why (optional)"},
+    {"id": "17", "kind": "call", "title": "\"That is not the week of a lazy person. It is the week of someone with a full tank and nowhere chosen to drive.\"",
+     "options": [["right", "Right"], ["between", "In between"], ["wrong", "Wrong"]], "placeholder": "Why (optional)"}
+   ]
+  }
+ ]
+}
