@@ -1,0 +1,24 @@
+flowchart TD
+  RAW["Your raw material<br/>calls, voice dumps, videos"] --> MINE["/mine and /extract-fathom"] --> BRAIN[("The Brain<br/>entries, chunks, rules")]
+  BRAIN --> BLANK
+  subgraph PLAN["1. PLANNING"]
+    BLANK["The blank<br/>this piece is about ___<br/>(you confirm)"] --> FACT["Fact sheet<br/>events and quotes<br/>in time order"] --> OUT["Outline<br/>thread word,<br/>key moments"] --> TONE["NEW: Tone line<br/>per section<br/>(you set or approve)"]
+  end
+  TONE --> KM
+  subgraph TRANS["2. TRANSLATING: into words"]
+    KM["Stop 1<br/>key moments,<br/>3 ways each"] --> PICK{{"You pick"}} --> DRAFT["Stop 2<br/>whole chapter,<br/>drafted fresh"]
+  end
+  DRAFT --> LINT
+  subgraph REV["3. REVIEWING"]
+    LINT["cg_lint<br/>every pass"] --> JOINS["Review file<br/>every join"] --> CHECK["cg_check<br/>final draft"] --> DIALS["NEW: Four<br/>dials check"] --> SCORE["Claude's<br/>6-trait score"] --> MARK{{"Your markup<br/>and score"}}
+  end
+  MARK -->|approved| MERGE["merge-epoch-to-book<br/>master draft, booklet"]
+  MARK -.->|epoch again| FACT
+  classDef you fill:#f6d77a,stroke:#8a5a00,color:#1b2430
+  classDef claude fill:#cfe3f7,stroke:#2a6fb0,color:#1b2430
+  classDef data fill:#e6e8ec,stroke:#5b6676,color:#1b2430
+  classDef new fill:#c9efd8,stroke:#1f7a4d,color:#1b2430,stroke-width:2px
+  class RAW,PICK,MARK you
+  class MINE,BLANK,FACT,OUT,KM,DRAFT,LINT,JOINS,CHECK,SCORE,MERGE claude
+  class BRAIN data
+  class TONE,DIALS new

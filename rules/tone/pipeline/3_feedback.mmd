@@ -1,0 +1,15 @@
+flowchart LR
+  MARK{{"Your markup<br/>comments, typed edits, score"}}
+  MARK -->|word for word| LOG["Calibration log"]
+  MARK -->|your typed lines| KEEP["Keeper lines"] --> NEXT["Next epoch's fact sheet"]
+  MARK -->|NEW: Claude's line vs yours| BANK["Tone bank"] --> NEXTW["Next draft's examples"]
+  LOG -->|a lesson you name| PROP["propose-language-rule<br/>tested on your test set"] -->|on your go| RULES["Rules table"]
+  MARK -->|your score| ANCH["Scorecard anchors"]
+  classDef you fill:#f6d77a,stroke:#8a5a00,color:#1b2430
+  classDef claude fill:#cfe3f7,stroke:#2a6fb0,color:#1b2430
+  classDef data fill:#e6e8ec,stroke:#5b6676,color:#1b2430
+  classDef new fill:#c9efd8,stroke:#1f7a4d,color:#1b2430,stroke-width:2px
+  class MARK you
+  class PROP,NEXT,NEXTW claude
+  class LOG,KEEP,RULES,ANCH data
+  class BANK new

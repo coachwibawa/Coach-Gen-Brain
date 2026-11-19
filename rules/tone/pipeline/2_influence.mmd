@@ -1,0 +1,35 @@
+flowchart LR
+  subgraph IN["WHAT SHAPES IT"]
+    BRAIN[("The Brain<br/>your material")]
+    YOU{{"You"}}
+    STANCE["NEW: Book stance, set once<br/>classic style, your reader,<br/>fellow traveller a few steps ahead,<br/>exception: self-aware asides"]
+    BANK["NEW: Tone bank<br/>edit pairs, praised lines,<br/>your call passages, taste-test 10s"]
+    RULES["Rules table<br/>as cards"]
+  end
+  subgraph STEPS["THE STEPS"]
+    FACT["Fact sheet"]
+    TONE["NEW: Tone line per section<br/>Sense, Feeling, Tone, Intention"]
+    WRITE["Stop 1 and Stop 2<br/>Claude writes"]
+    TESTS["cg_lint and cg_check"]
+    DIALS["NEW: Four dials check"]
+  end
+  BRAIN -->|events and quotes| FACT
+  BRAIN -->|sense| TONE
+  YOU -->|feeling, tone, intention| TONE
+  YOU -->|picks| WRITE
+  FACT --> WRITE
+  TONE -->|what each section must do| WRITE
+  STANCE -->|who you are to the reader| WRITE
+  BANK -->|2 or 3 examples per tone word| WRITE
+  RULES -->|card| WRITE
+  RULES -->|tests| TESTS
+  TONE -->|tone asked for| DIALS
+  WRITE --> TESTS --> DIALS
+  classDef you fill:#f6d77a,stroke:#8a5a00,color:#1b2430
+  classDef claude fill:#cfe3f7,stroke:#2a6fb0,color:#1b2430
+  classDef data fill:#e6e8ec,stroke:#5b6676,color:#1b2430
+  classDef new fill:#c9efd8,stroke:#1f7a4d,color:#1b2430,stroke-width:2px
+  class YOU you
+  class FACT,WRITE,TESTS claude
+  class BRAIN,RULES data
+  class STANCE,BANK,TONE,DIALS new
