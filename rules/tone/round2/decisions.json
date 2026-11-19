@@ -1,0 +1,55 @@
+{
+ "title": "Tone grilling, round 2: a mood framework",
+ "description": "Your ask of 19 Nov 2026: a framework, like the Hero's Journey, for how each part of a story carries the mood.",
+ "collection": "picks",
+ "intro": [
+  "Your words: \"I think we need a Framework (like heroes journey) on how each part inside a story carry the mood\".",
+  "Card 1 checks my reading of your top passages. Cards 2 to 6 shape the framework. No pick from Claude."
+ ],
+ "sections": [
+  {
+   "title": "What your top passages do",
+   "sub": "Three stories you scored high in the taste tests, each part with its mood (my reading).",
+   "cards": [
+    {"id": "1", "kind": "call", "title": "Is this how your top-scored stories move?",
+     "rows": [
+      ["Jim Marshall (Mindset, like-love, flow 10)", "Crowd cheers (high). He ran the wrong way, on national TV (drop). Shame, the worst moment of his life (low). His own line at halftime: a choice (turn). His best football and the win (rise). Talks, letters, a better person (widen). One line for the reader (land)."],
+      ["Robert, then Dweck (Mindset, love, flow 10)", "Parents worship a three-year-old (high). He misses one preschool and they go cold (drop). A failure at three (low, almost absurd). One line names it: failure as who you are (lesson). Dweck: as a kid, I feared that too (me too). A golfer, then rejection letters (widen to the reader)."],
+      ["The baseball bat (Atomic Habits, 9, flow 10)", "Last day of school (calm). Hit in the face, told through the body (shock). The slow walk, nobody knew every minute mattered (unease). The nurse's questions, ten seconds to name his mom (creeping dread)."]
+     ],
+     "options": [["yes", "Yes, that is how they move"], ["partly", "Partly (say what is off in the note)"], ["no", "No"]],
+     "placeholder": "Note (optional)"}
+   ]
+  },
+  {
+   "title": "The framework",
+   "sub": "What it covers, whose mood it tracks, and what it starts from.",
+   "cards": [
+    {"id": "2", "kind": "call", "title": "What counts as \"a story\" for this framework?",
+     "options": [["a", "a. One told story (David's case, Bayu's drawer)"], ["b", "b. One section"], ["c", "c. The whole chapter"], ["d", "d. Nested: one shape that works at every level"]],
+     "placeholder": "Note (optional)"},
+    {"id": "3", "kind": "call", "title": "Whose mood does it track?",
+     "options": [["a", "a. The reader's"], ["b", "b. The person in the story's"], ["c", "c. Both, side by side"]],
+     "placeholder": "Note (optional)"},
+    {"id": "4", "kind": "call", "title": "Which existing framework is closest to how you feel a story should move?",
+     "rows": [
+      ["a. Hero's Journey", "12 stages: leave home, the ordeal, return changed. Built for one hero's long journey."],
+      ["b. Story Circle (Dan Harmon)", "8 steps, a short Hero's Journey: need, go, find, pay, return, changed. Built for short episodes."],
+      ["c. Kishotenketsu", "4 parts: set up, develop, twist, bring together. No conflict needed. Built in Chinese and Japanese poems and comics."],
+      ["d. Sparkline (Nancy Duarte)", "Moves back and forth between what is and what could be, then ends on the new life. Built for talks that persuade."],
+      ["e. Monroe's sequence", "Attention, need, answer, picture it, act. Built for speeches that ask for action."],
+      ["f. Our own", "Built from your top passages (card 1) and your own stories."]
+     ],
+     "options": [["a", "a. Hero's Journey"], ["b", "b. Story Circle"], ["c", "c. Kishotenketsu"], ["d", "d. Sparkline"], ["e", "e. Monroe's sequence"], ["f", "f. Our own"], ["g", "g. A mix, or none of these (say which in the note)"]],
+     "placeholder": "Note (optional)"},
+    {"id": "5", "kind": "call", "title": "Each part gets a mood from your round 1 answers. Use this list?",
+     "context": "Warm (often). Sure and decisive (often). Curious and amused (often). Playful and self-aware (sometimes). Talking to yourself (sometimes). Blunt (flagships only). Plus new moods you find while writing.",
+     "options": [["yes", "Yes, use this list"], ["change", "Change it (say how in the note)"]],
+     "placeholder": "Note (optional)"},
+    {"id": "6", "kind": "call", "title": "How strict is the framework?",
+     "options": [["a", "a. A fixed order every story follows"], ["b", "b. A usual order, and parts can be skipped or swapped"], ["c", "c. A map used only to check a draft after it is written"]],
+     "placeholder": "Note (optional)"}
+   ]
+  }
+ ]
+}

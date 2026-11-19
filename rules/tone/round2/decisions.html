@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<title>Tone grilling, round 2: a mood framework</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column, each decision a sheet with its verdict strip at the foot */
+:root{
+ --paper:#f6f7f9; --sheet:#ffffff; --ink:#1b2430; --muted:#5b6676; --rule:#d9dee6;
+ --accent:#2a6fb0; --accentbg:#e3eef9; --call:#8a5a00; --callbg:#f8ecd2; --cut:#a8323a; --cutbg:#f9e3e4; --ok:#1f7a4d; --okbg:#dcf1e5;
+ --serif:"Libre Baskerville",Georgia,"Times New Roman",serif;
+ --sans:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --paper:#11161d; --sheet:#18202a; --ink:#e4e9f0; --muted:#9aa6b6; --rule:#2c3644;
+ --accent:#7fb4e8; --accentbg:#1c2f45; --call:#f0c26b; --callbg:#3d2f12; --cut:#ff8a90; --cutbg:#45212a; --ok:#6fd3a0; --okbg:#173a2a; color-scheme:dark}}
+:root[data-theme="dark"]{
+ --paper:#11161d; --sheet:#18202a; --ink:#e4e9f0; --muted:#9aa6b6; --rule:#2c3644;
+ --accent:#7fb4e8; --accentbg:#1c2f45; --call:#f0c26b; --callbg:#3d2f12; --cut:#ff8a90; --cutbg:#45212a; --ok:#6fd3a0; --okbg:#173a2a; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;
+ padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1{font-family:var(--serif);font-size:1.9rem;line-height:1.2;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:1.3rem;line-height:1.3;margin:0;text-wrap:balance}
+h3{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0;font-weight:600}
+p{margin:0}
+.lede{display:flex;flex-direction:column;gap:10px;color:var(--muted)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding-block:10px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:.9rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.bar strong{font-variant-numeric:tabular-nums}
+.status{color:var(--muted)}
+.part{display:flex;flex-direction:column;gap:6px;padding-top:12px}
+.part p{color:var(--muted)}
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;scroll-margin-top:64px}
+.head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.tag{font-size:.75rem;font-weight:600;letter-spacing:.04em;padding:2px 9px;border-radius:99px;font-variant-numeric:tabular-nums;white-space:nowrap;background:var(--accentbg);color:var(--accent)}
+.tag.call{background:var(--callbg);color:var(--call)} .tag.change{background:var(--cutbg);color:var(--cut)} .tag.settled{background:var(--okbg);color:var(--ok)}
+.ctx{color:var(--muted);font-size:.95rem}
+.said{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.said li{font-family:var(--serif);font-style:italic;font-size:.95rem}
+.rows{display:grid;grid-template-columns:max-content 1fr;gap:8px 14px;margin:0}
+.rows dt{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-top:3px}
+.rows dd{margin:0;font-family:var(--serif);min-width:0}
+@media (max-width:480px){.rows{grid-template-columns:1fr}.rows dd{margin-bottom:6px}}
+ol.items{margin:0;padding-left:2.4em;display:flex;flex-direction:column;gap:8px;font-family:var(--serif)}
+ol.items li::marker{font-family:var(--sans);font-variant-numeric:tabular-nums;color:var(--muted);font-size:.9em}
+.verdict{border-top:1px dashed var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.choices{display:flex;flex-direction:column;gap:8px}
+.choices label{display:flex;align-items:flex-start;gap:8px;border:1px solid var(--rule);border-radius:12px;padding:8px 12px;cursor:pointer;font-size:.95rem}
+.choices input{accent-color:var(--accent);margin-top:4px}
+.choices label:has(input:checked){border-color:var(--accent);color:var(--accent);font-weight:600}
+.choices label:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+textarea{width:100%;box-sizing:border-box;min-height:56px;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;resize:vertical}
+textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.saved{font-size:.8rem;color:var(--muted);min-height:1.2em}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+ <header class="lede">
+  <h1>Tone grilling, round 2: a mood framework</h1>
+  <p>Your words: &quot;I think we need a Framework (like heroes journey) on how each part inside a story carry the mood&quot;.</p><p>Card 1 checks my reading of your top passages. Cards 2 to 6 shape the framework. No pick from Claude.</p>
+ </header>
+ <div class="bar"><span><strong id="done">0</strong> of <strong id="total">0</strong> decided</span><span class="status" id="status">Connecting…</span></div>
+ <main id="list" class="wrap" style="gap:24px"></main>
+</div>
+<script id="spec" type="application/json">{"title": "Tone grilling, round 2: a mood framework", "description": "Your ask of 19 Nov 2026: a framework, like the Hero's Journey, for how each part of a story carries the mood.", "collection": "picks", "intro": ["Your words: \"I think we need a Framework (like heroes journey) on how each part inside a story carry the mood\".", "Card 1 checks my reading of your top passages. Cards 2 to 6 shape the framework. No pick from Claude."], "sections": [{"title": "What your top passages do", "sub": "Three stories you scored high in the taste tests, each part with its mood (my reading).", "cards": [{"id": "1", "kind": "call", "title": "Is this how your top-scored stories move?", "rows": [["Jim Marshall (Mindset, like-love, flow 10)", "Crowd cheers (high). He ran the wrong way, on national TV (drop). Shame, the worst moment of his life (low). His own line at halftime: a choice (turn). His best football and the win (rise). Talks, letters, a better person (widen). One line for the reader (land)."], ["Robert, then Dweck (Mindset, love, flow 10)", "Parents worship a three-year-old (high). He misses one preschool and they go cold (drop). A failure at three (low, almost absurd). One line names it: failure as who you are (lesson). Dweck: as a kid, I feared that too (me too). A golfer, then rejection letters (widen to the reader)."], ["The baseball bat (Atomic Habits, 9, flow 10)", "Last day of school (calm). Hit in the face, told through the body (shock). The slow walk, nobody knew every minute mattered (unease). The nurse's questions, ten seconds to name his mom (creeping dread)."]], "options": [["yes", "Yes, that is how they move"], ["partly", "Partly (say what is off in the note)"], ["no", "No"]], "placeholder": "Note (optional)", "tag": "1"}]}, {"title": "The framework", "sub": "What it covers, whose mood it tracks, and what it starts from.", "cards": [{"id": "2", "kind": "call", "title": "What counts as \"a story\" for this framework?", "options": [["a", "a. One told story (David's case, Bayu's drawer)"], ["b", "b. One section"], ["c", "c. The whole chapter"], ["d", "d. Nested: one shape that works at every level"]], "placeholder": "Note (optional)", "tag": "2"}, {"id": "3", "kind": "call", "title": "Whose mood does it track?", "options": [["a", "a. The reader's"], ["b", "b. The person in the story's"], ["c", "c. Both, side by side"]], "placeholder": "Note (optional)", "tag": "3"}, {"id": "4", "kind": "call", "title": "Which existing framework is closest to how you feel a story should move?", "rows": [["a. Hero's Journey", "12 stages: leave home, the ordeal, return changed. Built for one hero's long journey."], ["b. Story Circle (Dan Harmon)", "8 steps, a short Hero's Journey: need, go, find, pay, return, changed. Built for short episodes."], ["c. Kishotenketsu", "4 parts: set up, develop, twist, bring together. No conflict needed. Built in Chinese and Japanese poems and comics."], ["d. Sparkline (Nancy Duarte)", "Moves back and forth between what is and what could be, then ends on the new life. Built for talks that persuade."], ["e. Monroe's sequence", "Attention, need, answer, picture it, act. Built for speeches that ask for action."], ["f. Our own", "Built from your top passages (card 1) and your own stories."]], "options": [["a", "a. Hero's Journey"], ["b", "b. Story Circle"], ["c", "c. Kishotenketsu"], ["d", "d. Sparkline"], ["e", "e. Monroe's sequence"], ["f", "f. Our own"], ["g", "g. A mix, or none of these (say which in the note)"]], "placeholder": "Note (optional)", "tag": "4"}, {"id": "5", "kind": "call", "title": "Each part gets a mood from your round 1 answers. Use this list?", "context": "Warm (often). Sure and decisive (often). Curious and amused (often). Playful and self-aware (sometimes). Talking to yourself (sometimes). Blunt (flagships only). Plus new moods you find while writing.", "options": [["yes", "Yes, use this list"], ["change", "Change it (say how in the note)"]], "placeholder": "Note (optional)", "tag": "5"}, {"id": "6", "kind": "call", "title": "How strict is the framework?", "options": [["a", "a. A fixed order every story follows"], ["b", "b. A usual order, and parts can be skipped or swapped"], ["c", "c. A map used only to check a draft after it is written"]], "placeholder": "Note (optional)", "tag": "6"}]}]}</script>
+<script>
+const SPEC = JSON.parse(document.getElementById('spec').textContent);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const list = document.getElementById('list');
+const CARDS = [];
+for (const s of SPEC.sections){
+  const sec = document.createElement('section'); sec.className = 'part';
+  sec.innerHTML = `<h2>${esc(s.title)}</h2>` + (s.sub ? `<p>${esc(s.sub)}</p>` : '');
+  list.appendChild(sec);
+  for (const c of s.cards){
+    CARDS.push(c);
+    const id = String(c.id);
+    const el = document.createElement('article'); el.className = 'card'; el.id = 'd-' + id;
+    let b = `<div class="head"><span class="tag ${esc(c.kind||'')}">${esc(c.tag)}</span><h2>${esc(c.title)}</h2></div>`;
+    if (c.context) b += `<p class="ctx">${esc(c.context)}</p>`;
+    if (c.rows && c.rows.length) b += `<dl class="rows">${c.rows.map(([k,v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+    if (c.items && c.items.length) b += `<ol class="items" start="${c.start}">${c.items.map(t => `<li>${esc(t)}</li>`).join('')}</ol>`;
+    if (c.said && c.said.length) b += `<div><h3>What you said</h3><ul class="said">${c.said.map(w => `<li>“${esc(w)}”</li>`).join('')}</ul></div>`;
+    b += `<div class="verdict"><h3>Your call</h3><div class="choices" role="radiogroup" aria-label="${esc(c.title)}">${c.options.map(([v,l]) => `<label><input type="radio" name="v-${id}" id="v-${id}-${esc(v)}" value="${esc(v)}"> <span>${esc(l)}</span></label>`).join('')}</div>
+      <textarea id="why-${id}" aria-label="Note for ${esc(c.title)}" placeholder="${esc(c.placeholder || 'Note (optional)')}"></textarea><p class="saved" id="saved-${id}"></p></div>`;
+    el.innerHTML = b; list.appendChild(el);
+  }
+}
+document.getElementById('total').textContent = CARDS.length;
+const state = {};
+function count(){ document.getElementById('done').textContent = Object.values(state).filter(s => s && s.call).length; }
+(async () => {
+  const st = document.getElementById('status');
+  let db = null;
+  try { db = await claude.use('db'); } catch (e) {}
+  if (!db){ st.textContent = 'Saving is unavailable in this view. Open the page signed in to claude.ai.'; return; }
+  const col = SPEC.collection || 'picks';
+  const timer = setTimeout(() => { st.textContent = 'Still loading your picks…'; }, 10000);
+  db.collection(col).onSnapshot(snap => {
+    clearTimeout(timer); st.textContent = 'Picks save as you go.';
+    for (const d of snap.docs){ const v = d.data(); state[d.id] = v;
+      const r = document.getElementById(`v-${d.id}-${v.call}`); if (r && !r.checked) r.checked = true;
+      const t = document.getElementById('why-' + d.id); if (t && document.activeElement !== t && v.why !== undefined) t.value = v.why; }
+    count();
+  }, err => { clearTimeout(timer); st.textContent = 'Could not load saved picks. Reload the page to try again.'; });
+  const busy = {}, again = {};
+  async function save(id){
+    if (busy[id]){ again[id] = true; return; }
+    busy[id] = true;
+    const call = (document.querySelector(`input[name="v-${id}"]:checked`) || {}).value || '';
+    const why = document.getElementById('why-' + id).value;
+    const msg = document.getElementById('saved-' + id);
+    try { await db.doc(col + '/' + id).set({call, why, at: new Date().toISOString()}); msg.textContent = 'Saved.'; state[id] = {call, why}; count(); }
+    catch (e){ msg.textContent = 'Not saved. ' + (e && e.message ? e.message : 'Try again.'); }
+    finally { busy[id] = false; if (again[id]){ again[id] = false; save(id); } }
+  }
+  for (const c of CARDS){
+    const id = String(c.id);
+    document.querySelectorAll(`input[name="v-${id}"]`).forEach(r => r.addEventListener('change', () => save(id)));
+    let t; document.getElementById('why-' + id).addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => save(id), 800); });
+  }
+})();
+</script>
