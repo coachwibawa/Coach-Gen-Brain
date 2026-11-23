@@ -1,0 +1,538 @@
+{
+ "title": "The six labels: one language for writing and markup",
+ "description": "Item 20 of 23 Nov 2026, set in stone. Each label: what it covers, where the fix goes, and your own past comments as examples.",
+ "collection": "picks",
+ "intro": [
+  "One language for both of us, used at every point of the loop: before drafting, in the rules, in your markup, and in what gets stored.",
+  "Built from two models: Richards (what is said, feeling, tone, intention) and Flower and Hayes (planning, putting into words, reviewing). The examples are your own comments, word for word.",
+  "Cards 1 to 6 are proposed definitions. Cards 13 to 17 are your calls, with no pick from Claude."
+ ],
+ "sections": [
+  {
+   "title": "The six labels",
+   "sub": "Proposed definitions. Go, or say what to change.",
+   "cards": [
+    {
+     "id": "1",
+     "kind": "change",
+     "title": "Content: what is said",
+     "rows": [
+      [
+       "Covers",
+       "Facts, events, quotes, built details, research. Material that is wrong, missing, or not in your records."
+      ],
+      [
+       "Not",
+       "How a true fact is phrased. That is wording."
+      ],
+      [
+       "Fix goes to",
+       "The brain and the fact sheet"
+      ],
+      [
+       "Code",
+       "/content"
+      ],
+      [
+       "Your words",
+       "\"where the fuck did healthy come from?\" and \"he would tally the count, then it goes back to zero\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "2",
+     "kind": "change",
+     "title": "Structure: where things go",
+     "rows": [
+      [
+       "Covers",
+       "Order, joins between lines and paragraphs, repeats, gaps, what sits in which section, headings, the length of a part."
+      ],
+      [
+       "Not",
+       "What a part is for. That is intention."
+      ],
+      [
+       "Fix goes to",
+       "The outline and the review file"
+      ],
+      [
+       "Code",
+       "/structure"
+      ],
+      [
+       "Your words",
+       "\"this point seems to be repeated too much\" and \"did I just miss several paragraphs\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "3",
+     "kind": "change",
+     "title": "Intention: what a part is for",
+     "rows": [
+      [
+       "Covers",
+       "The point of a passage, what the reader should get or do, whether a part earns its place, building up to an exercise."
+      ],
+      [
+       "Not",
+       "How it sounds. That is tone."
+      ],
+      [
+       "Fix goes to",
+       "The blank and the section line"
+      ],
+      [
+       "Code",
+       "/intention"
+      ],
+      [
+       "Your words",
+       "\"If this is an exercise I will give, or a flagship part of the framework, I want to allude to it and build hype to it.\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "4",
+     "kind": "change",
+     "title": "Tone: how you come across to the reader",
+     "rows": [
+      [
+       "Covers",
+       "Your attitude to the reader: warm, sure, beside them, know-it-all, preachy, pitying, cold, transactional."
+      ],
+      [
+       "Not",
+       "One word choice, unless that word changes how you come across."
+      ],
+      [
+       "Fix goes to",
+       "The section line and the tone bank"
+      ],
+      [
+       "Code",
+       "/tone"
+      ],
+      [
+       "Your words",
+       "\"I don't like the advice and diagnosis and knowitallness\" and \"session feels transactional. I want to make it feel like I am a great coach, while being a warm interaction.\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "5",
+     "kind": "change",
+     "title": "Wording: how it is put into words",
+     "rows": [
+      [
+       "Covers",
+       "Word choice, how a sentence is built, choppy lines, fragments, vague images, slop, plain words, parallels."
+      ],
+      [
+       "Not",
+       "Grammar and punctuation. That is mechanics."
+      ],
+      [
+       "Fix goes to",
+       "Keeper lines. A rule only when you name a lesson."
+      ],
+      [
+       "Code",
+       "/wording"
+      ],
+      [
+       "Your words",
+       "\"slop?\", \"what is this vague metaphor no one ever uses?\" and \"also these are choppy.\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "6",
+     "kind": "change",
+     "title": "Mechanics: grammar and marks",
+     "rows": [
+      [
+       "Covers",
+       "Grammar, punctuation, tense, spelling, commas."
+      ],
+      [
+       "Not",
+       "Anything that changes your wording or your tense on purpose."
+      ],
+      [
+       "Fix goes to",
+       "The lint"
+      ],
+      [
+       "Code",
+       "/mechanics"
+      ],
+      [
+       "Your words",
+       "\"oxford comma important\" and \"the and you should be parallel. either both thes or both you(r)ss\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "7",
+     "kind": "call",
+     "title": "Feeling (how you feel about the subject: amused, serious, sad): its own label, or part of tone?",
+     "options": [
+      [
+       "a",
+       "a. Part of tone (six labels)"
+      ],
+      [
+       "b",
+       "b. Its own label (seven labels)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    }
+   ]
+  },
+  {
+   "title": "How the labels are used",
+   "sub": "Proposed. Go, or say what to change.",
+   "cards": [
+    {
+     "id": "8",
+     "kind": "change",
+     "title": "One comment can carry more than one label",
+     "rows": [
+      [
+       "Change",
+       "Claude splits the comment, and each part goes to its own fix."
+      ],
+      [
+       "Example",
+       "\"too blocky. No warmth.\" is wording (blocky) and tone (warmth)."
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "9",
+     "kind": "change",
+     "title": "Praise gets a label too",
+     "rows": [
+      [
+       "Change",
+       "A line you praise gets the label of what you praised, and is kept as a good example in the right store."
+      ],
+      [
+       "Example",
+       "\"good edit. I like this style of self conversation\" is tone, and goes to the tone bank."
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "10",
+     "kind": "change",
+     "title": "A comment with no clear label",
+     "rows": [
+      [
+       "Change",
+       "Claude labels it from the passage it sits on, and marks it (guess)."
+      ],
+      [
+       "Example",
+       "\"this.\" or \"wtf is this?\""
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "11",
+     "kind": "call",
+     "title": "Your codes: how short?",
+     "context": "A code in a comment overrides Claude's label, the same way /privileged works today.",
+     "options": [
+      [
+       "a",
+       "a. Full words: /content /structure /intention /tone /wording /mechanics"
+      ],
+      [
+       "b",
+       "b. Letters: /c /s /i /t /w /m"
+      ],
+      [
+       "c",
+       "c. Both work"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "12",
+     "kind": "change",
+     "title": "Where the labels live",
+     "rows": [
+      [
+       "Change",
+       "In the brain, one row per label, as the single copy. The writer skill reads them from there when drafting and when reading your markup. No copy in a doc, a skill or memory."
+      ],
+      [
+       "Why",
+       "Your rule: a second copy drifts."
+      ]
+     ],
+     "options": [
+      [
+       "go",
+       "Go"
+      ],
+      [
+       "change",
+       "Change it (say how)"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    }
+   ]
+  },
+  {
+   "title": "Where the labels touch",
+   "sub": "Your past words that sit on a boundary. Your call on each. Claude has no pick.",
+   "cards": [
+    {
+     "id": "13",
+     "kind": "call",
+     "title": "Rhythm: \"this story still feels a bit out of rhythm\"",
+     "options": [
+      [
+       "a",
+       "a. Wording"
+      ],
+      [
+       "b",
+       "b. Tone"
+      ],
+      [
+       "c",
+       "c. Structure"
+      ],
+      [
+       "d",
+       "d. It depends: Claude splits it each time"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "14",
+     "kind": "call",
+     "title": "Warmth: \"No warmth.\"",
+     "options": [
+      [
+       "a",
+       "a. Tone"
+      ],
+      [
+       "b",
+       "b. Wording"
+      ],
+      [
+       "c",
+       "c. Content (warm details are missing)"
+      ],
+      [
+       "d",
+       "d. It depends: Claude splits it each time"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "15",
+     "kind": "call",
+     "title": "A jarring change: \"change from previous paragraph is jarring. need a transition.\"",
+     "options": [
+      [
+       "a",
+       "a. Structure"
+      ],
+      [
+       "b",
+       "b. Wording"
+      ],
+      [
+       "c",
+       "c. Tone"
+      ],
+      [
+       "d",
+       "d. It depends: Claude splits it each time"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "16",
+     "kind": "call",
+     "title": "Quotes that don't work: \"quoted sentence feel too short.\"",
+     "options": [
+      [
+       "a",
+       "a. Content"
+      ],
+      [
+       "b",
+       "b. Wording"
+      ],
+      [
+       "c",
+       "c. Tone"
+      ],
+      [
+       "d",
+       "d. It depends: Claude splits it each time"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    },
+    {
+     "id": "17",
+     "kind": "call",
+     "title": "Too short: \"I feel most of my complaints come from oversuccinct.\"",
+     "options": [
+      [
+       "a",
+       "a. Structure"
+      ],
+      [
+       "b",
+       "b. Wording"
+      ],
+      [
+       "c",
+       "c. Content"
+      ],
+      [
+       "d",
+       "d. It depends: Claude splits it each time"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    }
+   ]
+  },
+  {
+   "title": "Already settled",
+   "sub": "Named for completeness.",
+   "cards": [
+    {
+     "id": "18",
+     "kind": "settled",
+     "title": "A comment is a note on its passage, not a rule",
+     "context": "Settled by your words of 6 Oct (\"others feel like overfitting\", when rules were proposed from single comments) and 30 Oct (\"that is my observation about how the ai writes, not a command\"). A label never turns a comment into a rule. A rule still goes through propose-language-rule, on your go.",
+     "options": [
+      [
+       "ok",
+       "Understood"
+      ]
+     ],
+     "placeholder": "Note (optional)"
+    }
+   ]
+  }
+ ]
+}
