@@ -1,11 +1,11 @@
 ---
 name: morning-base
-description: Coach Gen's daily 8:00 Morning Base brief, written by Setsu in a fixed 8-section page. Use for /morning-base, the scheduled 8:00 run, and his reply words (done, go, draft, add, snooze, list, mine).
+description: Coach Gen's daily 6:00 Morning Base brief, written by Setsu in a fixed 8-section page. Use for /morning-base, the scheduled 6:00 run, and his reply words (done, go, draft, add, snooze, list, mine).
 ---
 
 # /morning-base
 
-One page at 8:00 every day, about 30 seconds to read. Plan approved by Gen on 23 Nov 2026. Runs only in the main base chat. Speak as **Setsu**.
+One page at 6:00 every day, about 30 seconds to read. Plan approved by Gen on 23 Nov 2026. Runs only in the main base chat. Speak as **Setsu**.
 
 **The renderer owns the layout.** Claude only fills `brief.json`. Never hand-write HTML, never add a section, never change the order. If something does not fit a section, it does not go in.
 
@@ -13,17 +13,17 @@ One page at 8:00 every day, about 30 seconds to read. Plan approved by Gen on 23
 
 1. Repo: if `/home/claude/Coach-Gen-Brain` is missing, `git clone --depth 1 https://github.com/coachwibawa/Coach-Gen-Brain.git /home/claude/Coach-Gen-Brain`. The renderer is `tools/morning_base/render.py`. Its docstring holds the `brief.json` shape.
 2. Work folder: `/home/claude/morning/`.
-3. Times are Asia/Jakarta. "Since the last brief" means since yesterday 08:00. Streak: Day 1 = 23 Nov 2026, Day N = days since then plus 1.
+3. Times are Asia/Jakarta. "Since the last brief" means since yesterday 06:00. Streak: Day 1 = 23 Nov 2026, Day N = days since then plus 1.
 
 ## 2. Gather (about 6 reads, one per source)
 
-1. **Calendar:** `list_events`, today 00:00 to the day after tomorrow 00:00, `orderBy: startTime`. Today: only events that end after 08:00. Tomorrow: the first event only, kept only if it needs prep.
+1. **Calendar:** `list_events`, today 00:00 to the day after tomorrow 00:00, `orderBy: startTime`. Today: only events that end after 06:00. Tomorrow: the first event only, kept only if it needs prep.
 2. **Notion list** (one SQL on `collection://2e0f1e0a-e9c3-8028-bce1-000bc8f337e5`): rows with an Area that are open (`Chunks`, `In progress`, `Blocked`, `Not started`) or Done this week:
    `WHERE "Area" IS NOT NULL AND ("Status" IN ('Chunks','In progress','Blocked','Not started') OR ("Status" = 'Done' AND "date:Done on:start" >= date('<today>','-6 days','weekday 1')))`
    Columns: Project name, Status, Area, Next step, Claude can start, Priority, `date:Done on:start`.
 3. **Money** (one SQL on the Coaching Payments Ledger, `collection://84090b70-855c-42e3-a5fd-1b875bf77e85`): rows with `Status` = `Pending` or empty. Columns: Client Name, Invoice No, Invoice Amount (IDR), Tier, Program, createdTime.
 4. **Email:** `search_threads` with `in:inbox newer_than:3d -from:me -category:promotions -category:social -category:updates -category:forums`, `pageSize: 15`, view `THREAD_VIEW_SUMMARY`. Then open each real candidate once with `get_thread`.
-5. **Fathom:** `list_meetings` with `created_after` = yesterday 08:00 Jakarta in UTC.
+5. **Fathom:** `list_meetings` with `created_after` = yesterday 06:00 Jakarta in UTC.
 6. **Brain** (one `execute_sql`, project `zjedqjiuxkoncwsmylls`) returning one JSON object:
    - `health`: `select * from brain.health()`
    - `known_urls`: `brain.sources.url` for the Fathom urls from step 5
@@ -51,7 +51,7 @@ Keys and caps are in the renderer docstring. Empty means `[]` or `null`. The ren
 1. `python3 /home/claude/Coach-Gen-Brain/tools/morning_base/render.py brief.json Morning_Base_YYYY-MM-DD.html`. Keep the number map it prints. Reply words use those numbers today.
 2. `SendUserFile` with `display: render` and `status: proactive`.
 3. One `SendUserMessage` with the headline line only, so it reaches his phone.
-4. Schedule tomorrow: `send_later` into this chat, `at` = tomorrow 08:00 `[Asia/Jakarta]`, name "Morning Base", message: "Run /morning-base for today."
+4. Schedule tomorrow: `send_later` into this chat, `at` = tomorrow 06:00 `[Asia/Jakarta]`, name "Morning Base", message: "Run /morning-base for today."
 
 No screenshot on daily runs. The layout is fixed and was checked when the renderer was built.
 
