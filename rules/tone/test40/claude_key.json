@@ -1,0 +1,371 @@
+[
+ {
+  "id": 1,
+  "his_words": "If you keep trying but never finish this is why is repeated 3 times in the first sequence of papers.",
+  "on": "Introduction epoch 0, general note",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "A repeat."
+ },
+ {
+  "id": 2,
+  "his_words": "'The first 2 people' is unecessary detail.",
+  "on": "Introduction epoch 0",
+  "claude_labels": [
+   "intention"
+  ],
+  "claude_why": "The detail does not earn its place."
+ },
+ {
+  "id": 3,
+  "his_words": "'So what I realized is that, .... ' this setting the stage needs to precisely paint the picture of a coaching session and the client's progress, using words readers know and expect.",
+  "on": "Introduction epoch 0",
+  "claude_labels": [
+   "content",
+   "wording"
+  ],
+  "claude_why": "The session picture is missing, and the words must be ones readers know."
+ },
+ {
+  "id": 4,
+  "his_words": "let's try a construction where this sentence is the first sentence",
+  "on": "Introduction epoch 0",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Order."
+ },
+ {
+  "id": 5,
+  "his_words": "it seems you are being too concise here. no problem, since you were trained on beat to beat articles.",
+  "on": "Introduction epoch 0",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "A missing step (guess)."
+ },
+ {
+  "id": 6,
+  "his_words": "find how clear and dweck references other people's work or research. the way you put things is very jarring.",
+  "on": "Chapter 1 epoch 1, general note",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "How research is put into words."
+ },
+ {
+  "id": 7,
+  "his_words": "for book, let's try making quotes inline. I believe other authors do this too.",
+  "on": "Chapter 1 epoch 1, general note",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Layout of quotes (guess)."
+ },
+ {
+  "id": 8,
+  "his_words": "now it seems that the subheadlines are not needed? or maybe the subheadline feels too robotic that it detracts currently. explore how clear dweck does it",
+  "on": "Chapter 1 epoch 1, general note",
+  "claude_labels": [
+   "structure",
+   "tone"
+  ],
+  "claude_why": "Headings, and how they come across (robotic)."
+ },
+ {
+  "id": 9,
+  "his_words": "Some language can (must, should) be changed to keep down the number of vocabulary the reader needs to keep in his head.",
+  "on": "Chapter 1 epoch 1, general note",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "Word choice."
+ },
+ {
+  "id": 10,
+  "his_words": "this feels unnecessary, or can be said more elegantly to not be verbose",
+  "on": "On \"and this is what I said to myself:\" (Chapter 1 epoch 2)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "Said more simply."
+ },
+ {
+  "id": 11,
+  "his_words": "feels like a good place to end the subheading. put the next part into the next subheading.",
+  "on": "On \"want\" in \"that I needed to put in hard work to get what I want.\" (Chapter 1 epoch 2)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "What sits in which section."
+ },
+ {
+  "id": 12,
+  "his_words": "some repeated ideas here that can be squished together",
+  "on": "On the paragraph he rebuilt from \"So instead of another 30-day challenge...\" (Chapter 1 epoch 2)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Repeats."
+ },
+ {
+  "id": 13,
+  "his_words": "arrange this sentence to be less like fragments jumbled together. I still like all the points it makes, just wondering how to connect them all together with nice connecting phrases.",
+  "on": "On \"You may be clearing a bar someone else set, just starting out, announcing and never finishing. Or you've changed, but you still haven't realised it.\" (Chapter 1 epoch 2)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "How one sentence is built."
+ },
+ {
+  "id": 14,
+  "his_words": "chapter summary should not be \"I\". should be we or anything else. Also chapter summary is a good place to house key phrases.",
+  "on": "On \"Chapter Summary\" (Chapter 1 epoch 2)",
+  "claude_labels": [
+   "tone",
+   "structure"
+  ],
+  "claude_why": "I versus we, and what sits in the summary."
+ },
+ {
+  "id": 15,
+  "his_words": "help me say this better. and I'm missing 1 or 2 sentences here. I believe clear also has sentences where he \"clearly defines what is and is not in this book\" and who this book is and is not for.",
+  "on": "On his typed note \"[the question is that is it more painful to stay who you are, or to learn to work and make lasting change? ...]\" (Chapter 1 epoch 2)",
+  "claude_labels": [
+   "wording",
+   "intention"
+  ],
+  "claude_why": "Say it better, and what the part must do."
+ },
+ {
+  "id": 16,
+  "his_words": "this is a very special line that deserves a new line or its own paragraph or box. only some select lines will have this",
+  "on": "On \"You do not fail to make lasting change. You succeed at staying who you are.\" (Chapter 1 epoch 3)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Layout (guess)."
+ },
+ {
+  "id": 17,
+  "his_words": "bullet these. also make from within you differently boxed than summary. for coding.",
+  "on": "On the three From Within You questions (Chapter 1 epoch 3)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Layout (guess)."
+ },
+ {
+  "id": 18,
+  "his_words": "2a feels best. but need to be connected with the previous paragraph",
+  "on": "On option 2A (Introduction key moments 2)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "A join."
+ },
+ {
+  "id": 19,
+  "his_words": "integrate this sentence. keyword is patterm",
+  "on": "On his typed note \"[Sometimes they seek me because they already start noticing that pattern, and it starts to baffle them how it seems they ...]\" (Introduction key moments 2)",
+  "claude_labels": [
+   "content"
+  ],
+  "claude_why": "His material to add."
+ },
+ {
+  "id": 20,
+  "his_words": "too rough. get ahead is word I like to use very sparingly.",
+  "on": "On his added line \"and used that knowledge to my advantage to get ahead in life, over people who are not aware of this themselves.\"",
+  "claude_labels": [
+   "wording",
+   "tone"
+  ],
+  "claude_why": "A word choice, and how it comes across (rough)."
+ },
+ {
+  "id": 21,
+  "his_words": "add the skip 1 step thing. I believe this may or may not be in the worksheet. that the 5 laws is sequence, no skipping, people try to start from law 3, blabla.",
+  "on": "On \"order\" in \"each of the 5 Laws gets its own chapter, in order\" (Introduction epoch 3)",
+  "claude_labels": [
+   "content"
+  ],
+  "claude_why": "Missing material."
+ },
+ {
+  "id": 22,
+  "his_words": "this seems better. but I think david's story can be expanded to contain more of the truths. I'll give you more details.",
+  "on": "On \"...decided where I was actually driving to.\" (Law 1 story options)",
+  "claude_labels": [
+   "content"
+  ],
+  "claude_why": "More of the record."
+ },
+ {
+  "id": 23,
+  "his_words": "additionally, in the book, I think David's story can be broken into multiple people's names. and can be scattered throughout multiple chapters under different names. this reduces load of reader. and gives more numerous characters. you can ask me for names.",
+  "on": "Same place (Law 1 story options)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "What sits where across chapters."
+ },
+ {
+  "id": 24,
+  "his_words": "this one is good in isolation. but currently the content is so far from anything else in this chapter. needs heavy connectors or introduction to ideas.",
+  "on": "On \"...and Law 1 is where you find yours.\" (Law 1 story options)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Joins."
+ },
+ {
+  "id": 25,
+  "his_words": "the story is fine. but the crystallization to \"you gotta find your own and that ain't easy\" is VERY wobbly.",
+  "on": "On the Dick Fosbury paragraph (Law 1 story options)",
+  "claude_labels": [
+   "intention"
+  ],
+  "claude_why": "The point drawn from the story."
+ },
+ {
+  "id": 26,
+  "his_words": "\"distract ourselves\" is powerful word. \"the thought comes back\"",
+  "on": "On option 6C, the dream in the drawer (Law 1 story options)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "Praise of word choice."
+ },
+ {
+  "id": 27,
+  "his_words": "I think this revelation is better revealed with a thought experiment, like how they do in courage to be disliked. and can even take a whole article if needed.",
+  "on": "On \"So if we already know, why haven't we picked it? ...my best was never tested.\" (Law 1 Part 3 draft 1)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "How the reveal is built."
+ },
+ {
+  "id": 28,
+  "his_words": "even just looking at the connection between sentence 1 and 2. Something feels off. Yes, astute readers may be able to follow, but it takes energy and it drains readers. No sentence feels smooth next to each other. Sentence 1 talks about melina's internal talk, but 2 talks about something else",
+  "on": "Round 1, passage 4 (Claude, Introduction middle)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Joins between sentences."
+ },
+ {
+  "id": 29,
+  "his_words": "this is good. But following it is a mix of jumbled perspective, jumbled ideas, choppy sentences, and inconfident authorship",
+  "on": "Round 1, passage 8 (Claude, the Melina scene)",
+  "claude_labels": [
+   "structure",
+   "wording",
+   "tone"
+  ],
+  "claude_why": "Ideas jumbled, choppy lines, unsure voice."
+ },
+ {
+  "id": 30,
+  "his_words": "I see the pattern here, but still lacking some warmth.",
+  "on": "Round 2, passage 1 (Claude, Why Pushing Harder Fails)",
+  "claude_labels": [
+   "tone"
+  ],
+  "claude_why": "Warmth (guess)."
+ },
+ {
+  "id": 31,
+  "his_words": "This sentence feels weird, maybe a : or some better construction would help, or another sentence.",
+  "on": "On \"It never worked for me, and it took me years to see why. You cannot overpower the part of you that wants to stay the same, because that part is you.\" (round 2)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "How the sentence is built."
+ },
+ {
+  "id": 32,
+  "his_words": "this sentence itself feels like the meaning is 100% there. but better choice of words can take it it from 60% to 100% in terms of feel and flow",
+  "on": "On \"Then she would look at the people around her, who all seemed to finish what they started, and feel even further behind.\" (round 2)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "Word choice."
+ },
+ {
+  "id": 33,
+  "his_words": "I like the progression and storytelling. comparing, I think can summarise it out better to the reader more what was the old way.",
+  "on": "On the paragraph from \"Then she started comparing it with her old lists\" to her realisation (round 2)",
+  "claude_labels": [
+   "content"
+  ],
+  "claude_why": "The old way is missing."
+ },
+ {
+  "id": 34,
+  "his_words": "cool sentence",
+  "on": "On \"I did not have to explain it to her. She found it in her own story, and a lesson you find yourself stays with you much longer than one somebody hands you.\" (round 2)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "Praise (guess)."
+ },
+ {
+  "id": 35,
+  "his_words": "there's parallel yes, but the parallel is still not that connected or is forced in a context that can't use that structure. Or when not enough material is there to make a parallel.",
+  "on": "Round 2, passage 5 (Claude, Melina's old sentence and his)",
+  "claude_labels": [
+   "wording",
+   "content"
+  ],
+  "claude_why": "A forced parallel, and too little material for it."
+ },
+ {
+  "id": 36,
+  "his_words": "doesn't make sense. this might make sense in context of coaching with hours of context built between me and client, but not for reader. I think this is a BIG thing that you need to keep in mind. yes, my words are verbatim and records of coaching is nice. but they are in a wall of context.",
+  "on": "On \"When someone told her she should be faster, she would drop the whole thing\" (round 2)",
+  "claude_labels": [
+   "content"
+  ],
+  "claude_why": "The reader is missing the context."
+ },
+ {
+  "id": 37,
+  "his_words": "it is not clear here. if this happens, fix is either reclarify, or make the previous clause more concise.",
+  "on": "On \"It never lasted, and the higher I set the bar, the worse it got\" (round 3)",
+  "claude_labels": [
+   "wording"
+  ],
+  "claude_why": "Clarity of one sentence."
+ },
+ {
+  "id": 38,
+  "his_words": "too many differing concepts that were unexplored.",
+  "on": "On \"And it doesn't start from zero. Somewhere in your life, you have already changed something without noticing\" (round 3)",
+  "claude_labels": [
+   "structure"
+  ],
+  "claude_why": "Too many ideas in one place."
+ },
+ {
+  "id": 39,
+  "his_words": "yes now it's parallel and long, but it's just making it robotic and repeated. It’s overall worse.",
+  "on": "Round 3, passage 1 (Claude, Why Pushing Harder Fails)",
+  "claude_labels": [
+   "wording",
+   "tone"
+  ],
+  "claude_why": "Built like a pattern, and it comes across robotic."
+ },
+ {
+  "id": 40,
+  "his_words": "good mix of credibility and argument",
+  "on": "On the parent paragraph (Chapter 3 epoch 4)",
+  "claude_labels": [
+   "content"
+  ],
+  "claude_why": "Praise of the material and the case it makes."
+ }
+]
