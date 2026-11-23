@@ -391,7 +391,7 @@
   },
   {
    "title": "Where the labels touch",
-   "sub": "Your past words that sit on a boundary. Your call on each. Claude has no pick.",
+   "sub": "Your past words that sit on a boundary. Under each card: what the problem and the fix would look like for each choice. Examples marked (yours) are your own comments, word for word. The rest are mine. Your picks are saved. Change any of them if an example shifts your view.",
    "cards": [
     {
      "id": "13",
@@ -415,7 +415,25 @@
        "d. It depends: Claude splits it each time"
       ]
      ],
-     "placeholder": "Note (optional)"
+     "placeholder": "Note (optional)",
+     "rows": [
+      [
+       "a. Wording",
+       "One sentence carries too much in one breath, or every sentence has the same shape. Mine: \"So on the days fun won, a zero cost him nothing he had chosen, and of course he felt little about it.\" Fix: rebuild the sentences, same content, same order."
+      ],
+      [
+       "b. Tone",
+       "The way you sound changes in the middle of a beat: warm story, then a line that explains David to the reader, then warm again. Fix: keep one attitude through a beat, and change it only at the turn."
+      ],
+      [
+       "c. Structure",
+       "The beats jump: the opening moves from the first session, to a week later, to weeks later, before the reader has felt the first beat. Fix: move or cut a beat, so each beat lands before the next starts."
+      ],
+      [
+       "d. It depends",
+       "Claude splits it, and each part goes to its own fix."
+      ]
+     ]
     },
     {
      "id": "14",
@@ -439,7 +457,25 @@
        "d. It depends: Claude splits it each time"
       ]
      ],
-     "placeholder": "Note (optional)"
+     "placeholder": "Note (optional)",
+     "rows": [
+      [
+       "a. Tone",
+       "You talk at the reader instead of beside them. Fix: you stand next to the reader, often with \"I\" or \"we\" before \"you\"."
+      ],
+      [
+       "b. Wording",
+       "Cold, abstract words: \"the pattern\", \"the system\". Fix: concrete words from the record: \"the zeros\", \"$200 to his friend\"."
+      ],
+      [
+       "c. Content",
+       "The warm details are missing. Yours: \"maybe can even add lines to describe how the conversation flowed in that session.\" Fix: add what the record holds about the moment."
+      ],
+      [
+       "d. It depends",
+       "Claude splits it, and each part goes to its own fix."
+      ]
+     ]
     },
     {
      "id": "15",
@@ -463,7 +499,25 @@
        "d. It depends: Claude splits it each time"
       ]
      ],
-     "placeholder": "Note (optional)"
+     "placeholder": "Note (optional)",
+     "rows": [
+      [
+       "a. Structure",
+       "A bridge is missing between two paragraphs. Yours: \"change from previous paragraph is jarring. need a transition.\" Fix: a joining line (it became \"As for my own sentence\")."
+      ],
+      [
+       "b. Wording",
+       "The bridge is there, but the joining word is wrong. Yours: \"[then is not the right connector here]\". Fix: change the word."
+      ],
+      [
+       "c. Tone",
+       "Your attitude jumps between paragraphs, from telling a story to giving an order. Fix: a line that turns to the reader gently before the ask."
+      ],
+      [
+       "d. It depends",
+       "Claude splits it, and each part goes to its own fix."
+      ]
+     ]
     },
     {
      "id": "16",
@@ -487,7 +541,25 @@
        "d. It depends: Claude splits it each time"
       ]
      ],
-     "placeholder": "Note (optional)"
+     "placeholder": "Note (optional)",
+     "rows": [
+      [
+       "a. Content",
+       "The quote is too thin, and the record holds more. Yours, on \"Maybe I just can't.\": \"quoted sentence feel too short.\" Fix: use more of the record, or explain the quote."
+      ],
+      [
+       "b. Wording",
+       "The quote was trimmed until it lost what made it his. \"One of the patterns that I know runs me is that I tend towards starting new things\" became \"I tend towards starting new things.\" Fix: keep the words that make it his."
+      ],
+      [
+       "c. Tone",
+       "The quote makes the person sound pitiful, or makes you the hero. Yours, from the rules refactor: some quotes kept word for word \"produce only sorrow\". Fix: rebuild the quote for the reader."
+      ],
+      [
+       "d. It depends",
+       "Claude splits it, and each part goes to its own fix."
+      ]
+     ]
     },
     {
      "id": "17",
@@ -511,7 +583,25 @@
        "d. It depends: Claude splits it each time"
       ]
      ],
-     "placeholder": "Note (optional)"
+     "placeholder": "Note (optional)",
+     "rows": [
+      [
+       "a. Structure",
+       "A step is missing between two ideas. Yours, on the exam passage: \"so many leaps in logic that needs to be surgically served over the course of multiple paragraphs\". Fix: add the missing steps, one per paragraph."
+      ],
+      [
+       "b. Wording",
+       "One sentence is too tight to follow. Yours: \"it. is too vague. repeating the sentence in paraphrase would help here\". Fix: say it again in other words."
+      ],
+      [
+       "c. Content",
+       "Too few examples to feel it. Yours: \"this would benefit from more examples I think\". Fix: add examples from the record."
+      ],
+      [
+       "d. It depends",
+       "Claude splits it, and each part goes to its own fix."
+      ]
+     ]
     }
    ]
   },
